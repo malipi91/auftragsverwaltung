@@ -6040,13 +6040,12 @@ public class StartAV extends javax.swing.JFrame {
     }//GEN-LAST:event_miZKSucheActionPerformed
 
     private void miZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKBearbeitenActionPerformed
-<<<<<<< HEAD
+
         // Hicran Yörük Ersterstellung
     if(istEingeloggt==true){
-=======
+
         // Hicran Yörük Ersterstellung, alle Panels werden versteckt bis auf 
-        //ZKBearbeiten auf sichtbar gesetzt.
->>>>>>> e7b3d085f68b115d54f09a66d5393b4f322287ff
+        //ZKBearbeiten auf sichtbar gesetzt
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
