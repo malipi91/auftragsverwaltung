@@ -35,7 +35,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private final String ABMELDE_TITEL = "ABMELDEN";
     private final String ABMELDE_TEXT = "Möchten Sie wirklich abmelden";
-
+    boolean istEingeloggt = false;
     /**
      * Creates new form StartAV
      */
@@ -926,7 +926,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addComponent(jlAbschlussdatum)
                                             .addComponent(jlAuftragsart)
                                             .addComponent(jlStatus))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                                         .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jftfLieferdatum_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jftfErfassungsdatum_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4526,6 +4526,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
+        jmDatei.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmDateiActionPerformed(evt);
+            }
+        });
 
         miAbmelden.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         miAbmelden.setMnemonic('o');
@@ -4551,6 +4556,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jmAuftrag.setMnemonic('e');
         jmAuftrag.setText("Auftrag");
+        jmAuftrag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmAuftragActionPerformed(evt);
+            }
+        });
 
         miAuftraganzeigen.setText("Anzeigen");
         miAuftraganzeigen.setToolTipText("");
@@ -4584,6 +4594,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jmArtikel.setMnemonic('h');
         jmArtikel.setText("Artikel");
+        jmArtikel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmArtikelActionPerformed(evt);
+            }
+        });
 
         miArtikelanzeigen.setText("Anzeigen");
         miArtikelanzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -4614,6 +4629,11 @@ public class StartAV extends javax.swing.JFrame {
         menuBar.add(jmArtikel);
 
         jmSuche.setText("Suche");
+        jmSuche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmSucheActionPerformed(evt);
+            }
+        });
 
         miAuftragSuche.setText("Auftrag");
         miAuftragSuche.addActionListener(new java.awt.event.ActionListener() {
@@ -4771,6 +4791,7 @@ public class StartAV extends javax.swing.JFrame {
     private void miAbmeldenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAbmeldenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+        if(istEingeloggt==true){
         JOptionPane.showMessageDialog(null, ABMELDE_TEXT, ABMELDE_TITEL, JOptionPane.INFORMATION_MESSAGE);
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
@@ -4796,14 +4817,27 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt wird beim abmelden auf false gesetzt.*/
+        /*----------------------------------------------------------*/
+        istEingeloggt=false;
         
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
        
     }//GEN-LAST:event_miAbmeldenActionPerformed
 
     private void miAuftraganzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftraganzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
-
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -4828,12 +4862,19 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
-        
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        }else {
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");    
+        }
     }//GEN-LAST:event_miAuftraganzeigenActionPerformed
 
     private void miAuftragSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftragSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -4858,7 +4899,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
-        
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miAuftragSucheActionPerformed
 
     private void jbBearbeiten_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_azActionPerformed
@@ -4924,6 +4972,7 @@ public class StartAV extends javax.swing.JFrame {
     private void miArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+        if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -4948,11 +4997,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miArtikelSucheActionPerformed
 
     private void miArtikelanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(true);
@@ -4977,11 +5035,19 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
-        
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miArtikelanzeigenActionPerformed
 
     private void miArtikelanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelanlegenActionPerformed
         // TODO add your handling code here:
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(true);
         ArtikelAnzeige.setVisible(false);
@@ -5006,11 +5072,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");       
+        }
     }//GEN-LAST:event_miArtikelanlegenActionPerformed
 
     private void miArtikelbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5035,11 +5110,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miArtikelbearbeitenActionPerformed
 
     private void miAuftraganlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftraganlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5064,12 +5148,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miAuftraganlegenActionPerformed
 
     private void miAuftragbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftragbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
-
+    if(istEingeloggt){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5089,11 +5181,20 @@ public class StartAV extends javax.swing.JFrame {
         KundeBearbeiten.setVisible(false);
         Startseite.setVisible(false);
         AuftragsID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miAuftragbearbeitenActionPerformed
 
     private void miLieferantSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5118,6 +5219,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantSucheActionPerformed
 
     private void jbAbbrechen_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_AuftragBearbeitenActionPerformed
@@ -5197,7 +5306,7 @@ public class StartAV extends javax.swing.JFrame {
     private void miKundeSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        
+        if(istEingeloggt == true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5222,11 +5331,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundeSucheActionPerformed
 
     private void miLieferantanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5251,11 +5369,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantanzeigenActionPerformed
 
     private void miLieferantanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5282,11 +5409,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantanlegenActionPerformed
 
     private void miLieferantbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5311,11 +5447,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantbearbeitenActionPerformed
 
     private void miKundeanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5340,11 +5485,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundeanzeigenActionPerformed
 
     private void miKundeanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5369,11 +5523,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundeanlegenActionPerformed
 
     private void miKundebearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundebearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5398,6 +5561,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundebearbeitenActionPerformed
 
     private void jbZurueck_AutragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbZurueck_AutragSuchenActionPerformed
@@ -5732,6 +5903,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void miZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKAnzeigenActionPerformed
         // Hicran Yörük Ersterstellung
+        if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5756,10 +5928,19 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miZKAnzeigenActionPerformed
 
     private void miZKAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKAnlegenActionPerformed
         // Hicran Yörük Ersterstellung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5784,6 +5965,15 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
+        
     }//GEN-LAST:event_miZKAnlegenActionPerformed
 
     private void jcbDatumAuftragsIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDatumAuftragsIDSuchenActionPerformed
@@ -5804,6 +5994,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void miZKSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKSucheActionPerformed
         // Hicran Yörük Ersterstellung
+        if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5828,11 +6019,17 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(true);
         ZKID_suchen.setVisible(false);
-        
+        }
+        //Samet, Variable istEingeloggt, um den Status eingeloggt oder nicht eingeloggt zu erfassen.
+        // Bei istEingeloggt=false wird die unten stehende Fehlermeldung ausgegeben.
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miZKSucheActionPerformed
 
     private void miZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKBearbeitenActionPerformed
         // Hicran Yörük Ersterstellung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5857,6 +6054,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(true);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miZKBearbeitenActionPerformed
 
     private void jbAbbrechen_ZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKAnzeigenActionPerformed
@@ -5972,6 +6177,7 @@ public class StartAV extends javax.swing.JFrame {
 
         Startseite.setVisible(false);
         SeiteZwei.setVisible(true);
+        istEingeloggt=true;
     }//GEN-LAST:event_jbanmelden_StartseiteActionPerformed
 
     private void jbSpeichern_LieferantAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_LieferantAnlegenActionPerformed
@@ -5989,6 +6195,47 @@ public class StartAV extends javax.swing.JFrame {
     private void jcbAuftragsartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAuftragsartActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAuftragsartActionPerformed
+
+    private void jmDateiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmDateiActionPerformed
+if(istEingeloggt==true){
+}
+else{
+     JOptionPane.showMessageDialog(null,"Sie müssen eingeloggt sein, um sich abmelden zu können !");
+     }
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jmDateiActionPerformed
+
+    private void jmAuftragActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAuftragActionPerformed
+if(istEingeloggt==true){
+        
+    
+    
+    
+    }/*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_jmAuftragActionPerformed
+
+    private void jmSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmSucheActionPerformed
+    // TODO add your handling code here:
+    
+    if(istEingeloggt==true){
+        
+    }
+    else{
+        
+    }
+    }//GEN-LAST:event_jmSucheActionPerformed
+
+    private void jmArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmArtikelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmArtikelActionPerformed
     
     
    
