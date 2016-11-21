@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import java.sql.Connection;
@@ -12,17 +7,24 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import util.DBConnection;
 
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 17.11.16 MaLi Anlegen der Klasse */
+/*----------------------------------------------------------*/
 /**
- *
- * @author marti
+ * Diese Klasse dient dem Zugriff auf die Tabelle DataDictionary aus der Daten-
+ * bank.
+ * @author Martin Lipinski 
  */
 public class DAODataDictionary {
     
+    // 
     private final String LETZE_ADRESS_ID;
     /*
-    * Hicran
+    * 
+    * Hicran 
     */
-        private final String LETZTE_AUFTRAG_ID;
+    private final String LETZTE_AUFTRAG_ID;
 
 
     public DAODataDictionary() {
