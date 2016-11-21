@@ -56,6 +56,7 @@ public class StartAV extends javax.swing.JFrame {
         private int laenge;
         private String erlaubteZeichen;
 
+        // Mechmet Impram
         public UniversalDokument(boolean sindBErlaubt, boolean sindZErlaubt, String zeichen, int laenge) {
             this.laenge = laenge;
             this.erlaubteZeichen = zeichen;
@@ -68,6 +69,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         }
 
+        // Mechmet Impram
         public void insertString(int off, String str, AttributeSet a)
                 throws BadLocationException {
             boolean insertString;
@@ -90,6 +92,7 @@ public class StartAV extends javax.swing.JFrame {
         }
     }
 
+    // Mechmet Impram
     class UniversalVerifier extends InputVerifier {
 
         private String regEx;
@@ -111,6 +114,7 @@ public class StartAV extends javax.swing.JFrame {
             return istGueltig;
         }
 
+        // Mechmet Impram
         public boolean shouldYieldFocus(JComponent input) {
             boolean yieldFocus = false;
             if (verify(input)) {
@@ -124,6 +128,7 @@ public class StartAV extends javax.swing.JFrame {
 
     }
 
+    // Mechmet Impram
     private DefaultFormatterFactory erstelleMF(String schablone) {
         DefaultFormatterFactory dffmf = null;
         MaskFormatter mf = null;
@@ -144,10 +149,13 @@ public class StartAV extends javax.swing.JFrame {
         initComponents();
         this.jRegister.setVisible(false);
         //Startseite
+        // Mechmet Impram
 //Benutzername Feld akzeptiert nur Buchstaben.
         jtfBenutzername_Startseite.setDocument(new UniversalDokument(true, false, "-. ' ", -1));
+        // Mechmet Impram
 //Passwort Feld ebenso akzeptiert nur Buchstaben.        
         jpwpasswort_Startseite.setDocument((new UniversalDokument(true, false, "-. ' ", -1)));
+        // Mechmet Impram
         //Artikelanzeigen
         jtfArtikelID_ArtikelAnzeigen.setDocument(new UniversalDokument(false, true, "", 5));
         jtfartikelname_ArtikelAnzeigen.setDocument(new UniversalDokument(true, false, "-. ' ", -1));
@@ -165,6 +173,7 @@ public class StartAV extends javax.swing.JFrame {
         jtfbestellwertnetto_ArtikelAnzeigen.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
         jtfbestellwertbrutto_ArtikelAnzeigen.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
         jtfbestellwertbrutto_ArtikelAnzeigen.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+       // Mechmet Impram
         //Artikelanlegen
              jtfartikelid_ArtikelAnlegen.setDocument(new UniversalDokument(false, true, "", 5));
         jtfartikelname_ArtikelAnlegen.setDocument(new UniversalDokument(true, false, "-. ' ", -1));
@@ -182,7 +191,8 @@ public class StartAV extends javax.swing.JFrame {
         jtfbestellwertnetto_ArtikelAnlegen.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
         jtfbestellwertbrutto_ArtikelAnlegen.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
         jtfbestellwertbrutto_ArtikelAnlegen.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        //AuftragSuchen
+// Mechmet Impram        
+//AuftragSuchen
         jtfAuftragsID_AuftragSuchen.setDocument(new UniversalDokument(false, true, "", 5));
         jtfKundenName_AuftragSuchen.setDocument(new UniversalDokument(true, false, ".-' ", -1));
         jtfLieferantenname_AuftragSuche.setDocument(new UniversalDokument(true, false, ".-' ", -1));
@@ -192,6 +202,7 @@ public class StartAV extends javax.swing.JFrame {
         jtfMinAuftragswert_AuftragSuche.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
      jtfMaxAuftragswert_AuftragSuche.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
         jtfMaxAuftragswert_AuftragSuche.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+       // Mechmet Impram
         //ArtikelBearbeiten
         jtfartikelid_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
         
