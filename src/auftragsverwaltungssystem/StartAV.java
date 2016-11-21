@@ -6,6 +6,8 @@
 package auftragsverwaltungssystem;
 
 import dao.DAOAuftrag;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
@@ -34,6 +36,15 @@ import model.Auftragsstatus;
 //laaalaaaa
 public class StartAV extends javax.swing.JFrame {
 
+    //Hicran passt die Rahmengröße des Fensters an.
+    @Override
+    public void setBounds(int x, int y, int width, int height) {
+        super.setBounds(x, y, 1200, 800); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+
+    
+    
     private final String ABMELDE_TITEL = "ABMELDEN";
     private final String ABMELDE_TEXT = "Möchten Sie wirklich abmelden";
     boolean istEingeloggt = false;
@@ -148,7 +159,7 @@ public class StartAV extends javax.swing.JFrame {
     public StartAV() {
 
         initComponents();
-        this.jRegister.setVisible(false);
+//        this.jRegister.setVisible(false);
         //Startseite
         // Mechmet Impram
 //Benutzername Feld akzeptiert nur Buchstaben.
@@ -230,8 +241,6 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite = new javax.swing.JButton();
         jpwpasswort_Startseite = new javax.swing.JPasswordField();
         jSeparator3 = new javax.swing.JSeparator();
-        jRegister = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
         SeiteZwei = new javax.swing.JPanel();
         AuftragAnzeigen = new javax.swing.JPanel();
         jlAuftragsid = new javax.swing.JLabel();
@@ -285,7 +294,6 @@ public class StartAV extends javax.swing.JFrame {
         jtfLieferdatum_aa = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
-        javax.swing.JButton jSpeichern_aa = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jBeschreibung_aa = new javax.swing.JTextArea();
         jLabel41 = new javax.swing.JLabel();
@@ -310,6 +318,7 @@ public class StartAV extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jbMinus_AuftragAnlegen = new javax.swing.JButton();
         jbPlus_AuftragAnlegen = new javax.swing.JButton();
+        javax.swing.JButton jSpeichern_aa = new javax.swing.JButton();
         AuftragBearbeiten = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jbAbbrechen_AuftragBearbeiten = new javax.swing.JButton();
@@ -682,12 +691,13 @@ public class StartAV extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         desktopPane.setInheritsPopupMenu(true);
+        desktopPane.setLayout(new java.awt.CardLayout());
 
         Ansicht.setMaximumSize(new java.awt.Dimension(1000, 1000));
         Ansicht.setLayout(new java.awt.CardLayout());
 
         Startseite.setMaximumSize(null);
-        Startseite.setPreferredSize(new java.awt.Dimension(1200, 800));
+        Startseite.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jLabel3.setText("Passwort");
 
@@ -701,30 +711,6 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbanmelden_StartseiteActionPerformed(evt);
-            }
-        });
-
-        jRegister.setText("jTextField1");
-        jRegister.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRegisterMouseClicked(evt);
-            }
-        });
-        jRegister.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jRegisterKeyPressed(evt);
-            }
-        });
-
-        jButton5.setText("noch nicht regisitiert?");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jButton5.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jButton5KeyPressed(evt);
             }
         });
 
@@ -747,12 +733,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jtfBenutzername_Startseite)
                                     .addComponent(jpwpasswort_Startseite)
-                                    .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                            .addGroup(StartseiteLayout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton5)))))
+                                    .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))))
                     .addGroup(StartseiteLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1015, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -775,26 +756,22 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbanmelden_Startseite)
-                .addGap(95, 95, 95)
-                .addComponent(jButton5)
-                .addGap(28, 28, 28)
-                .addComponent(jRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(441, Short.MAX_VALUE))
+                .addContainerGap(532, Short.MAX_VALUE))
         );
 
         Ansicht.add(Startseite, "card9");
 
-        SeiteZwei.setPreferredSize(new java.awt.Dimension(1200, 800));
+        SeiteZwei.setPreferredSize(new java.awt.Dimension(1200, 1200));
 
         javax.swing.GroupLayout SeiteZweiLayout = new javax.swing.GroupLayout(SeiteZwei);
         SeiteZwei.setLayout(SeiteZweiLayout);
         SeiteZweiLayout.setHorizontalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1207, Short.MAX_VALUE)
+            .addGap(0, 1034, Short.MAX_VALUE)
         );
         SeiteZweiLayout.setVerticalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 721, Short.MAX_VALUE)
         );
 
         Ansicht.add(SeiteZwei, "card8");
@@ -979,7 +956,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(379, Short.MAX_VALUE))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
         AuftragAnzeigenLayout.setVerticalGroup(
             AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1053,7 +1030,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragAnzeigen, "card2");
@@ -1097,14 +1074,6 @@ public class StartAV extends javax.swing.JFrame {
         jLabel22.setText("Lieferdatum:");
 
         jLabel25.setText("Beschreibung:");
-
-        jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
-        jSpeichern_aa.setText("Speichern");
-        jSpeichern_aa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSpeichern_aaActionPerformed(evt);
-            }
-        });
 
         jBeschreibung_aa.setColumns(20);
         jBeschreibung_aa.setRows(5);
@@ -1432,6 +1401,14 @@ public class StartAV extends javax.swing.JFrame {
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
+        jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jSpeichern_aa.setText("Speichern");
+        jSpeichern_aa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSpeichern_aaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout AuftragAnlegenLayout = new javax.swing.GroupLayout(AuftragAnlegen);
         AuftragAnlegen.setLayout(AuftragAnlegenLayout);
         AuftragAnlegenLayout.setHorizontalGroup(
@@ -1448,7 +1425,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(AuftragAnlegenLayout.createSequentialGroup()
                         .addComponent(jSpeichern_aa)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jbAbbrechen_aa))
                     .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1481,7 +1458,7 @@ public class StartAV extends javax.swing.JFrame {
                                     .addComponent(jtfLieferdatum_aa)
                                     .addComponent(jtfAbschlussdatum_aa)
                                     .addComponent(jcbAuftragsart, 0, 150, Short.MAX_VALUE))))))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         AuftragAnlegenLayout.setVerticalGroup(
             AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1524,7 +1501,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_aa)
                     .addComponent(jSpeichern_aa))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragAnlegen, "card10");
@@ -1556,7 +1533,7 @@ public class StartAV extends javax.swing.JFrame {
         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
         AuftragBearbeitenLayout.setHorizontalGroup(
             AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator10, javax.swing.GroupLayout.DEFAULT_SIZE, 1207, Short.MAX_VALUE)
+            .addComponent(jSeparator10, javax.swing.GroupLayout.DEFAULT_SIZE, 1034, Short.MAX_VALUE)
             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel8))
@@ -1587,7 +1564,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_AuftragBearbeiten)
                     .addComponent(jbBearbeiten_AuftragBearbeiten))
-                .addContainerGap(655, Short.MAX_VALUE))
+                .addContainerGap(576, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragBearbeiten, "card11");
@@ -1835,7 +1812,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addComponent(jbZurueck_AutragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(4, 4, 4))))))
-                        .addGap(0, 447, Short.MAX_VALUE)))
+                        .addGap(0, 274, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         AuftragSuchenLayout.setVerticalGroup(
@@ -1888,7 +1865,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_AuftragSuchen)
                     .addComponent(jbZurueck_AutragSuchen))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragSuchen, "card3");
@@ -1968,7 +1945,7 @@ public class StartAV extends javax.swing.JFrame {
                                                 .addComponent(jLabel91)
                                                 .addGap(108, 108, 108)
                                                 .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                        .addGap(0, 475, Short.MAX_VALUE)))
+                        .addGap(0, 302, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         AuftragsID_suchenLayout.setVerticalGroup(
@@ -1994,7 +1971,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_AuftragsIDSuchen)
                     .addComponent(jbSuchen_AuftragsIDSuchen))
-                .addContainerGap(570, Short.MAX_VALUE))
+                .addContainerGap(491, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragsID_suchen, "card20");
@@ -2136,7 +2113,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addComponent(jtfverkauft_ArtikelAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
                                             .addComponent(jtfreserviert_ArtikelAnzeigen)))
                                     .addComponent(jtfbestelltext_ArtikelAnzeigen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(712, Short.MAX_VALUE))))
+                        .addContainerGap(541, Short.MAX_VALUE))))
             .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
@@ -2153,7 +2130,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jtfartikelname_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         ArtikelAnzeigeLayout.setVerticalGroup(
             ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2216,7 +2193,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbbearbeiten_ArtikelAnzeigen)
                     .addComponent(jbabbrechen_ArtikelAnzeigen)
                     .addComponent(jbSpeichern_ArtikelAnzeigen))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelAnzeige, "card4");
@@ -2354,7 +2331,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addComponent(jtfverkauft_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
                                             .addComponent(jtfreserviert_ArtikelAnlegen)))
                                     .addComponent(jtfbestelltext_ArtikelAnlegen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(711, Short.MAX_VALUE))))
+                        .addContainerGap(540, Short.MAX_VALUE))))
             .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
@@ -2369,7 +2346,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 940, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         ArtikelAnlegenLayout.setVerticalGroup(
             ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2432,7 +2409,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_ArtikelAnlegen)
                     .addComponent(jbAbbrechen_ArtikelAnlegen))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelAnlegen, "card6");
@@ -2498,7 +2475,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBearbeiten_ArtikelBearbeiten)
                     .addComponent(jbAbbrechen_ArtikelBearbeiten))
-                .addContainerGap(608, Short.MAX_VALUE))
+                .addContainerGap(529, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelBearbeiten, "card7");
@@ -2609,7 +2586,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_ArtikelSuche)
                     .addComponent(jbAbbrechen_ArtikelSuche))
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelSuche, "card5");
@@ -2640,7 +2617,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(297, 297, 297)
                         .addComponent(jLabel10))
                     .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         LieferantAnzeigenLayout.setVerticalGroup(
             LieferantAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2651,7 +2628,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(157, 157, 157)
                 .addComponent(jbzurueck_LieferantAnzeigen)
-                .addContainerGap(556, Short.MAX_VALUE))
+                .addContainerGap(477, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantAnzeigen, "card14");
@@ -2945,7 +2922,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jrbLieferadresseidentisch_LieferantAnlegen)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jrbabweichendeLieferadresse_LieferantAnlegen)))
-                        .addGap(0, 831, Short.MAX_VALUE))
+                        .addGap(0, 658, Short.MAX_VALUE))
                     .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                         .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
@@ -2992,7 +2969,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_LieferantAnlegen)
                     .addComponent(jbAbbrechen_LieferantAnlegen))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantAnlegen, "card15");
@@ -3024,7 +3001,7 @@ public class StartAV extends javax.swing.JFrame {
                             .addGroup(LieferantBearbeitenLayout.createSequentialGroup()
                                 .addGap(346, 346, 346)
                                 .addComponent(jLabel12)))
-                        .addGap(0, 692, Short.MAX_VALUE))
+                        .addGap(0, 519, Short.MAX_VALUE))
                     .addComponent(jSeparator18, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3037,7 +3014,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(165, 165, 165)
                 .addComponent(jbzurueck_LieferantBearbeiten)
-                .addContainerGap(544, Short.MAX_VALUE))
+                .addContainerGap(465, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantBearbeiten, "card16");
@@ -3191,7 +3168,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantSuchenLayout.createSequentialGroup()
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(LieferantSuchenLayout.createSequentialGroup()
@@ -3221,7 +3198,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_LieferantSuchen)
                     .addComponent(jbAbbrechen_LieferantSuchen))
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantSuchen, "card12");
@@ -3248,7 +3225,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(KundeAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(zurueck_KundeAnzeigen)
                     .addComponent(jLabel13))
-                .addContainerGap(785, Short.MAX_VALUE))
+                .addContainerGap(612, Short.MAX_VALUE))
             .addGroup(KundeAnzeigenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator19)
@@ -3263,7 +3240,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(191, 191, 191)
                 .addComponent(zurueck_KundeAnzeigen)
-                .addContainerGap(520, Short.MAX_VALUE))
+                .addContainerGap(441, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeAnzeigen, "card17");
@@ -3290,7 +3267,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel14)
                     .addComponent(zurueck_KundeAnlegen))
-                .addContainerGap(779, Short.MAX_VALUE))
+                .addContainerGap(606, Short.MAX_VALUE))
             .addGroup(KundeAnlegenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator20)
@@ -3305,7 +3282,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(184, 184, 184)
                 .addComponent(zurueck_KundeAnlegen)
-                .addContainerGap(526, Short.MAX_VALUE))
+                .addContainerGap(447, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeAnlegen, "card18");
@@ -3337,7 +3314,7 @@ public class StartAV extends javax.swing.JFrame {
                             .addGroup(KundeBearbeitenLayout.createSequentialGroup()
                                 .addGap(283, 283, 283)
                                 .addComponent(jLabel15)))
-                        .addGap(0, 774, Short.MAX_VALUE))
+                        .addGap(0, 601, Short.MAX_VALUE))
                     .addComponent(jSeparator21, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3350,7 +3327,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(179, 179, 179)
                 .addComponent(zurueck_KundeBearbeiten)
-                .addContainerGap(533, Short.MAX_VALUE))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeBearbeiten, "card19");
@@ -3523,7 +3500,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addGroup(KundeSuchenLayout.createSequentialGroup()
                                     .addGap(44, 44, 44)
                                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 421, Short.MAX_VALUE)))
+                        .addGap(0, 248, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KundeSuchenLayout.setVerticalGroup(
@@ -3544,7 +3521,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(KundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_KundeSuchen)
                     .addComponent(jbAbbrechen_KundeSuchen))
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeSuchen, "card13");
@@ -3793,7 +3770,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
                         .addGap(361, 361, 361)
                         .addComponent(jLabel77)))
-                .addContainerGap(421, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
         ZKAnzeigenLayout.setVerticalGroup(
             ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3829,7 +3806,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbSpeichern_ZKAnzeigen)
                     .addComponent(jbAbbrechen_ZKAnzeigen)
                     .addComponent(jbBearbeiten_ZKAnzeigen))
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKAnzeigen, "card21");
@@ -4039,7 +4016,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnlegenLayout.createSequentialGroup()
                         .addGap(281, 281, 281)
                         .addComponent(jLabel78)))
-                .addContainerGap(451, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         ZKAnlegenLayout.setVerticalGroup(
             ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4068,7 +4045,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_ZKAnlegen)
                     .addComponent(jbAbbrechen_ZKAnlegen))
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKAnlegen, "card22");
@@ -4119,7 +4096,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jbBearbeiten_ZKBearbeiten)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jbAbbrechen_ZKBearbeiten)))))
-                .addContainerGap(658, Short.MAX_VALUE))
+                .addContainerGap(485, Short.MAX_VALUE))
         );
         ZKBearbeitenLayout.setVerticalGroup(
             ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4136,7 +4113,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbBearbeiten_ZKBearbeiten)
                     .addComponent(jbAbbrechen_ZKBearbeiten))
-                .addContainerGap(661, Short.MAX_VALUE))
+                .addContainerGap(582, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKBearbeiten, "card23");
@@ -4411,7 +4388,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKSuchenLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
                         .addComponent(jLabel79)))
-                .addGap(0, 514, Short.MAX_VALUE))
+                .addGap(0, 341, Short.MAX_VALUE))
         );
         ZKSuchenLayout.setVerticalGroup(
             ZKSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4503,7 +4480,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKID_suchenLayout.createSequentialGroup()
                         .addGap(301, 301, 301)
                         .addComponent(jLabel80)))
-                .addContainerGap(488, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
         ZKID_suchenLayout.setVerticalGroup(
             ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4528,13 +4505,12 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_ZKIDSuchen)
                     .addComponent(jbAbbrechen_ZKIDSuchen))
-                .addContainerGap(609, Short.MAX_VALUE))
+                .addContainerGap(530, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKID_suchen, "card25");
 
-        desktopPane.add(Ansicht);
-        Ansicht.setBounds(0, 0, 1030, 720);
+        desktopPane.add(Ansicht, "card2");
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
@@ -4785,12 +4761,14 @@ public class StartAV extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(58, Short.MAX_VALUE)
                 .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
         pack();
@@ -6165,26 +6143,6 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfAbschlussdatum_azActionPerformed
 
-    private void jButton5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton5KeyPressed
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jButton5KeyPressed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jRegisterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRegisterKeyPressed
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jRegisterKeyPressed
-
-    private void jRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRegisterMouseClicked
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jRegisterMouseClicked
-
     private void jbanmelden_StartseiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbanmelden_StartseiteActionPerformed
         /* Mechmet Impram
         Hier werden BN und Passwort mit eingelegte Benutzer auf Richtigkeit vergleichen
@@ -6325,7 +6283,6 @@ if(istEingeloggt==true){
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JTextArea jBeschreibung_aa;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -6475,7 +6432,6 @@ if(istEingeloggt==true){
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jRegister;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
