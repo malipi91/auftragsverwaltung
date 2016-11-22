@@ -3486,7 +3486,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel158)
                     .addComponent(jtfStaatRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         jPLieferdaten.setBorder(javax.swing.BorderFactory.createTitledBorder("Lieferdaten"));
@@ -3648,9 +3648,8 @@ public class StartAV extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPLieferdaten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPKontakt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(28, 28, 28)
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(abbrechen_KundeAnlegen)
@@ -5134,14 +5133,14 @@ public class StartAV extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -6211,12 +6210,8 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jcbSuchkriterium_AuftragSuchenActionPerformed
-    
-    private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
-        //Hicran 18.11.2016
-        // Die Daten werden in der Gui-Maske geschrieben und nach bestätigung des Speicher
-        //Buttons werden die Daten in die Datenbank gespeichert
-        Auftragsstatus aStatus = new Auftragsstatus();
+    public void jS(){
+          Auftragsstatus aStatus = new Auftragsstatus();
         String beschreibung = this.jBeschreibung_aa.getText();
         String erfassungsdatum = this.jtfErfassungsdatum_aa.getText();
         String lieferdatum = this.jtfLieferdatum_aa.getText();
@@ -6232,7 +6227,28 @@ public class StartAV extends javax.swing.JFrame {
         }catch (SQLException ex){
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+    }
+    private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
+        //Hicran 18.11.2016
+        // Die Daten werden in der Gui-Maske geschrieben und nach bestätigung des Speicher
+        //Buttons werden die Daten in die Datenbank gespeichert
+//        Auftragsstatus aStatus = new Auftragsstatus();
+//        String beschreibung = this.jBeschreibung_aa.getText();
+//        String erfassungsdatum = this.jtfErfassungsdatum_aa.getText();
+//        String lieferdatum = this.jtfLieferdatum_aa.getText();
+//        String auftragsart = (String)this.jcbAuftragsart.getSelectedItem();
+//        String status  = (String) this.jcbStatus.getSelectedItem();
+//        String abschlussDatum = this.jtfAbschlussdatum_aa.getText();
+//        System.out.println("Result: " + beschreibung + erfassungsdatum  );
+//        Auftrag auftrag = new Auftrag(beschreibung, erfassungsdatum, lieferdatum,
+//        auftragsart, aStatus.ueberfuehreAuftragsStatus(status), abschlussDatum);
+//        try {
+//            DAOAuftrag daoAuftrag = new DAOAuftrag();
+//            daoAuftrag.legeNeueAuftragAn(auftrag);
+//        }catch (SQLException ex){
+//            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    jS();
         
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
