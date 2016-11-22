@@ -235,11 +235,11 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         Startseite = new javax.swing.JPanel();
         jtfBenutzername_Startseite = new javax.swing.JTextField();
+        jpwpasswort_Startseite = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jbanmelden_Startseite = new javax.swing.JButton();
-        jpwpasswort_Startseite = new javax.swing.JPasswordField();
         jSeparator3 = new javax.swing.JSeparator();
         SeiteZwei = new javax.swing.JPanel();
         jifAuftragAnzeigen = new javax.swing.JInternalFrame();
@@ -757,7 +757,9 @@ public class StartAV extends javax.swing.JFrame {
         miZKBearbeiten = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImages(null);
         setMinimumSize(new java.awt.Dimension(1400, 1000));
+        setName("frame1"); // NOI18N
         setPreferredSize(new java.awt.Dimension(1200, 1000));
 
         desktopPane.setInheritsPopupMenu(true);
@@ -765,6 +767,9 @@ public class StartAV extends javax.swing.JFrame {
         Startseite.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         Startseite.setMinimumSize(new java.awt.Dimension(1400, 1000));
         Startseite.setPreferredSize(new java.awt.Dimension(1200, 800));
+        Startseite.setRequestFocusEnabled(false);
+
+        jpwpasswort_Startseite.setText("jPasswordField1");
 
         jLabel3.setText("Passwort");
 
@@ -786,34 +791,34 @@ public class StartAV extends javax.swing.JFrame {
         StartseiteLayout.setHorizontalGroup(
             StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StartseiteLayout.createSequentialGroup()
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 825, Short.MAX_VALUE))
+            .addGroup(StartseiteLayout.createSequentialGroup()
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(StartseiteLayout.createSequentialGroup()
-                        .addGap(331, 331, 331)
+                        .addGap(434, 434, 434)
                         .addComponent(jLabel6))
                     .addGroup(StartseiteLayout.createSequentialGroup()
-                        .addGap(329, 329, 329)
+                        .addGap(357, 357, 357)
                         .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(StartseiteLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(51, 51, 51)
-                                .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jtfBenutzername_Startseite)
-                                    .addComponent(jpwpasswort_Startseite)
-                                    .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))))
-                    .addGroup(StartseiteLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1015, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGap(72, 72, 72)
+                        .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jtfBenutzername_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         StartseiteLayout.setVerticalGroup(
             StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StartseiteLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(27, 27, 27)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
+                .addGap(28, 28, 28)
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jtfBenutzername_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -823,29 +828,27 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbanmelden_Startseite)
-                .addContainerGap(811, Short.MAX_VALUE))
+                .addContainerGap(888, Short.MAX_VALUE))
         );
 
         desktopPane.add(Startseite);
-        Startseite.setBounds(-10, 0, 1170, 1060);
+        Startseite.setBounds(0, 0, 1200, 800);
 
-        SeiteZwei.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
-        SeiteZwei.setMinimumSize(new java.awt.Dimension(1800, 1000));
-        SeiteZwei.setPreferredSize(new java.awt.Dimension(1800, 800));
+        SeiteZwei.setPreferredSize(new java.awt.Dimension(2000, 1100));
 
         javax.swing.GroupLayout SeiteZweiLayout = new javax.swing.GroupLayout(SeiteZwei);
         SeiteZwei.setLayout(SeiteZweiLayout);
         SeiteZweiLayout.setHorizontalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2147483647, 2147483647)
+            .addGap(0, 2000, Short.MAX_VALUE)
         );
         SeiteZweiLayout.setVerticalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2147483647, 2147483647)
+            .addGap(0, 1100, Short.MAX_VALUE)
         );
 
         desktopPane.add(SeiteZwei);
-        SeiteZwei.setBounds(0, 0, 2147483647, 2147483647);
+        SeiteZwei.setBounds(0, 0, 2000, 1100);
 
         jifAuftragAnzeigen.setClosable(true);
         jifAuftragAnzeigen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -3526,7 +3529,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_LieferantSuchen)
                     .addComponent(jbAbbrechen_LieferantSuchen))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(286, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jifLieferantSuchenLayout = new javax.swing.GroupLayout(jifLieferantSuchen.getContentPane());
@@ -3534,18 +3537,16 @@ public class StartAV extends javax.swing.JFrame {
         jifLieferantSuchenLayout.setHorizontalGroup(
             jifLieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jifLieferantSuchenLayout.createSequentialGroup()
-                .addComponent(LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 1014, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 999, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 85, Short.MAX_VALUE))
         );
         jifLieferantSuchenLayout.setVerticalGroup(
             jifLieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jifLieferantSuchenLayout.createSequentialGroup()
-                .addComponent(LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(LieferantSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifLieferantSuchen);
-        jifLieferantSuchen.setBounds(0, 0, 1016, 770);
+        jifLieferantSuchen.setBounds(0, 0, 1100, 780);
 
         jifKundeAnzeigen.setClosable(true);
         jifKundeAnzeigen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -4937,7 +4938,6 @@ public class StartAV extends javax.swing.JFrame {
         jifZKSuchen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         jifZKSuchen.setMinimumSize(new java.awt.Dimension(76, 40));
         jifZKSuchen.setNormalBounds(new java.awt.Rectangle(0, 0, 60, 40));
-        jifZKSuchen.setOpaque(true);
         jifZKSuchen.setPreferredSize(new java.awt.Dimension(1016, 770));
         jifZKSuchen.setVisible(false);
 
@@ -5346,7 +5346,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_ZKIDSuchen)
                     .addComponent(jbAbbrechen_ZKIDSuchen))
-                .addContainerGap(543, Short.MAX_VALUE))
+                .addContainerGap(494, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jifZKID_suchenLayout = new javax.swing.GroupLayout(jifZKID_suchen.getContentPane());
@@ -5613,15 +5613,11 @@ public class StartAV extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1152, Short.MAX_VALUE))
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 933, Short.MAX_VALUE)
-                .addContainerGap(122, Short.MAX_VALUE))
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
         );
 
         pack();
@@ -6608,11 +6604,11 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
         jifAuftragsID_suchen.setVisible(false);
-        Startseite.setVisible(false);        // TODO add your handling code here:
+        Startseite.setVisible(false);        
     }//GEN-LAST:event_zurueck_KundeBearbeitenActionPerformed
 
     private void jtfGPID_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfGPID_azActionPerformed
-        // Hicran Yörük Ersterstellung
+        
     }//GEN-LAST:event_jtfGPID_azActionPerformed
 
     private void jtfAuftragsid_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfAuftragsid_aaActionPerformed
