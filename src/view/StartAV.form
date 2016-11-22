@@ -275,6 +275,12 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1400, 1000]"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1200, 1000]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="menuBar"/>
@@ -298,15 +304,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="desktopPane" min="-2" pref="1034" max="-2" attributes="0"/>
+              <Component id="desktopPane" pref="1152" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="desktopPane" min="-2" pref="721" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="desktopPane" pref="933" max="32767" attributes="0"/>
+              <EmptySpace pref="122" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -317,168 +323,195 @@
         <Property name="inheritsPopupMenu" type="boolean" value="true"/>
       </Properties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Ansicht">
+        <Container class="javax.swing.JPanel" name="Startseite">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1000, 1000]"/>
+              <Dimension value="[2147483647, 2147483647]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1400, 1000]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1200, 800]"/>
             </Property>
           </Properties>
           <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="-10" y="0" width="1170" height="1060"/>
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="Startseite">
-              <Properties>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="null"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new java.awt.Dimension(1200, 900)" type="code"/>
-                </Property>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card9"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="331" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="329" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jtfBenutzername_Startseite" max="32767" attributes="0"/>
-                                              <Component id="jpwpasswort_Startseite" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="jbanmelden_Startseite" alignment="1" pref="150" max="32767" attributes="0"/>
-                                          </Group>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="331" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="329" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jtfBenutzername_Startseite" max="32767" attributes="0"/>
+                                          <Component id="jpwpasswort_Startseite" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jbanmelden_Startseite" alignment="1" pref="150" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jSeparator3" min="-2" pref="1015" max="-2" attributes="0"/>
-                              </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jSeparator3" min="-2" pref="1015" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtfBenutzername_Startseite" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jpwpasswort_Startseite" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jbanmelden_Startseite" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="532" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfBenutzername_Startseite" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jpwpasswort_Startseite" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jbanmelden_Startseite" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="811" max="32767" attributes="0"/>
                   </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JTextField" name="jtfBenutzername_Startseite">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel3">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Passwort"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Benutzername"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel6">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Tahoma" size="24" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Willkommen"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jbanmelden_Startseite">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/view/anmelden.png"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Anmelden"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbanmelden_StartseiteActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JPasswordField" name="jpwpasswort_Startseite">
-                </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator3">
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="SeiteZwei">
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="jtfBenutzername_Startseite">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new java.awt.Dimension(1200, 1200)" type="code"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Passwort"/>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card8"/>
-                </Constraint>
-              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Benutzername"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="24" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Willkommen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jbanmelden_Startseite">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/view/anmelden.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Anmelden"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbanmelden_StartseiteActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="jpwpasswort_Startseite">
+            </Component>
+            <Component class="javax.swing.JSeparator" name="jSeparator3">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="SeiteZwei">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[2147483647, 2147483647]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1800, 1000]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1800, 800]"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="2147483647" height="2147483647"/>
+            </Constraint>
+          </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1034" max="32767" attributes="0"/>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="2147483647" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="2147483647" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifAuftragAnzeigen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 41, 40]"/>
+            </Property>
+            <Property name="opaque" type="boolean" value="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 892]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="AuftragAnzeigen" min="-2" pref="1018" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="721" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="AuftragAnzeigen" alignment="0" pref="856" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="AuftragAnzeigen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card2"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -569,7 +602,7 @@
                               </Group>
                               <Component id="jScrollPane1" min="-2" pref="816" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="206" max="32767" attributes="0"/>
+                          <EmptySpace pref="190" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -663,7 +696,7 @@
                               <Component id="jbBearbeiten_az" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="jbSpeichern_az" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="61" max="32767" attributes="0"/>
+                          <EmptySpace pref="196" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -931,17 +964,57 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifAuftragAnlegen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1200, 1000]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 41, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 1044]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="1000" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Component id="AuftragAnlegen" alignment="0" pref="1000" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="1008" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="AuftragAnlegen" min="-2" pref="683" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="325" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="AuftragAnlegen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new java.awt.Dimension(1200, 800)" type="code"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card10"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -1004,7 +1077,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="109" max="32767" attributes="0"/>
+                          <EmptySpace pref="75" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1054,7 +1127,7 @@
                               <Component id="jbAbbrechen_aa" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jSpeichern_aa" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="51" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1415,22 +1488,53 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifAuftragBearbeiten">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 41, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="AuftragBearbeiten" min="-2" pref="1022" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="AuftragBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="AuftragBearbeiten">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card11"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jSeparator10" alignment="0" pref="1034" max="32767" attributes="0"/>
+                      <Component id="jSeparator10" alignment="0" pref="1022" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -1469,7 +1573,7 @@
                               <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="576" max="32767" attributes="0"/>
+                          <EmptySpace pref="589" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1516,17 +1620,45 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifAuftragSuchen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 41, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="AuftragSuchen" alignment="0" pref="1000" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="AuftragSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="AuftragSuchen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card3"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -1554,11 +1686,11 @@
                                                   </Group>
                                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jftfLieferdatum_AuftragSuche" alignment="1" pref="150" max="32767" attributes="0"/>
+                                                      <Component id="jftfLieferdatum_AuftragSuche" alignment="1" max="32767" attributes="0"/>
                                                       <Component id="jtfLieferantenname_AuftragSuche" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="jftfErfassungsdatum_AuftragSuche" alignment="1" max="32767" attributes="0"/>
                                                       <Component id="jtfAuftragsID_AuftragSuchen" max="32767" attributes="0"/>
-                                                      <Component id="jcbSuchkriterium_AuftragSuchen" max="32767" attributes="0"/>
+                                                      <Component id="jcbSuchkriterium_AuftragSuchen" pref="150" max="32767" attributes="0"/>
                                                       <Component id="jtfKundenName_AuftragSuchen" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="32767" attributes="0"/>
@@ -1606,7 +1738,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="274" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="240" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1672,7 +1804,7 @@
                               <Component id="jbAnzeigen_AuftragSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbZurueck_AutragSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="46" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1910,6 +2042,42 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifAuftragsID_suchen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="AuftragsID_suchen" alignment="0" pref="1000" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="AuftragsID_suchen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="AuftragsID_suchen">
               <Properties>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -1917,11 +2085,6 @@
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card20"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -1970,7 +2133,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="302" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="268" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -2003,7 +2166,7 @@
                               <Component id="jbAbbrechen_AuftragsIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbSuchen_AuftragsIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="491" max="32767" attributes="0"/>
+                          <EmptySpace pref="504" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2096,17 +2259,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifArtikelAnzeige">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ArtikelAnzeige" min="-2" pref="1018" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ArtikelAnzeige" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ArtikelAnzeige">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card4"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -2203,7 +2400,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="541" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2229,7 +2426,7 @@
                                   <Component id="jSeparator5" min="-2" pref="452" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="94" max="32767" attributes="0"/>
+                          <EmptySpace pref="78" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2303,7 +2500,7 @@
                               <Component id="jbabbrechen_ArtikelAnzeigen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbSpeichern_ArtikelAnzeigen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="120" max="32767" attributes="0"/>
+                          <EmptySpace pref="133" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2474,17 +2671,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifArtikelAnlegen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ArtikelAnlegen" alignment="0" pref="1000" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ArtikelAnlegen" min="-2" pref="683" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="51" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ArtikelAnlegen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card6"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -2573,7 +2804,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="540" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2596,7 +2827,7 @@
                               <Component id="jSeparator11" alignment="0" min="-2" pref="452" max="-2" attributes="0"/>
                               <Component id="jSeparator12" alignment="0" min="-2" pref="452" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="94" max="32767" attributes="0"/>
+                          <EmptySpace pref="60" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2671,7 +2902,7 @@
                               <Component id="jbSpeichern_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="120" max="32767" attributes="0"/>
+                          <EmptySpace pref="82" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2834,17 +3065,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifArtikelBearbeiten">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ArtikelBearbeiten" min="-2" pref="1016" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ArtikelBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ArtikelBearbeiten">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card7"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -2892,7 +3157,7 @@
                               <Component id="jbBearbeiten_ArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_ArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="529" max="32767" attributes="0"/>
+                          <EmptySpace pref="542" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2939,6 +3204,42 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifArtikelSuche">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ArtikelSuche" alignment="0" pref="1018" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ArtikelSuche" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ArtikelSuche">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2946,11 +3247,6 @@
                 </Property>
                 <Property name="requestFocusEnabled" type="boolean" value="false"/>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card5"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -3000,7 +3296,7 @@
                               <Component id="jbAnzeigen_ArtikelSuche" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_ArtikelSuche" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="98" max="32767" attributes="0"/>
+                          <EmptySpace pref="111" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3092,17 +3388,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifLieferantAnzeigen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="LieferantAnzeigen" min="-2" pref="1017" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LieferantAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="LieferantAnzeigen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card14"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -3119,7 +3449,7 @@
                               </Group>
                               <Component id="jSeparator16" alignment="0" min="-2" pref="943" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="91" max="32767" attributes="0"/>
+                          <EmptySpace pref="74" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3132,7 +3462,7 @@
                           <Component id="jSeparator16" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                           <Component id="jbzurueck_LieferantAnzeigen" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="477" max="32767" attributes="0"/>
+                          <EmptySpace pref="490" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3161,17 +3491,54 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifLieferantAnlegen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="LieferantAnlegen" min="-2" pref="1019" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="LieferantAnlegen" min="-2" pref="685" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="LieferantAnlegen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card15"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -3202,7 +3569,7 @@
                                           <Component id="jrbabweichendeLieferadresse_LieferantAnlegen" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="878" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -3219,7 +3586,7 @@
                                           <Component id="jbAbbrechen_LieferantAnlegen" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="91" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -3263,7 +3630,7 @@
                               <Component id="jbSpeichern_LieferantAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_LieferantAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="247" max="32767" attributes="0"/>
+                          <EmptySpace pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3752,17 +4119,51 @@
                 </Container>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifLieferantBearbeiten">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="LieferantBearbeiten" min="-2" pref="1017" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LieferantBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="LieferantBearbeiten">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card16"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -3780,7 +4181,7 @@
                                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="519" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="502" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator18" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -3797,7 +4198,7 @@
                           <Component id="jSeparator18" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                           <Component id="jbzurueck_LieferantBearbeiten" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="465" max="32767" attributes="0"/>
+                          <EmptySpace pref="478" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3826,17 +4227,54 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifLieferantSuchen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="LieferantSuchen" min="-2" pref="1014" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="LieferantSuchen" min="-2" pref="687" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="LieferantSuchen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card12"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -3858,7 +4296,7 @@
                                   <Component id="jtfSuchkriterium_LieferantSuchen" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="24" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -3896,7 +4334,7 @@
                               <Component id="jbAnzeigen_LieferantSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_LieferantSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="263" max="32767" attributes="0"/>
+                          <EmptySpace pref="229" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4014,17 +4452,51 @@
                 </Container>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifKundeAnzeigen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="KundeAnzeigen" min="-2" pref="1018" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="KundeAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="KundeAnzeigen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card17"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -4035,7 +4507,7 @@
                               <Component id="zurueck_KundeAnzeigen" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="612" max="32767" attributes="0"/>
+                          <EmptySpace pref="596" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -4053,7 +4525,7 @@
                           <Component id="jSeparator19" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                           <Component id="zurueck_KundeAnzeigen" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="441" max="32767" attributes="0"/>
+                          <EmptySpace pref="454" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4082,17 +4554,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifKundeAnlegen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="KundeAnlegen" min="-2" pref="1017" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="KundeAnlegen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="KundeAnlegen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card18"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -4147,7 +4653,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="90" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -4157,7 +4663,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="139" max="32767" attributes="0"/>
                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="jSeparator20" min="-2" pref="10" max="-2" attributes="0"/>
@@ -4187,7 +4693,6 @@
                               <Component id="abbrechen_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbSpeichern" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="147" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4441,7 +4946,7 @@
                                   <Component id="jLabel158" min="-2" max="-2" attributes="0"/>
                                   <Component id="jtfStaatRG_KundeAnlegen" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="73" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4688,17 +5193,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifKundeBearbeiten">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="KundeBearbeiten" min="-2" pref="1014" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="KundeBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="KundeBearbeiten">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card19"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -4716,7 +5255,7 @@
                                           <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="601" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="581" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator21" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -4733,7 +5272,7 @@
                           <Component id="jSeparator21" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
                           <Component id="zurueck_KundeBearbeiten" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="454" max="32767" attributes="0"/>
+                          <EmptySpace pref="467" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4762,17 +5301,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifKundeSuchen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="KundeSuchen" min="-2" pref="1019" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="KundeSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="KundeSuchen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card13"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -4807,7 +5380,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="248" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="233" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -4834,7 +5407,7 @@
                               <Component id="jbAnzeigen_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="251" max="32767" attributes="0"/>
+                          <EmptySpace pref="264" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4960,17 +5533,51 @@
                 </Container>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifZKAnzeigen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ZKAnzeigen" min="-2" pref="1018" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ZKAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ZKAnzeigen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card21"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -5009,7 +5616,7 @@
                                                       </Group>
                                                       <Component id="jtfLieferzeitSofort_ZKAnzeigen" min="-2" pref="153" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <EmptySpace pref="60" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -5034,7 +5641,7 @@
                                   <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="248" max="32767" attributes="0"/>
+                          <EmptySpace pref="230" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5080,7 +5687,7 @@
                               <Component id="jbAbbrechen_ZKAnzeigen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbBearbeiten_ZKAnzeigen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="246" max="32767" attributes="0"/>
+                          <EmptySpace pref="259" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5437,17 +6044,51 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifZKAnlegen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ZKAnlegen" min="-2" pref="1020" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ZKAnlegen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ZKAnlegen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card22"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -5508,7 +6149,7 @@
                                   <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="278" max="32767" attributes="0"/>
+                          <EmptySpace pref="264" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5543,7 +6184,7 @@
                               <Component id="jbSpeichern_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="204" max="32767" attributes="0"/>
+                          <EmptySpace pref="217" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5845,6 +6486,45 @@
                 </Container>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifZKBearbeiten">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ZKBearbeiten" min="-2" pref="1019" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ZKBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ZKBearbeiten">
               <Properties>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -5857,11 +6537,6 @@
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card23"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -5889,7 +6564,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="485" max="32767" attributes="0"/>
+                          <EmptySpace pref="470" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5910,7 +6585,7 @@
                               <Component id="jbBearbeiten_ZKBearbeiten" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_ZKBearbeiten" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="582" max="32767" attributes="0"/>
+                          <EmptySpace pref="595" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5957,6 +6632,46 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifZKSuchen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[76, 40]"/>
+            </Property>
+            <Property name="normalBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 60, 40]"/>
+            </Property>
+            <Property name="opaque" type="boolean" value="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1016, 770]"/>
+            </Property>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ZKSuchen" min="-2" pref="1014" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ZKSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ZKSuchen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -5964,11 +6679,6 @@
                 </Property>
                 <Property name="requestFocusEnabled" type="boolean" value="false"/>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card24"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -6008,7 +6718,7 @@
                                   <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="341" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="321" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6037,7 +6747,7 @@
                               <Component id="jbAbbrechen_ZKSuchen" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAnzeigen_ZKSuchen" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="270" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6144,17 +6854,42 @@
                 </Container>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifZKID_suchen">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="721"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="ZKID_suchen" min="-2" pref="1017" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ZKID_suchen" alignment="0" pref="685" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="ZKID_suchen">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[1200, 800]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card25"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -6199,7 +6934,7 @@
                                   <Component id="jLabel80" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="315" max="32767" attributes="0"/>
+                          <EmptySpace pref="298" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6229,7 +6964,7 @@
                               <Component id="jbAnzeigen_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="530" max="32767" attributes="0"/>
+                          <EmptySpace pref="543" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
