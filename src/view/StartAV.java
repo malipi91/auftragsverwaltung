@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package auftragsverwaltungssystem;
+package view;
 
 import dao.DAOAuftrag;
 import java.awt.Component;
@@ -753,7 +753,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("Willkommen");
 
-        jbanmelden_Startseite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anmelden.png"))); // NOI18N
+        jbanmelden_Startseite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anmelden.png"))); // NOI18N
         jbanmelden_Startseite.setText("Anmelden");
         jbanmelden_Startseite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -857,7 +857,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_az.setText("Speichern");
         jbSpeichern_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -881,7 +881,7 @@ public class StartAV extends javax.swing.JFrame {
         jTable1.setAutoscrolls(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jbBearbeiten_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_az.setText("Bearbeiten");
         jbBearbeiten_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -889,7 +889,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbZurueck_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbZurueck_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbZurueck_az.setText("Zurück");
         jbZurueck_az.setToolTipText("");
         jbZurueck_az.addActionListener(new java.awt.event.ActionListener() {
@@ -1087,7 +1087,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Auftrag anlegen");
 
-        jbAbbrechen_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_aa.setText("Abbrechen");
         jbAbbrechen_aa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1138,7 +1138,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel18.setText("Artikel-ID:");
 
-        jbLupe_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbLupe_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
 
         jLabel23.setText("Artikelname:");
 
@@ -1363,9 +1363,9 @@ public class StartAV extends javax.swing.JFrame {
         ));
         jScrollPane8.setViewportView(jTable2);
 
-        jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/minus2.png"))); // NOI18N
+        jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/minus2.png"))); // NOI18N
 
-        jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/plus2.png"))); // NOI18N
+        jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/plus2.png"))); // NOI18N
 
         javax.swing.GroupLayout Auftragsposition_AuftragAnlegenLayout = new javax.swing.GroupLayout(Auftragsposition_AuftragAnlegen);
         Auftragsposition_AuftragAnlegen.setLayout(Auftragsposition_AuftragAnlegenLayout);
@@ -1448,7 +1448,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
-        jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jSpeichern_aa.setText("Speichern");
         jSpeichern_aa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1558,7 +1558,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setText("Auftrag Bearbeiten");
 
-        jbAbbrechen_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_AuftragBearbeiten.setText("Abbrechen");
         jbAbbrechen_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1566,7 +1566,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbBearbeiten_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_AuftragBearbeiten.setText("Bearbeiten");
         jbBearbeiten_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1623,7 +1623,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jlAuftragsnr_as.setText("Auftrags-ID:");
 
-        jbZurueck_AutragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbZurueck_AutragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbZurueck_AutragSuchen.setText("Zurück");
         jbZurueck_AutragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1672,7 +1672,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel34.setText("bis");
 
-        jbSuchen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragSuchen.setText("Suchen");
 
         jLabel35.setText("€");
@@ -1788,7 +1788,7 @@ public class StartAV extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jtTabelle_AuftragSuche);
 
-        jbAnzeigen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_AuftragSuchen.setText("Anzeigen");
         jbAnzeigen_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1944,10 +1944,10 @@ public class StartAV extends javax.swing.JFrame {
 
         jcbStatus_AuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erfasst", "freigegeben", "abgeschlossen", "" }));
 
-        jbAbbrechen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_AuftragsIDSuchen.setText("Abbrechen");
 
-        jbSuchen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragsIDSuchen.setText("Suchen");
         jbSuchen_AuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2061,7 +2061,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel42.setText("Artikel-ID:");
 
-        jbbearbeiten_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbbearbeiten_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbbearbeiten_ArtikelAnzeigen.setText("Bearbeiten");
         jbbearbeiten_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2069,7 +2069,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbabbrechen_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbabbrechen_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbabbrechen_ArtikelAnzeigen.setText("Abbrechen");
         jbabbrechen_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2084,7 +2084,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jtfArtikelID_ArtikelAnzeigen.setToolTipText("");
 
-        jbSpeichern_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ArtikelAnzeigen.setText("Speichern");
 
         javax.swing.GroupLayout ArtikelAnzeigeLayout = new javax.swing.GroupLayout(ArtikelAnzeige);
@@ -2252,7 +2252,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel58.setText("%");
 
-        jbAbbrechen_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ArtikelAnlegen.setText("Abbrechen");
         jbAbbrechen_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2264,7 +2264,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel60.setText("Bestellwert (Netto):");
 
-        jbSpeichern_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ArtikelAnlegen.setText("Speichern");
         jbSpeichern_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2465,7 +2465,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel5.setText("Artikel-ID:");
 
-        jbBearbeiten_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ArtikelBearbeiten.setText("Bearbeiten");
         jbBearbeiten_ArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2473,7 +2473,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAbbrechen_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ArtikelBearbeiten.setText("Abbrechen");
         jbAbbrechen_ArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2532,7 +2532,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel57.setText("Artikel-ID:");
 
-        jbAnzeigen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ArtikelSuche.setText("Anzeigen");
         jbAnzeigen_ArtikelSuche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2540,7 +2540,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSuchen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_ArtikelSuche.setText("Suchen");
 
         jt_ArtikelSuche.setModel(new javax.swing.table.DefaultTableModel(
@@ -2578,7 +2578,7 @@ public class StartAV extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jt_ArtikelSuche);
 
-        jbAbbrechen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ArtikelSuche.setText("Abbrechen");
         jbAbbrechen_ArtikelSuche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2643,7 +2643,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setText("Lieferant anzeigen");
 
-        jbzurueck_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbzurueck_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbzurueck_LieferantAnzeigen.setText("Zurück");
         jbzurueck_LieferantAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2685,7 +2685,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setText("Lieferant anlegen");
 
-        jbAbbrechen_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_LieferantAnlegen.setText("Abbrechen");
         jbAbbrechen_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2693,7 +2693,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_LieferantAnlegen.setText("Speichern");
         jbSpeichern_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3026,7 +3026,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setText("Lieferant Bearbeiten");
 
-        jbzurueck_LieferantBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbzurueck_LieferantBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbzurueck_LieferantBearbeiten.setText("Zurück");
         jbzurueck_LieferantBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3071,7 +3071,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel16.setText("Lieferant Suchen");
 
-        jbAbbrechen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_LieferantSuchen.setText("Abbrechen");
         jbAbbrechen_LieferantSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3079,7 +3079,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAnzeigen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_LieferantSuchen.setText("Anzeigen");
         jbAnzeigen_LieferantSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3255,7 +3255,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel13.setText("Kunde anzeigen");
 
-        zurueck_KundeAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        zurueck_KundeAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         zurueck_KundeAnzeigen.setText("Zurück");
         zurueck_KundeAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3297,7 +3297,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel14.setText("Kunde Anlegen");
 
-        abbrechen_KundeAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        abbrechen_KundeAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         abbrechen_KundeAnlegen.setText("Abbrechen");
         abbrechen_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3578,7 +3578,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
-        jbSpeichern.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern.setText("Speichern");
 
         javax.swing.GroupLayout KundeAnlegenLayout = new javax.swing.GroupLayout(KundeAnlegen);
@@ -3664,7 +3664,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel15.setText("Kunde bearbeiten");
 
-        zurueck_KundeBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        zurueck_KundeBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         zurueck_KundeBearbeiten.setText("Zurück");
         zurueck_KundeBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3709,7 +3709,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("Kunde Suchen");
 
-        jbAbbrechen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_KundeSuchen.setText("Abbrechen");
         jbAbbrechen_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3727,7 +3727,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jbSuchen_KundeSuchen.setText("Suchen");
 
-        jbAnzeigen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_KundeSuchen.setText("Anzeigen");
         jbAnzeigen_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3903,7 +3903,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel77.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel77.setText("Zahlungskonditionen Anzeigen");
 
-        jbAbbrechen_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKAnzeigen.setText("Abbrechen");
         jbAbbrechen_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3911,7 +3911,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbBearbeiten_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ZKAnzeigen.setText("Bearbeiten");
         jbBearbeiten_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3919,7 +3919,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ZKAnzeigen.setText("Speichern");
 
         jLabel81.setText("ZK-ID:");
@@ -4088,7 +4088,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jbLupe_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbLupe_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbLupe_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupe_ZKAnzeigenActionPerformed(evt);
@@ -4188,7 +4188,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel78.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel78.setText("Zahlungskonditionen Anlegen");
 
-        jbAbbrechen_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKAnlegen.setText("Abbrechen");
         jbAbbrechen_ZKAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4196,7 +4196,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ZKAnlegen.setText("Speichern");
         jbSpeichern_ZKAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4429,7 +4429,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel76.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel76.setText("Zahlungskonditionen Bearbeiten");
 
-        jbAbbrechen_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKBearbeiten.setText("Abbrechen");
         jbAbbrechen_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4437,7 +4437,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbBearbeiten_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ZKBearbeiten.setText("Bearbeiten");
         jbBearbeiten_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4493,7 +4493,7 @@ public class StartAV extends javax.swing.JFrame {
         ZKSuchen.setPreferredSize(new java.awt.Dimension(1200, 800));
         ZKSuchen.setRequestFocusEnabled(false);
 
-        jbAbbrechen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKSuchen.setText("Abbrechen");
         jbAbbrechen_ZKSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4501,7 +4501,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAnzeigen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ZKSuchen.setText("Anzeigen");
         jbAnzeigen_ZKSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4509,7 +4509,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSuchen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_ZKSuchen.setText("Suchen");
 
         jLabel79.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -4794,7 +4794,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel80.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel80.setText("Zahlungskondition-ID Suchen");
 
-        jbAbbrechen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKIDSuchen.setText("Abbrechen");
         jbAbbrechen_ZKIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4802,7 +4802,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAnzeigen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ZKIDSuchen.setText("Anzeigen");
         jbAnzeigen_ZKIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
