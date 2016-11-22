@@ -297,7 +297,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="58" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="desktopPane" min="-2" pref="1034" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -306,7 +306,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="desktopPane" min="-2" pref="721" max="-2" attributes="0"/>
-              <EmptySpace pref="140" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -429,7 +429,7 @@
                 <Component class="javax.swing.JButton" name="jbanmelden_Startseite">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anmelden.png"/>
+                      <Image iconType="3" name="/view/anmelden.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anmelden"/>
                   </Properties>
@@ -740,7 +740,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern_az">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -818,7 +818,7 @@
                 <Component class="javax.swing.JButton" name="jbBearbeiten_az">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/bearbeiten1.png"/>
+                      <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bearbeiten"/>
                   </Properties>
@@ -829,7 +829,7 @@
                 <Component class="javax.swing.JButton" name="jbZurueck_az">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/zur&#xfc;ck.png"/>
+                      <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Zur&#xfc;ck"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -1071,7 +1071,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_aa">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -1324,7 +1324,7 @@
                     <Component class="javax.swing.JButton" name="jbLupe_AuftragAnlegen">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/auftragsverwaltungssystem/lupe.png"/>
+                          <Image iconType="3" name="/view/lupe.png"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1385,14 +1385,14 @@
                     <Component class="javax.swing.JButton" name="jbMinus_AuftragAnlegen">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/auftragsverwaltungssystem/minus2.png"/>
+                          <Image iconType="3" name="/view/minus2.png"/>
                         </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="jbPlus_AuftragAnlegen">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/auftragsverwaltungssystem/plus2.png"/>
+                          <Image iconType="3" name="/view/plus2.png"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1401,7 +1401,7 @@
                 <Component class="javax.swing.JButton" name="jSpeichern_aa">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -1486,7 +1486,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_AuftragBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -1499,7 +1499,7 @@
                 <Component class="javax.swing.JButton" name="jbBearbeiten_AuftragBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/bearbeiten1.png"/>
+                      <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bearbeiten"/>
                   </Properties>
@@ -1696,7 +1696,7 @@
                 <Component class="javax.swing.JButton" name="jbZurueck_AutragSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/zur&#xfc;ck.png"/>
+                      <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Zur&#xfc;ck"/>
                   </Properties>
@@ -1816,7 +1816,7 @@
                 <Component class="javax.swing.JButton" name="jbSuchen_AuftragSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/lupe.png"/>
+                      <Image iconType="3" name="/view/lupe.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Suchen"/>
                   </Properties>
@@ -1900,7 +1900,7 @@
                 <Component class="javax.swing.JButton" name="jbAnzeigen_AuftragSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anzeigen.png"/>
+                      <Image iconType="3" name="/view/anzeigen.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anzeigen"/>
                   </Properties>
@@ -2078,7 +2078,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_AuftragsIDSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -2086,7 +2086,7 @@
                 <Component class="javax.swing.JButton" name="jbSuchen_AuftragsIDSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/lupe.png"/>
+                      <Image iconType="3" name="/view/lupe.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Suchen"/>
                   </Properties>
@@ -2415,7 +2415,7 @@
                 <Component class="javax.swing.JButton" name="jbbearbeiten_ArtikelAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/bearbeiten1.png"/>
+                      <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bearbeiten"/>
                   </Properties>
@@ -2428,7 +2428,7 @@
                 <Component class="javax.swing.JButton" name="jbabbrechen_ArtikelAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -2467,7 +2467,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern_ArtikelAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -2703,7 +2703,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ArtikelAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -2728,7 +2728,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern_ArtikelAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -2908,7 +2908,7 @@
                 <Component class="javax.swing.JButton" name="jbBearbeiten_ArtikelBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/bearbeiten1.png"/>
+                      <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bearbeiten"/>
                   </Properties>
@@ -2919,7 +2919,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ArtikelBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -3014,7 +3014,7 @@
                 <Component class="javax.swing.JButton" name="jbAnzeigen_ArtikelSuche">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anzeigen.png"/>
+                      <Image iconType="3" name="/view/anzeigen.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anzeigen"/>
                   </Properties>
@@ -3025,7 +3025,7 @@
                 <Component class="javax.swing.JButton" name="jbSuchen_ArtikelSuche">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/lupe.png"/>
+                      <Image iconType="3" name="/view/lupe.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Suchen"/>
                   </Properties>
@@ -3059,7 +3059,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ArtikelSuche">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -3149,7 +3149,7 @@
                 <Component class="javax.swing.JButton" name="jbzurueck_LieferantAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/zur&#xfc;ck.png"/>
+                      <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Zur&#xfc;ck"/>
                   </Properties>
@@ -3280,7 +3280,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_LieferantAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -3293,7 +3293,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern_LieferantAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -3814,7 +3814,7 @@
                 <Component class="javax.swing.JButton" name="jbzurueck_LieferantBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/zur&#xfc;ck.png"/>
+                      <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Zur&#xfc;ck"/>
                   </Properties>
@@ -3913,7 +3913,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_LieferantSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -3926,7 +3926,7 @@
                 <Component class="javax.swing.JButton" name="jbAnzeigen_LieferantSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anzeigen.png"/>
+                      <Image iconType="3" name="/view/anzeigen.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anzeigen"/>
                   </Properties>
@@ -4070,7 +4070,7 @@
                 <Component class="javax.swing.JButton" name="zurueck_KundeAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/zur&#xfc;ck.png"/>
+                      <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Zur&#xfc;ck"/>
                   </Properties>
@@ -4204,7 +4204,7 @@
                 <Component class="javax.swing.JButton" name="abbrechen_KundeAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -4441,7 +4441,7 @@
                                   <Component id="jLabel158" min="-2" max="-2" attributes="0"/>
                                   <Component id="jtfStaatRG_KundeAnlegen" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="72" max="32767" attributes="0"/>
+                              <EmptySpace pref="73" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4681,7 +4681,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -4750,7 +4750,7 @@
                 <Component class="javax.swing.JButton" name="zurueck_KundeBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/zur&#xfc;ck.png"/>
+                      <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Zur&#xfc;ck"/>
                   </Properties>
@@ -4851,7 +4851,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_KundeSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -4890,7 +4890,7 @@
                 <Component class="javax.swing.JButton" name="jbAnzeigen_KundeSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anzeigen.png"/>
+                      <Image iconType="3" name="/view/anzeigen.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anzeigen"/>
                   </Properties>
@@ -5097,7 +5097,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ZKAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -5108,7 +5108,7 @@
                 <Component class="javax.swing.JButton" name="jbBearbeiten_ZKAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/bearbeiten1.png"/>
+                      <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bearbeiten"/>
                   </Properties>
@@ -5121,7 +5121,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern_ZKAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -5428,7 +5428,7 @@
                 <Component class="javax.swing.JButton" name="jbLupe_ZKAnzeigen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/lupe.png"/>
+                      <Image iconType="3" name="/view/lupe.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -5562,7 +5562,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ZKAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -5573,7 +5573,7 @@
                 <Component class="javax.swing.JButton" name="jbSpeichern_ZKAnlegen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/speichern2.png"/>
+                      <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Speichern"/>
                   </Properties>
@@ -5929,7 +5929,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ZKBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -5940,7 +5940,7 @@
                 <Component class="javax.swing.JButton" name="jbBearbeiten_ZKBearbeiten">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/bearbeiten1.png"/>
+                      <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bearbeiten"/>
                   </Properties>
@@ -6046,7 +6046,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ZKSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -6057,7 +6057,7 @@
                 <Component class="javax.swing.JButton" name="jbAnzeigen_ZKSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anzeigen.png"/>
+                      <Image iconType="3" name="/view/anzeigen.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anzeigen"/>
                   </Properties>
@@ -6068,7 +6068,7 @@
                 <Component class="javax.swing.JButton" name="jbSuchen_ZKSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/lupe.png"/>
+                      <Image iconType="3" name="/view/lupe.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Suchen"/>
                   </Properties>
@@ -6248,7 +6248,7 @@
                 <Component class="javax.swing.JButton" name="jbAbbrechen_ZKIDSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/abbruch2.png"/>
+                      <Image iconType="3" name="/view/abbruch2.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Abbrechen"/>
                   </Properties>
@@ -6259,7 +6259,7 @@
                 <Component class="javax.swing.JButton" name="jbAnzeigen_ZKIDSuchen">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/auftragsverwaltungssystem/anzeigen.png"/>
+                      <Image iconType="3" name="/view/anzeigen.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Anzeigen"/>
                   </Properties>
