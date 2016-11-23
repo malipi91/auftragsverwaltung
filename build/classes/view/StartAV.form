@@ -496,7 +496,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragAnzeigen" alignment="0" pref="863" max="32767" attributes="0"/>
+                  <Component id="AuftragAnzeigen" alignment="0" pref="739" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -511,37 +511,33 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator2" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jSeparator2" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jlAuftragsid" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jlGPNr" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jlAuftragswertbrutto_az" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jlAuftragswertnetto_az" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
-                                                  <Component id="titel_az" min="-2" pref="169" max="-2" attributes="0"/>
-                                              </Group>
                                               <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jlAuftragsid" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jlGPNr" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jlAuftragswertbrutto_az" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jlAuftragswertnetto_az" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                                   <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jtfGPID_az" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="jtfGPName_az" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="jtfGPadresse_az" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="jtfGPID_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                          <Component id="jtfGPName_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                          <Component id="jtfGPadresse_az" alignment="0" pref="150" max="32767" attributes="0"/>
                                                           <Component id="jtfAuftragswertbrutto_az" alignment="0" pref="150" max="32767" attributes="0"/>
-                                                          <Component id="jtfAuftragswertnetto_az" max="32767" attributes="0"/>
+                                                          <Component id="jtfAuftragswertnetto_az" pref="150" max="32767" attributes="0"/>
                                                       </Group>
                                                       <Component id="jtfAuftragsid_az" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                       <Group type="102" alignment="1" attributes="0">
                                                           <EmptySpace max="32767" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -579,29 +575,29 @@
                                                       </Group>
                                                   </Group>
                                               </Group>
+                                              <Component id="jlGPadresse_az" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jlGPName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
+                                                  <Component id="titel_az" min="-2" pref="195" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jScrollPane1" alignment="1" min="-2" pref="862" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace min="0" pref="81" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="jlGPadresse_az" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlGPName" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="492" max="-2" attributes="0"/>
+                                  <Component id="jbSpeichern_az" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jbBearbeiten_az" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jbZurueck_az" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jbSpeichern_az" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jbBearbeiten_az" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jbZurueck_az" min="-2" pref="93" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jScrollPane1" min="-2" pref="816" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="192" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -617,51 +613,51 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlAuftragsid" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfAuftragsid_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtfAuftragsid_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jlZKID" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jlGPNr" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jtfGPID_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jtfGPID_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlGPName" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfGPName_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtfGPName_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jlStatus" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlGPadresse_az" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfGPadresse_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtfGPadresse_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jcbAuftragsart_az" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="jcbAuftragsart_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jlAuftragsart" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtfZKID_az" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jcbStatus_az" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtfZKID_az" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jcbStatus_az" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jftfErfassungsdatum_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jftfErfassungsdatum_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jlErfassungsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jftfLieferdatum_az" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlLieferdatum" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jtfAbschlussdatum_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jftfLieferdatum_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jlLieferdatum" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jtfAbschlussdatum_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jlAbschlussdatum" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -671,16 +667,16 @@
                                   <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlAuftragswertbrutto_az" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfAuftragswertbrutto_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtfAuftragswertbrutto_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlAuftragswertnetto_az" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfAuftragswertnetto_az" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtfAuftragswertnetto_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Component id="jlBeschreibung" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jScrollPane2" min="-2" pref="96" max="-2" attributes="0"/>
@@ -694,7 +690,7 @@
                               <Component id="jbBearbeiten_az" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="jbSpeichern_az" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="217" max="32767" attributes="0"/>
+                          <EmptySpace pref="34" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -702,6 +698,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jlAuftragsid">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Auftrags-Nr:"/>
                   </Properties>
                 </Component>
@@ -709,6 +708,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlGPNr">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Gesch&#xe4;ftspartner-ID:"/>
                   </Properties>
                 </Component>
@@ -722,6 +724,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlAuftragsart">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Auftragsart:"/>
                   </Properties>
                 </Component>
@@ -746,6 +751,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlGPName">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Gesch&#xe4;ftspartner-Name:"/>
                   </Properties>
                 </Component>
@@ -753,6 +761,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlErfassungsdatum">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Erfassungsdatum:"/>
                   </Properties>
                 </Component>
@@ -760,6 +771,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlLieferdatum">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lieferdatum:"/>
                   </Properties>
                 </Component>
@@ -770,6 +784,9 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="jbSpeichern_az">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/view/speichern2.png"/>
                     </Property>
@@ -789,14 +806,13 @@
                     <Component class="javax.swing.JTable" name="jTable1">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="6">
-                            <Column editable="true" title="Auftrags-Nr." type="java.lang.Object"/>
-                            <Column editable="true" title="Auftragsart" type="java.lang.Object"/>
-                            <Column editable="true" title="GP-Nr." type="java.lang.Object"/>
-                            <Column editable="true" title="GP-Name" type="java.lang.Object"/>
-                            <Column editable="true" title="Erfassungsdatum" type="java.lang.Object"/>
-                            <Column editable="true" title="Lieferdatum" type="java.lang.Object"/>
-                            <Column editable="true" title="Bestellwert" type="java.lang.Object"/>
+                          <Table columnCount="6" rowCount="6">
+                            <Column editable="true" title="Positionsnr." type="java.lang.Object"/>
+                            <Column editable="true" title="Artikel-ID" type="java.lang.Object"/>
+                            <Column editable="true" title="Artikelname" type="java.lang.Object"/>
+                            <Column editable="true" title="Menge" type="java.lang.Object"/>
+                            <Column editable="true" title="Einzelwert" type="java.lang.Object"/>
+                            <Column editable="true" title="Gesamtwert" type="java.lang.Object"/>
                           </Table>
                         </Property>
                         <Property name="autoscrolls" type="boolean" value="false"/>
@@ -848,6 +864,9 @@
                 </Container>
                 <Component class="javax.swing.JButton" name="jbBearbeiten_az">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/view/bearbeiten1.png"/>
                     </Property>
@@ -859,6 +878,9 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="jbZurueck_az">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/view/zur&#xfc;ck.png"/>
                     </Property>
@@ -872,13 +894,16 @@
                 <Component class="javax.swing.JLabel" name="titel_az">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Tahoma" size="18" style="0"/>
+                      <Font name="Tahoma" size="24" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Auftrag anzeigen"/>
+                    <Property name="text" type="java.lang.String" value="Auftrag Anzeigen"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlGPadresse_az">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Gesch&#xe4;ftspartner Adresse:"/>
                   </Properties>
                 </Component>
@@ -886,6 +911,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlZKID">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Zahlungskondition-ID"/>
                   </Properties>
                 </Component>
@@ -896,6 +924,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlStatus">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Status"/>
                   </Properties>
                 </Component>
@@ -916,6 +947,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlAbschlussdatum">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Abschlussdatum:"/>
                   </Properties>
                 </Component>
@@ -926,6 +960,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlBeschreibung">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Beschreibung:"/>
                   </Properties>
                 </Component>
@@ -946,6 +983,9 @@
                 </Container>
                 <Component class="javax.swing.JLabel" name="jlAuftragswertbrutto_az">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Auftragswert(brutto)"/>
                   </Properties>
                 </Component>
@@ -953,6 +993,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jlAuftragswertnetto_az">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="16" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Auftragswert (netto)"/>
                   </Properties>
                 </Component>
@@ -1125,7 +1168,7 @@
                               <Component id="jbAbbrechen_aa" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jSpeichern_aa" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="48" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1517,7 +1560,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="AuftragBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1646,7 +1689,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragSuchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="AuftragSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2071,7 +2114,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragsID_suchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="AuftragsID_suchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2308,16 +2351,14 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jtfbestelltext_ArtikelAnzeigen" pref="348" max="32767" attributes="0"/>
-                                          <Component id="jtfartikeltext_ArtikelAnzeigen" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="jtfbestelltext_ArtikelAnzeigen" max="32767" attributes="0"/>
+                                      <Component id="jtfartikeltext_ArtikelAnzeigen" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel53" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel55" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="6" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jcbmehrwertsteuer_ArtikelAnzeigen" min="-2" pref="60" max="-2" attributes="0"/>
@@ -2394,7 +2435,7 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="544" max="32767" attributes="0"/>
+                                          <EmptySpace pref="357" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -2442,7 +2483,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="66" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2476,11 +2517,13 @@
                               <Component id="jtfreserviert_ArtikelAnzeigen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" max="-2" attributes="0">
-                              <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jtfzulauf_ArtikelAnzeigen" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jtfverkauft_ArtikelAnzeigen" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jSeparator6" min="-2" pref="13" max="-2" attributes="0"/>
@@ -2889,7 +2932,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ArtikelAnlegen" alignment="0" pref="1024" max="32767" attributes="0"/>
+                  <Component id="ArtikelAnlegen" alignment="0" pref="1000" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -2927,91 +2970,89 @@
                                               <Component id="jbAbbrechen_ArtikelAnlegen" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jtfartikelname_ArtikelAnlegen" pref="150" max="32767" attributes="0"/>
-                                                      <Component id="jtfartikelid_ArtikelAnlegen" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jtfartikelname_ArtikelAnlegen" pref="150" max="32767" attributes="0"/>
+                                                  <Component id="jtfartikelid_ArtikelAnlegen" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="jLabel63" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel71" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="jtfartikeltext_ArtikelAnlegen" alignment="0" pref="348" max="32767" attributes="0"/>
+                                              <Component id="jtfbestelltext_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabel65" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel66" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel72" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
+                                                      <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                              </Group>
-                                              <Component id="jLabel63" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel71" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="jtfartikeltext_ArtikelAnlegen" alignment="0" pref="348" max="32767" attributes="0"/>
-                                                  <Component id="jtfbestelltext_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Component id="jLabel65" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel66" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel72" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
-                                                          <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel67" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jtffrei_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                          <Component id="jtfzulauf_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel67" min="-2" pref="34" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jtffrei_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                                                              <Component id="jtfzulauf_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
+                                                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jLabel68" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                  <Component id="jtfeinzelwertnetto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jLabel170" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                                      <Group type="102" alignment="0" attributes="0">
-                                                                          <Component id="jcbMwst_ArtikelAnlegen" min="-2" pref="60" max="-2" attributes="0"/>
-                                                                          <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="jLabel58" min="-2" pref="14" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                      <Component id="jtfbestellwertnetto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jLabel68" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                              <Component id="jtfeinzelwertnetto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="jLabel170" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Group type="102" alignment="0" attributes="0">
+                                                                      <Component id="jcbMwst_ArtikelAnlegen" min="-2" pref="60" max="-2" attributes="0"/>
+                                                                      <EmptySpace max="-2" attributes="0"/>
+                                                                      <Component id="jLabel58" min="-2" pref="14" max="-2" attributes="0"/>
                                                                   </Group>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jLabel171" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jtfbestellwertnetto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
                                                               </Group>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="jLabel171" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="1" attributes="0">
-                                                              <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jtfverkauft_ArtikelAnlegen" pref="150" max="32767" attributes="0"/>
-                                                          <Component id="jtfreserviert_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jtfeinzelwertbrutto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jLabel172" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jtfbestellwertbrutto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jLabel173" min="-2" pref="61" max="-2" attributes="0"/>
-                                                      </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="jtfverkauft_ArtikelAnlegen" pref="150" max="32767" attributes="0"/>
+                                                      <Component id="jtfreserviert_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jtfeinzelwertbrutto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLabel172" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jtfbestellwertbrutto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLabel173" min="-2" pref="61" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -3463,7 +3504,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ArtikelBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ArtikelBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -3628,7 +3669,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ArtikelSuche" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ArtikelSuche" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -3815,7 +3856,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LieferantAnzeigen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="LieferantAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -3979,7 +4020,7 @@
                                           <Component id="jbAbbrechen_LieferantAnlegen" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="136" max="32767" attributes="0"/>
+                                  <EmptySpace pref="91" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -4023,7 +4064,7 @@
                               <Component id="jbSpeichern_LieferantAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_LieferantAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="132" max="32767" attributes="0"/>
+                          <EmptySpace pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4546,7 +4587,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LieferantBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="LieferantBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4574,7 +4615,7 @@
                                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="504" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="502" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator18" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -4654,7 +4695,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LieferantSuchen" alignment="0" pref="751" max="32767" attributes="0"/>
+                  <Component id="LieferantSuchen" alignment="0" pref="744" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4876,7 +4917,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeAnzeigen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4978,7 +5019,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeAnlegen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeAnlegen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5002,7 +5043,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <EmptySpace min="0" pref="724" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jbSpeichern" min="-2" pref="105" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="abbrechen_KundeAnlegen" min="-2" pref="105" max="-2" attributes="0"/>
@@ -5043,7 +5084,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="55" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -5617,7 +5658,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5645,7 +5686,7 @@
                                           <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="583" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="581" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator21" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -5725,7 +5766,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeSuchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5770,7 +5811,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="235" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="233" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -5957,7 +5998,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKAnzeigen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -6006,7 +6047,7 @@
                                                       </Group>
                                                       <Component id="jtfLieferzeitSofort_ZKAnzeigen" min="-2" pref="153" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="60" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -6031,7 +6072,7 @@
                                   <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="253" max="32767" attributes="0"/>
+                          <EmptySpace pref="231" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6468,7 +6509,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKAnlegen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKAnlegen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -6539,7 +6580,7 @@
                                   <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="306" max="32767" attributes="0"/>
+                          <EmptySpace pref="264" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6910,7 +6951,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -7056,7 +7097,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKSuchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -7107,7 +7148,7 @@
                                   <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="322" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="321" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -7268,7 +7309,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKID_suchen" alignment="0" pref="692" max="32767" attributes="0"/>
+                  <Component id="ZKID_suchen" alignment="0" pref="685" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -7323,7 +7364,7 @@
                                   <Component id="jLabel80" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                          <EmptySpace pref="298" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
