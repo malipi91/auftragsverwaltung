@@ -6,6 +6,7 @@
 package model;
 
 import dao.DAOAdresse;
+import dao.DAOAuftrag;
 import java.sql.SQLException;
 
 /**
@@ -16,9 +17,10 @@ public class test {
     
     
     public static void main(String [ ] args) throws SQLException{
-        Adresse adr = new Adresse();
-        DAOAdresse adresse = new DAOAdresse();
-        adresse.legeNeueAdresseAn(adr);
+        Auftrag adr = new Auftrag();
+        DAOAuftrag adresse = new DAOAuftrag();
+        adr = adresse.erhalteAuftragFuerID("2");
+        System.out.println(adr.getAuftragsart());
     }
     
 }

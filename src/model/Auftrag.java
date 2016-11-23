@@ -22,10 +22,29 @@ public class Auftrag {
     private String abschlussdatum; 
     private Auftragsposition auftragspositionen;
     private Geschaeftspartner geschaeftspartner;
+    private String geschaeftspartnerID;
     
     public Auftrag(){
         
     }
+    public Auftrag(String id, String text, String erfassungsdatum, 
+            String lieferdatum, String auftragsart, int auftragswert, 
+            String status, String abschlussdatum){
+        this.auftrags_ID = id;
+        this.auftragstext = text;
+        this.Erfassungsdatum = erfassungsdatum;
+        this.Lieferdatum = lieferdatum;
+        this.auftragsart = auftragsart;
+        this.auftragswert = auftragswert;
+        this.Status = status;
+        this.abschlussdatum = abschlussdatum;
+        
+    }
+    
+    public void setzeGeschaeftspartnerID(String id){
+        this.geschaeftspartnerID = id;
+    }
+    
     /**
      * Erzeugt ein Instanz von Auftrag, mit eingegangene Daten
      * Hicran
