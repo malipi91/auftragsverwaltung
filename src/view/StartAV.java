@@ -507,25 +507,6 @@ public class StartAV extends javax.swing.JFrame {
         jtfOrtRG_LieferantAnlegen = new javax.swing.JTextField();
         jLabel136 = new javax.swing.JLabel();
         jtfStaatRG_LieferantAnlegen = new javax.swing.JTextField();
-        Lieferdaten_LieferantAnlegen = new javax.swing.JPanel();
-        jLabel140 = new javax.swing.JLabel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jtfStaat2_LieferantAnlegen = new javax.swing.JTextField();
-        jcbAnrede2_LieferantAnlegen = new javax.swing.JComboBox<>();
-        jtfName2_LieferantAnlegen = new javax.swing.JTextField();
-        jtfVorname2_LieferantAnlegen = new javax.swing.JTextField();
-        jtfStraße2_LieferantAnlegen = new javax.swing.JTextField();
-        jtfFirma2_LieferantAnlegen = new javax.swing.JTextField();
-        jtfHNr2_LieferantAnlegen = new javax.swing.JTextField();
-        jtfPlz2_LieferantAnlegen = new javax.swing.JTextField();
-        jtfOrt2_LieferantAnlegen = new javax.swing.JTextField();
-        jrbLieferadresseidentisch_LieferantAnlegen = new javax.swing.JRadioButton();
-        jrbabweichendeLieferadresse_LieferantAnlegen = new javax.swing.JRadioButton();
         Kontakt_LieferantAnlegen = new javax.swing.JPanel();
         jLabel137 = new javax.swing.JLabel();
         jLabel138 = new javax.swing.JLabel();
@@ -768,7 +749,6 @@ public class StartAV extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImages(null);
         setMinimumSize(new java.awt.Dimension(1400, 1000));
-        setPreferredSize(new java.awt.Dimension(1200, 1000));
 
         desktopPane.setInheritsPopupMenu(true);
 
@@ -1018,7 +998,7 @@ public class StartAV extends javax.swing.JFrame {
                                         .addComponent(jlGPNr)
                                         .addComponent(jlAuftragswertbrutto_az)
                                         .addComponent(jlAuftragswertnetto_az))
-                                    .addGap(87, 87, 87)
+                                    .addGap(78, 78, 78)
                                     .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jtfGPID_az, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
@@ -1063,7 +1043,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jcbStatus_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jftfAbschlussdatum_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         AuftragAnzeigenLayout.setVerticalGroup(
             AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2641,6 +2621,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel62.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel62.setText("(Brutto):");
 
+        jtfartikelid_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfartikelid_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfartikelid_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
         jtfartikelid_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -2707,7 +2688,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator13, javax.swing.GroupLayout.DEFAULT_SIZE, 938, Short.MAX_VALUE)
+                        .addComponent(jSeparator13)
                         .addComponent(jSeparator11)
                         .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                             .addContainerGap()
@@ -3134,7 +3115,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(297, 297, 297)
                         .addComponent(jLabel10))
                     .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
         LieferantAnzeigenLayout.setVerticalGroup(
             LieferantAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3145,7 +3126,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(157, 157, 157)
                 .addComponent(jbzurueck_LieferantAnzeigen)
-                .addContainerGap(490, Short.MAX_VALUE))
+                .addContainerGap(556, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jifLieferantAnzeigenLayout = new javax.swing.GroupLayout(jifLieferantAnzeigen.getContentPane());
@@ -3173,9 +3154,10 @@ public class StartAV extends javax.swing.JFrame {
 
         LieferantAnlegen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel11.setText("Lieferant anlegen");
 
+        jbAbbrechen_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_LieferantAnlegen.setText("Abbrechen");
         jbAbbrechen_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -3184,6 +3166,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
+        jbSpeichern_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSpeichern_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_LieferantAnlegen.setText("Speichern");
         jbSpeichern_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -3192,27 +3175,57 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
+        jLabel74.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel74.setText("GP-ID:");
 
+        jtfGPID_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel75.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel75.setText("Kreditlimit");
+
+        jtfKreditlimit_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         Rechnungsdaten_LieferantAnlegen.setBorder(javax.swing.BorderFactory.createTitledBorder("Rechnungsdaten"));
 
+        jLabel130.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel130.setText("Anrede");
 
+        jcbAnredeRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbAnredeRG_LieferantAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Firma", "Frau", "Herr", "" }));
 
+        jLabel131.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel131.setText("Name");
 
+        jLabel132.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel132.setText("Vorname");
 
+        jtfNameRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfVornameRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel133.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel133.setText("Firma");
 
+        jtfFirmaRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel134.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel134.setText("Straße, HNr.");
 
+        jtfStraßeRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfHNrRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel135.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel135.setText("PLZ, Ort");
 
+        jtfPlzRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfOrtRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel136.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel136.setText("Staat");
+
+        jtfStaatRG_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout Rechnungsdaten_LieferantAnlegenLayout = new javax.swing.GroupLayout(Rechnungsdaten_LieferantAnlegen);
         Rechnungsdaten_LieferantAnlegen.setLayout(Rechnungsdaten_LieferantAnlegenLayout);
@@ -3227,12 +3240,12 @@ public class StartAV extends javax.swing.JFrame {
                             .addComponent(jLabel131)
                             .addComponent(jLabel132)
                             .addComponent(jLabel133))
-                        .addGap(38, 38, 38)
+                        .addGap(42, 42, 42)
                         .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfVornameRG_LieferantAnlegen)
-                            .addComponent(jtfNameRG_LieferantAnlegen)
-                            .addComponent(jcbAnredeRG_LieferantAnlegen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jtfFirmaRG_LieferantAnlegen)))
+                            .addComponent(jtfNameRG_LieferantAnlegen, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jtfVornameRG_LieferantAnlegen, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jtfFirmaRG_LieferantAnlegen)
+                            .addComponent(jcbAnredeRG_LieferantAnlegen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createSequentialGroup()
                         .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel134)
@@ -3245,10 +3258,10 @@ public class StartAV extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jtfHNrRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jtfPlzRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtfPlzRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jtfOrtRG_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE))
-                            .addComponent(jtfStaatRG_LieferantAnlegen))))
+                                .addComponent(jtfOrtRG_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
+                            .addComponent(jtfStaatRG_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Rechnungsdaten_LieferantAnlegenLayout.setVerticalGroup(
@@ -3257,149 +3270,52 @@ public class StartAV extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel130)
-                    .addComponent(jcbAnredeRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jcbAnredeRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel131)
-                    .addComponent(jtfNameRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfNameRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel132)
-                    .addComponent(jtfVornameRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfVornameRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel133)
-                    .addComponent(jtfFirmaRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfFirmaRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel134)
-                    .addComponent(jtfStraßeRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfHNrRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfStraßeRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfHNrRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel135)
-                    .addComponent(jtfPlzRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfOrtRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfPlzRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfOrtRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Rechnungsdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel136)
-                    .addComponent(jtfStaatRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfStaatRG_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
 
-        Lieferdaten_LieferantAnlegen.setBorder(javax.swing.BorderFactory.createTitledBorder("Lieferdaten"));
-
-        jLabel140.setText("Anrede");
-        jLabel140.setToolTipText("");
-
-        jLabel141.setText("Name");
-
-        jLabel142.setText("Vorname");
-
-        jLabel143.setText("Firma");
-
-        jLabel144.setText("Straße, HNr.");
-
-        jLabel145.setText("PLZ, Ort");
-
-        jLabel146.setText("Staat");
-
-        jcbAnrede2_LieferantAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "FIrma", "Frau", "Herr" }));
-
-        javax.swing.GroupLayout Lieferdaten_LieferantAnlegenLayout = new javax.swing.GroupLayout(Lieferdaten_LieferantAnlegen);
-        Lieferdaten_LieferantAnlegen.setLayout(Lieferdaten_LieferantAnlegenLayout);
-        Lieferdaten_LieferantAnlegenLayout.setHorizontalGroup(
-            Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lieferdaten_LieferantAnlegenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Lieferdaten_LieferantAnlegenLayout.createSequentialGroup()
-                        .addComponent(jLabel144)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtfStraße2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtfHNr2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Lieferdaten_LieferantAnlegenLayout.createSequentialGroup()
-                        .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel146)
-                            .addComponent(jLabel140)
-                            .addComponent(jLabel141)
-                            .addComponent(jLabel142)
-                            .addComponent(jLabel143)
-                            .addComponent(jLabel145))
-                        .addGap(35, 35, 35)
-                        .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfName2_LieferantAnlegen)
-                            .addComponent(jtfVorname2_LieferantAnlegen)
-                            .addComponent(jtfFirma2_LieferantAnlegen)
-                            .addComponent(jcbAnrede2_LieferantAnlegen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jtfStaat2_LieferantAnlegen)
-                            .addGroup(Lieferdaten_LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jtfPlz2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jtfOrt2_LieferantAnlegen)))))
-                .addContainerGap())
-        );
-        Lieferdaten_LieferantAnlegenLayout.setVerticalGroup(
-            Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lieferdaten_LieferantAnlegenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel140)
-                    .addComponent(jcbAnrede2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel141)
-                    .addComponent(jtfName2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel142)
-                    .addComponent(jtfVorname2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel143)
-                    .addComponent(jtfFirma2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel144)
-                    .addComponent(jtfStraße2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfHNr2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel145)
-                    .addComponent(jtfPlz2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfOrt2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Lieferdaten_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel146)
-                    .addComponent(jtfStaat2_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        buttonGroup2.add(jrbLieferadresseidentisch_LieferantAnlegen);
-        jrbLieferadresseidentisch_LieferantAnlegen.setText("Lieferadresse identisch");
-        jrbLieferadresseidentisch_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrbLieferadresseidentisch_LieferantAnlegenActionPerformed(evt);
-            }
-        });
-
-        buttonGroup2.add(jrbabweichendeLieferadresse_LieferantAnlegen);
-        jrbabweichendeLieferadresse_LieferantAnlegen.setText("abweichende Lieferadresse");
-        jrbabweichendeLieferadresse_LieferantAnlegen.setToolTipText("");
-        jrbabweichendeLieferadresse_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrbabweichendeLieferadresse_LieferantAnlegenActionPerformed(evt);
-            }
-        });
-
         Kontakt_LieferantAnlegen.setBorder(javax.swing.BorderFactory.createTitledBorder("Kontakt"));
 
+        jLabel137.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel137.setText("Telefon:");
 
+        jLabel138.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel138.setText("Telefax:");
 
+        jLabel139.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel139.setText("E-Mail:");
+
+        jtfTel_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfFax_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfEmail_LieferantAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout Kontakt_LieferantAnlegenLayout = new javax.swing.GroupLayout(Kontakt_LieferantAnlegen);
         Kontakt_LieferantAnlegen.setLayout(Kontakt_LieferantAnlegenLayout);
@@ -3413,9 +3329,9 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jLabel138))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtfTel_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                    .addComponent(jtfFax_LieferantAnlegen)
-                    .addComponent(jtfEmail_LieferantAnlegen))
+                    .addComponent(jtfTel_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                    .addComponent(jtfFax_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                    .addComponent(jtfEmail_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                 .addContainerGap())
         );
         Kontakt_LieferantAnlegenLayout.setVerticalGroup(
@@ -3424,16 +3340,16 @@ public class StartAV extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel137)
-                    .addComponent(jtfTel_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfTel_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel138)
-                    .addComponent(jtfFax_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jtfFax_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel139)
-                    .addComponent(jtfEmail_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jtfEmail_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout LieferantAnlegenLayout = new javax.swing.GroupLayout(LieferantAnlegen);
@@ -3441,73 +3357,60 @@ public class StartAV extends javax.swing.JFrame {
         LieferantAnlegenLayout.setHorizontalGroup(
             LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator17))
-            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                         .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                                .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel75)
-                                    .addComponent(jLabel74))
-                                .addGap(56, 56, 56)
-                                .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtfGPID_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                    .addComponent(jtfKreditlimit_LieferantAnlegen)))
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jrbLieferadresseidentisch_LieferantAnlegen)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jrbabweichendeLieferadresse_LieferantAnlegen)))
+                            .addComponent(jLabel75)
+                            .addComponent(jLabel74))
+                        .addGap(56, 56, 56)
+                        .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtfGPID_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(jtfKreditlimit_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                        .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantAnlegenLayout.createSequentialGroup()
+                        .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
+                                .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                                 .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Lieferdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbAbbrechen_LieferantAnlegen)))
-                        .addContainerGap(91, Short.MAX_VALUE))))
+                                .addGap(36, 36, 36)
+                                .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(387, 387, 387))))
             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                .addGap(422, 422, 422)
-                .addComponent(jLabel11)
+                .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LieferantAnlegenLayout.createSequentialGroup()
+                        .addGap(300, 300, 300)
+                        .addComponent(jLabel11))
+                    .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         LieferantAnlegenLayout.setVerticalGroup(
             LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addContainerGap()
                 .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel74)
-                    .addComponent(jtfGPID_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfGPID_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel75)
-                    .addComponent(jtfKreditlimit_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrbLieferadresseidentisch_LieferantAnlegen)
-                    .addComponent(jrbabweichendeLieferadresse_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Lieferdaten_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfKreditlimit_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbSpeichern_LieferantAnlegen)
-                    .addComponent(jbAbbrechen_LieferantAnlegen))
-                .addContainerGap(100, Short.MAX_VALUE))
+                    .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jifLieferantAnlegenLayout = new javax.swing.GroupLayout(jifLieferantAnlegen.getContentPane());
@@ -3515,7 +3418,7 @@ public class StartAV extends javax.swing.JFrame {
         jifLieferantAnlegenLayout.setHorizontalGroup(
             jifLieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jifLieferantAnlegenLayout.createSequentialGroup()
-                .addComponent(LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 1019, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jifLieferantAnlegenLayout.setVerticalGroup(
@@ -4781,7 +4684,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
                         .addGap(361, 361, 361)
                         .addComponent(jLabel77)))
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         ZKAnzeigenLayout.setVerticalGroup(
             ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6484,7 +6387,7 @@ public class StartAV extends javax.swing.JFrame {
 //        AuftragBearbeiten.setVisible(false);
 //        KundeSuchen.setVisible(false);
 //        LieferantSuchen.setVisible(false);
-        LieferantAnlegen.setVisible(true);
+          jifLieferantAnlegen.setVisible(true);
 //        LieferantAnzeigen.setVisible(false);
 //        LieferantBearbeiten.setVisible(false);
 //        KundeAnlegen.setVisible(false);
@@ -6980,16 +6883,6 @@ public class StartAV extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
-    private void jrbLieferadresseidentisch_LieferantAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbLieferadresseidentisch_LieferantAnlegenActionPerformed
-        // Duygu Citak Ersterstellung
-        Lieferdaten_LieferantAnlegen.setVisible(false);
-    }//GEN-LAST:event_jrbLieferadresseidentisch_LieferantAnlegenActionPerformed
-
-    private void jrbabweichendeLieferadresse_LieferantAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbabweichendeLieferadresse_LieferantAnlegenActionPerformed
-        // Duygu Citak Ersterstellung
-        Lieferdaten_LieferantAnlegen.setVisible(true);
-    }//GEN-LAST:event_jrbabweichendeLieferadresse_LieferantAnlegenActionPerformed
-
     private void jbBearbeiten_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AuftragBearbeitenActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
         jifAuftragBearbeiten.setVisible(false);
@@ -7438,7 +7331,6 @@ if(istEingeloggt==true){
     private javax.swing.JPanel LieferantAnzeigen;
     private javax.swing.JPanel LieferantBearbeiten;
     private javax.swing.JPanel LieferantSuchen;
-    private javax.swing.JPanel Lieferdaten_LieferantAnlegen;
     private javax.swing.JPanel Mahnzeit_ZKAnzeigen;
     private javax.swing.JPanel Rechnungsdaten_LieferantAnlegen;
     private javax.swing.JPanel SeiteZwei;
@@ -7501,13 +7393,6 @@ if(istEingeloggt==true){
     private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel140;
-    private javax.swing.JLabel jLabel141;
-    private javax.swing.JLabel jLabel142;
-    private javax.swing.JLabel jLabel143;
-    private javax.swing.JLabel jLabel144;
-    private javax.swing.JLabel jLabel145;
-    private javax.swing.JLabel jLabel146;
     private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
@@ -7722,7 +7607,6 @@ if(istEingeloggt==true){
     private javax.swing.JButton jbbearbeiten_ArtikelAnzeigen;
     private javax.swing.JButton jbzurueck_LieferantAnzeigen;
     private javax.swing.JButton jbzurueck_LieferantBearbeiten;
-    private javax.swing.JComboBox<String> jcbAnrede2_LieferantAnlegen;
     private javax.swing.JComboBox<String> jcbAnredeRG_KundeAnlegen;
     private javax.swing.JComboBox<String> jcbAnredeRG_LieferantAnlegen;
     private javax.swing.JComboBox jcbArtikelID_ArtikelSuche;
@@ -7794,8 +7678,6 @@ if(istEingeloggt==true){
     private javax.swing.JPasswordField jpwpasswort_Startseite;
     private javax.swing.JRadioButton jrbAbweichendeLieferadresse_KundeAnlegen;
     private javax.swing.JRadioButton jrbLieferadresseIdentisch_KundeAnlegen;
-    private javax.swing.JRadioButton jrbLieferadresseidentisch_LieferantAnlegen;
-    private javax.swing.JRadioButton jrbabweichendeLieferadresse_LieferantAnlegen;
     private javax.swing.JTextField jrfTelefax_KundeAnlegen;
     private javax.swing.JTable jtTabelle_AuftragSuche;
     private javax.swing.JTable jt_ArtikelSuche;
@@ -7822,7 +7704,6 @@ if(istEingeloggt==true){
     private javax.swing.JTextField jtfErfassungsdatum_aa;
     private javax.swing.JTextField jtfFax_LieferantAnlegen;
     private javax.swing.JTextField jtfFirma2_KundeAnlegen;
-    private javax.swing.JTextField jtfFirma2_LieferantAnlegen;
     private javax.swing.JTextField jtfFirmaRG_KundeAnlegen;
     private javax.swing.JTextField jtfFirmaRG_LieferantAnlegen;
     private javax.swing.JTextField jtfGPID_KundeAnlegen;
@@ -7833,7 +7714,6 @@ if(istEingeloggt==true){
     private javax.swing.JTextField jtfGPadresse_az;
     private javax.swing.JTextField jtfGPname_aa;
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
-    private javax.swing.JTextField jtfHNr2_LieferantAnlegen;
     private javax.swing.JTextField jtfHNrRG_KundeAnlegen;
     private javax.swing.JTextField jtfHNrRG_LieferantAnlegen;
     private javax.swing.JTextField jtfKreditlimit_KundenAnlegen;
@@ -7858,14 +7738,11 @@ if(istEingeloggt==true){
     private javax.swing.JTextField jtfMenge_AuftragAnlegen;
     private javax.swing.JTextField jtfMinAuftragswert_AuftragSuche;
     private javax.swing.JTextField jtfName2_KundeAnlegen;
-    private javax.swing.JTextField jtfName2_LieferantAnlegen;
     private javax.swing.JTextField jtfNameRG_KundeAnlegen;
     private javax.swing.JTextField jtfNameRG_LieferantAnlegen;
-    private javax.swing.JTextField jtfOrt2_LieferantAnlegen;
     private javax.swing.JTextField jtfOrtRG_KundeAnlegen;
     private javax.swing.JTextField jtfOrtRG_LieferantAnlegen;
     private javax.swing.JTextField jtfPlz2_KundeAnlegen;
-    private javax.swing.JTextField jtfPlz2_LieferantAnlegen;
     private javax.swing.JTextField jtfPlzRG_KundeAnlegen;
     private javax.swing.JTextField jtfPlzRG_LieferantAnlegen;
     private javax.swing.JTextField jtfPositionsID_AuftragAnlegen;
@@ -7881,11 +7758,9 @@ if(istEingeloggt==true){
     private javax.swing.JTextField jtfSperrzeitWunsch_ZKAnlegen;
     private javax.swing.JTextField jtfSperrzeitWunsch_ZKAnzeigen;
     private javax.swing.JTextField jtfStaat2_KundeAnlegen;
-    private javax.swing.JTextField jtfStaat2_LieferantAnlegen;
     private javax.swing.JTextField jtfStaatRG_KundeAnlegen;
     private javax.swing.JTextField jtfStaatRG_LieferantAnlegen;
     private javax.swing.JTextField jtfStraße2_KundeAnlegen;
-    private javax.swing.JTextField jtfStraße2_LieferantAnlegen;
     private javax.swing.JTextField jtfStraßeRG_KundeAnlegen;
     private javax.swing.JTextField jtfStraßeRG_LieferantAnlegen;
     private javax.swing.JTextField jtfSuchkriterium_KundeSuchen;
@@ -7894,7 +7769,6 @@ if(istEingeloggt==true){
     private javax.swing.JTextField jtfTel_LieferantAnlegen;
     private javax.swing.JTextField jtfTelefon_KundeAnlegen;
     private javax.swing.JTextField jtfVorname2_KundeAnlegen;
-    private javax.swing.JTextField jtfVorname2_LieferantAnlegen;
     private javax.swing.JTextField jtfVornameRG_KundeAnlegen;
     private javax.swing.JTextField jtfVornameRG_LieferantAnlegen;
     private javax.swing.JTextField jtfZKID_ZKAnlegen;
