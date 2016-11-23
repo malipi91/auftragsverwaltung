@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package auftragsverwaltungssystem;
+package view;
 
 import dao.DAOAuftrag;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
@@ -34,9 +36,18 @@ import model.Auftragsstatus;
 //laaalaaaa
 public class StartAV extends javax.swing.JFrame {
 
+    //Hicran passt die Rahmengröße des Fensters an.
+    @Override
+    public void setBounds(int x, int y, int width, int height) {
+        super.setBounds(x, y, 1200, 800); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+
+    
+    
     private final String ABMELDE_TITEL = "ABMELDEN";
     private final String ABMELDE_TEXT = "Möchten Sie wirklich abmelden";
-
+    boolean istEingeloggt = false;
     /**
      * Creates new form StartAV
      */
@@ -148,7 +159,7 @@ public class StartAV extends javax.swing.JFrame {
     public StartAV() {
 
         initComponents();
-        this.jRegister.setVisible(false);
+//        this.jRegister.setVisible(false);
         //Startseite
         // Mechmet Impram
 //Benutzername Feld akzeptiert nur Buchstaben.
@@ -220,6 +231,7 @@ public class StartAV extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         desktopPane = new javax.swing.JDesktopPane();
         Ansicht = new javax.swing.JPanel();
         Startseite = new javax.swing.JPanel();
@@ -230,8 +242,6 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite = new javax.swing.JButton();
         jpwpasswort_Startseite = new javax.swing.JPasswordField();
         jSeparator3 = new javax.swing.JSeparator();
-        jRegister = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
         SeiteZwei = new javax.swing.JPanel();
         AuftragAnzeigen = new javax.swing.JPanel();
         jlAuftragsid = new javax.swing.JLabel();
@@ -285,7 +295,6 @@ public class StartAV extends javax.swing.JFrame {
         jtfLieferdatum_aa = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
-        javax.swing.JButton jSpeichern_aa = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jBeschreibung_aa = new javax.swing.JTextArea();
         jLabel41 = new javax.swing.JLabel();
@@ -310,6 +319,7 @@ public class StartAV extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jbMinus_AuftragAnlegen = new javax.swing.JButton();
         jbPlus_AuftragAnlegen = new javax.swing.JButton();
+        javax.swing.JButton jSpeichern_aa = new javax.swing.JButton();
         AuftragBearbeiten = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jbAbbrechen_AuftragBearbeiten = new javax.swing.JButton();
@@ -497,7 +507,7 @@ public class StartAV extends javax.swing.JFrame {
         jtfOrt2_LieferantAnlegen = new javax.swing.JTextField();
         jrbLieferadresseidentisch_LieferantAnlegen = new javax.swing.JRadioButton();
         jrbabweichendeLieferadresse_LieferantAnlegen = new javax.swing.JRadioButton();
-        jPanel3 = new javax.swing.JPanel();
+        Kontakt_LieferantAnlegen = new javax.swing.JPanel();
         jLabel137 = new javax.swing.JLabel();
         jLabel138 = new javax.swing.JLabel();
         jLabel139 = new javax.swing.JLabel();
@@ -523,8 +533,54 @@ public class StartAV extends javax.swing.JFrame {
         jSeparator19 = new javax.swing.JSeparator();
         KundeAnlegen = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        zurueck_KundeAnlegen = new javax.swing.JButton();
+        abbrechen_KundeAnlegen = new javax.swing.JButton();
         jSeparator20 = new javax.swing.JSeparator();
+        jLabel147 = new javax.swing.JLabel();
+        jtfGPID_KundeAnlegen = new javax.swing.JTextField();
+        jLabel148 = new javax.swing.JLabel();
+        jtfKreditlimit_KundenAnlegen = new javax.swing.JTextField();
+        jrbLieferadresseIdentisch_KundeAnlegen = new javax.swing.JRadioButton();
+        jrbAbweichendeLieferadresse_KundeAnlegen = new javax.swing.JRadioButton();
+        jPKontakt = new javax.swing.JPanel();
+        jLabel149 = new javax.swing.JLabel();
+        jtfTelefon_KundeAnlegen = new javax.swing.JTextField();
+        jLabel150 = new javax.swing.JLabel();
+        jrfTelefax_KundeAnlegen = new javax.swing.JTextField();
+        jLabel151 = new javax.swing.JLabel();
+        jtfEMail_KundeAnlegen = new javax.swing.JTextField();
+        jPRechnungsdaten = new javax.swing.JPanel();
+        jLabel152 = new javax.swing.JLabel();
+        jcbAnredeRG_KundeAnlegen = new javax.swing.JComboBox<>();
+        jLabel153 = new javax.swing.JLabel();
+        jtfNameRG_KundeAnlegen = new javax.swing.JTextField();
+        jLabel154 = new javax.swing.JLabel();
+        jtfVornameRG_KundeAnlegen = new javax.swing.JTextField();
+        jLabel155 = new javax.swing.JLabel();
+        jtfFirmaRG_KundeAnlegen = new javax.swing.JTextField();
+        jLabel156 = new javax.swing.JLabel();
+        jtfStraßeRG_KundeAnlegen = new javax.swing.JTextField();
+        jtfHNrRG_KundeAnlegen = new javax.swing.JTextField();
+        jLabel157 = new javax.swing.JLabel();
+        jtfPlzRG_KundeAnlegen = new javax.swing.JTextField();
+        jtfOrtRG_KundeAnlegen = new javax.swing.JTextField();
+        jLabel158 = new javax.swing.JLabel();
+        jtfStaatRG_KundeAnlegen = new javax.swing.JTextField();
+        jPLieferdaten = new javax.swing.JPanel();
+        jLabel159 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel160 = new javax.swing.JLabel();
+        jtfName2_KundeAnlegen = new javax.swing.JTextField();
+        jLabel161 = new javax.swing.JLabel();
+        jtfVorname2_KundeAnlegen = new javax.swing.JTextField();
+        jLabel162 = new javax.swing.JLabel();
+        jtfFirma2_KundeAnlegen = new javax.swing.JTextField();
+        jLabel163 = new javax.swing.JLabel();
+        jtfStraße2_KundeAnlegen = new javax.swing.JTextField();
+        jLabel164 = new javax.swing.JLabel();
+        jtfPlz2_KundeAnlegen = new javax.swing.JTextField();
+        jLabel165 = new javax.swing.JLabel();
+        jtfStaat2_KundeAnlegen = new javax.swing.JTextField();
+        jbSpeichern = new javax.swing.JButton();
         KundeBearbeiten = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         zurueck_KundeBearbeiten = new javax.swing.JButton();
@@ -682,12 +738,13 @@ public class StartAV extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         desktopPane.setInheritsPopupMenu(true);
+        desktopPane.setLayout(new java.awt.CardLayout());
 
         Ansicht.setMaximumSize(new java.awt.Dimension(1000, 1000));
         Ansicht.setLayout(new java.awt.CardLayout());
 
         Startseite.setMaximumSize(null);
-        Startseite.setPreferredSize(new java.awt.Dimension(1200, 800));
+        Startseite.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jLabel3.setText("Passwort");
 
@@ -696,35 +753,11 @@ public class StartAV extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("Willkommen");
 
-        jbanmelden_Startseite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anmelden.png"))); // NOI18N
+        jbanmelden_Startseite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anmelden.png"))); // NOI18N
         jbanmelden_Startseite.setText("Anmelden");
         jbanmelden_Startseite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbanmelden_StartseiteActionPerformed(evt);
-            }
-        });
-
-        jRegister.setText("jTextField1");
-        jRegister.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jRegisterMouseClicked(evt);
-            }
-        });
-        jRegister.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jRegisterKeyPressed(evt);
-            }
-        });
-
-        jButton5.setText("noch nicht regisitiert?");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jButton5.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jButton5KeyPressed(evt);
             }
         });
 
@@ -747,12 +780,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jtfBenutzername_Startseite)
                                     .addComponent(jpwpasswort_Startseite)
-                                    .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                            .addGroup(StartseiteLayout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton5)))))
+                                    .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))))
                     .addGroup(StartseiteLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1015, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -775,26 +803,22 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbanmelden_Startseite)
-                .addGap(95, 95, 95)
-                .addComponent(jButton5)
-                .addGap(28, 28, 28)
-                .addComponent(jRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(441, Short.MAX_VALUE))
+                .addContainerGap(532, Short.MAX_VALUE))
         );
 
         Ansicht.add(Startseite, "card9");
 
-        SeiteZwei.setPreferredSize(new java.awt.Dimension(1200, 800));
+        SeiteZwei.setPreferredSize(new java.awt.Dimension(1200, 1200));
 
         javax.swing.GroupLayout SeiteZweiLayout = new javax.swing.GroupLayout(SeiteZwei);
         SeiteZwei.setLayout(SeiteZweiLayout);
         SeiteZweiLayout.setHorizontalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1207, Short.MAX_VALUE)
+            .addGap(0, 1034, Short.MAX_VALUE)
         );
         SeiteZweiLayout.setVerticalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 721, Short.MAX_VALUE)
         );
 
         Ansicht.add(SeiteZwei, "card8");
@@ -833,7 +857,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_az.setText("Speichern");
         jbSpeichern_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -857,7 +881,7 @@ public class StartAV extends javax.swing.JFrame {
         jTable1.setAutoscrolls(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jbBearbeiten_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_az.setText("Bearbeiten");
         jbBearbeiten_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -865,7 +889,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbZurueck_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbZurueck_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbZurueck_az.setText("Zurück");
         jbZurueck_az.setToolTipText("");
         jbZurueck_az.addActionListener(new java.awt.event.ActionListener() {
@@ -938,7 +962,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addComponent(jlAbschlussdatum)
                                             .addComponent(jlAuftragsart)
                                             .addComponent(jlStatus))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                                         .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jftfLieferdatum_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jftfErfassungsdatum_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -979,7 +1003,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(379, Short.MAX_VALUE))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
         AuftragAnzeigenLayout.setVerticalGroup(
             AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1053,7 +1077,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragAnzeigen, "card2");
@@ -1063,7 +1087,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Auftrag anlegen");
 
-        jbAbbrechen_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_aa.setText("Abbrechen");
         jbAbbrechen_aa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1098,14 +1122,6 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel25.setText("Beschreibung:");
 
-        jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
-        jSpeichern_aa.setText("Speichern");
-        jSpeichern_aa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSpeichern_aaActionPerformed(evt);
-            }
-        });
-
         jBeschreibung_aa.setColumns(20);
         jBeschreibung_aa.setRows(5);
         jScrollPane5.setViewportView(jBeschreibung_aa);
@@ -1122,7 +1138,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel18.setText("Artikel-ID:");
 
-        jbLupe_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbLupe_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
 
         jLabel23.setText("Artikelname:");
 
@@ -1347,9 +1363,9 @@ public class StartAV extends javax.swing.JFrame {
         ));
         jScrollPane8.setViewportView(jTable2);
 
-        jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/minus2.png"))); // NOI18N
+        jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/minus2.png"))); // NOI18N
 
-        jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/plus2.png"))); // NOI18N
+        jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/plus2.png"))); // NOI18N
 
         javax.swing.GroupLayout Auftragsposition_AuftragAnlegenLayout = new javax.swing.GroupLayout(Auftragsposition_AuftragAnlegen);
         Auftragsposition_AuftragAnlegen.setLayout(Auftragsposition_AuftragAnlegenLayout);
@@ -1432,6 +1448,14 @@ public class StartAV extends javax.swing.JFrame {
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
+        jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
+        jSpeichern_aa.setText("Speichern");
+        jSpeichern_aa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSpeichern_aaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout AuftragAnlegenLayout = new javax.swing.GroupLayout(AuftragAnlegen);
         AuftragAnlegen.setLayout(AuftragAnlegenLayout);
         AuftragAnlegenLayout.setHorizontalGroup(
@@ -1448,7 +1472,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(AuftragAnlegenLayout.createSequentialGroup()
                         .addComponent(jSpeichern_aa)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jbAbbrechen_aa))
                     .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1481,7 +1505,7 @@ public class StartAV extends javax.swing.JFrame {
                                     .addComponent(jtfLieferdatum_aa)
                                     .addComponent(jtfAbschlussdatum_aa)
                                     .addComponent(jcbAuftragsart, 0, 150, Short.MAX_VALUE))))))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         AuftragAnlegenLayout.setVerticalGroup(
             AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1524,7 +1548,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_aa)
                     .addComponent(jSpeichern_aa))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragAnlegen, "card10");
@@ -1534,7 +1558,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setText("Auftrag Bearbeiten");
 
-        jbAbbrechen_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_AuftragBearbeiten.setText("Abbrechen");
         jbAbbrechen_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1542,7 +1566,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbBearbeiten_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_AuftragBearbeiten.setText("Bearbeiten");
         jbBearbeiten_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1556,7 +1580,7 @@ public class StartAV extends javax.swing.JFrame {
         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
         AuftragBearbeitenLayout.setHorizontalGroup(
             AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator10, javax.swing.GroupLayout.DEFAULT_SIZE, 1207, Short.MAX_VALUE)
+            .addComponent(jSeparator10, javax.swing.GroupLayout.DEFAULT_SIZE, 1034, Short.MAX_VALUE)
             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel8))
@@ -1587,7 +1611,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_AuftragBearbeiten)
                     .addComponent(jbBearbeiten_AuftragBearbeiten))
-                .addContainerGap(655, Short.MAX_VALUE))
+                .addContainerGap(576, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragBearbeiten, "card11");
@@ -1599,7 +1623,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jlAuftragsnr_as.setText("Auftrags-ID:");
 
-        jbZurueck_AutragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbZurueck_AutragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbZurueck_AutragSuchen.setText("Zurück");
         jbZurueck_AutragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1648,7 +1672,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel34.setText("bis");
 
-        jbSuchen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragSuchen.setText("Suchen");
 
         jLabel35.setText("€");
@@ -1764,7 +1788,7 @@ public class StartAV extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jtTabelle_AuftragSuche);
 
-        jbAnzeigen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_AuftragSuchen.setText("Anzeigen");
         jbAnzeigen_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1835,7 +1859,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addComponent(jbZurueck_AutragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(4, 4, 4))))))
-                        .addGap(0, 447, Short.MAX_VALUE)))
+                        .addGap(0, 274, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         AuftragSuchenLayout.setVerticalGroup(
@@ -1888,7 +1912,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_AuftragSuchen)
                     .addComponent(jbZurueck_AutragSuchen))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragSuchen, "card3");
@@ -1920,10 +1944,10 @@ public class StartAV extends javax.swing.JFrame {
 
         jcbStatus_AuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erfasst", "freigegeben", "abgeschlossen", "" }));
 
-        jbAbbrechen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_AuftragsIDSuchen.setText("Abbrechen");
 
-        jbSuchen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragsIDSuchen.setText("Suchen");
         jbSuchen_AuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1968,7 +1992,7 @@ public class StartAV extends javax.swing.JFrame {
                                                 .addComponent(jLabel91)
                                                 .addGap(108, 108, 108)
                                                 .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                        .addGap(0, 475, Short.MAX_VALUE)))
+                        .addGap(0, 302, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         AuftragsID_suchenLayout.setVerticalGroup(
@@ -1994,7 +2018,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_AuftragsIDSuchen)
                     .addComponent(jbSuchen_AuftragsIDSuchen))
-                .addContainerGap(570, Short.MAX_VALUE))
+                .addContainerGap(491, Short.MAX_VALUE))
         );
 
         Ansicht.add(AuftragsID_suchen, "card20");
@@ -2037,7 +2061,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel42.setText("Artikel-ID:");
 
-        jbbearbeiten_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbbearbeiten_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbbearbeiten_ArtikelAnzeigen.setText("Bearbeiten");
         jbbearbeiten_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2045,7 +2069,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbabbrechen_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbabbrechen_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbabbrechen_ArtikelAnzeigen.setText("Abbrechen");
         jbabbrechen_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2060,7 +2084,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jtfArtikelID_ArtikelAnzeigen.setToolTipText("");
 
-        jbSpeichern_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ArtikelAnzeigen.setText("Speichern");
 
         javax.swing.GroupLayout ArtikelAnzeigeLayout = new javax.swing.GroupLayout(ArtikelAnzeige);
@@ -2136,7 +2160,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addComponent(jtfverkauft_ArtikelAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
                                             .addComponent(jtfreserviert_ArtikelAnzeigen)))
                                     .addComponent(jtfbestelltext_ArtikelAnzeigen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(712, Short.MAX_VALUE))))
+                        .addContainerGap(541, Short.MAX_VALUE))))
             .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
@@ -2153,7 +2177,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jtfartikelname_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         ArtikelAnzeigeLayout.setVerticalGroup(
             ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2216,7 +2240,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbbearbeiten_ArtikelAnzeigen)
                     .addComponent(jbabbrechen_ArtikelAnzeigen)
                     .addComponent(jbSpeichern_ArtikelAnzeigen))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelAnzeige, "card4");
@@ -2228,7 +2252,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel58.setText("%");
 
-        jbAbbrechen_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ArtikelAnlegen.setText("Abbrechen");
         jbAbbrechen_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2240,7 +2264,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel60.setText("Bestellwert (Netto):");
 
-        jbSpeichern_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ArtikelAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ArtikelAnlegen.setText("Speichern");
         jbSpeichern_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2354,7 +2378,7 @@ public class StartAV extends javax.swing.JFrame {
                                             .addComponent(jtfverkauft_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
                                             .addComponent(jtfreserviert_ArtikelAnlegen)))
                                     .addComponent(jtfbestelltext_ArtikelAnlegen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(711, Short.MAX_VALUE))))
+                        .addContainerGap(540, Short.MAX_VALUE))))
             .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
@@ -2369,7 +2393,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 940, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         ArtikelAnlegenLayout.setVerticalGroup(
             ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2432,7 +2456,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_ArtikelAnlegen)
                     .addComponent(jbAbbrechen_ArtikelAnlegen))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelAnlegen, "card6");
@@ -2441,7 +2465,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel5.setText("Artikel-ID:");
 
-        jbBearbeiten_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ArtikelBearbeiten.setText("Bearbeiten");
         jbBearbeiten_ArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2449,7 +2473,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAbbrechen_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ArtikelBearbeiten.setText("Abbrechen");
         jbAbbrechen_ArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2498,7 +2522,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBearbeiten_ArtikelBearbeiten)
                     .addComponent(jbAbbrechen_ArtikelBearbeiten))
-                .addContainerGap(608, Short.MAX_VALUE))
+                .addContainerGap(529, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelBearbeiten, "card7");
@@ -2508,7 +2532,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel57.setText("Artikel-ID:");
 
-        jbAnzeigen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ArtikelSuche.setText("Anzeigen");
         jbAnzeigen_ArtikelSuche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2516,7 +2540,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSuchen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_ArtikelSuche.setText("Suchen");
 
         jt_ArtikelSuche.setModel(new javax.swing.table.DefaultTableModel(
@@ -2554,7 +2578,7 @@ public class StartAV extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jt_ArtikelSuche);
 
-        jbAbbrechen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ArtikelSuche.setText("Abbrechen");
         jbAbbrechen_ArtikelSuche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2609,7 +2633,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_ArtikelSuche)
                     .addComponent(jbAbbrechen_ArtikelSuche))
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         Ansicht.add(ArtikelSuche, "card5");
@@ -2619,7 +2643,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setText("Lieferant anzeigen");
 
-        jbzurueck_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbzurueck_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbzurueck_LieferantAnzeigen.setText("Zurück");
         jbzurueck_LieferantAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2640,7 +2664,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(297, 297, 297)
                         .addComponent(jLabel10))
                     .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         LieferantAnzeigenLayout.setVerticalGroup(
             LieferantAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2651,7 +2675,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(157, 157, 157)
                 .addComponent(jbzurueck_LieferantAnzeigen)
-                .addContainerGap(556, Short.MAX_VALUE))
+                .addContainerGap(477, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantAnzeigen, "card14");
@@ -2661,7 +2685,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setText("Lieferant anlegen");
 
-        jbAbbrechen_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_LieferantAnlegen.setText("Abbrechen");
         jbAbbrechen_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2669,7 +2693,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_LieferantAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_LieferantAnlegen.setText("Speichern");
         jbSpeichern_LieferantAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2878,7 +2902,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Kontakt"));
+        Kontakt_LieferantAnlegen.setBorder(javax.swing.BorderFactory.createTitledBorder("Kontakt"));
 
         jLabel137.setText("Telefon:");
 
@@ -2886,36 +2910,36 @@ public class StartAV extends javax.swing.JFrame {
 
         jLabel139.setText("E-Mail:");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout Kontakt_LieferantAnlegenLayout = new javax.swing.GroupLayout(Kontakt_LieferantAnlegen);
+        Kontakt_LieferantAnlegen.setLayout(Kontakt_LieferantAnlegenLayout);
+        Kontakt_LieferantAnlegenLayout.setHorizontalGroup(
+            Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Kontakt_LieferantAnlegenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel137)
                     .addComponent(jLabel139)
                     .addComponent(jLabel138))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jtfTel_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                     .addComponent(jtfFax_LieferantAnlegen)
                     .addComponent(jtfEmail_LieferantAnlegen))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        Kontakt_LieferantAnlegenLayout.setVerticalGroup(
+            Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Kontakt_LieferantAnlegenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel137)
                     .addComponent(jtfTel_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel138)
                     .addComponent(jtfFax_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Kontakt_LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel139)
                     .addComponent(jtfEmail_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2945,11 +2969,11 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jrbLieferadresseidentisch_LieferantAnlegen)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jrbabweichendeLieferadresse_LieferantAnlegen)))
-                        .addGap(0, 831, Short.MAX_VALUE))
+                        .addGap(0, 878, Short.MAX_VALUE))
                     .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                         .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2985,14 +3009,14 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jrbabweichendeLieferadresse_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Lieferdaten_LieferantAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_LieferantAnlegen)
                     .addComponent(jbAbbrechen_LieferantAnlegen))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantAnlegen, "card15");
@@ -3002,7 +3026,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setText("Lieferant Bearbeiten");
 
-        jbzurueck_LieferantBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        jbzurueck_LieferantBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbzurueck_LieferantBearbeiten.setText("Zurück");
         jbzurueck_LieferantBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3024,7 +3048,7 @@ public class StartAV extends javax.swing.JFrame {
                             .addGroup(LieferantBearbeitenLayout.createSequentialGroup()
                                 .addGap(346, 346, 346)
                                 .addComponent(jLabel12)))
-                        .addGap(0, 692, Short.MAX_VALUE))
+                        .addGap(0, 519, Short.MAX_VALUE))
                     .addComponent(jSeparator18, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3037,7 +3061,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(165, 165, 165)
                 .addComponent(jbzurueck_LieferantBearbeiten)
-                .addContainerGap(544, Short.MAX_VALUE))
+                .addContainerGap(465, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantBearbeiten, "card16");
@@ -3047,7 +3071,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel16.setText("Lieferant Suchen");
 
-        jbAbbrechen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_LieferantSuchen.setText("Abbrechen");
         jbAbbrechen_LieferantSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3055,7 +3079,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAnzeigen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_LieferantSuchen.setText("Anzeigen");
         jbAnzeigen_LieferantSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3191,7 +3215,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantSuchenLayout.createSequentialGroup()
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(LieferantSuchenLayout.createSequentialGroup()
@@ -3221,7 +3245,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_LieferantSuchen)
                     .addComponent(jbAbbrechen_LieferantSuchen))
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
 
         Ansicht.add(LieferantSuchen, "card12");
@@ -3231,7 +3255,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel13.setText("Kunde anzeigen");
 
-        zurueck_KundeAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        zurueck_KundeAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         zurueck_KundeAnzeigen.setText("Zurück");
         zurueck_KundeAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3248,7 +3272,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(KundeAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(zurueck_KundeAnzeigen)
                     .addComponent(jLabel13))
-                .addContainerGap(785, Short.MAX_VALUE))
+                .addContainerGap(612, Short.MAX_VALUE))
             .addGroup(KundeAnzeigenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator19)
@@ -3263,7 +3287,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(191, 191, 191)
                 .addComponent(zurueck_KundeAnzeigen)
-                .addContainerGap(520, Short.MAX_VALUE))
+                .addContainerGap(441, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeAnzeigen, "card17");
@@ -3271,29 +3295,335 @@ public class StartAV extends javax.swing.JFrame {
         KundeAnlegen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel14.setText("Kunde anlegen");
+        jLabel14.setText("Kunde Anlegen");
 
-        zurueck_KundeAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
-        zurueck_KundeAnlegen.setText("Zurück");
-        zurueck_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+        abbrechen_KundeAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
+        abbrechen_KundeAnlegen.setText("Abbrechen");
+        abbrechen_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                zurueck_KundeAnlegenActionPerformed(evt);
+                abbrechen_KundeAnlegenActionPerformed(evt);
             }
         });
+
+        jLabel147.setText("GP-ID:");
+
+        jtfGPID_KundeAnlegen.setToolTipText("");
+        jtfGPID_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfGPID_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        jLabel148.setText("Kreditlimit:");
+
+        buttonGroup1.add(jrbLieferadresseIdentisch_KundeAnlegen);
+        jrbLieferadresseIdentisch_KundeAnlegen.setText("Lieferadresse identisch");
+        jrbLieferadresseIdentisch_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbLieferadresseIdentisch_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jrbAbweichendeLieferadresse_KundeAnlegen);
+        jrbAbweichendeLieferadresse_KundeAnlegen.setText("abweichende Lieferadresse");
+        jrbAbweichendeLieferadresse_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        jPKontakt.setBorder(javax.swing.BorderFactory.createTitledBorder("Kontakt"));
+
+        jLabel149.setText("Telefon:");
+
+        jtfTelefon_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfTelefon_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        jLabel150.setText("Telefax:");
+
+        jLabel151.setText("E-Mail:");
+
+        javax.swing.GroupLayout jPKontaktLayout = new javax.swing.GroupLayout(jPKontakt);
+        jPKontakt.setLayout(jPKontaktLayout);
+        jPKontaktLayout.setHorizontalGroup(
+            jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPKontaktLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel149)
+                    .addComponent(jLabel150)
+                    .addComponent(jLabel151))
+                .addGap(28, 28, 28)
+                .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .addComponent(jrfTelefax_KundeAnlegen)
+                    .addComponent(jtfEMail_KundeAnlegen))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jPKontaktLayout.setVerticalGroup(
+            jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPKontaktLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel149)
+                    .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel150)
+                    .addComponent(jrfTelefax_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfEMail_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel151))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPRechnungsdaten.setBorder(javax.swing.BorderFactory.createTitledBorder("Rechnungsdaten"));
+
+        jLabel152.setText("Anrede");
+
+        jcbAnredeRG_KundeAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau ", "Herr" }));
+
+        jLabel153.setText("Name:");
+
+        jLabel154.setText("Vorname:");
+
+        jLabel155.setText("Firma:");
+
+        jLabel156.setText("Straße,HNr. :");
+
+        jLabel157.setText("PLZ, Ort:");
+
+        jtfPlzRG_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfPlzRG_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        jtfOrtRG_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfOrtRG_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        jLabel158.setText("Staat:");
+
+        javax.swing.GroupLayout jPRechnungsdatenLayout = new javax.swing.GroupLayout(jPRechnungsdaten);
+        jPRechnungsdaten.setLayout(jPRechnungsdatenLayout);
+        jPRechnungsdatenLayout.setHorizontalGroup(
+            jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPRechnungsdatenLayout.createSequentialGroup()
+                            .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel156)
+                                .addComponent(jLabel157))
+                            .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jtfHNrRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
+                                    .addGap(12, 12, 12)
+                                    .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jtfStaatRG_KundeAnlegen)
+                                        .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
+                                            .addComponent(jtfPlzRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jtfOrtRG_KundeAnlegen))))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPRechnungsdatenLayout.createSequentialGroup()
+                            .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel152)
+                                .addComponent(jLabel153)
+                                .addComponent(jLabel154)
+                                .addComponent(jLabel155))
+                            .addGap(31, 31, 31)
+                            .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jcbAnredeRG_KundeAnlegen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jtfVornameRG_KundeAnlegen)
+                                .addComponent(jtfFirmaRG_KundeAnlegen)
+                                .addComponent(jtfNameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtfStraßeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel158))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPRechnungsdatenLayout.setVerticalGroup(
+            jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel152)
+                    .addComponent(jcbAnredeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel153)
+                    .addComponent(jtfNameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfVornameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel154))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel155)
+                    .addComponent(jtfFirmaRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel156)
+                    .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtfHNrRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfStraßeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel157)
+                    .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtfPlzRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfOrtRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel158)
+                    .addComponent(jtfStaatRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
+        jPLieferdaten.setBorder(javax.swing.BorderFactory.createTitledBorder("Lieferdaten"));
+
+        jLabel159.setText("Anrede");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau", "Herr" }));
+
+        jLabel160.setText("Name:");
+
+        jLabel161.setText("Vorname:");
+
+        jLabel162.setText("Firma:");
+
+        jtfFirma2_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfFirma2_KundeAnlegenActionPerformed(evt);
+            }
+        });
+
+        jLabel163.setText("Straße, HNr. :");
+
+        jLabel164.setText("PLZ, Ort:");
+
+        jLabel165.setText("Staat:");
+
+        javax.swing.GroupLayout jPLieferdatenLayout = new javax.swing.GroupLayout(jPLieferdaten);
+        jPLieferdaten.setLayout(jPLieferdatenLayout);
+        jPLieferdatenLayout.setHorizontalGroup(
+            jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPLieferdatenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPLieferdatenLayout.createSequentialGroup()
+                        .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel159)
+                            .addComponent(jLabel160)
+                            .addComponent(jLabel161)
+                            .addComponent(jLabel162))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jComboBox1, 0, 190, Short.MAX_VALUE)
+                            .addComponent(jtfName2_KundeAnlegen)
+                            .addComponent(jtfVorname2_KundeAnlegen)
+                            .addComponent(jtfFirma2_KundeAnlegen)))
+                    .addGroup(jPLieferdatenLayout.createSequentialGroup()
+                        .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel163)
+                            .addComponent(jLabel164)
+                            .addComponent(jLabel165))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfStraße2_KundeAnlegen)
+                            .addComponent(jtfPlz2_KundeAnlegen)
+                            .addComponent(jtfStaat2_KundeAnlegen))))
+                .addGap(23, 23, 23))
+        );
+        jPLieferdatenLayout.setVerticalGroup(
+            jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPLieferdatenLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel159)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel160)
+                    .addComponent(jtfName2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel161)
+                    .addComponent(jtfVorname2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel162)
+                    .addComponent(jtfFirma2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel163)
+                    .addComponent(jtfStraße2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel164)
+                    .addComponent(jtfPlz2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel165)
+                    .addComponent(jtfStaat2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
+        jbSpeichern.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
+        jbSpeichern.setText("Speichern");
 
         javax.swing.GroupLayout KundeAnlegenLayout = new javax.swing.GroupLayout(KundeAnlegen);
         KundeAnlegen.setLayout(KundeAnlegenLayout);
         KundeAnlegenLayout.setHorizontalGroup(
             KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                .addGap(311, 311, 311)
-                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel14)
-                    .addComponent(zurueck_KundeAnlegen))
-                .addContainerGap(779, Short.MAX_VALUE))
-            .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator20)
+                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator20))
+                    .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                        .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                    .addGap(311, 311, 311)
+                                    .addComponent(jLabel14))
+                                .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                    .addGap(21, 21, 21)
+                                    .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                            .addComponent(jrbLieferadresseIdentisch_KundeAnlegen)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jrbAbweichendeLieferadresse_KundeAnlegen))
+                                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                            .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel148)
+                                                .addComponent(jLabel147))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jtfGPID_KundeAnlegen)
+                                                .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))))
+                                .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jPKontakt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 90, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KundeAnlegenLayout.setVerticalGroup(
@@ -3303,9 +3633,28 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(20, 20, 20)
                 .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(184, 184, 184)
-                .addComponent(zurueck_KundeAnlegen)
-                .addContainerGap(526, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel147)
+                    .addComponent(jtfGPID_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel148)
+                    .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrbLieferadresseIdentisch_KundeAnlegen)
+                    .addComponent(jrbAbweichendeLieferadresse_KundeAnlegen))
+                .addGap(18, 18, 18)
+                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPLieferdaten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(abbrechen_KundeAnlegen)
+                    .addComponent(jbSpeichern))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeAnlegen, "card18");
@@ -3315,7 +3664,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel15.setText("Kunde bearbeiten");
 
-        zurueck_KundeBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/zurück.png"))); // NOI18N
+        zurueck_KundeBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         zurueck_KundeBearbeiten.setText("Zurück");
         zurueck_KundeBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3337,7 +3686,7 @@ public class StartAV extends javax.swing.JFrame {
                             .addGroup(KundeBearbeitenLayout.createSequentialGroup()
                                 .addGap(283, 283, 283)
                                 .addComponent(jLabel15)))
-                        .addGap(0, 774, Short.MAX_VALUE))
+                        .addGap(0, 601, Short.MAX_VALUE))
                     .addComponent(jSeparator21, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3350,7 +3699,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(179, 179, 179)
                 .addComponent(zurueck_KundeBearbeiten)
-                .addContainerGap(533, Short.MAX_VALUE))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeBearbeiten, "card19");
@@ -3360,7 +3709,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("Kunde Suchen");
 
-        jbAbbrechen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_KundeSuchen.setText("Abbrechen");
         jbAbbrechen_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3378,7 +3727,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jbSuchen_KundeSuchen.setText("Suchen");
 
-        jbAnzeigen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_KundeSuchen.setText("Anzeigen");
         jbAnzeigen_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3523,7 +3872,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addGroup(KundeSuchenLayout.createSequentialGroup()
                                     .addGap(44, 44, 44)
                                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 421, Short.MAX_VALUE)))
+                        .addGap(0, 248, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KundeSuchenLayout.setVerticalGroup(
@@ -3544,7 +3893,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(KundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_KundeSuchen)
                     .addComponent(jbAbbrechen_KundeSuchen))
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         Ansicht.add(KundeSuchen, "card13");
@@ -3554,7 +3903,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel77.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel77.setText("Zahlungskonditionen Anzeigen");
 
-        jbAbbrechen_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKAnzeigen.setText("Abbrechen");
         jbAbbrechen_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3562,7 +3911,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbBearbeiten_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ZKAnzeigen.setText("Bearbeiten");
         jbBearbeiten_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3570,7 +3919,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ZKAnzeigen.setText("Speichern");
 
         jLabel81.setText("ZK-ID:");
@@ -3739,7 +4088,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jbLupe_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbLupe_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbLupe_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupe_ZKAnzeigenActionPerformed(evt);
@@ -3793,7 +4142,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
                         .addGap(361, 361, 361)
                         .addComponent(jLabel77)))
-                .addContainerGap(421, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
         ZKAnzeigenLayout.setVerticalGroup(
             ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3829,7 +4178,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbSpeichern_ZKAnzeigen)
                     .addComponent(jbAbbrechen_ZKAnzeigen)
                     .addComponent(jbBearbeiten_ZKAnzeigen))
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKAnzeigen, "card21");
@@ -3839,7 +4188,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel78.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel78.setText("Zahlungskonditionen Anlegen");
 
-        jbAbbrechen_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKAnlegen.setText("Abbrechen");
         jbAbbrechen_ZKAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3847,7 +4196,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSpeichern_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/speichern2.png"))); // NOI18N
+        jbSpeichern_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ZKAnlegen.setText("Speichern");
         jbSpeichern_ZKAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4039,7 +4388,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnlegenLayout.createSequentialGroup()
                         .addGap(281, 281, 281)
                         .addComponent(jLabel78)))
-                .addContainerGap(451, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         ZKAnlegenLayout.setVerticalGroup(
             ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4068,7 +4417,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_ZKAnlegen)
                     .addComponent(jbAbbrechen_ZKAnlegen))
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKAnlegen, "card22");
@@ -4080,7 +4429,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel76.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel76.setText("Zahlungskonditionen Bearbeiten");
 
-        jbAbbrechen_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKBearbeiten.setText("Abbrechen");
         jbAbbrechen_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4088,7 +4437,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbBearbeiten_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ZKBearbeiten.setText("Bearbeiten");
         jbBearbeiten_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4119,7 +4468,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jbBearbeiten_ZKBearbeiten)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jbAbbrechen_ZKBearbeiten)))))
-                .addContainerGap(658, Short.MAX_VALUE))
+                .addContainerGap(485, Short.MAX_VALUE))
         );
         ZKBearbeitenLayout.setVerticalGroup(
             ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4136,7 +4485,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbBearbeiten_ZKBearbeiten)
                     .addComponent(jbAbbrechen_ZKBearbeiten))
-                .addContainerGap(661, Short.MAX_VALUE))
+                .addContainerGap(582, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKBearbeiten, "card23");
@@ -4144,7 +4493,7 @@ public class StartAV extends javax.swing.JFrame {
         ZKSuchen.setPreferredSize(new java.awt.Dimension(1200, 800));
         ZKSuchen.setRequestFocusEnabled(false);
 
-        jbAbbrechen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKSuchen.setText("Abbrechen");
         jbAbbrechen_ZKSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4152,7 +4501,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAnzeigen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ZKSuchen.setText("Anzeigen");
         jbAnzeigen_ZKSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4160,7 +4509,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbSuchen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/lupe.png"))); // NOI18N
+        jbSuchen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_ZKSuchen.setText("Suchen");
 
         jLabel79.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -4411,7 +4760,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKSuchenLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
                         .addComponent(jLabel79)))
-                .addGap(0, 514, Short.MAX_VALUE))
+                .addGap(0, 341, Short.MAX_VALUE))
         );
         ZKSuchenLayout.setVerticalGroup(
             ZKSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4445,7 +4794,7 @@ public class StartAV extends javax.swing.JFrame {
         jLabel80.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel80.setText("Zahlungskondition-ID Suchen");
 
-        jbAbbrechen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/abbruch2.png"))); // NOI18N
+        jbAbbrechen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKIDSuchen.setText("Abbrechen");
         jbAbbrechen_ZKIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4453,7 +4802,7 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        jbAnzeigen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/auftragsverwaltungssystem/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ZKIDSuchen.setText("Anzeigen");
         jbAnzeigen_ZKIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4503,7 +4852,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKID_suchenLayout.createSequentialGroup()
                         .addGap(301, 301, 301)
                         .addComponent(jLabel80)))
-                .addContainerGap(488, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
         ZKID_suchenLayout.setVerticalGroup(
             ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4528,16 +4877,20 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_ZKIDSuchen)
                     .addComponent(jbAbbrechen_ZKIDSuchen))
-                .addContainerGap(609, Short.MAX_VALUE))
+                .addContainerGap(530, Short.MAX_VALUE))
         );
 
         Ansicht.add(ZKID_suchen, "card25");
 
-        desktopPane.add(Ansicht);
-        Ansicht.setBounds(0, 0, 1030, 720);
+        desktopPane.add(Ansicht, "card2");
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
+        jmDatei.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmDateiActionPerformed(evt);
+            }
+        });
 
         miAbmelden.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         miAbmelden.setMnemonic('o');
@@ -4563,6 +4916,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jmAuftrag.setMnemonic('e');
         jmAuftrag.setText("Auftrag");
+        jmAuftrag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmAuftragActionPerformed(evt);
+            }
+        });
 
         miAuftraganzeigen.setText("Anzeigen");
         miAuftraganzeigen.setToolTipText("");
@@ -4596,6 +4954,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jmArtikel.setMnemonic('h');
         jmArtikel.setText("Artikel");
+        jmArtikel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmArtikelActionPerformed(evt);
+            }
+        });
 
         miArtikelanzeigen.setText("Anzeigen");
         miArtikelanzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -4626,6 +4989,11 @@ public class StartAV extends javax.swing.JFrame {
         menuBar.add(jmArtikel);
 
         jmSuche.setText("Suche");
+        jmSuche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmSucheActionPerformed(evt);
+            }
+        });
 
         miAuftragSuche.setText("Auftrag");
         miAuftragSuche.addActionListener(new java.awt.event.ActionListener() {
@@ -4770,7 +5138,9 @@ public class StartAV extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -4783,6 +5153,7 @@ public class StartAV extends javax.swing.JFrame {
     private void miAbmeldenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAbmeldenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+        if(istEingeloggt==true){
         JOptionPane.showMessageDialog(null, ABMELDE_TEXT, ABMELDE_TITEL, JOptionPane.INFORMATION_MESSAGE);
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
@@ -4808,14 +5179,27 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt wird beim abmelden auf false gesetzt.*/
+        /*----------------------------------------------------------*/
+        istEingeloggt=false;
         
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
        
     }//GEN-LAST:event_miAbmeldenActionPerformed
 
     private void miAuftraganzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftraganzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
-
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -4840,12 +5224,19 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
-        
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        }else {
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");    
+        }
     }//GEN-LAST:event_miAuftraganzeigenActionPerformed
 
     private void miAuftragSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftragSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -4870,7 +5261,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
-        
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miAuftragSucheActionPerformed
 
     private void jbBearbeiten_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_azActionPerformed
@@ -4936,6 +5334,7 @@ public class StartAV extends javax.swing.JFrame {
     private void miArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+        if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -4960,11 +5359,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miArtikelSucheActionPerformed
 
     private void miArtikelanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(true);
@@ -4989,11 +5397,19 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
-        
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miArtikelanzeigenActionPerformed
 
     private void miArtikelanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelanlegenActionPerformed
         // TODO add your handling code here:
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(true);
         ArtikelAnzeige.setVisible(false);
@@ -5018,11 +5434,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");       
+        }
     }//GEN-LAST:event_miArtikelanlegenActionPerformed
 
     private void miArtikelbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5047,11 +5472,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miArtikelbearbeitenActionPerformed
 
     private void miAuftraganlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftraganlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5076,12 +5510,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miAuftraganlegenActionPerformed
 
     private void miAuftragbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftragbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran Yörük Erweiterung
-
+    if(istEingeloggt){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5101,11 +5543,20 @@ public class StartAV extends javax.swing.JFrame {
         KundeBearbeiten.setVisible(false);
         Startseite.setVisible(false);
         AuftragsID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miAuftragbearbeitenActionPerformed
 
     private void miLieferantSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5130,6 +5581,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantSucheActionPerformed
 
     private void jbAbbrechen_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_AuftragBearbeitenActionPerformed
@@ -5209,7 +5668,7 @@ public class StartAV extends javax.swing.JFrame {
     private void miKundeSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        
+        if(istEingeloggt == true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5234,11 +5693,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundeSucheActionPerformed
 
     private void miLieferantanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5263,11 +5731,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantanzeigenActionPerformed
 
     private void miLieferantanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5289,16 +5766,26 @@ public class StartAV extends javax.swing.JFrame {
         AuftragsID_suchen.setVisible(false);
         Rechnungsdaten_LieferantAnlegen.setVisible(true);
         Lieferdaten_LieferantAnlegen.setVisible(false);
+        Kontakt_LieferantAnlegen.setVisible(true);
          ZKAnlegen.setVisible(false);
         ZKAnzeigen.setVisible(false);
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantanlegenActionPerformed
 
     private void miLieferantbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5323,11 +5810,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miLieferantbearbeitenActionPerformed
 
     private void miKundeanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5352,11 +5848,20 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundeanzeigenActionPerformed
 
     private void miKundeanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5381,11 +5886,23 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        jPKontakt.setVisible(true);
+        jPRechnungsdaten.setVisible(true);
+        jPLieferdaten.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundeanlegenActionPerformed
 
     private void miKundebearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundebearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5410,6 +5927,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miKundebearbeitenActionPerformed
 
     private void jbZurueck_AutragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbZurueck_AutragSuchenActionPerformed
@@ -5556,7 +6081,7 @@ public class StartAV extends javax.swing.JFrame {
         AuftragsID_suchen.setVisible(false);
     }//GEN-LAST:event_zurueck_KundeAnzeigenActionPerformed
 
-    private void zurueck_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zurueck_KundeAnlegenActionPerformed
+    private void abbrechen_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abbrechen_KundeAnlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
         SeiteZwei.setVisible(true);
@@ -5579,7 +6104,7 @@ public class StartAV extends javax.swing.JFrame {
         Startseite.setVisible(false);       
         AuftragsID_suchen.setVisible(false);
 // TODO add your handling code here:
-    }//GEN-LAST:event_zurueck_KundeAnlegenActionPerformed
+    }//GEN-LAST:event_abbrechen_KundeAnlegenActionPerformed
 
     private void zurueck_KundeBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zurueck_KundeBearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
@@ -5685,12 +6210,8 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jcbSuchkriterium_AuftragSuchenActionPerformed
-    
-    private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
-        //Hicran 18.11.2016
-        // Die Daten werden in der Gui-Maske geschrieben und nach bestätigung des Speicher
-        //Buttons werden die Daten in die Datenbank gespeichert
-        Auftragsstatus aStatus = new Auftragsstatus();
+    public void jS(){
+          Auftragsstatus aStatus = new Auftragsstatus();
         String beschreibung = this.jBeschreibung_aa.getText();
         String erfassungsdatum = this.jtfErfassungsdatum_aa.getText();
         String lieferdatum = this.jtfLieferdatum_aa.getText();
@@ -5706,7 +6227,28 @@ public class StartAV extends javax.swing.JFrame {
         }catch (SQLException ex){
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+    }
+    private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
+        //Hicran 18.11.2016
+        // Die Daten werden in der Gui-Maske geschrieben und nach bestätigung des Speicher
+        //Buttons werden die Daten in die Datenbank gespeichert
+//        Auftragsstatus aStatus = new Auftragsstatus();
+//        String beschreibung = this.jBeschreibung_aa.getText();
+//        String erfassungsdatum = this.jtfErfassungsdatum_aa.getText();
+//        String lieferdatum = this.jtfLieferdatum_aa.getText();
+//        String auftragsart = (String)this.jcbAuftragsart.getSelectedItem();
+//        String status  = (String) this.jcbStatus.getSelectedItem();
+//        String abschlussDatum = this.jtfAbschlussdatum_aa.getText();
+//        System.out.println("Result: " + beschreibung + erfassungsdatum  );
+//        Auftrag auftrag = new Auftrag(beschreibung, erfassungsdatum, lieferdatum,
+//        auftragsart, aStatus.ueberfuehreAuftragsStatus(status), abschlussDatum);
+//        try {
+//            DAOAuftrag daoAuftrag = new DAOAuftrag();
+//            daoAuftrag.legeNeueAuftragAn(auftrag);
+//        }catch (SQLException ex){
+//            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    jS();
         
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
@@ -5744,6 +6286,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void miZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKAnzeigenActionPerformed
         // Hicran Yörük Ersterstellung
+        if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5768,10 +6311,19 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miZKAnzeigenActionPerformed
 
     private void miZKAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKAnlegenActionPerformed
         // Hicran Yörük Ersterstellung
+    if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5796,6 +6348,15 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
+        
     }//GEN-LAST:event_miZKAnlegenActionPerformed
 
     private void jcbDatumAuftragsIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDatumAuftragsIDSuchenActionPerformed
@@ -5816,6 +6377,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void miZKSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKSucheActionPerformed
         // Hicran Yörük Ersterstellung
+        if(istEingeloggt==true){
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5840,12 +6402,21 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(false);
         ZKSuchen.setVisible(true);
         ZKID_suchen.setVisible(false);
-        
+        }
+        //Samet, Variable istEingeloggt, um den Status eingeloggt oder nicht eingeloggt zu erfassen.
+        // Bei istEingeloggt=false wird die unten stehende Fehlermeldung ausgegeben.
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miZKSucheActionPerformed
 
     private void miZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKBearbeitenActionPerformed
+
+        // Hicran Yörük Ersterstellung
+    if(istEingeloggt==true){
+
         // Hicran Yörük Ersterstellung, alle Panels werden versteckt bis auf 
-        //ZKBearbeiten auf sichtbar gesetzt.
+        //ZKBearbeiten auf sichtbar gesetzt
         SeiteZwei.setVisible(false);
         ArtikelAnlegen.setVisible(false);
         ArtikelAnzeige.setVisible(false);
@@ -5870,6 +6441,14 @@ public class StartAV extends javax.swing.JFrame {
         ZKBearbeiten.setVisible(true);
         ZKSuchen.setVisible(false);
         ZKID_suchen.setVisible(false);
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
     }//GEN-LAST:event_miZKBearbeitenActionPerformed
 
     private void jbAbbrechen_ZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKAnzeigenActionPerformed
@@ -5957,26 +6536,6 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfAbschlussdatum_azActionPerformed
 
-    private void jButton5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton5KeyPressed
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jButton5KeyPressed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jRegisterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRegisterKeyPressed
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jRegisterKeyPressed
-
-    private void jRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRegisterMouseClicked
-        // Hicran Yörük Ersterstellung
-        this.jRegister.setVisible(true);
-    }//GEN-LAST:event_jRegisterMouseClicked
-
     private void jbanmelden_StartseiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbanmelden_StartseiteActionPerformed
         /* Mechmet Impram
         Hier werden BN und Passwort mit eingelegte Benutzer auf Richtigkeit vergleichen
@@ -5985,6 +6544,7 @@ public class StartAV extends javax.swing.JFrame {
 
         Startseite.setVisible(false);
         SeiteZwei.setVisible(true);
+        istEingeloggt=true;
     }//GEN-LAST:event_jbanmelden_StartseiteActionPerformed
 
     private void jbSpeichern_LieferantAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_LieferantAnlegenActionPerformed
@@ -6002,6 +6562,79 @@ public class StartAV extends javax.swing.JFrame {
     private void jcbAuftragsartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAuftragsartActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAuftragsartActionPerformed
+
+    private void jmDateiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmDateiActionPerformed
+if(istEingeloggt==true){
+}
+else{
+     JOptionPane.showMessageDialog(null,"Sie müssen eingeloggt sein, um sich abmelden zu können !");
+     }
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jmDateiActionPerformed
+
+    private void jmAuftragActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAuftragActionPerformed
+if(istEingeloggt==true){
+        
+    
+    
+    
+    }/*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_jmAuftragActionPerformed
+
+    private void jmSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmSucheActionPerformed
+    // TODO add your handling code here:
+    
+    if(istEingeloggt==true){
+        
+    }
+    else{
+        
+    }
+    }//GEN-LAST:event_jmSucheActionPerformed
+
+    private void jmArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmArtikelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmArtikelActionPerformed
+
+    private void jtfGPID_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfGPID_KundeAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfGPID_KundeAnlegenActionPerformed
+    /*
+    Duygu Citak
+    */
+    private void jrbLieferadresseIdentisch_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
+        jPLieferdaten.setVisible(false);
+    }//GEN-LAST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
+
+    private void jtfTelefon_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTelefon_KundeAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfTelefon_KundeAnlegenActionPerformed
+
+    private void jtfPlzRG_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPlzRG_KundeAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfPlzRG_KundeAnlegenActionPerformed
+
+    private void jtfOrtRG_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfOrtRG_KundeAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfOrtRG_KundeAnlegenActionPerformed
+
+    private void jtfFirma2_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfFirma2_KundeAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfFirma2_KundeAnlegenActionPerformed
+    /*
+    Duygu Citak 
+    */
+    private void jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
+      jPLieferdaten.setVisible(true);
+    }//GEN-LAST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
     
     
    
@@ -6053,6 +6686,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JPanel AuftragSuchen;
     private javax.swing.JPanel AuftragsID_suchen;
     private javax.swing.JPanel Auftragsposition_AuftragAnlegen;
+    private javax.swing.JPanel Kontakt_LieferantAnlegen;
     private javax.swing.JPanel KundeAnlegen;
     private javax.swing.JPanel KundeAnzeigen;
     private javax.swing.JPanel KundeBearbeiten;
@@ -6072,10 +6706,12 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JPanel ZKBearbeiten;
     private javax.swing.JPanel ZKID_suchen;
     private javax.swing.JPanel ZKSuchen;
+    private javax.swing.JButton abbrechen_KundeAnlegen;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JTextArea jBeschreibung_aa;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -6129,8 +6765,27 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel144;
     private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -6222,10 +6877,11 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
+    private javax.swing.JPanel jPKontakt;
+    private javax.swing.JPanel jPLieferdaten;
+    private javax.swing.JPanel jPRechnungsdaten;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jRegister;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -6295,6 +6951,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JButton jbLupe_ZKAnzeigen;
     private javax.swing.JButton jbMinus_AuftragAnlegen;
     private javax.swing.JButton jbPlus_AuftragAnlegen;
+    private javax.swing.JButton jbSpeichern;
     private javax.swing.JButton jbSpeichern_ArtikelAnlegen;
     private javax.swing.JButton jbSpeichern_ArtikelAnzeigen;
     private javax.swing.JButton jbSpeichern_LieferantAnlegen;
@@ -6314,6 +6971,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JButton jbzurueck_LieferantAnzeigen;
     private javax.swing.JButton jbzurueck_LieferantBearbeiten;
     private javax.swing.JComboBox<String> jcbAnrede2_LieferantAnlegen;
+    private javax.swing.JComboBox<String> jcbAnredeRG_KundeAnlegen;
     private javax.swing.JComboBox<String> jcbAnredeRG_LieferantAnlegen;
     private javax.swing.JComboBox jcbArtikelID_ArtikelSuche;
     private javax.swing.JComboBox<String> jcbAuftragsart;
@@ -6359,8 +7017,11 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JMenu jmSuche;
     private javax.swing.JMenu jmZahlungskondition;
     private javax.swing.JPasswordField jpwpasswort_Startseite;
+    private javax.swing.JRadioButton jrbAbweichendeLieferadresse_KundeAnlegen;
+    private javax.swing.JRadioButton jrbLieferadresseIdentisch_KundeAnlegen;
     private javax.swing.JRadioButton jrbLieferadresseidentisch_LieferantAnlegen;
     private javax.swing.JRadioButton jrbabweichendeLieferadresse_LieferantAnlegen;
+    private javax.swing.JTextField jrfTelefax_KundeAnlegen;
     private javax.swing.JTable jtTabelle_AuftragSuche;
     private javax.swing.JTable jt_ArtikelSuche;
     private javax.swing.JTable jt_KundeSuchen;
@@ -6381,12 +7042,16 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfAuftragswertnetto_az;
     private javax.swing.JTextField jtfBenutzername_Startseite;
     private javax.swing.JTextField jtfDatum_AuftragsIDSuchen;
+    private javax.swing.JTextField jtfEMail_KundeAnlegen;
     private javax.swing.JTextField jtfEinzelwert_AuftragAnlegen;
     private javax.swing.JTextField jtfEmail_LieferantAnlegen;
     private javax.swing.JTextField jtfErfassungsdatum_aa;
     private javax.swing.JTextField jtfFax_LieferantAnlegen;
+    private javax.swing.JTextField jtfFirma2_KundeAnlegen;
     private javax.swing.JTextField jtfFirma2_LieferantAnlegen;
+    private javax.swing.JTextField jtfFirmaRG_KundeAnlegen;
     private javax.swing.JTextField jtfFirmaRG_LieferantAnlegen;
+    private javax.swing.JTextField jtfGPID_KundeAnlegen;
     private javax.swing.JTextField jtfGPID_LieferantAnlegen;
     private javax.swing.JTextField jtfGPID_aa;
     private javax.swing.JTextField jtfGPID_az;
@@ -6395,7 +7060,9 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfGPname_aa;
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
     private javax.swing.JTextField jtfHNr2_LieferantAnlegen;
+    private javax.swing.JTextField jtfHNrRG_KundeAnlegen;
     private javax.swing.JTextField jtfHNrRG_LieferantAnlegen;
+    private javax.swing.JTextField jtfKreditlimit_KundenAnlegen;
     private javax.swing.JTextField jtfKreditlimit_LieferantAnlegen;
     private javax.swing.JTextField jtfKundenName_AuftragSuchen;
     private javax.swing.JTextField jtfKundenname_AuftragsIDSuchen;
@@ -6416,11 +7083,16 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfMaxAuftragswert_AuftragSuche;
     private javax.swing.JTextField jtfMenge_AuftragAnlegen;
     private javax.swing.JTextField jtfMinAuftragswert_AuftragSuche;
+    private javax.swing.JTextField jtfName2_KundeAnlegen;
     private javax.swing.JTextField jtfName2_LieferantAnlegen;
+    private javax.swing.JTextField jtfNameRG_KundeAnlegen;
     private javax.swing.JTextField jtfNameRG_LieferantAnlegen;
     private javax.swing.JTextField jtfOrt2_LieferantAnlegen;
+    private javax.swing.JTextField jtfOrtRG_KundeAnlegen;
     private javax.swing.JTextField jtfOrtRG_LieferantAnlegen;
+    private javax.swing.JTextField jtfPlz2_KundeAnlegen;
     private javax.swing.JTextField jtfPlz2_LieferantAnlegen;
+    private javax.swing.JTextField jtfPlzRG_KundeAnlegen;
     private javax.swing.JTextField jtfPlzRG_LieferantAnlegen;
     private javax.swing.JTextField jtfPositionsID_AuftragAnlegen;
     private javax.swing.JTextField jtfSkontofrist1_ZKAnlegen;
@@ -6434,15 +7106,22 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfSkontozeit1_ZKIDSuchen;
     private javax.swing.JTextField jtfSperrzeitWunsch_ZKAnlegen;
     private javax.swing.JTextField jtfSperrzeitWunsch_ZKAnzeigen;
+    private javax.swing.JTextField jtfStaat2_KundeAnlegen;
     private javax.swing.JTextField jtfStaat2_LieferantAnlegen;
+    private javax.swing.JTextField jtfStaatRG_KundeAnlegen;
     private javax.swing.JTextField jtfStaatRG_LieferantAnlegen;
+    private javax.swing.JTextField jtfStraße2_KundeAnlegen;
     private javax.swing.JTextField jtfStraße2_LieferantAnlegen;
+    private javax.swing.JTextField jtfStraßeRG_KundeAnlegen;
     private javax.swing.JTextField jtfStraßeRG_LieferantAnlegen;
     private javax.swing.JTextField jtfSuchkriterium_KundeSuchen;
     private javax.swing.JTextField jtfSuchkriterium_LieferantSuchen;
     private javax.swing.JTextField jtfSuchkriterium_ZKSuchen;
     private javax.swing.JTextField jtfTel_LieferantAnlegen;
+    private javax.swing.JTextField jtfTelefon_KundeAnlegen;
+    private javax.swing.JTextField jtfVorname2_KundeAnlegen;
     private javax.swing.JTextField jtfVorname2_LieferantAnlegen;
+    private javax.swing.JTextField jtfVornameRG_KundeAnlegen;
     private javax.swing.JTextField jtfVornameRG_LieferantAnlegen;
     private javax.swing.JTextField jtfZKID_ZKAnlegen;
     private javax.swing.JTextField jtfZKID_ZKAnzeigen;
@@ -6497,7 +7176,6 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JMenuItem miZKSuche;
     private javax.swing.JLabel titel_as;
     private javax.swing.JLabel titel_az;
-    private javax.swing.JButton zurueck_KundeAnlegen;
     private javax.swing.JButton zurueck_KundeAnzeigen;
     private javax.swing.JButton zurueck_KundeBearbeiten;
     // End of variables declaration//GEN-END:variables
