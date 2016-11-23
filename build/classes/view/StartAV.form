@@ -2327,9 +2327,9 @@
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jtfbestellwertnetto_ArtikelAnzeigen" min="-2" pref="150" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel167" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -2343,9 +2343,9 @@
                                           <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="jtfeinzelwertnetto_ArtikelAnzeigen" min="-2" pref="150" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel166" min="-2" pref="6" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel166" min="-2" pref="14" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel52" min="-2" max="-2" attributes="0"/>
@@ -2546,6 +2546,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfbestellwertnetto_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2606,6 +2609,9 @@
                         <StringItem index="1" value="7"/>
                         <StringItem index="2" value="19"/>
                       </StringArray>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[37, 25]"/>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[37, 25]"/>
@@ -2673,6 +2679,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfeinzelwertnetto_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2680,6 +2689,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfbestellwertbrutto_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2687,6 +2699,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtffrei_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2694,6 +2709,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfzulauf_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2701,6 +2719,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfartikelname_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2728,6 +2749,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfreserviert_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2755,6 +2779,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfverkauft_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2762,6 +2789,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jtfeinzelwertbrutto_ArtikelAnzeigen">
                   <Properties>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[6, 25]"/>
+                    </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[6, 25]"/>
                     </Property>
@@ -2886,7 +2916,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jSeparator12" alignment="1" min="-2" pref="930" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jSeparator13" alignment="0" pref="932" max="32767" attributes="0"/>
+                                  <Component id="jSeparator13" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator11" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3059,7 +3089,7 @@
                               <Component id="jLabel173" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="jtfbestellwertbrutto_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel72" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jcbMwst_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
