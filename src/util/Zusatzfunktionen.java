@@ -11,4 +11,14 @@ package util;
  */
 public class Zusatzfunktionen {
 
+    public Zusatzfunktionen(){
+        
+    }
+    
+    public String gebeTimestamp(){
+        java.util.Date date = new java.util.Date();
+        java.text.SimpleDateFormat dateformat = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String currentTime = dateformat.format(date);
+        return currentTime;
+    }
 }
