@@ -6,7 +6,6 @@
 package view;
 
 import dao.DAOAuftrag;
-import dao.DAOAuftragsposition;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -19,14 +18,12 @@ import javax.swing.InputVerifier;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 import javax.swing.text.PlainDocument;
 import model.Auftrag;
-import model.Auftragsposition;
 import model.Auftragsstatus;
 
 /**
@@ -44,10 +41,13 @@ public class StartAV extends javax.swing.JFrame {
 //    public void setBounds(int x, int y, int width, int height) {
 //        super.setBounds(x, y, 1200, 800); //To change body of generated methods, choose Tools | Templates.
 //    }
+    
+
+    
+    
     private final String ABMELDE_TITEL = "ABMELDEN";
     private final String ABMELDE_TEXT = "MÃ¶chten Sie wirklich abmelden";
     boolean istEingeloggt = false;
-
     /**
      * Creates new form StartAV
      */
@@ -62,7 +62,6 @@ public class StartAV extends javax.swing.JFrame {
         public sindBErlaubt() {
         }
     }
-
     // Mechmet Impram
     class UniversalDokument extends PlainDocument {
 
@@ -186,9 +185,9 @@ public class StartAV extends javax.swing.JFrame {
         jtfbestellwertnetto_ArtikelAnzeigen.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
         jtfbestellwertbrutto_ArtikelAnzeigen.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
         jtfbestellwertbrutto_ArtikelAnzeigen.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        // Mechmet Impram
+       // Mechmet Impram
         //Artikelanlegen
-        jtfartikelid_ArtikelAnlegen.setDocument(new UniversalDokument(false, true, "", 5));
+             jtfartikelid_ArtikelAnlegen.setDocument(new UniversalDokument(false, true, "", 5));
         jtfartikelname_ArtikelAnlegen.setDocument(new UniversalDokument(true, false, "-. ' ", -1));
         jtffrei_ArtikelAnlegen.setDocument(new UniversalDokument(false, true, "", 5));
         jtfreserviert_ArtikelAnlegen.setDocument(new UniversalDokument(false, true, "", 5));
@@ -213,11 +212,12 @@ public class StartAV extends javax.swing.JFrame {
         jftfErfassungsdatum_AuftragSuche.setFormatterFactory(erstelleMF("##.##.####"));
         jtfMinAuftragswert_AuftragSuche.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
         jtfMinAuftragswert_AuftragSuche.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        jtfMaxAuftragswert_AuftragSuche.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+     jtfMaxAuftragswert_AuftragSuche.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
         jtfMaxAuftragswert_AuftragSuche.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        // Mechmet Impram
+       // Mechmet Impram
         //ArtikelBearbeiten
         jtfartikelid_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+        
 
     }
 
@@ -309,12 +309,16 @@ public class StartAV extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jtfArtikelID_AuftragAnlegen = new javax.swing.JTextField();
         jbLupe_AuftragAnlegen = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jtfArtikelname_AuftragAnlegen = new javax.swing.JTextField();
         jtfMenge_AuftragAnlegen = new javax.swing.JTextField();
         jLabel122 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
         jtfEinzelwert_AuftragAnlegen = new javax.swing.JTextField();
+        jtfGesamtwert_AuftragAnlegen = new javax.swing.JTextField();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jPositionenTabelle = new javax.swing.JTable();
+        jTable2 = new javax.swing.JTable();
         jbMinus_AuftragAnlegen = new javax.swing.JButton();
         jbPlus_AuftragAnlegen = new javax.swing.JButton();
         javax.swing.JButton jSpeichern_aa = new javax.swing.JButton();
@@ -1131,7 +1135,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifAuftragAnzeigenLayout.setVerticalGroup(
             jifAuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 863, Short.MAX_VALUE)
+            .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifAuftragAnzeigen);
@@ -1229,8 +1233,13 @@ public class StartAV extends javax.swing.JFrame {
 
         jbLupe_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
 
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel23.setText("Artikelname:");
+
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel24.setText("Menge");
+
+        jtfArtikelname_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jtfMenge_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfMenge_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -1242,9 +1251,14 @@ public class StartAV extends javax.swing.JFrame {
         jLabel122.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel122.setText("Einzelwert");
 
+        jLabel123.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel123.setText("Gesamtwert:");
+
         jtfEinzelwert_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jPositionenTabelle.setModel(new javax.swing.table.DefaultTableModel(
+        jtfGesamtwert_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -1451,16 +1465,11 @@ public class StartAV extends javax.swing.JFrame {
                 "Positionsnr.", "Artikel-ID", "Artikelname", "Menge", "Einzelwert", "Gesamtwert"
             }
         ));
-        jScrollPane8.setViewportView(jPositionenTabelle);
+        jScrollPane8.setViewportView(jTable2);
 
         jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/minus2.png"))); // NOI18N
 
         jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/plus2.png"))); // NOI18N
-        jbPlus_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbPlus_AuftragAnlegenActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout Auftragsposition_AuftragAnlegenLayout = new javax.swing.GroupLayout(Auftragsposition_AuftragAnlegen);
         Auftragsposition_AuftragAnlegen.setLayout(Auftragsposition_AuftragAnlegenLayout);
@@ -1471,29 +1480,37 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jbMinus_AuftragAnlegen)
                             .addComponent(jbPlus_AuftragAnlegen))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                        .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel18))
-                        .addGap(95, 95, 95)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtfPositionsID_AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .addComponent(jtfArtikelID_AuftragAnlegen))
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel18))
+                                .addGap(95, 95, 95)
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jtfPositionsID_AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(jtfArtikelID_AuftragAnlegen)))
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addGap(95, 95, 95)
+                                .addComponent(jtfArtikelname_AuftragAnlegen)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbLupe_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(75, 75, 75)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel122)
-                            .addComponent(jLabel24))
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel123))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtfMenge_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtfMenge_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(82, 82, 82))))
         );
         Auftragsposition_AuftragAnlegenLayout.setVerticalGroup(
@@ -1501,7 +1518,10 @@ public class StartAV extends javax.swing.JFrame {
             .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbMinus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                        .addComponent(jbPlus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbMinus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1511,22 +1531,25 @@ public class StartAV extends javax.swing.JFrame {
                             .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel18)
-                                .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel122)
-                                .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jbLupe_AuftragAnlegen))
-                        .addGap(43, 43, 43)
-                        .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbPlus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(48, 48, 48))))))
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23)
+                                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jtfArtikelname_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel123))))
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel122)
+                                    .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbLupe_AuftragAnlegen))
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         jSpeichern_aa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
@@ -1583,7 +1606,7 @@ public class StartAV extends javax.swing.JFrame {
                                     .addComponent(jtfAbschlussdatum_aa)
                                     .addComponent(jcbAuftragsart, 0, 150, Short.MAX_VALUE))))
                         .addGap(105, 105, 105))
-                    .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(83, Short.MAX_VALUE))
             .addComponent(jSeparator9)
         );
@@ -1635,17 +1658,17 @@ public class StartAV extends javax.swing.JFrame {
         jifAuftragAnlegen.getContentPane().setLayout(jifAuftragAnlegenLayout);
         jifAuftragAnlegenLayout.setHorizontalGroup(
             jifAuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jifAuftragAnlegenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addGap(0, 1008, Short.MAX_VALUE)
+            .addGroup(jifAuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jifAuftragAnlegenLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jifAuftragAnlegenLayout.setVerticalGroup(
             jifAuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jifAuftragAnlegenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 856, Short.MAX_VALUE)
+            .addGroup(jifAuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE))
         );
 
         desktopPane.add(jifAuftragAnlegen);
@@ -1716,8 +1739,6 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                         .addGap(386, 386, 386)
                         .addComponent(jLabel8))
-<<<<<<< HEAD
-<<<<<<< HEAD
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1731,36 +1752,6 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                         .addContainerGap()
-=======
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jLabel87)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jLabel49)
-                                .addGap(41, 41, 41)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addContainerGap()
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jLabel87)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jLabel49)
-                                .addGap(41, 41, 41)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addContainerGap()
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                         .addComponent(jLabel141)))
                 .addContainerGap(414, Short.MAX_VALUE))
         );
@@ -1776,21 +1767,12 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jLabel87)
                     .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-<<<<<<< HEAD
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-=======
-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(65, 65, 65)
-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                     .addComponent(jLabel49)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1806,7 +1788,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifAuftragBearbeitenLayout.setVerticalGroup(
             jifAuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(AuftragBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifAuftragBearbeiten);
@@ -2125,7 +2107,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifAuftragSuchenLayout.setVerticalGroup(
             jifAuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifAuftragSuchen);
@@ -2250,7 +2232,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifAuftragsID_suchenLayout.setVerticalGroup(
             jifAuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragsID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(AuftragsID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifAuftragsID_suchen);
@@ -2490,19 +2472,6 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jbbearbeiten_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .addContainerGap()
-                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel50)
-                            .addComponent(jLabel49))))
-                .addGap(0, 68, Short.MAX_VALUE))
-=======
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                         .addComponent(jLabel50)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2511,13 +2480,6 @@ public class StartAV extends javax.swing.JFrame {
                 .addComponent(jLabel37)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jSeparator5)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
         );
         ArtikelAnzeigeLayout.setVerticalGroup(
             ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3021,7 +2983,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifArtikelBearbeitenLayout.setVerticalGroup(
             jifArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifArtikelBearbeiten);
@@ -3151,7 +3113,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifArtikelSucheLayout.setVerticalGroup(
             jifArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ArtikelSuche, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(ArtikelSuche, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifArtikelSuche);
@@ -3214,7 +3176,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifLieferantAnzeigenLayout.setVerticalGroup(
             jifLieferantAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LieferantAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(LieferantAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifLieferantAnzeigen);
@@ -3445,50 +3407,15 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantAnlegenLayout.createSequentialGroup()
                         .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-<<<<<<< HEAD
-<<<<<<< HEAD
                             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                                 .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                                 .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-<<<<<<< HEAD
-                                .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbAbbrechen_LieferantAnlegen)))
-                        .addContainerGap(136, Short.MAX_VALUE))))
-=======
                                 .addGap(36, 36, 36)
                                 .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(387, 387, 387))))
->>>>>>> origin/master
-=======
-=======
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
-                                .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-                                .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(387, 387, 387))))
-<<<<<<< HEAD
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LieferantAnlegenLayout.createSequentialGroup()
@@ -3518,27 +3445,9 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    .addComponent(jbSpeichern_LieferantAnlegen)
-                    .addComponent(jbAbbrechen_LieferantAnlegen))
-                .addContainerGap(132, Short.MAX_VALUE))
-=======
                     .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(67, Short.MAX_VALUE))
->>>>>>> origin/master
-=======
-                    .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(67, Short.MAX_VALUE))
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
-                    .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(67, Short.MAX_VALUE))
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
         );
 
         javax.swing.GroupLayout jifLieferantAnlegenLayout = new javax.swing.GroupLayout(jifLieferantAnlegen.getContentPane());
@@ -3593,7 +3502,7 @@ public class StartAV extends javax.swing.JFrame {
                             .addGroup(LieferantBearbeitenLayout.createSequentialGroup()
                                 .addGap(346, 346, 346)
                                 .addComponent(jLabel12)))
-                        .addGap(0, 504, Short.MAX_VALUE))
+                        .addGap(0, 502, Short.MAX_VALUE))
                     .addComponent(jSeparator18, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -3619,7 +3528,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifLieferantBearbeitenLayout.setVerticalGroup(
             jifLieferantBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LieferantBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(LieferantBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifLieferantBearbeiten);
@@ -3824,7 +3733,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifLieferantSuchenLayout.setVerticalGroup(
             jifLieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LieferantSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
+            .addComponent(LieferantSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifLieferantSuchen);
@@ -3887,7 +3796,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifKundeAnzeigenLayout.setVerticalGroup(
             jifKundeAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(KundeAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(KundeAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifKundeAnzeigen);
@@ -4201,7 +4110,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(KundeAnlegenLayout.createSequentialGroup()
                         .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                .addGap(0, 724, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4231,7 +4140,7 @@ public class StartAV extends javax.swing.JFrame {
                                     .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 55, Short.MAX_VALUE)))
+                        .addGap(0, 34, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KundeAnlegenLayout.setVerticalGroup(
@@ -4274,7 +4183,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifKundeAnlegenLayout.setVerticalGroup(
             jifKundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifKundeAnlegen);
@@ -4314,7 +4223,7 @@ public class StartAV extends javax.swing.JFrame {
                             .addGroup(KundeBearbeitenLayout.createSequentialGroup()
                                 .addGap(283, 283, 283)
                                 .addComponent(jLabel15)))
-                        .addGap(0, 583, Short.MAX_VALUE))
+                        .addGap(0, 581, Short.MAX_VALUE))
                     .addComponent(jSeparator21, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -4340,7 +4249,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifKundeBearbeitenLayout.setVerticalGroup(
             jifKundeBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(KundeBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(KundeBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifKundeBearbeiten);
@@ -4521,7 +4430,7 @@ public class StartAV extends javax.swing.JFrame {
                                 .addGroup(KundeSuchenLayout.createSequentialGroup()
                                     .addGap(44, 44, 44)
                                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 235, Short.MAX_VALUE)))
+                        .addGap(0, 233, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KundeSuchenLayout.setVerticalGroup(
@@ -4555,7 +4464,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifKundeSuchenLayout.setVerticalGroup(
             jifKundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(KundeSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(KundeSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifKundeSuchen);
@@ -4798,7 +4707,7 @@ public class StartAV extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jbLupe_ZKAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(jtfLieferzeitSofort_ZKAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)))
                                 .addGroup(ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
                                         .addGroup(ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4812,19 +4721,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
                         .addGap(361, 361, 361)
                         .addComponent(jLabel77)))
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .addContainerGap(253, Short.MAX_VALUE))
-=======
                 .addContainerGap(231, Short.MAX_VALUE))
->>>>>>> origin/master
-=======
-                .addContainerGap(231, Short.MAX_VALUE))
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
-                .addContainerGap(231, Short.MAX_VALUE))
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
         );
         ZKAnzeigenLayout.setVerticalGroup(
             ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4873,7 +4770,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifZKAnzeigenLayout.setVerticalGroup(
             jifZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ZKAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(ZKAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifZKAnzeigen);
@@ -5091,7 +4988,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnlegenLayout.createSequentialGroup()
                         .addGap(281, 281, 281)
                         .addComponent(jLabel78)))
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
         ZKAnlegenLayout.setVerticalGroup(
             ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5133,7 +5030,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifZKAnlegenLayout.setVerticalGroup(
             jifZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ZKAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(ZKAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifZKAnlegen);
@@ -5222,7 +5119,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifZKBearbeitenLayout.setVerticalGroup(
             jifZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ZKBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(ZKBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifZKBearbeiten);
@@ -5505,7 +5402,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKSuchenLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
                         .addComponent(jLabel79)))
-                .addGap(0, 322, Short.MAX_VALUE))
+                .addGap(0, 321, Short.MAX_VALUE))
         );
         ZKSuchenLayout.setVerticalGroup(
             ZKSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5542,7 +5439,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifZKSuchenLayout.setVerticalGroup(
             jifZKSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ZKSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+            .addComponent(ZKSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifZKSuchen);
@@ -5615,7 +5512,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKID_suchenLayout.createSequentialGroup()
                         .addGap(301, 301, 301)
                         .addComponent(jLabel80)))
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
         ZKID_suchenLayout.setVerticalGroup(
             ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5653,7 +5550,7 @@ public class StartAV extends javax.swing.JFrame {
         );
         jifZKID_suchenLayout.setVerticalGroup(
             jifZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ZKID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+            .addComponent(ZKID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
         );
 
         desktopPane.add(jifZKID_suchen);
@@ -5924,8 +5821,8 @@ public class StartAV extends javax.swing.JFrame {
     private void miAbmeldenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAbmeldenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
-            JOptionPane.showMessageDialog(null, ABMELDE_TEXT, ABMELDE_TITEL, JOptionPane.INFORMATION_MESSAGE);
+        if(istEingeloggt==true){
+        JOptionPane.showMessageDialog(null, ABMELDE_TEXT, ABMELDE_TITEL, JOptionPane.INFORMATION_MESSAGE);
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -5944,37 +5841,39 @@ public class StartAV extends javax.swing.JFrame {
 //        KundeAnzeigen.setVisible(false);
 //        KundeBearbeiten.setVisible(false);
 //        AuftragsID_suchen.setVisible(false);
-            Startseite.setVisible(true);
+          Startseite.setVisible(true);
 //        ZKAnlegen.setVisible(false);
 //        ZKAnzeigen.setVisible(false);
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-            /*----------------------------------------------------------*/
- /* 21.11.16 Samet Variable istEngeloggt wird beim abmelden auf false gesetzt.*/
- /*----------------------------------------------------------*/
-            istEingeloggt = false;
-
-            /*----------------------------------------------------------*/
- /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt wird beim abmelden auf false gesetzt.*/
+        /*----------------------------------------------------------*/
+        istEingeloggt=false;
+        
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
         Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
- /*----------------------------------------------------------*/
-        } else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        /*----------------------------------------------------------*/
+        
         }
-
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
+       
     }//GEN-LAST:event_miAbmeldenActionPerformed
 
     private void miAuftraganzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftraganzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
 //        ArtikelBearbeiten.setVisible(false);
 //        ArtikelSuche.setVisible(false);
-            jifAuftragAnzeigen.setVisible(true);
+          jifAuftragAnzeigen.setVisible(true);
 //        AuftragSuchen.setVisible(false);
 //        AuftragAnlegen.setVisible(false);
 //        AuftragBearbeiten.setVisible(false);
@@ -5993,26 +5892,26 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-            /*----------------------------------------------------------*/
- /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
         Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
- /*----------------------------------------------------------*/
-        } else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        /*----------------------------------------------------------*/
+        }else {
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");    
         }
     }//GEN-LAST:event_miAuftraganzeigenActionPerformed
 
     private void miAuftragSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftragSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
 //        ArtikelBearbeiten.setVisible(false);
 //        ArtikelSuche.setVisible(false);
 //        AuftragAnzeigen.setVisible(false);
-            jifAuftragSuchen.setVisible(true);
+          jifAuftragSuchen.setVisible(true);
 //        AuftragAnlegen.setVisible(false);
 //        AuftragBearbeiten.setVisible(false);
 //        KundeSuchen.setVisible(false);
@@ -6030,9 +5929,13 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miAuftragSucheActionPerformed
 
@@ -6078,7 +5981,7 @@ public class StartAV extends javax.swing.JFrame {
     private void jbAbbrechen_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelBearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
 //        ArtikelAnlegen.setVisible(false);
-        SeiteZwei.setVisible(true);
+          SeiteZwei.setVisible(true);
 //        AuftragSuche.setVisible(false);
 //        AuftragAnzeige.setVisible(false);
 //        AuftragAnlegen.setVisible(false);
@@ -6086,7 +5989,7 @@ public class StartAV extends javax.swing.JFrame {
 //        ArtikelSuche.setVisible(false);
 //        RegistrierungFrame.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
-        jifArtikelBearbeiten.setVisible(false);
+          jifArtikelBearbeiten.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_ArtikelBearbeitenActionPerformed
 
     private void jbZurueck_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbZurueck_azActionPerformed
@@ -6099,12 +6002,12 @@ public class StartAV extends javax.swing.JFrame {
     private void miArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
+        if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
 //        ArtikelBearbeiten.setVisible(false);
-            jifArtikelSuche.setVisible(true);
+          jifArtikelSuche.setVisible(true);
 //        AuftragAnzeigen.setVisible(false);
 //        AuftragSuchen.setVisible(false);
 //        AuftragAnlegen.setVisible(false);
@@ -6124,19 +6027,23 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miArtikelSucheActionPerformed
 
     private void miArtikelanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
-            jifArtikelAnzeige.setVisible(true);
+        jifArtikelAnzeige.setVisible(true);
 //        ArtikelBearbeiten.setVisible(false);
 //        ArtikelSuche.setVisible(false);
 //        AuftragAnzeigen.setVisible(false);
@@ -6158,17 +6065,21 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miArtikelanzeigenActionPerformed
 
     private void miArtikelanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelanlegenActionPerformed
         // TODO add your handling code here:
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
-            jifArtikelAnlegen.setVisible(true);
+        jifArtikelAnlegen.setVisible(true);
 //        ArtikelAnzeige.setVisible(false);
 //        ArtikelBearbeiten.setVisible(false);
 //        ArtikelSuche.setVisible(false);
@@ -6191,20 +6102,24 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");       
         }
     }//GEN-LAST:event_miArtikelanlegenActionPerformed
 
     private void miArtikelbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
-            jifArtikelBearbeiten.setVisible(true);
+        jifArtikelBearbeiten.setVisible(true);
 //        ArtikelSuche.setVisible(false);
 //        AuftragAnzeigen.setVisible(false);
 //        AuftragSuchen.setVisible(false);
@@ -6225,16 +6140,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miArtikelbearbeitenActionPerformed
 
     private void miAuftraganlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftraganlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6242,7 +6161,7 @@ public class StartAV extends javax.swing.JFrame {
 //        ArtikelSuche.setVisible(false);
 //        AuftragAnzeigen.setVisible(false);
 //        AuftragSuchen.setVisible(false);
-            jifAuftragAnlegen.setVisible(true);
+        jifAuftragAnlegen.setVisible(true);
 //        AuftragBearbeiten.setVisible(false);
 //        KundeSuchen.setVisible(false);
 //        LieferantSuchen.setVisible(false);
@@ -6259,16 +6178,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miAuftraganlegenActionPerformed
 
     private void miAuftragbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAuftragbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
-        if (istEingeloggt) {
+    if(istEingeloggt){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6277,7 +6200,7 @@ public class StartAV extends javax.swing.JFrame {
 //        AuftragAnzeigen.setVisible(false);
 //        AuftragSuchen.setVisible(false);
 //        AuftragAnlegen.setVisible(false);
-            jifAuftragBearbeiten.setVisible(true);
+        jifAuftragBearbeiten.setVisible(true);
 //        KundeSuchen.setVisible(false);
 //        LieferantSuchen.setVisible(false);
 //        LieferantAnlegen.setVisible(false);
@@ -6288,16 +6211,20 @@ public class StartAV extends javax.swing.JFrame {
 //        KundeBearbeiten.setVisible(false);
 //        Startseite.setVisible(false);
 //        AuftragsID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miAuftragbearbeitenActionPerformed
 
     private void miLieferantSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6308,7 +6235,7 @@ public class StartAV extends javax.swing.JFrame {
 //        AuftragAnlegen.setVisible(false);
 //        AuftragBearbeiten.setVisible(false);
 //        KundeSuchen.setVisible(false);
-            LieferantSuchen.setVisible(true);
+        LieferantSuchen.setVisible(true);
 //        LieferantAnlegen.setVisible(false);
 //        LieferantAnzeigen.setVisible(false);
 //        LieferantBearbeiten.setVisible(false);
@@ -6322,9 +6249,13 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantSucheActionPerformed
 
@@ -6348,7 +6279,7 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnlegen.setVisible(false);
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);      
         jifAuftragsID_suchen.setVisible(false);
 
     }//GEN-LAST:event_jbAbbrechen_AuftragBearbeitenActionPerformed
@@ -6364,7 +6295,7 @@ public class StartAV extends javax.swing.JFrame {
         jifAuftragAnzeigen.setVisible(false);
         jifAuftragSuchen.setVisible(false);
         jifAuftragAnlegen.setVisible(false);
-        jifAuftragBearbeiten.setVisible(false);
+       jifAuftragBearbeiten.setVisible(false);
         jifKundeSuchen.setVisible(false);
         jifLieferantSuchen.setVisible(false);
         jifLieferantAnlegen.setVisible(false);
@@ -6398,14 +6329,14 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnlegen.setVisible(false);
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);  
         jifAuftragsID_suchen.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_KundeSuchenActionPerformed
 
     private void miKundeSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeSucheActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+        if(istEingeloggt == true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6415,7 +6346,7 @@ public class StartAV extends javax.swing.JFrame {
 //        AuftragSuchen.setVisible(false);
 //        AuftragAnlegen.setVisible(false);
 //        AuftragBearbeiten.setVisible(false);
-            jifKundeSuchen.setVisible(true);
+        jifKundeSuchen.setVisible(true);
 //        LieferantSuchen.setVisible(false);
 //        LieferantAnlegen.setVisible(false);
 //        LieferantAnzeigen.setVisible(false);
@@ -6430,16 +6361,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundeSucheActionPerformed
 
     private void miLieferantanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6452,7 +6387,7 @@ public class StartAV extends javax.swing.JFrame {
 //        KundeSuchen.setVisible(false);
 //        LieferantSuchen.setVisible(false);
 //        LieferantAnlegen.setVisible(false);
-            jifLieferantAnzeigen.setVisible(true);
+        jifLieferantAnzeigen.setVisible(true);
 //        LieferantBearbeiten.setVisible(false);
 //        KundeAnlegen.setVisible(false);
 //        KundeAnzeigen.setVisible(false);
@@ -6464,16 +6399,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+       /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantanzeigenActionPerformed
 
     private void miLieferantanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6485,19 +6424,7 @@ public class StartAV extends javax.swing.JFrame {
 //        AuftragBearbeiten.setVisible(false);
 //        KundeSuchen.setVisible(false);
 //        LieferantSuchen.setVisible(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            LieferantAnlegen.setVisible(true);
-=======
           jifLieferantAnlegen.setVisible(true);
->>>>>>> origin/master
-=======
-          jifLieferantAnlegen.setVisible(true);
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
-          jifLieferantAnlegen.setVisible(true);
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 //        LieferantAnzeigen.setVisible(false);
 //        LieferantBearbeiten.setVisible(false);
 //        KundeAnlegen.setVisible(false);
@@ -6513,16 +6440,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantanlegenActionPerformed
 
     private void miLieferantbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantbearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6536,7 +6467,7 @@ public class StartAV extends javax.swing.JFrame {
 //        LieferantSuchen.setVisible(false);
 //        LieferantAnlegen.setVisible(false);
 //        LieferantAnzeigen.setVisible(false);
-            jifLieferantBearbeiten.setVisible(true);
+        jifLieferantBearbeiten.setVisible(true);
 //        KundeAnlegen.setVisible(false);
 //        KundeAnzeigen.setVisible(false);
 //        KundeBearbeiten.setVisible(false);
@@ -6547,16 +6478,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantbearbeitenActionPerformed
 
     private void miKundeanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanzeigenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6572,7 +6507,7 @@ public class StartAV extends javax.swing.JFrame {
 //        LieferantAnzeigen.setVisible(false);
 //        LieferantBearbeiten.setVisible(false);
 //        KundeAnlegen.setVisible(false);
-            jifKundeAnzeigen.setVisible(true);
+        jifKundeAnzeigen.setVisible(true);
 //        KundeBearbeiten.setVisible(false);
 //        Startseite.setVisible(false);
 //        AuftragsID_suchen.setVisible(false);
@@ -6581,16 +6516,20 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundeanzeigenActionPerformed
 
     private void miKundeanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanlegenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6605,7 +6544,7 @@ public class StartAV extends javax.swing.JFrame {
 //        LieferantAnlegen.setVisible(false);
 //        LieferantAnzeigen.setVisible(false);
 //        LieferantBearbeiten.setVisible(false);
-            jifKundeAnlegen.setVisible(true);
+        jifKundeAnlegen.setVisible(true);
 //        KundeAnzeigen.setVisible(false);
 //        KundeBearbeiten.setVisible(false);
 //        Startseite.setVisible(false);
@@ -6618,16 +6557,20 @@ public class StartAV extends javax.swing.JFrame {
 //        jPKontakt.setVisible(true);
 //        jPRechnungsdaten.setVisible(true);
 //        jPLieferdaten.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundeanlegenActionPerformed
 
     private void miKundebearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundebearbeitenActionPerformed
         // Mechmet Impram Ersterstellung
         // Duygu Citak Erweiterung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -6644,7 +6587,7 @@ public class StartAV extends javax.swing.JFrame {
 //        LieferantBearbeiten.setVisible(false);
 //        KundeAnlegen.setVisible(false);
 //        KundeAnzeigen.setVisible(false);
-            jifKundeBearbeiten.setVisible(true);
+        jifKundeBearbeiten.setVisible(true);
 //        Startseite.setVisible(false);
 //        AuftragsID_suchen.setVisible(false);
 //         ZKAnlegen.setVisible(false);
@@ -6652,9 +6595,13 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundebearbeitenActionPerformed
 
@@ -6683,7 +6630,7 @@ public class StartAV extends javax.swing.JFrame {
     }//GEN-LAST:event_jbZurueck_AutragSuchenActionPerformed
 
     private void jbAbbrechen_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_aaActionPerformed
-        // Mechmet Impram Ersterstellung
+           // Mechmet Impram Ersterstellung
         // Hicran YÃ¶rÃ¼k Erweiterung
         SeiteZwei.setVisible(true);
         jifArtikelAnlegen.setVisible(false);
@@ -6726,7 +6673,7 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnlegen.setVisible(false);
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);   
         jifAuftragsID_suchen.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_jbzurueck_LieferantAnzeigenActionPerformed
 
@@ -6750,7 +6697,7 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnlegen.setVisible(false);
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);   
         jifAuftragsID_suchen.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_jbAbbrechen_LieferantAnlegenActionPerformed
 
@@ -6798,7 +6745,7 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnlegen.setVisible(false);
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);      
         jifAuftragsID_suchen.setVisible(false);
     }//GEN-LAST:event_zurueck_KundeAnzeigenActionPerformed
 
@@ -6822,7 +6769,7 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnlegen.setVisible(false);
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);       
         jifAuftragsID_suchen.setVisible(false);
 // TODO add your handling code here:
     }//GEN-LAST:event_abbrechen_KundeAnlegenActionPerformed
@@ -6848,11 +6795,11 @@ public class StartAV extends javax.swing.JFrame {
         jifKundeAnzeigen.setVisible(false);
         jifKundeBearbeiten.setVisible(false);
         jifAuftragsID_suchen.setVisible(false);
-        Startseite.setVisible(false);
+        Startseite.setVisible(false);        
     }//GEN-LAST:event_zurueck_KundeBearbeitenActionPerformed
 
     private void jtfGPID_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfGPID_azActionPerformed
-
+        
     }//GEN-LAST:event_jtfGPID_azActionPerformed
 
     private void jtfAuftragsid_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfAuftragsid_aaActionPerformed
@@ -6929,7 +6876,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void jcbSuchkriterium_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbSuchkriterium_AuftragSuchenActionPerformed
         // TODO add your handling code here:
-
+        
     }//GEN-LAST:event_jcbSuchkriterium_AuftragSuchenActionPerformed
 //    public void jS(){
 //          Auftragsstatus aStatus = new Auftragsstatus();
@@ -6950,35 +6897,29 @@ public class StartAV extends javax.swing.JFrame {
 //        }
 //    }
     private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
-        //Duygu Citak 18.11.2016
+        //Hicran 18.11.2016
         // Die Daten werden in der Gui-Maske geschrieben und nach bestÃ¤tigung des Speicher
         //Buttons werden die Daten in die Datenbank gespeichert
         Auftragsstatus aStatus = new Auftragsstatus();
         String beschreibung = this.jBeschreibung_aa.getText();
         String erfassungsdatum = this.jtfErfassungsdatum_aa.getText();
         String lieferdatum = this.jtfLieferdatum_aa.getText();
-        String auftragsart = (String) this.jcbAuftragsart.getSelectedItem();
-        String status = (String) this.jcbStatus.getSelectedItem();
+        String auftragsart = (String)this.jcbAuftragsart.getSelectedItem();
+        String status  = (String) this.jcbStatus.getSelectedItem();
         String abschlussDatum = this.jtfAbschlussdatum_aa.getText();
-        System.out.println("Result: " + beschreibung + erfassungsdatum);
+        System.out.println("Result: " + beschreibung + erfassungsdatum  );
         Auftrag auftrag = new Auftrag(beschreibung, erfassungsdatum, lieferdatum,
-                auftragsart, aStatus.ueberfuehreAuftragsStatus(status), abschlussDatum);
+        auftragsart, aStatus.ueberfuehreAuftragsStatus(status), abschlussDatum);
         try {
             DAOAuftrag daoAuftrag = new DAOAuftrag();
             daoAuftrag.legeNeueAuftragAn(auftrag);
-        } catch (SQLException ex) {
+        }catch (SQLException ex){
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
 //    jS();
-
-<<<<<<< HEAD
-<<<<<<< HEAD
+        
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
     private void jbBearbeiten_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AuftragBearbeitenActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
         jifAuftragBearbeiten.setVisible(false);
@@ -7003,7 +6944,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void miZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKAnzeigenActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
-        if (istEingeloggt == true) {
+        if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -7023,20 +6964,24 @@ public class StartAV extends javax.swing.JFrame {
 //        KundeBearbeiten.setVisible(false);
 //        Startseite.setVisible(false);
 //        AuftragsID_suchen.setVisible(false);  
-            jifZKAnzeigen.setVisible(true);
+        jifZKAnzeigen.setVisible(true);
 //        ZKAnlegen.setVisible(false);
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miZKAnzeigenActionPerformed
 
     private void miZKAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKAnlegenActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -7057,15 +7002,19 @@ public class StartAV extends javax.swing.JFrame {
 //        Startseite.setVisible(false);
 //        AuftragsID_suchen.setVisible(false);  
 //        ZKAnzeigen.setVisible(false);
-            jifZKAnlegen.setVisible(true);
+        jifZKAnlegen.setVisible(true);
 //        ZKBearbeiten.setVisible(false);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
-
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
+        }
+        
     }//GEN-LAST:event_miZKAnlegenActionPerformed
 
     private void jcbDatumAuftragsIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDatumAuftragsIDSuchenActionPerformed
@@ -7086,7 +7035,7 @@ public class StartAV extends javax.swing.JFrame {
 
     private void miZKSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKSucheActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
-        if (istEingeloggt == true) {
+        if(istEingeloggt==true){
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -7109,22 +7058,23 @@ public class StartAV extends javax.swing.JFrame {
 //        ZKAnzeigen.setVisible(false);
 //        ZKAnlegen.setVisible(false);
 //        ZKBearbeiten.setVisible(false);
-            jifZKSuchen.setVisible(true);
+        jifZKSuchen.setVisible(true);
 //        ZKID_suchen.setVisible(false);
-        } //Samet, Variable istEingeloggt, um den Status eingeloggt oder nicht eingeloggt zu erfassen.
+        }
+        //Samet, Variable istEingeloggt, um den Status eingeloggt oder nicht eingeloggt zu erfassen.
         // Bei istEingeloggt=false wird die unten stehende Fehlermeldung ausgegeben.
-        else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miZKSucheActionPerformed
 
     private void miZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miZKBearbeitenActionPerformed
 
         // Hicran YÃ¶rÃ¼k Ersterstellung
-        if (istEingeloggt == true) {
+    if(istEingeloggt==true){
 
-            // Hicran YÃ¶rÃ¼k Ersterstellung, alle Panels werden versteckt bis auf 
-            //ZKBearbeiten auf sichtbar gesetzt
+        // Hicran YÃ¶rÃ¼k Ersterstellung, alle Panels werden versteckt bis auf 
+        //ZKBearbeiten auf sichtbar gesetzt
 //        SeiteZwei.setVisible(false);
 //        ArtikelAnlegen.setVisible(false);
 //        ArtikelAnzeige.setVisible(false);
@@ -7146,19 +7096,23 @@ public class StartAV extends javax.swing.JFrame {
 //        AuftragsID_suchen.setVisible(false);  
 //        ZKAnzeigen.setVisible(false);
 //        ZKAnlegen.setVisible(false);
-            jifZKBearbeiten.setVisible(true);
+        jifZKBearbeiten.setVisible(true);
 //        ZKSuchen.setVisible(false);
 //        ZKID_suchen.setVisible(false);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+        /*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
     }//GEN-LAST:event_miZKBearbeitenActionPerformed
 
     private void jbAbbrechen_ZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKAnzeigenActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
         SeiteZwei.setVisible(true);
-        jifZKAnzeigen.setVisible(false);
+        jifZKAnzeigen.setVisible(false);        
     }//GEN-LAST:event_jbAbbrechen_ZKAnzeigenActionPerformed
 
     private void jbAbbrechen_ZKAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKAnlegenActionPerformed
@@ -7182,7 +7136,7 @@ public class StartAV extends javax.swing.JFrame {
     private void jbAbbrechen_ZKIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKIDSuchenActionPerformed
         // Hicran YÃ¶rÃ¼k Ersterstellung
         SeiteZwei.setVisible(true);
-
+       
     }//GEN-LAST:event_jbAbbrechen_ZKIDSuchenActionPerformed
 
     private void jbBearbeiten_ZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_ZKBearbeitenActionPerformed
@@ -7249,32 +7203,40 @@ public class StartAV extends javax.swing.JFrame {
     }//GEN-LAST:event_jcbAuftragsartActionPerformed
 
     private void jmDateiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmDateiActionPerformed
-        if (istEingeloggt == true) {
-        } else {
-            JOptionPane.showMessageDialog(null, "Sie mÃ¼ssen eingeloggt sein, um sich abmelden zu kÃ¶nnen !");
-        }
-
+if(istEingeloggt==true){
+}
+else{
+     JOptionPane.showMessageDialog(null,"Sie mÃ¼ssen eingeloggt sein, um sich abmelden zu kÃ¶nnen !");
+     }
+        
 // TODO add your handling code here:
     }//GEN-LAST:event_jmDateiActionPerformed
 
     private void jmAuftragActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAuftragActionPerformed
-        if (istEingeloggt == true) {
-
-        }/*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
-            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+if(istEingeloggt==true){
+        
+    
+    
+    
+    }/*----------------------------------------------------------*/
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/
+        /*----------------------------------------------------------*/
+        else{
+        JOptionPane.showMessageDialog(null,"Bitte einloggen!");
         }
-        // TODO add your handling code here:
+                // TODO add your handling code here:
     }//GEN-LAST:event_jmAuftragActionPerformed
 
     private void jmSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmSucheActionPerformed
-        // TODO add your handling code here:
-
-        if (istEingeloggt == true) {
-
-        } else {
-
-        }
+    // TODO add your handling code here:
+    
+    if(istEingeloggt==true){
+        
+    }
+    else{
+        
+    }
     }//GEN-LAST:event_jmSucheActionPerformed
 
     private void jmArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmArtikelActionPerformed
@@ -7286,7 +7248,7 @@ public class StartAV extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfGPID_KundeAnlegenActionPerformed
     /*
     Duygu Citak
-     */
+    */
     private void jrbLieferadresseIdentisch_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
         jPLieferdaten.setVisible(false);
     }//GEN-LAST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
@@ -7308,20 +7270,20 @@ public class StartAV extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfFirma2_KundeAnlegenActionPerformed
     /*
     Duygu Citak 
-     */
+    */
     private void jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
-        jPLieferdaten.setVisible(true);
+      jPLieferdaten.setVisible(true);
     }//GEN-LAST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
 
     private void jbanmelden_StartseiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbanmelden_StartseiteActionPerformed
         /* Mechmet Impram
         Hier werden BN und Passwort mit eingelegte Benutzer auf Richtigkeit vergleichen
         wenn richtig, die Fenster anzeigen, solange muss die Menu invisible sein.
-         */
+        */
 
         Startseite.setVisible(false);
         SeiteZwei.setVisible(true);
-        istEingeloggt = true;
+        istEingeloggt=true;
     }//GEN-LAST:event_jbanmelden_StartseiteActionPerformed
 
     private void jtfbestelltext_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfbestelltext_ArtikelAnzeigenActionPerformed
@@ -7347,28 +7309,10 @@ public class StartAV extends javax.swing.JFrame {
     private void jtfbestelltext_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfbestelltext_ArtikelAnlegenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfbestelltext_ArtikelAnlegenActionPerformed
-
-    private void jbPlus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlus_AuftragAnlegenActionPerformed
-        // TODO add your handling code here:
-
-        String auftragsKopf = this.jtfAuftragsid_aa.getText();
-        int positionsId = Integer.valueOf(this.jtfPositionsID_AuftragAnlegen.getText());
-        int positionsMenge = Integer.valueOf(this.jtfMenge_AuftragAnlegen.getText());
-        int einzelwert = Integer.valueOf(this.jtfEinzelwert_AuftragAnlegen.getText());
-        String artikelId = this.jtfArtikelID_AuftragAnlegen.getText();
-       
-        System.out.println("Result: " + auftragsKopf + positionsId);
-        Auftragsposition auftragsPosition = new Auftragsposition(auftragsKopf, positionsId, positionsMenge, einzelwert, artikelId);
-
-        try {
-            DAOAuftragsposition daoAuftragsposition = new DAOAuftragsposition();
-            daoAuftragsposition.legeNeueAuftragspositionAn(auftragsPosition);
-        } catch (SQLException ex) {
-            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }//GEN-LAST:event_jbPlus_AuftragAnlegenActionPerformed
-
+    
+    
+   
+    
     /**
      * @param args the command line arguments
      */
@@ -7469,6 +7413,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
@@ -7525,6 +7470,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -7614,7 +7560,6 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JTable jPositionenTabelle;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -7654,6 +7599,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JButton jbAbbrechen_ArtikelAnlegen;
     private javax.swing.JButton jbAbbrechen_ArtikelBearbeiten;
     private javax.swing.JButton jbAbbrechen_ArtikelSuche;
@@ -7783,6 +7729,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfAbschlussdatum_aa;
     private javax.swing.JTextField jtfArtikelID_ArtikelAnzeigen;
     private javax.swing.JTextField jtfArtikelID_AuftragAnlegen;
+    private javax.swing.JTextField jtfArtikelname_AuftragAnlegen;
     private javax.swing.JTextField jtfAuftragsID_AuftragBearbeiten;
     private javax.swing.JTextField jtfAuftragsID_AuftragSuchen;
     private javax.swing.JTextField jtfAuftragsart_ZKAnlegen;
@@ -7807,19 +7754,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfGPName_az;
     private javax.swing.JTextField jtfGPadresse_az;
     private javax.swing.JTextField jtfGPname_aa;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private javax.swing.JTextField jtfHNr2_LieferantAnlegen;
-=======
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
->>>>>>> origin/master
-=======
-    private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
-=======
-    private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
->>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
     private javax.swing.JTextField jtfHNrRG_KundeAnlegen;
     private javax.swing.JTextField jtfHNrRG_LieferantAnlegen;
     private javax.swing.JTextField jtfKreditlimit_KundenAnlegen;
