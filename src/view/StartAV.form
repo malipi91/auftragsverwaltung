@@ -1719,6 +1719,7 @@
                               <Component id="jtfAuftragsID_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
+<<<<<<< HEAD
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="jButton1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -1729,6 +1730,18 @@
                               <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jComboBox2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
+=======
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jButton1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          </Group>
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="466" max="32767" attributes="0"/>
@@ -2643,9 +2656,12 @@
                               </Group>
                           </Group>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <EmptySpace min="0" pref="68" max="32767" attributes="0"/>
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                       </Group>
                       <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
@@ -4188,10 +4204,14 @@
                                       </Group>
                                   </Group>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   <EmptySpace pref="136" max="32767" attributes="0"/>
 =======
                                   <EmptySpace min="-2" pref="387" max="-2" attributes="0"/>
 >>>>>>> origin/master
+=======
+                                  <EmptySpace min="-2" pref="387" max="-2" attributes="0"/>
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                               </Group>
                           </Group>
                       </Group>
@@ -4223,6 +4243,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel75" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jtfKreditlimit_LieferantAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+<<<<<<< HEAD
                           </Group>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -4240,16 +4261,27 @@
                               <Component id="Kontakt_LieferantAnlegen" max="32767" attributes="0"/>
                               <Component id="Lieferdaten_LieferantAnlegen" max="32767" attributes="0"/>
                               <Component id="Rechnungsdaten_LieferantAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+=======
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="Kontakt_LieferantAnlegen" min="-2" max="-2" attributes="0"/>
+                              <Component id="Rechnungsdaten_LieferantAnlegen" min="-2" max="-2" attributes="0"/>
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
+                          </Group>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jbSpeichern_LieferantAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jbAbbrechen_LieferantAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jbSpeichern_LieferantAnlegen" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="jbAbbrechen_LieferantAnlegen" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
+<<<<<<< HEAD
                           <EmptySpace pref="132" max="32767" attributes="0"/>
 =======
                           <EmptySpace pref="67" max="32767" attributes="0"/>
 >>>>>>> origin/master
+=======
+                          <EmptySpace pref="67" max="32767" attributes="0"/>
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6180,10 +6212,14 @@
                               </Group>
                           </Group>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <EmptySpace pref="253" max="32767" attributes="0"/>
 =======
                           <EmptySpace pref="231" max="32767" attributes="0"/>
 >>>>>>> origin/master
+=======
+                          <EmptySpace pref="231" max="32767" attributes="0"/>
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                       </Group>
                   </Group>
                 </DimensionLayout>
