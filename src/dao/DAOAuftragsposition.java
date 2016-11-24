@@ -52,7 +52,7 @@ public class DAOAuftragsposition {
     
     
     /* 
-    *Diese Methode legt durch Eingabe der Werte in die GUI einen neuen Auftrag 
+    *Diese Methode legt durch Eingabe der einzelnen Werte in die GUI einen neuen Auftrag 
     * in die Datenbank     
     */
     
