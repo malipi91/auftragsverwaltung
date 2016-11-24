@@ -20,30 +20,35 @@ import util.Zusatzfunktionen;
  *
  * @author marti
  */
-public class DAOAuftrag{
-   
+public class DAOAuftrag {
+
     private DAODataDictionary dd;
     private Zusatzfunktionen zf;
 
     private final String TAB_AUFTRAG = "auftrag";
-    
-    public DAOAuftrag() throws SQLException{
-    dd = new DAODataDictionary();
-    zf = new Zusatzfunktionen();
+
+    public DAOAuftrag() throws SQLException {
+        dd = new DAODataDictionary();
+        zf = new Zusatzfunktionen();
     }
-    
-    public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException{
+
+    public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
         String letzteID = dd.bekommeLetzteID(TAB_AUFTRAG);
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();
-        /*Hicran 18.11.2016
-        *hier werden die Daten von der GUI gelesen und in die DB reingeschrieben.
-        */
-    
+
+        /*----------------------------------------------------------*/
+ /* Datum Name Was                                           */
+ /* 14.11.16 Hicran Yörük Anlegen der Methode                 */
+ /*----------------------------------------------------------*/
+ /* 
+    *Diese Methode legt durch Eingabe der Werte in die GUI einen neuen Auftrag 
+    * in die Datenbank     
+    */
         String sql = "insert into auftrag "
-            + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
-            + "Lieferdatum,AStatus, Abschlussdatum) "
-            + "values (?,?,?,?,?,?,?)";
+                + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
+                + "Lieferdatum,AStatus, Abschlussdatum) "
+                + "values (?,?,?,?,?,?,?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, letzteID);
         stmt.setString(2, auftrag.getAuftragsart());
@@ -52,31 +57,32 @@ public class DAOAuftrag{
         stmt.setDate(5, java.sql.Date.valueOf(auftrag.getLieferdatum()));
         stmt.setString(6, auftrag.getStatus());
         stmt.setDate(7, java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
-    
-    
-        try{
+
+        try {
             stmt.executeUpdate();
             dd.erhoeheLetzteID(TAB_AUFTRAG);
+            //Datenbankverbindung wird geschlossen
             conn.close();
-        } catch (SQLException e){
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
             System.out.println(e);
             System.out.println("Objekt wurde nicht hinzugefügt.");
-        }    
+        }
     }
-    
-    
+
     /*----------------------------------------------------------*/
-    /* Datum Name Was                                           */
-    /* 14.11.16 MaLi Anlegen der Klasse                         */
-    /*----------------------------------------------------------*/
+ /* Datum Name Was                                           */
+ /* 14.11.16 MaLi Anlegen der Klasse                         */
+ /*----------------------------------------------------------*/
     /**
-     * Die Methode liest anhand der Auftragskopf-ID einen Datensatz aus der 
-     * Datenbank und liefert diesen als Auftrags-Objekt aus. 
+     * Die Methode liest anhand der Auftragskopf-ID einen Datensatz aus der
+     * Datenbank und liefert diesen als Auftrags-Objekt aus.
+     *
      * @param id erhält die ID als String.
-     * @return gibt ein Auftrags-Objekt aus. 
+     * @return gibt ein Auftrags-Objekt aus.
      * @throws SQLException
      */
-    public Auftrag erhalteAuftragFuerID(String id) throws SQLException{
+    public Auftrag erhalteAuftragFuerID(String id) throws SQLException {
         // Erzeugen eines neuen DBConnection Objekts.
         DBConnection con = new DBConnection();
         // Übergabe der Connection an ein Connection Objekt.
@@ -89,11 +95,11 @@ public class DAOAuftrag{
         String sql = "select * from auftrag where Auftragskopf_ID= " + id;
         // Erzeugen eines leeren Auftrags-Objekt.
         Auftrag auftrag = new Auftrag();
-        
-        try{
+
+        try {
             // Ausführen des SQL-Befehls.
             rs = stmt.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 // Die Informationen aus der DB werden an das Auftrags-Objekt übergeben.
                 auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
                 auftrag.setAuftragstext(rs.getString("Auftragstext"));
@@ -106,14 +112,12 @@ public class DAOAuftrag{
             }
             // DB-Verbindung wird geschlossen.
             conn.close();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             // Gibt die Fehlermeldung aus.
             System.out.println(e);
             System.out.println("Objekt nicht gefunden!");
-        }    
+        }
         // Ausgabe des Auftrags-Objekts.
         return auftrag;
     }
-} 
-    
-  
+}
