@@ -22,3 +22,7 @@ public class Zusatzfunktionen {
         return currentTime;
     }
 }
+
+/*
+Test Kommentar.
+*/
