@@ -1717,6 +1717,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(386, 386, 386)
                         .addComponent(jLabel8))
 <<<<<<< HEAD
+<<<<<<< HEAD
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1730,6 +1731,21 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                         .addContainerGap()
+=======
+                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                                .addComponent(jLabel87)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                                .addComponent(jLabel49)
+                                .addGap(41, 41, 41)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                        .addContainerGap()
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                         .addContainerGap()
@@ -1760,12 +1776,21 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jLabel87)
                     .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+<<<<<<< HEAD
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+=======
+                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65)
+                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                     .addComponent(jLabel49)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2467,12 +2492,15 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .addContainerGap()
                         .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel50)
                             .addComponent(jLabel49))))
                 .addGap(0, 68, Short.MAX_VALUE))
 =======
+=======
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                         .addComponent(jLabel50)
@@ -2484,7 +2512,10 @@ public class StartAV extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jSeparator5)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
         );
@@ -3415,6 +3446,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantAnlegenLayout.createSequentialGroup()
                         .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
 <<<<<<< HEAD
+<<<<<<< HEAD
                             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                                 .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -3442,10 +3474,20 @@ public class StartAV extends javax.swing.JFrame {
                         .addGap(387, 387, 387))))
 >>>>>>> origin/master
 =======
+=======
+                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
+                                .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(LieferantAnlegenLayout.createSequentialGroup()
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
                                 .addComponent(Kontakt_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(36, 36, 36)
                                 .addComponent(Rechnungsdaten_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(387, 387, 387))))
+<<<<<<< HEAD
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
+=======
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
             .addGroup(LieferantAnlegenLayout.createSequentialGroup()
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3478,6 +3520,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(LieferantAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     .addComponent(jbSpeichern_LieferantAnlegen)
                     .addComponent(jbAbbrechen_LieferantAnlegen))
                 .addContainerGap(132, Short.MAX_VALUE))
@@ -3486,6 +3529,11 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(67, Short.MAX_VALUE))
 >>>>>>> origin/master
+=======
+                    .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
                     .addComponent(jbSpeichern_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_LieferantAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4766,10 +4814,14 @@ public class StartAV extends javax.swing.JFrame {
                         .addComponent(jLabel77)))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addContainerGap(253, Short.MAX_VALUE))
 =======
                 .addContainerGap(231, Short.MAX_VALUE))
 >>>>>>> origin/master
+=======
+                .addContainerGap(231, Short.MAX_VALUE))
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
                 .addContainerGap(231, Short.MAX_VALUE))
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
@@ -6435,10 +6487,14 @@ public class StartAV extends javax.swing.JFrame {
 //        LieferantSuchen.setVisible(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             LieferantAnlegen.setVisible(true);
 =======
           jifLieferantAnlegen.setVisible(true);
 >>>>>>> origin/master
+=======
+          jifLieferantAnlegen.setVisible(true);
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
           jifLieferantAnlegen.setVisible(true);
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
@@ -6916,8 +6972,11 @@ public class StartAV extends javax.swing.JFrame {
 //    jS();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
+=======
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
     private void jbBearbeiten_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AuftragBearbeitenActionPerformed
@@ -7750,10 +7809,14 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfGPname_aa;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JTextField jtfHNr2_LieferantAnlegen;
 =======
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
 >>>>>>> origin/master
+=======
+    private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
+>>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
 =======
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
 >>>>>>> 611bf8008e4237a8ad6f75564d3d1f8f5ad59ed7
