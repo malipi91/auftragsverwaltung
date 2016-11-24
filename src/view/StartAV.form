@@ -500,7 +500,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragAnzeigen" alignment="0" pref="863" max="32767" attributes="0"/>
+                  <Component id="AuftragAnzeigen" alignment="0" pref="856" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1078,7 +1078,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <EmptySpace min="0" pref="856" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Component id="AuftragAnlegen" alignment="0" pref="863" max="32767" attributes="0"/>
+                      <Component id="AuftragAnlegen" alignment="0" pref="856" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1694,15 +1694,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="AuftragBearbeiten" min="-2" pref="1022" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="AuftragBearbeiten" alignment="0" pref="1000" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="AuftragBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1717,7 +1714,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jSeparator10" alignment="0" pref="1022" max="32767" attributes="0"/>
+                      <Component id="jSeparator10" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -1739,7 +1736,7 @@
                                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="402" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1761,7 +1758,7 @@
                               <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="591" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1841,6 +1838,69 @@
             </Container>
           </SubComponents>
         </Container>
+        <Container class="javax.swing.JInternalFrame" name="jifAuftragBearbeiten2">
+          <Properties>
+            <Property name="visible" type="boolean" value="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="427" max="-2" attributes="0"/>
+                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="400" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="jSeparator30" alignment="1" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jSeparator30" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="744" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel49">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="24" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Auftrag bearbeiten"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JSeparator" name="jSeparator30">
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
         <Container class="javax.swing.JInternalFrame" name="jifAuftragSuchen">
           <Properties>
             <Property name="closable" type="boolean" value="true"/>
@@ -1867,7 +1927,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragSuchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="AuftragSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2292,7 +2352,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="AuftragsID_suchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="AuftragsID_suchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2506,7 +2566,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ArtikelAnzeige" alignment="0" pref="863" max="32767" attributes="0"/>
+                  <Component id="ArtikelAnzeige" alignment="0" pref="856" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -3133,7 +3193,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jSeparator12" alignment="1" min="-2" pref="930" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jSeparator13" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jSeparator13" alignment="0" pref="938" max="32767" attributes="0"/>
                                   <Component id="jSeparator11" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3681,7 +3741,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ArtikelBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ArtikelBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -3846,7 +3906,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ArtikelSuche" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ArtikelSuche" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4033,7 +4093,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LieferantAnzeigen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="LieferantAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4225,7 +4285,7 @@
                               <Component id="jbSpeichern_LieferantAnlegen" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="jbAbbrechen_LieferantAnlegen" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="88" max="32767" attributes="0"/>
+                          <EmptySpace pref="67" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4670,7 +4730,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LieferantBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="LieferantBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4698,7 +4758,7 @@
                                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="504" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="502" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator18" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -4778,7 +4838,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LieferantSuchen" alignment="0" pref="751" max="32767" attributes="0"/>
+                  <Component id="LieferantSuchen" alignment="0" pref="744" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5000,7 +5060,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeAnzeigen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5102,7 +5162,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeAnlegen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeAnlegen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5126,7 +5186,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <EmptySpace min="0" pref="724" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jbSpeichern" min="-2" pref="105" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="abbrechen_KundeAnlegen" min="-2" pref="105" max="-2" attributes="0"/>
@@ -5167,7 +5227,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="55" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -5741,7 +5801,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5769,7 +5829,7 @@
                                           <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="583" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="581" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator21" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -5849,7 +5909,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KundeSuchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="KundeSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -5894,7 +5954,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="235" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="233" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -6081,7 +6141,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKAnzeigen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKAnzeigen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -6130,7 +6190,7 @@
                                                       </Group>
                                                       <Component id="jtfLieferzeitSofort_ZKAnzeigen" min="-2" pref="153" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="60" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -6155,7 +6215,7 @@
                                   <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="253" max="32767" attributes="0"/>
+                          <EmptySpace pref="230" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6592,7 +6652,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKAnlegen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKAnlegen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -6663,7 +6723,7 @@
                                   <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="306" max="32767" attributes="0"/>
+                          <EmptySpace pref="264" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -7034,7 +7094,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKBearbeiten" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKBearbeiten" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -7180,7 +7240,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKSuchen" alignment="0" pref="741" max="32767" attributes="0"/>
+                  <Component id="ZKSuchen" alignment="0" pref="734" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -7231,7 +7291,7 @@
                                   <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="322" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="321" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -7392,7 +7452,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ZKID_suchen" alignment="0" pref="692" max="32767" attributes="0"/>
+                  <Component id="ZKID_suchen" alignment="0" pref="685" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -7447,7 +7507,7 @@
                                   <Component id="jLabel80" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                          <EmptySpace pref="298" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
