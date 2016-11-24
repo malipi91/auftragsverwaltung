@@ -331,10 +331,9 @@ public class StartAV extends javax.swing.JFrame {
         jLabel87 = new javax.swing.JLabel();
         jtfAuftragsID_AuftragBearbeiten = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jifAuftragBearbeiten2 = new javax.swing.JInternalFrame();
-        jPanel3 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jSeparator30 = new javax.swing.JSeparator();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel141 = new javax.swing.JLabel();
         jifAuftragSuchen = new javax.swing.JInternalFrame();
         AuftragSuchen = new javax.swing.JPanel();
         titel_as = new javax.swing.JLabel();
@@ -1683,7 +1682,7 @@ public class StartAV extends javax.swing.JFrame {
 
         AuftragBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("Auftrag Bearbeiten");
 
         jbAbbrechen_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -1715,6 +1714,14 @@ public class StartAV extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
         jButton1.setText("Löschen");
 
+        jLabel49.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel49.setText("Auftragsart");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Barauftrag", "Sofortauftrag. Terminaufrtrag", "Bestellauftrag" }));
+
+        jLabel141.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel141.setText("ZK-ID");
+
         javax.swing.GroupLayout AuftragBearbeitenLayout = new javax.swing.GroupLayout(AuftragBearbeiten);
         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
         AuftragBearbeitenLayout.setHorizontalGroup(
@@ -1723,39 +1730,54 @@ public class StartAV extends javax.swing.JFrame {
             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
+                        .addContainerGap()
+                        .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                        .addGap(386, 386, 386)
                         .addComponent(jLabel8))
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(jLabel87)
-                        .addGap(31, 31, 31)
-                        .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap()
+                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                                .addComponent(jLabel87)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                                .addComponent(jLabel49)
+                                .addGap(41, 41, 41)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jbBearbeiten_AuftragBearbeiten)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbAbbrechen_AuftragBearbeiten)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
-                .addGap(0, 402, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jLabel141)))
+                .addContainerGap(414, Short.MAX_VALUE))
         );
         AuftragBearbeitenLayout.setVerticalGroup(
             AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel8)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel87)
                     .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbBearbeiten_AuftragBearbeiten)
-                    .addComponent(jbAbbrechen_AuftragBearbeiten)
-                    .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65)
+                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel49)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel141)
+                .addContainerGap(466, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jifAuftragBearbeitenLayout = new javax.swing.GroupLayout(jifAuftragBearbeiten.getContentPane());
@@ -1771,45 +1793,6 @@ public class StartAV extends javax.swing.JFrame {
 
         desktopPane.add(jifAuftragBearbeiten);
         jifAuftragBearbeiten.setBounds(0, 0, 1016, 770);
-
-        jifAuftragBearbeiten2.setVisible(true);
-
-        jLabel49.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel49.setText("Auftrag bearbeiten");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(427, 427, 427)
-                .addComponent(jLabel49)
-                .addContainerGap(400, Short.MAX_VALUE))
-            .addComponent(jSeparator30, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel49)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(744, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jifAuftragBearbeiten2Layout = new javax.swing.GroupLayout(jifAuftragBearbeiten2.getContentPane());
-        jifAuftragBearbeiten2.getContentPane().setLayout(jifAuftragBearbeiten2Layout);
-        jifAuftragBearbeiten2Layout.setHorizontalGroup(
-            jifAuftragBearbeiten2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jifAuftragBearbeiten2Layout.setVerticalGroup(
-            jifAuftragBearbeiten2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        desktopPane.add(jifAuftragBearbeiten2);
-        jifAuftragBearbeiten2.setBounds(0, 0, 1042, 835);
 
         jifAuftragSuchen.setClosable(true);
         jifAuftragSuchen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -2742,7 +2725,7 @@ public class StartAV extends javax.swing.JFrame {
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator13, javax.swing.GroupLayout.DEFAULT_SIZE, 938, Short.MAX_VALUE)
+                        .addComponent(jSeparator13)
                         .addComponent(jSeparator11)
                         .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                             .addContainerGap()
@@ -4738,7 +4721,7 @@ public class StartAV extends javax.swing.JFrame {
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
                         .addGap(361, 361, 361)
                         .addComponent(jLabel77)))
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         ZKAnzeigenLayout.setVerticalGroup(
             ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -7402,6 +7385,7 @@ if(istEingeloggt==true){
     private javax.swing.JTextArea jBeschreibung_aa;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -7449,6 +7433,7 @@ if(istEingeloggt==true){
     private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
@@ -7574,7 +7559,6 @@ if(istEingeloggt==true){
     private javax.swing.JPanel jPRechnungsdaten;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -7608,7 +7592,6 @@ if(istEingeloggt==true){
     private javax.swing.JSeparator jSeparator28;
     private javax.swing.JSeparator jSeparator29;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator30;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
@@ -7696,7 +7679,6 @@ if(istEingeloggt==true){
     private javax.swing.JInternalFrame jifAuftragAnlegen;
     private javax.swing.JInternalFrame jifAuftragAnzeigen;
     private javax.swing.JInternalFrame jifAuftragBearbeiten;
-    private javax.swing.JInternalFrame jifAuftragBearbeiten2;
     private javax.swing.JInternalFrame jifAuftragSuchen;
     private javax.swing.JInternalFrame jifAuftragsID_suchen;
     private javax.swing.JInternalFrame jifKundeAnlegen;
