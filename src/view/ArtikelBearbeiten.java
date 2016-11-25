@@ -49,6 +49,11 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         jLabel5.setText("Artikel-ID:");
 
         jtfartikelid_ArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfartikelid_ArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfartikelid_ArtikelBearbeitenActionPerformed(evt);
+            }
+        });
 
         jbBearbeiten_ArtikelBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbBearbeiten_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
@@ -136,7 +141,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(49, 49, 49)
-                    .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                     .addGap(50, 50, 50)))
         );
 
@@ -152,6 +157,10 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_ArtikelBearbeitenActionPerformed
+
+    private void jtfartikelid_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfartikelid_ArtikelBearbeitenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfartikelid_ArtikelBearbeitenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

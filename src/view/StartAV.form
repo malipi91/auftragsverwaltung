@@ -476,8 +476,6 @@
         </Container>
         <Component class="view.AuftraegeAlle" name="jifAuftraegeAlle">
           <Properties>
-            <Property name="closable" type="boolean" value="true"/>
-            <Property name="defaultCloseOperation" type="int" value="1"/>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
           <Constraints>

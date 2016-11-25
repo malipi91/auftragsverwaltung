@@ -6,6 +6,7 @@
 package view;
 
 import java.text.DecimalFormatSymbols;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -419,9 +420,54 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         this.setVisible(false);
      
     }//GEN-LAST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
+//Mehmet Impram 25.11.2016
+    private boolean istVollstaendig(){
+    boolean istVollstaendig = false;
+    String fehlermeldung = "";
+    if(jtfartikelid_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte geben Sie Artikel ID an";
+        jtfartikelid_ArtikelAnlegen.requestFocusInWindow();
+    }else if ( jtfartikelname_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung ="Bitte geben Sie Artikel Name an";
+    }else if (jtffrei_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte die freie Menge eingeben.";
+        jtffrei_ArtikelAnlegen.requestFocusInWindow();
+    }else if (jtfzulauf_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte die Zulauf Menge eingeben.";
+    }else if ( jtfreserviert_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte die reservierte Menge eingeben";
+    } else if (jtfverkauft_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte die verkaufte Menge eingeben";
+    } else if (jtfbestelltext_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte den Bestelltext eingeben.";
+    } else if (jtfartikeltext_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte den Artikeltext eingeben.";
+                
+    } else if ( jtfeinzelwertnetto_ArtikelAnlegen.getText().equals("")){
+        fehlermeldung = "Bitte geben Sie den EinzelWert Netto ein, eine ganze Zahl oder 2 nach Kommastellen";
+    } else if ( jtfeinzelwertbrutto_ArtikelAnlegen.getText().equals("")){
+         fehlermeldung = "Bitte geben Sie den EinzelWert Netto ein, eine ganze Zahl oder 2 nach Kommastellen";
+    } else if ( jtfbestellwertnetto_ArtikelAnlegen.getText().equals("")){
+         fehlermeldung = "Bitte geben Sie den BestellWert Netto ein, eine ganze Zahl oder 2 nach Kommastellen";
+         
+    }else if (jtfbestellwertbrutto_ArtikelAnlegen.getText().equals("")){
+         fehlermeldung = "Bitte geben Sie den BestellWert Brutto ein, eine ganze Zahl oder 2 nach Kommastellen";
+    } else if (jcbMwst_ArtikelAnlegen.getSelectedIndex() == 0){
+        fehlermeldung = "Wählen Sie Bitte den MSWT";
+    }
+            
+    if (fehlermeldung.equals("")){
+        istVollstaendig = true;
+    } else {
+        JOptionPane.showMessageDialog(this, fehlermeldung, "Unvollständig", JOptionPane.WARNING_MESSAGE);
+    }return istVollstaendig;
+}
 
     private void jbSpeichern_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnlegenActionPerformed
         // TODO add your handling code here:
+        if (istVollstaendig()) {
+            
+        }
     }//GEN-LAST:event_jbSpeichern_ArtikelAnlegenActionPerformed
 
     private void jtfbestelltext_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfbestelltext_ArtikelAnlegenActionPerformed

@@ -39,7 +39,7 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="ArtikelBearbeiten" pref="183" max="32767" attributes="0"/>
+                  <Component id="ArtikelBearbeiten" pref="187" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -126,6 +126,9 @@
               <Dimension value="[6, 25]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfartikelid_ArtikelBearbeitenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbBearbeiten_ArtikelBearbeiten">
           <Properties>

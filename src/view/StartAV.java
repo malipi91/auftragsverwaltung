@@ -842,7 +842,9 @@ public class StartAV extends javax.swing.JFrame {
     private void jmArtikelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmArtikelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jmArtikelActionPerformed
-
+//Impram Mehmet 25.11.2016
+    //Überprüft auf der Startseite die Felder. Benutzername und Passwortfeld wird als
+    //Pflichtfeld gesetzt.Wenn das nicht gefüllt ist erscheint eine Fehlermeldung.
     public boolean istVollstaendig(){
         Boolean vollstaendig = false;
         String fehlermeldung = "";
@@ -850,7 +852,10 @@ public class StartAV extends javax.swing.JFrame {
             fehlermeldung = "Füll ma alles aus";
             jtfBenutzername_Startseite.requestFocusInWindow();
             
-        }//else if (jpwpasswort_Startseite.getPassword().equals(""))
+        }else if (jpwpasswort_Startseite.getText().equals("")){
+            fehlermeldung = "Geben Sie das Passwort ein";
+            jpwpasswort_Startseite.requestFocusInWindow();
+        }
         if(fehlermeldung.equals("")){
             vollstaendig = true;
             
