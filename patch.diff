@@ -1,0 +1,667 @@
+From 3d44d032354bd48da1e5299daba0ed2051ea9cf2 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Hicran=20Y=C3=B6r=C3=BCk?= <hicranyrk@yahoo.de>
+Date: Thu, 24 Nov 2016 11:36:43 +0100
+Subject: [PATCH] =?UTF-8?q?auftrag=20bearbeiten=20=C3=BCberarbeitet?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ build/classes/view/StartAV.form | 152 ++++++++++++++++++----------------------
+ src/view/StartAV.form           | 152 ++++++++++++++++++----------------------
+ src/view/StartAV.java           | 118 +++++++++++++------------------
+ 3 files changed, 190 insertions(+), 232 deletions(-)
+
+diff --git a/build/classes/view/StartAV.form b/build/classes/view/StartAV.form
+index 6149a7d..d6e5423 100644
+--- a/build/classes/view/StartAV.form
++++ b/build/classes/view/StartAV.form
+@@ -1718,47 +1718,67 @@
+                       <Group type="102" attributes="0">
+                           <Group type="103" groupAlignment="0" attributes="0">
+                               <Group type="102" alignment="0" attributes="0">
+-                                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Component id="jbBearbeiten_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
++                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                                  <Component id="jButton1" min="-2" pref="150" max="-2" attributes="0"/>
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                               </Group>
+                               <Group type="102" alignment="0" attributes="0">
+-                                  <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+-                                  <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
+-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+-                                  <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
++                                  <EmptySpace min="-2" pref="386" max="-2" attributes="0"/>
++                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
++                              </Group>
++                              <Group type="102" attributes="0">
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Group type="103" groupAlignment="0" attributes="0">
++                                      <Group type="102" attributes="0">
++                                          <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
++                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                                          <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
++                                      </Group>
++                                      <Group type="102" alignment="0" attributes="0">
++                                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
++                                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
++                                          <Component id="jComboBox2" min="-2" pref="150" max="-2" attributes="0"/>
++                                      </Group>
++                                  </Group>
+                               </Group>
+                               <Group type="102" alignment="0" attributes="0">
+-                                  <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
+-                                  <Component id="jbBearbeiten_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
+-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+-                                  <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
+-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
+                               </Group>
+                           </Group>
+-                          <EmptySpace min="0" pref="402" max="32767" attributes="0"/>
++                          <EmptySpace pref="414" max="32767" attributes="0"/>
+                       </Group>
+                   </Group>
+                 </DimensionLayout>
+                 <DimensionLayout dim="1">
+                   <Group type="103" groupAlignment="0" attributes="0">
+                       <Group type="102" alignment="0" attributes="0">
+-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace type="separate" max="-2" attributes="0"/>
++                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                           <Component id="jSeparator10" min="-2" pref="10" max="-2" attributes="0"/>
+                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
+-                          <Group type="103" groupAlignment="0" attributes="0">
+-                              <Component id="jLabel87" alignment="0" min="-2" max="-2" attributes="0"/>
+-                              <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
++                          <Group type="103" groupAlignment="3" attributes="0">
++                              <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="jtfAuftragsID_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+                           </Group>
+-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
++                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                           <Group type="103" groupAlignment="3" attributes="0">
+-                              <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+-                              <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+-                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
++                              <Component id="jButton1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
++                              <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                           </Group>
+-                          <EmptySpace max="32767" attributes="0"/>
++                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
++                          <Group type="103" groupAlignment="3" attributes="0">
++                              <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="jComboBox2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
++                          </Group>
++                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                          <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace pref="466" max="32767" attributes="0"/>
+                       </Group>
+                   </Group>
+                 </DimensionLayout>
+@@ -1767,7 +1787,7 @@
+                 <Component class="javax.swing.JLabel" name="jLabel8">
+                   <Properties>
+                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+-                      <Font name="Tahoma" size="18" style="0"/>
++                      <Font name="Tahoma" size="24" style="0"/>
+                     </Property>
+                     <Property name="text" type="java.lang.String" value="Auftrag Bearbeiten"/>
+                   </Properties>
+@@ -1834,68 +1854,36 @@
+                     <Property name="text" type="java.lang.String" value="L&#xf6;schen"/>
+                   </Properties>
+                 </Component>
+-              </SubComponents>
+-            </Container>
+-          </SubComponents>
+-        </Container>
+-        <Container class="javax.swing.JInternalFrame" name="jifAuftragBearbeiten2">
+-          <Properties>
+-            <Property name="visible" type="boolean" value="true"/>
+-          </Properties>
+-          <Constraints>
+-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+-            </Constraint>
+-          </Constraints>
+-
+-          <Layout>
+-            <DimensionLayout dim="0">
+-              <Group type="103" groupAlignment="0" attributes="0">
+-                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+-              </Group>
+-            </DimensionLayout>
+-            <DimensionLayout dim="1">
+-              <Group type="103" groupAlignment="0" attributes="0">
+-                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+-              </Group>
+-            </DimensionLayout>
+-          </Layout>
+-          <SubComponents>
+-            <Container class="javax.swing.JPanel" name="jPanel3">
+-
+-              <Layout>
+-                <DimensionLayout dim="0">
+-                  <Group type="103" groupAlignment="0" attributes="0">
+-                      <Group type="102" attributes="0">
+-                          <EmptySpace min="-2" pref="427" max="-2" attributes="0"/>
+-                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace pref="400" max="32767" attributes="0"/>
+-                      </Group>
+-                      <Component id="jSeparator30" alignment="1" max="32767" attributes="0"/>
+-                  </Group>
+-                </DimensionLayout>
+-                <DimensionLayout dim="1">
+-                  <Group type="103" groupAlignment="0" attributes="0">
+-                      <Group type="102" alignment="0" attributes="0">
+-                          <EmptySpace max="-2" attributes="0"/>
+-                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace max="-2" attributes="0"/>
+-                          <Component id="jSeparator30" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace pref="744" max="32767" attributes="0"/>
+-                      </Group>
+-                  </Group>
+-                </DimensionLayout>
+-              </Layout>
+-              <SubComponents>
+                 <Component class="javax.swing.JLabel" name="jLabel49">
+                   <Properties>
+                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+-                      <Font name="Tahoma" size="24" style="0"/>
++                      <Font name="Tahoma" size="16" style="0"/>
+                     </Property>
+-                    <Property name="text" type="java.lang.String" value="Auftrag bearbeiten"/>
++                    <Property name="text" type="java.lang.String" value="Auftragsart"/>
+                   </Properties>
+                 </Component>
+-                <Component class="javax.swing.JSeparator" name="jSeparator30">
++                <Component class="javax.swing.JComboBox" name="jComboBox2">
++                  <Properties>
++                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
++                      <StringArray count="4">
++                        <StringItem index="0" value="-"/>
++                        <StringItem index="1" value="Barauftrag"/>
++                        <StringItem index="2" value="Sofortauftrag. Terminaufrtrag"/>
++                        <StringItem index="3" value="Bestellauftrag"/>
++                      </StringArray>
++                    </Property>
++                  </Properties>
++                  <AuxValues>
++                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
++                  </AuxValues>
++                </Component>
++                <Component class="javax.swing.JLabel" name="jLabel141">
++                  <Properties>
++                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                      <Font name="Tahoma" size="16" style="0"/>
++                    </Property>
++                    <Property name="text" type="java.lang.String" value="ZK-ID"/>
++                  </Properties>
+                 </Component>
+               </SubComponents>
+             </Container>
+@@ -3193,7 +3181,7 @@
+                           <Group type="103" groupAlignment="1" attributes="0">
+                               <Component id="jSeparator12" alignment="1" min="-2" pref="930" max="-2" attributes="0"/>
+                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+-                                  <Component id="jSeparator13" alignment="0" pref="938" max="32767" attributes="0"/>
++                                  <Component id="jSeparator13" alignment="0" max="32767" attributes="0"/>
+                                   <Component id="jSeparator11" alignment="0" max="32767" attributes="0"/>
+                                   <Group type="102" alignment="0" attributes="0">
+                                       <EmptySpace max="-2" attributes="0"/>
+@@ -6215,7 +6203,7 @@
+                                   <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
+                               </Group>
+                           </Group>
+-                          <EmptySpace pref="230" max="32767" attributes="0"/>
++                          <EmptySpace pref="231" max="32767" attributes="0"/>
+                       </Group>
+                   </Group>
+                 </DimensionLayout>
+diff --git a/src/view/StartAV.form b/src/view/StartAV.form
+index 6149a7d..d6e5423 100644
+--- a/src/view/StartAV.form
++++ b/src/view/StartAV.form
+@@ -1718,47 +1718,67 @@
+                       <Group type="102" attributes="0">
+                           <Group type="103" groupAlignment="0" attributes="0">
+                               <Group type="102" alignment="0" attributes="0">
+-                                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Component id="jbBearbeiten_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
++                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                                  <Component id="jButton1" min="-2" pref="150" max="-2" attributes="0"/>
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                               </Group>
+                               <Group type="102" alignment="0" attributes="0">
+-                                  <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+-                                  <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
+-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+-                                  <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
++                                  <EmptySpace min="-2" pref="386" max="-2" attributes="0"/>
++                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
++                              </Group>
++                              <Group type="102" attributes="0">
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Group type="103" groupAlignment="0" attributes="0">
++                                      <Group type="102" attributes="0">
++                                          <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
++                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                                          <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
++                                      </Group>
++                                      <Group type="102" alignment="0" attributes="0">
++                                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
++                                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
++                                          <Component id="jComboBox2" min="-2" pref="150" max="-2" attributes="0"/>
++                                      </Group>
++                                  </Group>
+                               </Group>
+                               <Group type="102" alignment="0" attributes="0">
+-                                  <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
+-                                  <Component id="jbBearbeiten_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
+-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+-                                  <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
+-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                                  <EmptySpace max="-2" attributes="0"/>
++                                  <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
+                               </Group>
+                           </Group>
+-                          <EmptySpace min="0" pref="402" max="32767" attributes="0"/>
++                          <EmptySpace pref="414" max="32767" attributes="0"/>
+                       </Group>
+                   </Group>
+                 </DimensionLayout>
+                 <DimensionLayout dim="1">
+                   <Group type="103" groupAlignment="0" attributes="0">
+                       <Group type="102" alignment="0" attributes="0">
+-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace type="separate" max="-2" attributes="0"/>
++                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                           <Component id="jSeparator10" min="-2" pref="10" max="-2" attributes="0"/>
+                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
+-                          <Group type="103" groupAlignment="0" attributes="0">
+-                              <Component id="jLabel87" alignment="0" min="-2" max="-2" attributes="0"/>
+-                              <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
++                          <Group type="103" groupAlignment="3" attributes="0">
++                              <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="jtfAuftragsID_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+                           </Group>
+-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
++                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                           <Group type="103" groupAlignment="3" attributes="0">
+-                              <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+-                              <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+-                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="jbBearbeiten_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
++                              <Component id="jButton1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
++                              <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                           </Group>
+-                          <EmptySpace max="32767" attributes="0"/>
++                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
++                          <Group type="103" groupAlignment="3" attributes="0">
++                              <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="jComboBox2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
++                          </Group>
++                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                          <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace pref="466" max="32767" attributes="0"/>
+                       </Group>
+                   </Group>
+                 </DimensionLayout>
+@@ -1767,7 +1787,7 @@
+                 <Component class="javax.swing.JLabel" name="jLabel8">
+                   <Properties>
+                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+-                      <Font name="Tahoma" size="18" style="0"/>
++                      <Font name="Tahoma" size="24" style="0"/>
+                     </Property>
+                     <Property name="text" type="java.lang.String" value="Auftrag Bearbeiten"/>
+                   </Properties>
+@@ -1834,68 +1854,36 @@
+                     <Property name="text" type="java.lang.String" value="L&#xf6;schen"/>
+                   </Properties>
+                 </Component>
+-              </SubComponents>
+-            </Container>
+-          </SubComponents>
+-        </Container>
+-        <Container class="javax.swing.JInternalFrame" name="jifAuftragBearbeiten2">
+-          <Properties>
+-            <Property name="visible" type="boolean" value="true"/>
+-          </Properties>
+-          <Constraints>
+-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+-            </Constraint>
+-          </Constraints>
+-
+-          <Layout>
+-            <DimensionLayout dim="0">
+-              <Group type="103" groupAlignment="0" attributes="0">
+-                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+-              </Group>
+-            </DimensionLayout>
+-            <DimensionLayout dim="1">
+-              <Group type="103" groupAlignment="0" attributes="0">
+-                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+-              </Group>
+-            </DimensionLayout>
+-          </Layout>
+-          <SubComponents>
+-            <Container class="javax.swing.JPanel" name="jPanel3">
+-
+-              <Layout>
+-                <DimensionLayout dim="0">
+-                  <Group type="103" groupAlignment="0" attributes="0">
+-                      <Group type="102" attributes="0">
+-                          <EmptySpace min="-2" pref="427" max="-2" attributes="0"/>
+-                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace pref="400" max="32767" attributes="0"/>
+-                      </Group>
+-                      <Component id="jSeparator30" alignment="1" max="32767" attributes="0"/>
+-                  </Group>
+-                </DimensionLayout>
+-                <DimensionLayout dim="1">
+-                  <Group type="103" groupAlignment="0" attributes="0">
+-                      <Group type="102" alignment="0" attributes="0">
+-                          <EmptySpace max="-2" attributes="0"/>
+-                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace max="-2" attributes="0"/>
+-                          <Component id="jSeparator30" min="-2" max="-2" attributes="0"/>
+-                          <EmptySpace pref="744" max="32767" attributes="0"/>
+-                      </Group>
+-                  </Group>
+-                </DimensionLayout>
+-              </Layout>
+-              <SubComponents>
+                 <Component class="javax.swing.JLabel" name="jLabel49">
+                   <Properties>
+                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+-                      <Font name="Tahoma" size="24" style="0"/>
++                      <Font name="Tahoma" size="16" style="0"/>
+                     </Property>
+-                    <Property name="text" type="java.lang.String" value="Auftrag bearbeiten"/>
++                    <Property name="text" type="java.lang.String" value="Auftragsart"/>
+                   </Properties>
+                 </Component>
+-                <Component class="javax.swing.JSeparator" name="jSeparator30">
++                <Component class="javax.swing.JComboBox" name="jComboBox2">
++                  <Properties>
++                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
++                      <StringArray count="4">
++                        <StringItem index="0" value="-"/>
++                        <StringItem index="1" value="Barauftrag"/>
++                        <StringItem index="2" value="Sofortauftrag. Terminaufrtrag"/>
++                        <StringItem index="3" value="Bestellauftrag"/>
++                      </StringArray>
++                    </Property>
++                  </Properties>
++                  <AuxValues>
++                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
++                  </AuxValues>
++                </Component>
++                <Component class="javax.swing.JLabel" name="jLabel141">
++                  <Properties>
++                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                      <Font name="Tahoma" size="16" style="0"/>
++                    </Property>
++                    <Property name="text" type="java.lang.String" value="ZK-ID"/>
++                  </Properties>
+                 </Component>
+               </SubComponents>
+             </Container>
+@@ -3193,7 +3181,7 @@
+                           <Group type="103" groupAlignment="1" attributes="0">
+                               <Component id="jSeparator12" alignment="1" min="-2" pref="930" max="-2" attributes="0"/>
+                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+-                                  <Component id="jSeparator13" alignment="0" pref="938" max="32767" attributes="0"/>
++                                  <Component id="jSeparator13" alignment="0" max="32767" attributes="0"/>
+                                   <Component id="jSeparator11" alignment="0" max="32767" attributes="0"/>
+                                   <Group type="102" alignment="0" attributes="0">
+                                       <EmptySpace max="-2" attributes="0"/>
+@@ -6215,7 +6203,7 @@
+                                   <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
+                               </Group>
+                           </Group>
+-                          <EmptySpace pref="230" max="32767" attributes="0"/>
++                          <EmptySpace pref="231" max="32767" attributes="0"/>
+                       </Group>
+                   </Group>
+                 </DimensionLayout>
+diff --git a/src/view/StartAV.java b/src/view/StartAV.java
+index 8b46588..fcda14b 100644
+--- a/src/view/StartAV.java
++++ b/src/view/StartAV.java
+@@ -331,10 +331,9 @@ public class StartAV extends javax.swing.JFrame {
+         jLabel87 = new javax.swing.JLabel();
+         jtfAuftragsID_AuftragBearbeiten = new javax.swing.JTextField();
+         jButton1 = new javax.swing.JButton();
+-        jifAuftragBearbeiten2 = new javax.swing.JInternalFrame();
+-        jPanel3 = new javax.swing.JPanel();
+         jLabel49 = new javax.swing.JLabel();
+-        jSeparator30 = new javax.swing.JSeparator();
++        jComboBox2 = new javax.swing.JComboBox<>();
++        jLabel141 = new javax.swing.JLabel();
+         jifAuftragSuchen = new javax.swing.JInternalFrame();
+         AuftragSuchen = new javax.swing.JPanel();
+         titel_as = new javax.swing.JLabel();
+@@ -1683,7 +1682,7 @@ public class StartAV extends javax.swing.JFrame {
+ 
+         AuftragBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 800));
+ 
+-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
++        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+         jLabel8.setText("Auftrag Bearbeiten");
+ 
+         jbAbbrechen_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+@@ -1715,6 +1714,14 @@ public class StartAV extends javax.swing.JFrame {
+         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
+         jButton1.setText("Löschen");
+ 
++        jLabel49.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
++        jLabel49.setText("Auftragsart");
++
++        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Barauftrag", "Sofortauftrag. Terminaufrtrag", "Bestellauftrag" }));
++
++        jLabel141.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
++        jLabel141.setText("ZK-ID");
++
+         javax.swing.GroupLayout AuftragBearbeitenLayout = new javax.swing.GroupLayout(AuftragBearbeiten);
+         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
+         AuftragBearbeitenLayout.setHorizontalGroup(
+@@ -1723,39 +1730,54 @@ public class StartAV extends javax.swing.JFrame {
+             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+-                        .addGap(190, 190, 190)
++                        .addContainerGap()
++                        .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
++                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
++                        .addGap(386, 386, 386)
+                         .addComponent(jLabel8))
+                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+-                        .addGap(220, 220, 220)
+-                        .addComponent(jLabel87)
+-                        .addGap(31, 31, 31)
+-                        .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
++                        .addContainerGap()
++                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
++                                .addComponent(jLabel87)
++                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                                .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
++                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
++                                .addComponent(jLabel49)
++                                .addGap(41, 41, 41)
++                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                     .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+-                        .addGap(197, 197, 197)
+-                        .addComponent(jbBearbeiten_AuftragBearbeiten)
+-                        .addGap(18, 18, 18)
+-                        .addComponent(jbAbbrechen_AuftragBearbeiten)
+-                        .addGap(18, 18, 18)
+-                        .addComponent(jButton1)))
+-                .addGap(0, 402, Short.MAX_VALUE))
++                        .addContainerGap()
++                        .addComponent(jLabel141)))
++                .addContainerGap(414, Short.MAX_VALUE))
+         );
+         AuftragBearbeitenLayout.setVerticalGroup(
+             AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+-                .addGap(7, 7, 7)
++                .addGap(12, 12, 12)
+                 .addComponent(jLabel8)
+-                .addGap(18, 18, 18)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(jLabel87)
+                     .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+-                .addGap(28, 28, 28)
++                .addGap(18, 18, 18)
+                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+-                    .addComponent(jbBearbeiten_AuftragBearbeiten)
+-                    .addComponent(jbAbbrechen_AuftragBearbeiten)
+-                    .addComponent(jButton1))
+-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                    .addComponent(jbBearbeiten_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
++                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
++                    .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(65, 65, 65)
++                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel49)
++                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jLabel141)
++                .addContainerGap(466, Short.MAX_VALUE))
+         );
+ 
+         javax.swing.GroupLayout jifAuftragBearbeitenLayout = new javax.swing.GroupLayout(jifAuftragBearbeiten.getContentPane());
+@@ -1772,45 +1794,6 @@ public class StartAV extends javax.swing.JFrame {
+         desktopPane.add(jifAuftragBearbeiten);
+         jifAuftragBearbeiten.setBounds(0, 0, 1016, 770);
+ 
+-        jifAuftragBearbeiten2.setVisible(true);
+-
+-        jLabel49.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+-        jLabel49.setText("Auftrag bearbeiten");
+-
+-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+-        jPanel3.setLayout(jPanel3Layout);
+-        jPanel3Layout.setHorizontalGroup(
+-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel3Layout.createSequentialGroup()
+-                .addGap(427, 427, 427)
+-                .addComponent(jLabel49)
+-                .addContainerGap(400, Short.MAX_VALUE))
+-            .addComponent(jSeparator30, javax.swing.GroupLayout.Alignment.TRAILING)
+-        );
+-        jPanel3Layout.setVerticalGroup(
+-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel3Layout.createSequentialGroup()
+-                .addContainerGap()
+-                .addComponent(jLabel49)
+-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jSeparator30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+-                .addContainerGap(744, Short.MAX_VALUE))
+-        );
+-
+-        javax.swing.GroupLayout jifAuftragBearbeiten2Layout = new javax.swing.GroupLayout(jifAuftragBearbeiten2.getContentPane());
+-        jifAuftragBearbeiten2.getContentPane().setLayout(jifAuftragBearbeiten2Layout);
+-        jifAuftragBearbeiten2Layout.setHorizontalGroup(
+-            jifAuftragBearbeiten2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-        );
+-        jifAuftragBearbeiten2Layout.setVerticalGroup(
+-            jifAuftragBearbeiten2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-        );
+-
+-        desktopPane.add(jifAuftragBearbeiten2);
+-        jifAuftragBearbeiten2.setBounds(0, 0, 1042, 835);
+-
+         jifAuftragSuchen.setClosable(true);
+         jifAuftragSuchen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+         jifAuftragSuchen.setNormalBounds(new java.awt.Rectangle(0, 0, 41, 40));
+@@ -2742,7 +2725,7 @@ public class StartAV extends javax.swing.JFrame {
+                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+-                        .addComponent(jSeparator13, javax.swing.GroupLayout.DEFAULT_SIZE, 938, Short.MAX_VALUE)
++                        .addComponent(jSeparator13)
+                         .addComponent(jSeparator11)
+                         .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
+                             .addContainerGap()
+@@ -4738,7 +4721,7 @@ public class StartAV extends javax.swing.JFrame {
+                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
+                         .addGap(361, 361, 361)
+                         .addComponent(jLabel77)))
+-                .addContainerGap(230, Short.MAX_VALUE))
++                .addContainerGap(231, Short.MAX_VALUE))
+         );
+         ZKAnzeigenLayout.setVerticalGroup(
+             ZKAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+@@ -7402,6 +7385,7 @@ if(istEingeloggt==true){
+     private javax.swing.JTextArea jBeschreibung_aa;
+     private javax.swing.JButton jButton1;
+     private javax.swing.JComboBox<String> jComboBox1;
++    private javax.swing.JComboBox<String> jComboBox2;
+     private javax.swing.JLabel jLabel1;
+     private javax.swing.JLabel jLabel10;
+     private javax.swing.JLabel jLabel100;
+@@ -7449,6 +7433,7 @@ if(istEingeloggt==true){
+     private javax.swing.JLabel jLabel139;
+     private javax.swing.JLabel jLabel14;
+     private javax.swing.JLabel jLabel140;
++    private javax.swing.JLabel jLabel141;
+     private javax.swing.JLabel jLabel147;
+     private javax.swing.JLabel jLabel148;
+     private javax.swing.JLabel jLabel149;
+@@ -7574,7 +7559,6 @@ if(istEingeloggt==true){
+     private javax.swing.JPanel jPRechnungsdaten;
+     private javax.swing.JPanel jPanel1;
+     private javax.swing.JPanel jPanel2;
+-    private javax.swing.JPanel jPanel3;
+     private javax.swing.JPopupMenu jPopupMenu1;
+     private javax.swing.JScrollPane jScrollPane1;
+     private javax.swing.JScrollPane jScrollPane2;
+@@ -7608,7 +7592,6 @@ if(istEingeloggt==true){
+     private javax.swing.JSeparator jSeparator28;
+     private javax.swing.JSeparator jSeparator29;
+     private javax.swing.JSeparator jSeparator3;
+-    private javax.swing.JSeparator jSeparator30;
+     private javax.swing.JSeparator jSeparator4;
+     private javax.swing.JSeparator jSeparator5;
+     private javax.swing.JSeparator jSeparator6;
+@@ -7696,7 +7679,6 @@ if(istEingeloggt==true){
+     private javax.swing.JInternalFrame jifAuftragAnlegen;
+     private javax.swing.JInternalFrame jifAuftragAnzeigen;
+     private javax.swing.JInternalFrame jifAuftragBearbeiten;
+-    private javax.swing.JInternalFrame jifAuftragBearbeiten2;
+     private javax.swing.JInternalFrame jifAuftragSuchen;
+     private javax.swing.JInternalFrame jifAuftragsID_suchen;
+     private javax.swing.JInternalFrame jifKundeAnlegen;
+-- 
+2.8.1.windows.1
+

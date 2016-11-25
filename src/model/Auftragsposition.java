@@ -6,10 +6,12 @@
 package model;
 
 /**
- *
+ * Erweiterung der setter und getter Methoden 24.11.2016
  * @author Duygu
  */
 public class Auftragsposition {
+    
+    // Deklaration der Variablen
 
     private String auftragskopfId;
     private int positionsnummer;
@@ -63,7 +65,7 @@ public class Auftragsposition {
         return this.einzelwert;
     }
 
-    public void setArtikelID(int einzelwert) {
+    public void setEinzelwert(int einzelwert) {
         this.einzelwert = einzelwert;
     }
 
