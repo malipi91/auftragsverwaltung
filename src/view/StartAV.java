@@ -843,15 +843,34 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmArtikelActionPerformed
 
+    public boolean istVollstaendig(){
+        Boolean vollstaendig = false;
+        String fehlermeldung = "";
+        if(jtfBenutzername_Startseite.getText().equals("")) {
+            fehlermeldung = "Füll ma alles aus";
+            jtfBenutzername_Startseite.requestFocusInWindow();
+            
+        }//else if (jpwpasswort_Startseite.getPassword().equals(""))
+        if(fehlermeldung.equals("")){
+            vollstaendig = true;
+            
+            
+        }else{
+            JOptionPane.showMessageDialog(this, fehlermeldung,"Unvollständig" ,JOptionPane.WARNING_MESSAGE);
+        }return vollstaendig;
+    }
     private void jbanmelden_StartseiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbanmelden_StartseiteActionPerformed
         /* Mechmet Impram 24.11.2016
         Hier werden BN und Passwort mit eingelegte Benutzer auf Richtigkeit vergleichen
         wenn richtig, die Fenster anzeigen, solange muss die Menu invisible sein.
         */
-
+        if(istVollstaendig()){
         Startseite.setVisible(false);
         SeiteZwei.setVisible(true);
         istEingeloggt = true;
+        }
+
+       
     }//GEN-LAST:event_jbanmelden_StartseiteActionPerformed
 
     private void miGesamtAuftraegeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGesamtAuftraegeActionPerformed
