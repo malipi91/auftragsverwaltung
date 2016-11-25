@@ -58,6 +58,14 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmAuftragActionPerformed"/>
           </Events>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="miLetzte">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Letzte"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miLetzteActionPerformed"/>
+              </Events>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="miAuftraganzeigen">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Anzeigen"/>
@@ -466,6 +474,18 @@
             </DimensionLayout>
           </Layout>
         </Container>
+        <Component class="view.AuftraegeAlle" name="jifAuftraegeAlle">
+          <Properties>
+            <Property name="closable" type="boolean" value="true"/>
+            <Property name="defaultCloseOperation" type="int" value="1"/>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
         <Component class="view.ArtikelSuche" name="jifArtikelSuche">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>

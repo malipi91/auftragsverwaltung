@@ -106,6 +106,7 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         SeiteZwei = new javax.swing.JPanel();
+        jifAuftraegeAlle = new view.AuftraegeAlle();
         jifArtikelSuche = new view.ArtikelSuche();
         jifZKID_suchen = new view.ZKID_suchen();
         jifZKSuchen = new view.ZKSuchen();
@@ -133,6 +134,7 @@ public class StartAV extends javax.swing.JFrame {
         miAbmelden = new javax.swing.JMenuItem();
         miBeenden = new javax.swing.JMenuItem();
         jmAuftrag = new javax.swing.JMenu();
+        miLetzte = new javax.swing.JMenuItem();
         miAuftraganzeigen = new javax.swing.JMenuItem();
         miAuftraganlegen = new javax.swing.JMenuItem();
         miAuftragbearbeiten = new javax.swing.JMenuItem();
@@ -250,6 +252,12 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(SeiteZwei);
         SeiteZwei.setBounds(0, 0, 2000, 1100);
 
+        jifAuftraegeAlle.setClosable(true);
+        jifAuftraegeAlle.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jifAuftraegeAlle.setVisible(false);
+        desktopPane.add(jifAuftraegeAlle);
+        jifAuftraegeAlle.setBounds(0, 0, 1087, 764);
+
         jifArtikelSuche.setVisible(false);
         desktopPane.add(jifArtikelSuche);
         jifArtikelSuche.setBounds(0, 0, 1059, 702);
@@ -312,7 +320,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
-        jifArtikelAnzeige.setBounds(0, 0, 786, 838);
+        jifArtikelAnzeige.setBounds(0, 0, 975, 846);
 
         jifAuftragsID_suchen.setVisible(false);
         desktopPane.add(jifAuftragsID_suchen);
@@ -328,11 +336,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
-        jifArtikelAnlegen.setBounds(0, 0, 991, 813);
+        jifArtikelAnlegen.setBounds(0, 0, 991, 821);
 
         jifAuftragAnzeigen.setVisible(false);
         desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 1058, 851);
+        jifAuftragAnzeigen.setBounds(0, 0, 1058, 859);
 
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
@@ -375,6 +383,14 @@ public class StartAV extends javax.swing.JFrame {
                 jmAuftragActionPerformed(evt);
             }
         });
+
+        miLetzte.setText("Letzte");
+        miLetzte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miLetzteActionPerformed(evt);
+            }
+        });
+        jmAuftrag.add(miLetzte);
 
         miAuftraganzeigen.setText("Anzeigen");
         miAuftraganzeigen.setToolTipText("");
@@ -838,6 +854,15 @@ public class StartAV extends javax.swing.JFrame {
         istEingeloggt = true;
     }//GEN-LAST:event_jbanmelden_StartseiteActionPerformed
 
+    private void miLetzteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLetzteActionPerformed
+        if (istEingeloggt == true) {
+            jifAuftraegeAlle.setVisible(true);
+        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+            JOptionPane.showMessageDialog(null, "Bitte einloggen!");
+        }
+    }//GEN-LAST:event_miLetzteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -890,6 +915,7 @@ public class StartAV extends javax.swing.JFrame {
     private view.ArtikelAnzeige jifArtikelAnzeige;
     private view.ArtikelBearbeiten jifArtikelBearbeiten;
     private view.ArtikelSuche jifArtikelSuche;
+    private view.AuftraegeAlle jifAuftraegeAlle;
     private view.AuftragAnlegen jifAuftragAnlegen;
     private view.AuftragAnzeigen jifAuftragAnzeigen;
     private view.AuftragBearbeiten jifAuftragBearbeiten;
@@ -933,6 +959,7 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JMenuItem miKundeanlegen;
     private javax.swing.JMenuItem miKundeanzeigen;
     private javax.swing.JMenuItem miKundebearbeiten;
+    private javax.swing.JMenuItem miLetzte;
     private javax.swing.JMenuItem miLieferantSuche;
     private javax.swing.JMenuItem miLieferantanlegen;
     private javax.swing.JMenuItem miLieferantanzeigen;
