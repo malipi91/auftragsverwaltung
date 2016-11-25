@@ -151,11 +151,6 @@
                   </Group>
                   <EmptySpace pref="84" max="32767" attributes="0"/>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
-              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -175,9 +170,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlAuftragsid" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jtfAuftragsid_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -252,7 +245,7 @@
                       <Component id="jbBearbeiten_az" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jbSpeichern_az" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -549,11 +542,6 @@
         <Component class="javax.swing.JFormattedTextField" name="jftfAbschlussdatum_az">
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="jftfErfassungsdatum_az">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

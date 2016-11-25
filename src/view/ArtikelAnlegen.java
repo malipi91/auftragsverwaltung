@@ -237,7 +237,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator13, javax.swing.GroupLayout.DEFAULT_SIZE, 938, Short.MAX_VALUE)
+                        .addComponent(jSeparator13)
                         .addComponent(jSeparator11)
                         .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                             .addContainerGap()
@@ -264,7 +264,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ArtikelAnlegenLayout.createSequentialGroup()
                                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
-                                            .addGap(187, 187, 187)
+                                            .addGap(304, 304, 304)
                                             .addComponent(jLabel39))
                                         .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                                             .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -300,7 +300,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                                             .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                 .addComponent(jLabel62)
                                                 .addComponent(jLabel61))))
-                                    .addGap(70, 70, 70)
+                                    .addGap(43, 43, 43)
                                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jtfverkauft_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
@@ -314,7 +314,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(jLabel173, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGap(180, 180, 180))))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ArtikelAnlegenLayout.setVerticalGroup(
             ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -394,7 +394,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 951, Short.MAX_VALUE)
+                    .addComponent(ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 951, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
@@ -402,7 +402,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
             .addGap(0, 773, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addComponent(ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 760, Short.MAX_VALUE)
+                    .addComponent(ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 768, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
