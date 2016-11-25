@@ -7,7 +7,7 @@ package view;
 
 /**
  *
- * @author User
+ * @author Hicran Yoeruek
  */
 public class AuftraegeAlle extends javax.swing.JInternalFrame {
 
