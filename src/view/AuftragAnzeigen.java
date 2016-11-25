@@ -61,6 +61,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jfftfLieferdatum_az = new javax.swing.JFormattedTextField();
         jftfAbschlussdatum_az = new javax.swing.JFormattedTextField();
         jftfErfassungsdatum_az = new javax.swing.JFormattedTextField();
+        jTextField1 = new javax.swing.JTextField();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -194,6 +195,8 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragswertnetto_az.setText("Auftragswert (netto)");
 
+        jTextField1.setText("jTextField1");
+
         javax.swing.GroupLayout AuftragAnzeigenLayout = new javax.swing.GroupLayout(AuftragAnzeigen);
         AuftragAnzeigen.setLayout(AuftragAnzeigenLayout);
         AuftragAnzeigenLayout.setHorizontalGroup(
@@ -268,6 +271,10 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                                                 .addComponent(jcbStatus_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jftfAbschlussdatum_az, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
                 .addContainerGap(84, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragAnzeigenLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123))
         );
         AuftragAnzeigenLayout.setVerticalGroup(
             AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,7 +292,9 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                     .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
                         .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
-                                .addGap(44, 44, 44)
+                                .addGap(7, 7, 7)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15)
                                 .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jlAuftragsid)
                                     .addComponent(jtfAuftragsid_az, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,7 +371,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 785, Short.MAX_VALUE)
+                    .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -406,6 +415,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbBearbeiten_az;
     private javax.swing.JButton jbSpeichern_az;
     private javax.swing.JButton jbZurueck_az;
