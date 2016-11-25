@@ -134,7 +134,7 @@ public class StartAV extends javax.swing.JFrame {
         miAbmelden = new javax.swing.JMenuItem();
         miBeenden = new javax.swing.JMenuItem();
         jmAuftrag = new javax.swing.JMenu();
-        miLetzte = new javax.swing.JMenuItem();
+        miGesamtAuftraege = new javax.swing.JMenuItem();
         miAuftraganzeigen = new javax.swing.JMenuItem();
         miAuftraganlegen = new javax.swing.JMenuItem();
         miAuftragbearbeiten = new javax.swing.JMenuItem();
@@ -384,13 +384,13 @@ public class StartAV extends javax.swing.JFrame {
             }
         });
 
-        miLetzte.setText("Letzte");
-        miLetzte.addActionListener(new java.awt.event.ActionListener() {
+        miGesamtAuftraege.setText("Gesamt Aufträge");
+        miGesamtAuftraege.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miLetzteActionPerformed(evt);
+                miGesamtAuftraegeActionPerformed(evt);
             }
         });
-        jmAuftrag.add(miLetzte);
+        jmAuftrag.add(miGesamtAuftraege);
 
         miAuftraganzeigen.setText("Anzeigen");
         miAuftraganzeigen.setToolTipText("");
@@ -854,14 +854,14 @@ public class StartAV extends javax.swing.JFrame {
         istEingeloggt = true;
     }//GEN-LAST:event_jbanmelden_StartseiteActionPerformed
 
-    private void miLetzteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLetzteActionPerformed
+    private void miGesamtAuftraegeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGesamtAuftraegeActionPerformed
         if (istEingeloggt == true) {
             jifAuftraegeAlle.setVisible(true);
         } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
         Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
-    }//GEN-LAST:event_miLetzteActionPerformed
+    }//GEN-LAST:event_miGesamtAuftraegeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -955,11 +955,11 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JMenuItem miAuftraganzeigen;
     private javax.swing.JMenuItem miAuftragbearbeiten;
     private javax.swing.JMenuItem miBeenden;
+    private javax.swing.JMenuItem miGesamtAuftraege;
     private javax.swing.JMenuItem miKundeSuche;
     private javax.swing.JMenuItem miKundeanlegen;
     private javax.swing.JMenuItem miKundeanzeigen;
     private javax.swing.JMenuItem miKundebearbeiten;
-    private javax.swing.JMenuItem miLetzte;
     private javax.swing.JMenuItem miLieferantSuche;
     private javax.swing.JMenuItem miLieferantanlegen;
     private javax.swing.JMenuItem miLieferantanzeigen;

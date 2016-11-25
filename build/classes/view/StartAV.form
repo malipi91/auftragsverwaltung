@@ -58,12 +58,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmAuftragActionPerformed"/>
           </Events>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="miLetzte">
+            <MenuItem class="javax.swing.JMenuItem" name="miGesamtAuftraege">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Letzte"/>
+                <Property name="text" type="java.lang.String" value="Gesamt Auftr&#xe4;ge"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miLetzteActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miGesamtAuftraegeActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="miAuftraganzeigen">
