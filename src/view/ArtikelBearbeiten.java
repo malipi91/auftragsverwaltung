@@ -408,7 +408,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichernArtikelBearbeiten)
                     .addComponent(jbAbbrechenArtikelBearbeiten))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -422,7 +422,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE)
+                .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -445,6 +445,8 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
 
     private void jbAbbrechenArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechenArtikelBearbeitenActionPerformed
         // TODO add your handling code here:
+        //Mehmet Impram nach Betätigung der Abbrechen Button wird das fenster geschlossen.
+        this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechenArtikelBearbeitenActionPerformed
 
 
