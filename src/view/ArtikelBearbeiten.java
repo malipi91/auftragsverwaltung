@@ -69,6 +69,13 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -151,42 +158,63 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel15.setText("Bestellwert (Brutto):");
 
-        jTextField1.setText("jTextField1");
         jTextField1.setMinimumSize(new java.awt.Dimension(6, 25));
         jTextField1.setPreferredSize(new java.awt.Dimension(59, 25));
 
-        jTextField2.setText("jTextField2");
         jTextField2.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField2.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField3.setText("jTextField3");
         jTextField3.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField3.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField4.setText("jTextField4");
         jTextField4.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField4.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField5.setText("jTextField5");
         jTextField5.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField5.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField6.setText("jTextField6");
         jTextField6.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField6.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField7.setText("jTextField7");
+        jTextField7.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField7.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField8.setText("jTextField8");
-
-        jTextField9.setText("jTextField9");
         jTextField9.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField9.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField10.setText("jTextField10");
         jTextField10.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField10.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField11.setText("jTextField11");
         jTextField11.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField11.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField12.setText("jTextField12");
         jTextField12.setMinimumSize(new java.awt.Dimension(6, 25));
+        jTextField12.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "7", "19" }));
+
+        jLabel16.setText("€");
+
+        jLabel17.setText("€");
+
+        jLabel18.setText("€");
+
+        jLabel19.setText("€");
+
+        jLabel20.setText("%");
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
+        jButton1.setText("Abbrechen");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
+        jButton2.setText("Speichern");
 
         javax.swing.GroupLayout ArtikelBearbeitenLayout = new javax.swing.GroupLayout(ArtikelBearbeiten);
         ArtikelBearbeiten.setLayout(ArtikelBearbeitenLayout);
@@ -197,7 +225,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                 .addComponent(jLabel40)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
-                .addContainerGap(301, Short.MAX_VALUE)
+                .addContainerGap(312, Short.MAX_VALUE)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                         .addComponent(jbBearbeiten_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,8 +251,8 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                             .addComponent(jLabel2))
                         .addGap(67, 67, 67)
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
@@ -261,7 +289,6 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
@@ -273,18 +300,35 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                         .addGap(61, 61, 61)
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
-                                .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                                .addGap(55, 55, 55)
-                                .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel15))
-                                .addGap(63, 63, 63)
-                                .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel20))
+                            .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
+                                    .addComponent(jButton2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton1))
+                                .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
+                                    .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel16)
+                                        .addComponent(jLabel17))
+                                    .addGap(26, 26, 26)
+                                    .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel14)
+                                        .addComponent(jLabel15))
+                                    .addGap(63, 63, 63)
+                                    .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel18)
+                                        .addComponent(jLabel19))))))
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ArtikelBearbeitenLayout.setVerticalGroup(
@@ -344,29 +388,42 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                     .addComponent(jLabel11)
                     .addComponent(jLabel14)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel18))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(jLabel15)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel19))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 1091, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 877, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -386,9 +443,15 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfartikelid_ArtikelBearbeitenActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ArtikelBearbeiten;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -397,7 +460,12 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
