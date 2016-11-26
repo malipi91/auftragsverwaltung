@@ -252,7 +252,7 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(SeiteZwei);
         SeiteZwei.setBounds(0, 0, 2000, 1100);
 
-        jifAuftragBearbeiten.setVisible(true);
+        jifAuftragBearbeiten.setVisible(false);
         desktopPane.add(jifAuftragBearbeiten);
         jifAuftragBearbeiten.setBounds(0, 0, 1174, 877);
 
