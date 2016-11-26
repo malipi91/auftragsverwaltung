@@ -56,26 +56,26 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jtfArtikelID_ArtikelBearbeiten_Gegraut = new javax.swing.JTextField();
+        jtfArtikelname_ArtikelBearbeiten = new javax.swing.JTextField();
+        jtffreiArtikelBearbeiten = new javax.swing.JTextField();
+        jtfzulaufArtikelBearbeiten = new javax.swing.JTextField();
+        jtfreserviertArtikelBearbeiten = new javax.swing.JTextField();
+        jtfverkauftArtikelBearbeiten = new javax.swing.JTextField();
+        jtfBestellTextArtikelBearbeiten = new javax.swing.JTextField();
+        jtfArtikelTextArtikelBearbeiten = new javax.swing.JTextField();
+        jtfEinzelwertNettoArtikelBearbeiten = new javax.swing.JTextField();
+        jtfBestellwertNettoArtikelBearbeiten = new javax.swing.JTextField();
+        jtfEinzelwertBruttoArtikelBearbeiten = new javax.swing.JTextField();
+        jtfBestellwertBruttoArtikelBearbeiten = new javax.swing.JTextField();
+        jcbMWSTArtikelBearbeiten = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jbAbbrechenArtikelBearbeiten = new javax.swing.JButton();
+        jbSpeichernArtikelBearbeiten = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -158,40 +158,40 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel15.setText("Bestellwert (Brutto):");
 
-        jTextField1.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField1.setPreferredSize(new java.awt.Dimension(59, 25));
+        jtfArtikelID_ArtikelBearbeiten_Gegraut.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfArtikelID_ArtikelBearbeiten_Gegraut.setPreferredSize(new java.awt.Dimension(59, 25));
 
-        jTextField2.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField2.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfArtikelname_ArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfArtikelname_ArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField3.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField3.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtffreiArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtffreiArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField4.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField4.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfzulaufArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfzulaufArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField5.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField5.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfreserviertArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfreserviertArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField6.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField6.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfverkauftArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfverkauftArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField7.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField7.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfBestellTextArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfBestellTextArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField9.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField9.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfEinzelwertNettoArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfEinzelwertNettoArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField10.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField10.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfBestellwertNettoArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfBestellwertNettoArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField11.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField11.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfEinzelwertBruttoArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfEinzelwertBruttoArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jTextField12.setMinimumSize(new java.awt.Dimension(6, 25));
-        jTextField12.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfBestellwertBruttoArtikelBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfBestellwertBruttoArtikelBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "7", "19" }));
+        jcbMWSTArtikelBearbeiten.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "7", "19" }));
 
         jLabel16.setText("€");
 
@@ -203,18 +203,18 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
 
         jLabel20.setText("%");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
-        jButton1.setText("Abbrechen");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbAbbrechenArtikelBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbAbbrechenArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
+        jbAbbrechenArtikelBearbeiten.setText("Abbrechen");
+        jbAbbrechenArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbAbbrechenArtikelBearbeitenActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
-        jButton2.setText("Speichern");
+        jbSpeichernArtikelBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbSpeichernArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
+        jbSpeichernArtikelBearbeiten.setText("Speichern");
 
         javax.swing.GroupLayout ArtikelBearbeitenLayout = new javax.swing.GroupLayout(ArtikelBearbeiten);
         ArtikelBearbeiten.setLayout(ArtikelBearbeitenLayout);
@@ -251,8 +251,8 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                             .addComponent(jLabel2))
                         .addGap(67, 67, 67)
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jtfArtikelID_ArtikelBearbeiten_Gegraut, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(jtfArtikelname_ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
@@ -268,21 +268,21 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                                     .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addGap(49, 49, 49)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jtfzulaufArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ArtikelBearbeitenLayout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jtffreiArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(102, 102, 102)))
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addGap(82, 82, 82)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jtfverkauftArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(67, 67, 67)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jtfreserviertArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jSeparator3))
                 .addContainerGap())
@@ -290,7 +290,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfBestellTextArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,18 +300,18 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                         .addGap(61, 61, 61)
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jcbMWSTArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel20))
                             .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
-                                    .addComponent(jButton2)
+                                    .addComponent(jbSpeichernArtikelBearbeiten)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton1))
+                                    .addComponent(jbAbbrechenArtikelBearbeiten))
                                 .addGroup(ArtikelBearbeitenLayout.createSequentialGroup()
                                     .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                        .addComponent(jtfEinzelwertNettoArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jtfBestellwertNettoArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel16)
@@ -322,13 +322,13 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel15))
                                     .addGap(63, 63, 63)
                                     .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                        .addComponent(jtfEinzelwertBruttoArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jtfBestellwertBruttoArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel18)
                                         .addComponent(jLabel19))))))
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfArtikelTextArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ArtikelBearbeitenLayout.setVerticalGroup(
@@ -353,10 +353,10 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtfArtikelID_ArtikelBearbeiten_Gegraut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfArtikelname_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -365,49 +365,49 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtffreiArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfreserviertArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfzulaufArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfverkauftArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtfBestellTextArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtfArtikelTextArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfEinzelwertNettoArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfEinzelwertBruttoArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16)
                     .addComponent(jLabel18))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(jLabel15)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfBestellwertNettoArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfBestellwertBruttoArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17)
                     .addComponent(jLabel19))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbMWSTArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(jbSpeichernArtikelBearbeiten)
+                    .addComponent(jbAbbrechenArtikelBearbeiten))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -443,16 +443,13 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfartikelid_ArtikelBearbeitenActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbAbbrechenArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechenArtikelBearbeitenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbAbbrechenArtikelBearbeitenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ArtikelBearbeiten;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -478,20 +475,23 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton jbAbbrechenArtikelBearbeiten;
     private javax.swing.JButton jbAbbrechen_ArtikelBearbeiten;
     private javax.swing.JButton jbBearbeiten_ArtikelBearbeiten;
+    private javax.swing.JButton jbSpeichernArtikelBearbeiten;
+    private javax.swing.JComboBox<String> jcbMWSTArtikelBearbeiten;
+    private javax.swing.JTextField jtfArtikelID_ArtikelBearbeiten_Gegraut;
+    private javax.swing.JTextField jtfArtikelTextArtikelBearbeiten;
+    private javax.swing.JTextField jtfArtikelname_ArtikelBearbeiten;
+    private javax.swing.JTextField jtfBestellTextArtikelBearbeiten;
+    private javax.swing.JTextField jtfBestellwertBruttoArtikelBearbeiten;
+    private javax.swing.JTextField jtfBestellwertNettoArtikelBearbeiten;
+    private javax.swing.JTextField jtfEinzelwertBruttoArtikelBearbeiten;
+    private javax.swing.JTextField jtfEinzelwertNettoArtikelBearbeiten;
     private javax.swing.JTextField jtfartikelid_ArtikelBearbeiten;
+    private javax.swing.JTextField jtffreiArtikelBearbeiten;
+    private javax.swing.JTextField jtfreserviertArtikelBearbeiten;
+    private javax.swing.JTextField jtfverkauftArtikelBearbeiten;
+    private javax.swing.JTextField jtfzulaufArtikelBearbeiten;
     // End of variables declaration//GEN-END:variables
 }
