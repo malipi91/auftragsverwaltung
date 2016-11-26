@@ -474,6 +474,26 @@
             </DimensionLayout>
           </Layout>
         </Container>
+        <Component class="view.ArtikelBearbeiten" name="jifArtikelBearbeiten">
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="view.AuftragBearbeiten" name="jifAuftragBearbeiten">
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
         <Component class="view.AuftraegeAlle" name="jifAuftraegeAlle">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
@@ -624,16 +644,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="view.ArtikelBearbeiten" name="jifArtikelBearbeiten">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Component class="view.ArtikelAnzeige" name="jifArtikelAnzeige">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
@@ -655,16 +665,6 @@
           </Constraints>
         </Component>
         <Component class="view.AuftragSuchen" name="jifAuftragSuchen">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="view.AuftragBearbeiten" name="jifAuftragBearbeiten">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
