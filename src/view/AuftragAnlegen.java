@@ -626,11 +626,11 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         //Buttons werden die Daten in die Datenbank gespeichert
         Auftragsstatus aStatus = new Auftragsstatus();
         String beschreibung = this.jBeschreibung_aa.getText();
-        String erfassungsdatum = this.jtfErfassungsdatum_aa.getText();
-        String lieferdatum = this.jtfLieferdatum_aa.getText();
+        String erfassungsdatum = this.jftfErfassungsdatum_aa.getText();
+        String lieferdatum = this.jftfLieferdatum_aa.getText();
         String auftragsart = (String) this.jcbAuftragsart.getSelectedItem();
         String status = (String) this.jcbStatus.getSelectedItem();
-        String abschlussDatum = this.jtfAbschlussdatum_aa.getText();
+        String abschlussDatum = this.jftfAbschlussdatum_AuftragAnlegen.getText();
         System.out.println("Result: " + beschreibung + erfassungsdatum);
         Auftrag auftrag = new Auftrag(beschreibung, erfassungsdatum, lieferdatum,
             auftragsart, aStatus.ueberfuehreAuftragsStatus(status), abschlussDatum);
