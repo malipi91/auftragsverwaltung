@@ -33,6 +33,8 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtAuftrageAlle = new javax.swing.JTable();
         jbAnzeigen_AuftraegeAlle = new javax.swing.JButton();
+        jbBearbeiten_AuftraegeAlle = new javax.swing.JButton();
+        jbAbbrechen_AuftraegeAlle = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -249,10 +251,30 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jtAuftrageAlle);
 
+        jbAnzeigen_AuftraegeAlle.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbAnzeigen_AuftraegeAlle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_AuftraegeAlle.setText("Anzeigen");
         jbAnzeigen_AuftraegeAlle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbAnzeigen_AuftraegeAlleActionPerformed(evt);
+            }
+        });
+
+        jbBearbeiten_AuftraegeAlle.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbBearbeiten_AuftraegeAlle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_AuftraegeAlle.setText("Bearbeiten");
+        jbBearbeiten_AuftraegeAlle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBearbeiten_AuftraegeAlleActionPerformed(evt);
+            }
+        });
+
+        jbAbbrechen_AuftraegeAlle.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbAbbrechen_AuftraegeAlle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
+        jbAbbrechen_AuftraegeAlle.setText("Abbrechen");
+        jbAbbrechen_AuftraegeAlle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAbbrechen_AuftraegeAlleActionPerformed(evt);
             }
         });
 
@@ -262,14 +284,20 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbAnzeigen_AuftraegeAlle)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbBearbeiten_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbAnzeigen_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbAbbrechen_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(460, 460, 460)
                             .addComponent(jLabel1))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(51, 51, 51)
+                            .addGap(39, 39, 39)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -280,11 +308,14 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jbAnzeigen_AuftraegeAlle)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbAnzeigen_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbBearbeiten_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -305,13 +336,23 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbAnzeigen_AuftraegeAlleActionPerformed
 
+    private void jbBearbeiten_AuftraegeAlleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AuftraegeAlleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbBearbeiten_AuftraegeAlleActionPerformed
+
+    private void jbAbbrechen_AuftraegeAlleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_AuftraegeAlleActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_jbAbbrechen_AuftraegeAlleActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton jbAbbrechen_AuftraegeAlle;
     private javax.swing.JButton jbAnzeigen_AuftraegeAlle;
+    private javax.swing.JButton jbBearbeiten_AuftraegeAlle;
     private javax.swing.JTable jtAuftrageAlle;
     // End of variables declaration//GEN-END:variables
 }

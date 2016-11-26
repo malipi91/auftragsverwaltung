@@ -105,7 +105,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jlLieferdatum" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jfftfLieferdatum_az" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="jftfLieferdatum_az" min="-2" pref="150" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jlErfassungsdatum" min="-2" max="-2" attributes="0"/>
@@ -162,7 +162,7 @@
                           <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
                           <Component id="jftfErfassungsdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jfftfLieferdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jftfLieferdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -367,7 +367,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable1">
+            <Component class="javax.swing.JTable" name="jtTabellePosition_AuftragAnzeigen">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="6" rowCount="6">
@@ -534,7 +534,7 @@
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator2">
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="jfftfLieferdatum_az">
+        <Component class="javax.swing.JFormattedTextField" name="jftfLieferdatum_az">
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="jftfAbschlussdatum_az">
         </Component>

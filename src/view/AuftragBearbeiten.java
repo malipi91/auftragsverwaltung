@@ -16,6 +16,12 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
      */
     public AuftragBearbeiten() {
         initComponents();
+        jtfGPID_AuftragBearbeiten.setEnabled(false);
+        jtfGPName_AuftragBearbeiten.setEnabled(false);
+        jtfZKIDAuftragBearbeiten.setEnabled(false);
+        jtfGesamtwert_AuftragBearbeiten.setEnabled(false);
+        jtfPositionsID_AuftragBearbeiten.setEnabled(false);
+        jftfErfassungsdatumAuftragBearbeiten.setEnabled(false);
     }
 
     /**
