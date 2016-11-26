@@ -19,6 +19,8 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         
         //Mechmet Impram
         jtfartikelid_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+        //Artikel Id kann man nicht bearbeiten
+        jtfArtikelID_ArtikelBearbeiten_Gegraut.setEnabled(false);
 
         
     }
