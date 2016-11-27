@@ -36,10 +36,10 @@ public class StartAV extends javax.swing.JFrame {
 //    }
     //Mehmet Impram 
     private final String ABMELDE_TITEL = "ABMELDEN";
-    private final String ABMELDE_TEXT = "MÃ¶chten Sie wirklich abmelden";
+    private final String ABMELDE_TEXT = "Möchten Sie wirklich abmelden";
     //Mehmet Impram 27.11.2016
-    private final String INFO_TITEL = "Info zur Anmelden auf das System";
-    private final String INFO_TEXT = "Bei Benutzername & Passwort geben sie min. 1 Buchstabe ";
+    private final String INFO_TITEL = "Info zum Anmelden auf das System";
+    private final String INFO_TEXT = "Bei Benutzername & Passwort geben sie min. 1 Buchstaben ein ";
     boolean istEingeloggt = false;
 
     /**
@@ -180,15 +180,21 @@ public class StartAV extends javax.swing.JFrame {
         Startseite.setPreferredSize(new java.awt.Dimension(1200, 800));
         Startseite.setRequestFocusEnabled(false);
 
+        jtfBenutzername_Startseite.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jpwpasswort_Startseite.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jpwpasswort_Startseite.setText("jPasswordField1");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel3.setText("Passwort");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel4.setText("Benutzername");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("Willkommen");
 
+        jbanmelden_Startseite.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbanmelden_Startseite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anmelden.png"))); // NOI18N
         jbanmelden_Startseite.setText("Anmelden");
         jbanmelden_Startseite.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +208,7 @@ public class StartAV extends javax.swing.JFrame {
         StartseiteLayout.setHorizontalGroup(
             StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StartseiteLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(460, 460, 460)
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addGroup(StartseiteLayout.createSequentialGroup()
@@ -212,7 +218,7 @@ public class StartAV extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jtfBenutzername_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -230,14 +236,14 @@ public class StartAV extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jtfBenutzername_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfBenutzername_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jbanmelden_Startseite)
-                .addContainerGap(799, Short.MAX_VALUE))
+                .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(793, Short.MAX_VALUE))
         );
 
         desktopPane.add(Startseite);
@@ -261,95 +267,95 @@ public class StartAV extends javax.swing.JFrame {
 
         jifAuftragBearbeiten.setVisible(false);
         desktopPane.add(jifAuftragBearbeiten);
-        jifAuftragBearbeiten.setBounds(0, 0, 1174, 870);
+        jifAuftragBearbeiten.setBounds(0, 0, 1174, 877);
 
         jifArtikelBearbeiten.setVisible(false);
         desktopPane.add(jifArtikelBearbeiten);
-        jifArtikelBearbeiten.setBounds(0, 0, 1128, 940);
+        jifArtikelBearbeiten.setBounds(0, 0, 1128, 1083);
 
         jifAuftraegeAlle.setVisible(false);
         desktopPane.add(jifAuftraegeAlle);
-        jifAuftraegeAlle.setBounds(0, 0, 1075, 749);
+        jifAuftraegeAlle.setBounds(0, 0, 1075, 765);
 
         jifArtikelSuche.setVisible(false);
         desktopPane.add(jifArtikelSuche);
-        jifArtikelSuche.setBounds(0, 0, 1059, 695);
+        jifArtikelSuche.setBounds(0, 0, 1059, 719);
 
         jifZKID_suchen.setVisible(false);
         desktopPane.add(jifZKID_suchen);
-        jifZKID_suchen.setBounds(0, 0, 1057, 311);
+        jifZKID_suchen.setBounds(0, 0, 1057, 336);
 
         jifZKSuchen.setVisible(false);
         desktopPane.add(jifZKSuchen);
-        jifZKSuchen.setBounds(0, 0, 1054, 536);
+        jifZKSuchen.setBounds(0, 0, 1054, 563);
 
         jifZKAnlegen.setVisible(false);
         desktopPane.add(jifZKAnlegen);
-        jifZKAnlegen.setBounds(0, 0, 1060, 589);
+        jifZKAnlegen.setBounds(0, 0, 1060, 623);
 
         jifZKBearbeiten.setVisible(false);
         desktopPane.add(jifZKBearbeiten);
-        jifZKBearbeiten.setBounds(0, 0, 1059, 559);
+        jifZKBearbeiten.setBounds(0, 0, 1059, 578);
 
         jifZKAnzeigen.setVisible(false);
         desktopPane.add(jifZKAnzeigen);
-        jifZKAnzeigen.setBounds(0, 0, 1058, 547);
+        jifZKAnzeigen.setBounds(0, 0, 1058, 585);
 
         jifKundeSuchen.setVisible(false);
         desktopPane.add(jifKundeSuchen);
-        jifKundeSuchen.setBounds(0, 0, 1059, 542);
+        jifKundeSuchen.setBounds(0, 0, 1059, 576);
 
         jifKundeBearbeiten.setVisible(false);
         desktopPane.add(jifKundeBearbeiten);
-        jifKundeBearbeiten.setBounds(0, 0, 1054, 339);
+        jifKundeBearbeiten.setBounds(0, 0, 1054, 358);
 
         jifKundeAnlegen.setVisible(false);
         desktopPane.add(jifKundeAnlegen);
-        jifKundeAnlegen.setBounds(0, 0, 1057, 667);
+        jifKundeAnlegen.setBounds(0, 0, 1057, 720);
 
         jifKundeAnzeigen.setVisible(false);
         desktopPane.add(jifKundeAnzeigen);
-        jifKundeAnzeigen.setBounds(0, 0, 1058, 352);
+        jifKundeAnzeigen.setBounds(0, 0, 1058, 376);
 
         jifLieferantAnlegen.setVisible(false);
         desktopPane.add(jifLieferantAnlegen);
-        jifLieferantAnlegen.setBounds(0, 0, 840, 744);
+        jifLieferantAnlegen.setBounds(0, 0, 840, 751);
 
         jifLieferantSuchen.setVisible(false);
         desktopPane.add(jifLieferantSuchen);
-        jifLieferantSuchen.setBounds(0, 0, 1039, 530);
+        jifLieferantSuchen.setBounds(0, 0, 1039, 553);
 
         jifLieferantBearbeiten.setVisible(false);
         desktopPane.add(jifLieferantBearbeiten);
-        jifLieferantBearbeiten.setBounds(0, 0, 1057, 311);
+        jifLieferantBearbeiten.setBounds(0, 0, 1057, 330);
 
         jifLieferantAnzeigen.setVisible(false);
         desktopPane.add(jifLieferantAnzeigen);
-        jifLieferantAnzeigen.setBounds(0, 0, 1057, 311);
+        jifLieferantAnzeigen.setBounds(0, 0, 1057, 330);
 
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
-        jifArtikelAnzeige.setBounds(0, 0, 1411, 839);
+        jifArtikelAnzeige.setBounds(0, 0, 1415, 858);
 
         jifAuftragsID_suchen.setVisible(false);
         desktopPane.add(jifAuftragsID_suchen);
-        jifAuftragsID_suchen.setBounds(0, 0, 772, 315);
+        jifAuftragsID_suchen.setBounds(0, 0, 849, 343);
 
         jifAuftragSuchen.setVisible(false);
         desktopPane.add(jifAuftragSuchen);
-        jifAuftragSuchen.setBounds(0, 0, 800, 747);
+        jifAuftragSuchen.setBounds(0, 0, 800, 774);
 
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
-        jifArtikelAnlegen.setBounds(0, 0, 991, 820);
+        jifArtikelAnlegen.setBounds(0, 0, 995, 841);
 
         jifAuftragAnzeigen.setVisible(false);
         desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 1058, 859);
+        jifAuftragAnzeigen.setBounds(0, 0, 1058, 878);
 
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
-        jifAuftragAnlegen.setBounds(0, 0, 1154, 863);
+        jifAuftragAnlegen.setBounds(0, 0, 1154, 874);
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
@@ -841,7 +847,7 @@ public class StartAV extends javax.swing.JFrame {
     private void jmDateiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmDateiActionPerformed
         if (istEingeloggt == true) {
         } else {
-            JOptionPane.showMessageDialog(null, "Sie mÃ¼ssen eingeloggt sein, um sich abmelden zu kÃ¶nnen !");
+            JOptionPane.showMessageDialog(null, "Sie müssen eingeloggt sein, um sich abmelden zu können !");
         }
     }//GEN-LAST:event_jmDateiActionPerformed
 
@@ -869,7 +875,7 @@ public class StartAV extends javax.swing.JFrame {
         Boolean vollstaendig = false;
         String fehlermeldung = "";
         if(jtfBenutzername_Startseite.getText().equals("")) {
-            fehlermeldung = "Füll ma alles aus";
+            fehlermeldung = "Geben Sie bitte Ihren Benutzernamen und das zugehörige Passwort an.";
             jtfBenutzername_Startseite.requestFocusInWindow();
             
         }else if (jpwpasswort_Startseite.getText().equals("")){
