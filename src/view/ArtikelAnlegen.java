@@ -463,7 +463,9 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
     } else {
         JOptionPane.showMessageDialog(this, fehlermeldung, "Unvollständig", JOptionPane.WARNING_MESSAGE);
     }return istVollstaendig;
+        
 }
+    
 
     private void jbSpeichern_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnlegenActionPerformed
         // TODO add your handling code here:
