@@ -7,10 +7,12 @@ package view;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 15.11.16 Impram Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 26.11.16 Impram Überarbeitung der Maske*/
+/*----------------------------------------------------------*/
 public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
 
     /**

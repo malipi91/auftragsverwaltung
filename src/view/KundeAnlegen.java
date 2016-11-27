@@ -5,10 +5,11 @@
  */
 package view;
 
-/**
- *
- * @author Hicfan Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 20.11.16 Citak Erstellung
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class KundeAnlegen extends javax.swing.JInternalFrame {
 
     /**
@@ -468,8 +469,9 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void abbrechen_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abbrechen_KundeAnlegenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_abbrechen_KundeAnlegenActionPerformed
 
@@ -478,10 +480,12 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfGPID_KundeAnlegenActionPerformed
 
     private void jrbLieferadresseIdentisch_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
+        //Citak
         jPLieferdaten.setVisible(false);
     }//GEN-LAST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
 
     private void jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
+        //Citak
         jPLieferdaten.setVisible(true);
     }//GEN-LAST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
 

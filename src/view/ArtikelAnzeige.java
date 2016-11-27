@@ -7,10 +7,11 @@ package view;
 
 import java.text.DecimalFormatSymbols;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 14.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class ArtikelAnzeige extends javax.swing.JInternalFrame {
 
     /**
@@ -454,8 +455,9 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfreserviert_ArtikelAnzeigenActionPerformed
 
     private void jbabbrechen_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbabbrechen_ArtikelAnzeigenActionPerformed
-         // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbabbrechen_ArtikelAnzeigenActionPerformed
 

@@ -5,10 +5,10 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 25.11.16 Yoeruek angelegt */
+/*----------------------------------------------------------*/
 public class AuftraegeAlle extends javax.swing.JInternalFrame {
 
     /**
@@ -341,6 +341,9 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbBearbeiten_AuftraegeAlleActionPerformed
 
     private void jbAbbrechen_AuftraegeAlleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_AuftraegeAlleActionPerformed
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_AuftraegeAlleActionPerformed
 

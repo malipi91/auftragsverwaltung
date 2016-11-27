@@ -8,10 +8,11 @@ package view;
 import java.text.DecimalFormatSymbols;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 15.11.16 Impram Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class ArtikelAnlegen extends javax.swing.JInternalFrame {
 
     /**
@@ -417,12 +418,15 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfeinzelwertbrutto_ArtikelAnlegenActionPerformed
 
     private void jbAbbrechen_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
      
     }//GEN-LAST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
-//Mehmet Impram 25.11.2016
+        /*----------------------------------------------------------*/
+        /* 20.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
     private boolean istVollstaendig(){
     boolean istVollstaendig = false;
     String fehlermeldung = "";

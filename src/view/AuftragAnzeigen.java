@@ -5,10 +5,11 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 15.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     /**
      * Creates new form AuftragAnzeigen
@@ -396,8 +397,9 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jcbAuftragsart_azActionPerformed
 
     private void jbZurueck_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbZurueck_azActionPerformed
-                // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbZurueck_azActionPerformed
 

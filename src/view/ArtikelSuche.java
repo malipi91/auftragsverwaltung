@@ -5,10 +5,11 @@
  */
 package view;
 
-/**
- *
- * @author User
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 18.11.16 Impram Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class ArtikelSuche extends javax.swing.JInternalFrame {
 
     /**
@@ -179,7 +180,9 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbAnzeigen_ArtikelSucheActionPerformed
 
     private void jbAbbrechen_ArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelSucheActionPerformed
-      this.setVisible(false);
+      /*----------------------------------------------------------*/
+        /* 24.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/ this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_ArtikelSucheActionPerformed
 
 

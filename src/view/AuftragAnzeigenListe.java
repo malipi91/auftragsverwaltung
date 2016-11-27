@@ -5,10 +5,10 @@
  */
 package view;
 
-/**
- *
- * @author User
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class AuftragAnzeigenListe extends javax.swing.JInternalFrame {
 
     /**

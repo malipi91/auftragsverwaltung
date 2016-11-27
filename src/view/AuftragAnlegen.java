@@ -12,10 +12,11 @@ import java.util.logging.Logger;
 import model.Auftrag;
 import model.Auftragsstatus;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 15.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     /**
@@ -603,8 +604,9 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAbbrechen_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_aaActionPerformed
-            // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_aaActionPerformed
 
@@ -621,9 +623,12 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfMenge_AuftragAnlegenActionPerformed
 
     private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
-        //Hicran 18.11.2016
-        // Die Daten werden in der Gui-Maske geschrieben und nach bestÃ¤tigung des Speicher
-        //Buttons werden die Daten in die Datenbank gespeichert
+        /*----------------------------------------------------------*/
+        /* 18.11.16 Citak Die Daten werden in der Gui-Maske geschrieben und nach 
+                          bestÃ¤tigung des Speicher Buttons werden die Daten in 
+                          die Datenbank gespeichert */
+        /*----------------------------------------------------------*/       
+
         Auftragsstatus aStatus = new Auftragsstatus();
         String beschreibung = this.jBeschreibung_aa.getText();
         String erfassungsdatum = this.jftfErfassungsdatum_aa.getText();

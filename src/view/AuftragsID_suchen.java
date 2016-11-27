@@ -5,10 +5,11 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 14.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/*----------------------------------------------------------*/
 public class AuftragsID_suchen extends javax.swing.JInternalFrame {
 
     /**
@@ -191,8 +192,9 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbSuchen_AuftragsIDSuchenActionPerformed
 
     private void jbAbbrechen_AuftragsIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_AuftragsIDSuchenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_AuftragsIDSuchenActionPerformed
 

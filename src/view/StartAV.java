@@ -18,14 +18,15 @@ import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 import javax.swing.text.PlainDocument;
 
-/**
- *
- * Ersterstellung 20161111 @author Mechmet Impram, Hicran YÃ¶rÃ¼k Erstellung der
- * GP-Masken 20161116 @author Duygu Citak
- *
- *
- */
-//laaalaaaa
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 11.11.16 Impram angelegt */
+/* 11.11.16 Yoeruek angelegt */
+/* 16.11.16 Citak angelegt */
+/*----------------------------------------------------------*/
+
+
+
 public class StartAV extends javax.swing.JFrame {
 
     //Hicran passt die RahmengrÃ¶ÃŸe des Fensters an.
@@ -70,7 +71,6 @@ public class StartAV extends javax.swing.JFrame {
     public StartAV() {
 
         initComponents();
-//        this.jRegister.setVisible(false);
         //Startseite
         // Mechmet Impram
 //Benutzername Feld akzeptiert nur Buchstaben.
