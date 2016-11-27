@@ -32,7 +32,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="ArtikelBearbeiten" pref="892" max="32767" attributes="0"/>
+              <Component id="ArtikelBearbeiten" pref="896" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -91,6 +91,8 @@
                               <Component id="jtfArtikelID_ArtikelBearbeiten_Gegraut" pref="150" max="32767" attributes="0"/>
                               <Component id="jtfArtikelname_ArtikelBearbeiten" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="jbSpeichernArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -159,11 +161,7 @@
                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jbSpeichernArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbAbbrechenArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jbAbbrechenArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jtfEinzelwertNettoArtikelBearbeiten" max="32767" attributes="0"/>
@@ -195,7 +193,7 @@
                       </Group>
                       <Component id="jtfArtikelTextArtikelBearbeiten" alignment="0" min="-2" pref="348" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="342" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -228,7 +226,10 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jtfArtikelname_ArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jtfArtikelname_ArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbSpeichernArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
@@ -283,11 +284,8 @@
                       <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbSpeichernArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbAbbrechenArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <Component id="jbAbbrechenArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="35" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -651,6 +649,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Speichern"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSpeichernArtikelBearbeitenActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

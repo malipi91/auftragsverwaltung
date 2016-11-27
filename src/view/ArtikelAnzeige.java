@@ -446,6 +446,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
 
     private void jbbearbeiten_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbearbeiten_ArtikelAnzeigenActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbbearbeiten_ArtikelAnzeigenActionPerformed
 
     private void jtfreserviert_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfreserviert_ArtikelAnzeigenActionPerformed
