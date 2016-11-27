@@ -26,7 +26,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         //Mechmet Impram
         jtfArtikelID_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
         //Artikel Id kann man nicht bearbeiten
-        jtfArtikelID_ArtikelBearbeiten.setEnabled(false);
+       // jtfArtikelID_ArtikelBearbeiten.setEnabled(false);
         //27.11.2016
         jtfArtikelname_ArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
         jtffreiArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
@@ -452,22 +452,22 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 // 27.11.2016 Mehmet Impram Überprüfung der Pflichtfeld Artikel ID.    
-    private boolean istVollstaendig(){
-    boolean istVollstaendig = false;
-    String fehlermeldung = "";
-    if(jtfArtikelID_ArtikelBearbeiten.getText().equals("")){
-        fehlermeldung = "Bitte geben Sie eine Artikel ID an";
-    }
-    if ( fehlermeldung.equals("")){
-        istVollstaendig = true;
-    } else {
-        JOptionPane.showMessageDialog(this, fehlermeldung, "Unvollständig", JOptionPane.WARNING_MESSAGE);
-    } return istVollstaendig;
-}
+//    private boolean istVollstaendig(){
+//    boolean istVollstaendig = false;
+//    String fehlermeldung = "";
+//    if(jtfArtikelID_ArtikelBearbeiten.getText().equals("")){
+//        fehlermeldung = "Bitte geben Sie eine Artikel ID an";
+//    }
+//    if ( fehlermeldung.equals("")){
+//        istVollstaendig = true;
+//    } else {
+//        JOptionPane.showMessageDialog(this, fehlermeldung, "Unvollständig", JOptionPane.WARNING_MESSAGE);
+//    } return istVollstaendig;
+//}
     private void jbBearbeiten_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_ArtikelBearbeitenActionPerformed
-if (istVollstaendig()) {
-            
-        }       
+//if (istVollstaendig()) {
+//            
+//        }       
     }//GEN-LAST:event_jbBearbeiten_ArtikelBearbeitenActionPerformed
 
     private void jbLöschen_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschen_ArtikelBearbeitenActionPerformed
