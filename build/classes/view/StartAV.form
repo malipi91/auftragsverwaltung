@@ -378,6 +378,10 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <Component id="jSeparator3" min="-2" pref="1175" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="225" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="460" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -388,19 +392,13 @@
                               </Group>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jbanmelden_Startseite" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="jtfBenutzername_Startseite" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jbanmelden_Startseite" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="jtfBenutzername_Startseite" min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="jpwpasswort_Startseite" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jSeparator3" min="-2" pref="1175" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="225" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -511,7 +509,17 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="view.AuftragBearbeiten" name="jifAuftragBearbeiten">
+        <Component class="view.ArtikelAnlegen" name="jifArtikelAnlegen">
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="view.ArtikelAnzeige" name="jifArtikelAnzeige">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -522,6 +530,16 @@
           </Constraints>
         </Component>
         <Component class="view.ArtikelBearbeiten" name="jifArtikelBearbeiten">
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="view.AuftragBearbeiten" name="jifAuftragBearbeiten">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -681,16 +699,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="view.ArtikelAnzeige" name="jifArtikelAnzeige">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Component class="view.AuftragsID_suchen" name="jifAuftragsID_suchen">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
@@ -702,16 +710,6 @@
           </Constraints>
         </Component>
         <Component class="view.AuftragSuchen" name="jifAuftragSuchen">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="view.ArtikelAnlegen" name="jifArtikelAnlegen">
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
