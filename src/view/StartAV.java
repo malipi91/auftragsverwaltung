@@ -34,8 +34,12 @@ public class StartAV extends javax.swing.JFrame {
 //    public void setBounds(int x, int y, int width, int height) {
 //        super.setBounds(x, y, 1200, 800); 
 //    }
+    //Mehmet Impram 
     private final String ABMELDE_TITEL = "ABMELDEN";
     private final String ABMELDE_TEXT = "MÃ¶chten Sie wirklich abmelden";
+    //Mehmet Impram 27.11.2016
+    private final String INFO_TITEL = "Info zur Anmelden auf das System";
+    private final String INFO_TEXT = "Bei Benutzername & Passwort geben sie min. 1 Buchstabe ";
     boolean istEingeloggt = false;
 
     /**
@@ -139,6 +143,7 @@ public class StartAV extends javax.swing.JFrame {
         miAuftraganlegen = new javax.swing.JMenuItem();
         miAuftragbearbeiten = new javax.swing.JMenuItem();
         jmArtikel = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         miArtikelanzeigen = new javax.swing.JMenuItem();
         miArtikelanlegen = new javax.swing.JMenuItem();
         miArtikelbearbeiten = new javax.swing.JMenuItem();
@@ -161,6 +166,8 @@ public class StartAV extends javax.swing.JFrame {
         miZKAnzeigen = new javax.swing.JMenuItem();
         miZKAnlegen = new javax.swing.JMenuItem();
         miZKBearbeiten = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImages(null);
@@ -254,95 +261,95 @@ public class StartAV extends javax.swing.JFrame {
 
         jifAuftragBearbeiten.setVisible(false);
         desktopPane.add(jifAuftragBearbeiten);
-        jifAuftragBearbeiten.setBounds(0, 0, 1174, 877);
+        jifAuftragBearbeiten.setBounds(0, 0, 1174, 870);
 
         jifArtikelBearbeiten.setVisible(false);
         desktopPane.add(jifArtikelBearbeiten);
-        jifArtikelBearbeiten.setBounds(0, 0, 1096, 917);
+        jifArtikelBearbeiten.setBounds(0, 0, 1128, 940);
 
         jifAuftraegeAlle.setVisible(false);
         desktopPane.add(jifAuftraegeAlle);
-        jifAuftraegeAlle.setBounds(0, 0, 1087, 764);
+        jifAuftraegeAlle.setBounds(0, 0, 1075, 749);
 
         jifArtikelSuche.setVisible(false);
         desktopPane.add(jifArtikelSuche);
-        jifArtikelSuche.setBounds(0, 0, 1059, 702);
+        jifArtikelSuche.setBounds(0, 0, 1059, 695);
 
         jifZKID_suchen.setVisible(false);
         desktopPane.add(jifZKID_suchen);
-        jifZKID_suchen.setBounds(0, 0, 1057, 318);
+        jifZKID_suchen.setBounds(0, 0, 1057, 311);
 
         jifZKSuchen.setVisible(false);
         desktopPane.add(jifZKSuchen);
-        jifZKSuchen.setBounds(0, 0, 1054, 543);
+        jifZKSuchen.setBounds(0, 0, 1054, 536);
 
         jifZKAnlegen.setVisible(false);
         desktopPane.add(jifZKAnlegen);
-        jifZKAnlegen.setBounds(0, 0, 1060, 596);
+        jifZKAnlegen.setBounds(0, 0, 1060, 589);
 
         jifZKBearbeiten.setVisible(false);
         desktopPane.add(jifZKBearbeiten);
-        jifZKBearbeiten.setBounds(0, 0, 1059, 566);
+        jifZKBearbeiten.setBounds(0, 0, 1059, 559);
 
         jifZKAnzeigen.setVisible(false);
         desktopPane.add(jifZKAnzeigen);
-        jifZKAnzeigen.setBounds(0, 0, 1058, 554);
+        jifZKAnzeigen.setBounds(0, 0, 1058, 547);
 
         jifKundeSuchen.setVisible(false);
         desktopPane.add(jifKundeSuchen);
-        jifKundeSuchen.setBounds(0, 0, 1059, 549);
+        jifKundeSuchen.setBounds(0, 0, 1059, 542);
 
         jifKundeBearbeiten.setVisible(false);
         desktopPane.add(jifKundeBearbeiten);
-        jifKundeBearbeiten.setBounds(0, 0, 1054, 346);
+        jifKundeBearbeiten.setBounds(0, 0, 1054, 339);
 
         jifKundeAnlegen.setVisible(false);
         desktopPane.add(jifKundeAnlegen);
-        jifKundeAnlegen.setBounds(0, 0, 1057, 674);
+        jifKundeAnlegen.setBounds(0, 0, 1057, 667);
 
         jifKundeAnzeigen.setVisible(false);
         desktopPane.add(jifKundeAnzeigen);
-        jifKundeAnzeigen.setBounds(0, 0, 1058, 359);
+        jifKundeAnzeigen.setBounds(0, 0, 1058, 352);
 
         jifLieferantAnlegen.setVisible(false);
         desktopPane.add(jifLieferantAnlegen);
-        jifLieferantAnlegen.setBounds(0, 0, 840, 751);
+        jifLieferantAnlegen.setBounds(0, 0, 840, 744);
 
         jifLieferantSuchen.setVisible(false);
         desktopPane.add(jifLieferantSuchen);
-        jifLieferantSuchen.setBounds(0, 0, 1039, 537);
+        jifLieferantSuchen.setBounds(0, 0, 1039, 530);
 
         jifLieferantBearbeiten.setVisible(false);
         desktopPane.add(jifLieferantBearbeiten);
-        jifLieferantBearbeiten.setBounds(0, 0, 1057, 318);
+        jifLieferantBearbeiten.setBounds(0, 0, 1057, 311);
 
         jifLieferantAnzeigen.setVisible(false);
         desktopPane.add(jifLieferantAnzeigen);
-        jifLieferantAnzeigen.setBounds(0, 0, 1057, 318);
+        jifLieferantAnzeigen.setBounds(0, 0, 1057, 311);
 
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
-        jifArtikelAnzeige.setBounds(0, 0, 975, 846);
+        jifArtikelAnzeige.setBounds(0, 0, 1411, 839);
 
         jifAuftragsID_suchen.setVisible(false);
         desktopPane.add(jifAuftragsID_suchen);
-        jifAuftragsID_suchen.setBounds(0, 0, 772, 322);
+        jifAuftragsID_suchen.setBounds(0, 0, 772, 315);
 
         jifAuftragSuchen.setVisible(false);
         desktopPane.add(jifAuftragSuchen);
-        jifAuftragSuchen.setBounds(0, 0, 800, 754);
+        jifAuftragSuchen.setBounds(0, 0, 800, 747);
 
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
-        jifArtikelAnlegen.setBounds(0, 0, 991, 821);
+        jifArtikelAnlegen.setBounds(0, 0, 991, 820);
 
         jifAuftragAnzeigen.setVisible(false);
         desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 1060, 866);
+        jifAuftragAnzeigen.setBounds(0, 0, 1058, 859);
 
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
-        jifAuftragAnlegen.setBounds(0, 0, 1110, 862);
+        jifAuftragAnlegen.setBounds(0, 0, 1154, 863);
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
@@ -427,6 +434,9 @@ public class StartAV extends javax.swing.JFrame {
                 jmArtikelActionPerformed(evt);
             }
         });
+
+        jMenuItem1.setText("Gesamt Artikeln");
+        jmArtikel.add(jMenuItem1);
 
         miArtikelanzeigen.setText("Anzeigen");
         miArtikelanzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -593,6 +603,18 @@ public class StartAV extends javax.swing.JFrame {
         jmZahlungskondition.add(miZKBearbeiten);
 
         menuBar.add(jmZahlungskondition);
+
+        jMenu1.setText("?");
+
+        jMenuItem2.setText("Info");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        menuBar.add(jMenu1);
 
         setJMenuBar(menuBar);
 
@@ -884,6 +906,11 @@ public class StartAV extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miGesamtAuftraegeActionPerformed
+//27.11.2016 Impram
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         JOptionPane.showMessageDialog(null, INFO_TEXT, INFO_TITEL, JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -930,6 +957,9 @@ public class StartAV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JButton jbanmelden_Startseite;
