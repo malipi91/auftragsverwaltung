@@ -5,10 +5,12 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 18.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class LieferantSuchen extends javax.swing.JInternalFrame {
 
     /**
@@ -42,9 +44,10 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
 
         LieferantSuchen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel16.setText("Lieferant Suchen");
 
+        jbAbbrechen_LieferantSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_LieferantSuchen.setText("Abbrechen");
         jbAbbrechen_LieferantSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -53,6 +56,7 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jbAnzeigen_LieferantSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAnzeigen_LieferantSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_LieferantSuchen.setText("Anzeigen");
         jbAnzeigen_LieferantSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +66,8 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
         });
 
         jcbSuchkriterium_LieferantSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Name", "Vorname", "PLZ", "Typ" }));
+
+        jtfSuchkriterium_LieferantSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jt_LieferantSuchen.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -186,7 +192,7 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
                         .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 998, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(LieferantSuchenLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -194,9 +200,9 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(LieferantSuchenLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jbAnzeigen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbAnzeigen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbAbbrechen_LieferantSuchen))
+                        .addComponent(jbAbbrechen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(LieferantSuchenLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane7)))
@@ -211,14 +217,14 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(85, 85, 85)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAnzeigen_LieferantSuchen)
-                    .addComponent(jbAbbrechen_LieferantSuchen))
+                    .addComponent(jbAnzeigen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -235,11 +241,11 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 497, Short.MAX_VALUE)
+            .addGap(0, 513, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(LieferantSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+                    .addComponent(LieferantSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -247,8 +253,10 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAbbrechen_LieferantSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_LieferantSuchenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* Datum Name Was */
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_LieferantSuchenActionPerformed
 

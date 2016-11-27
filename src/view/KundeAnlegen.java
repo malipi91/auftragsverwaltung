@@ -5,10 +5,12 @@
  */
 package view;
 
-/**
- *
- * @author Hicfan Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 20.11.16 Citak Erstellung
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Citak Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class KundeAnlegen extends javax.swing.JInternalFrame {
 
     /**
@@ -83,9 +85,10 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
 
         KundeAnlegen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel14.setText("Kunde Anlegen");
 
+        abbrechen_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         abbrechen_KundeAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         abbrechen_KundeAnlegen.setText("Abbrechen");
         abbrechen_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -94,8 +97,10 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel147.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel147.setText("GP-ID:");
 
+        jtfGPID_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfGPID_KundeAnlegen.setToolTipText("");
         jtfGPID_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,8 +108,12 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel148.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel148.setText("Kreditlimit:");
 
+        jtfKreditlimit_KundenAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jrbLieferadresseIdentisch_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jrbLieferadresseIdentisch_KundeAnlegen.setText("Lieferadresse identisch");
         jrbLieferadresseIdentisch_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +121,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jrbAbweichendeLieferadresse_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jrbAbweichendeLieferadresse_KundeAnlegen.setText("abweichende Lieferadresse");
         jrbAbweichendeLieferadresse_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,19 +129,27 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
-        jPKontakt.setBorder(javax.swing.BorderFactory.createTitledBorder("Kontakt"));
+        jPKontakt.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Kontakt", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
+        jLabel149.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel149.setText("Telefon:");
 
+        jtfTelefon_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfTelefon_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfTelefon_KundeAnlegenActionPerformed(evt);
             }
         });
 
+        jLabel150.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel150.setText("Telefax:");
 
+        jrfTelefax_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel151.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel151.setText("E-Mail:");
+
+        jtfEMail_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPKontaktLayout = new javax.swing.GroupLayout(jPKontakt);
         jPKontakt.setLayout(jPKontaktLayout);
@@ -145,10 +163,10 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel151))
                 .addGap(28, 28, 28)
                 .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(jrfTelefax_KundeAnlegen)
-                    .addComponent(jtfEMail_KundeAnlegen))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jrfTelefax_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfEMail_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPKontaktLayout.setVerticalGroup(
             jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,47 +174,69 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel149)
-                    .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel150)
-                    .addComponent(jrfTelefax_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jrfTelefax_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfEMail_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfEMail_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel151))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPRechnungsdaten.setBorder(javax.swing.BorderFactory.createTitledBorder("Rechnungsdaten"));
+        jPRechnungsdaten.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rechnungsdaten", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
+        jLabel152.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel152.setText("Anrede");
 
+        jcbAnredeRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbAnredeRG_KundeAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau ", "Herr" }));
 
+        jLabel153.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel153.setText("Name:");
 
+        jtfNameRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel154.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel154.setText("Vorname:");
 
+        jtfVornameRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel155.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel155.setText("Firma:");
 
+        jtfFirmaRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel156.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel156.setText("Straße,HNr. :");
 
+        jtfStraßeRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfHNrRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel157.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel157.setText("PLZ, Ort:");
 
+        jtfPlzRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfPlzRG_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfPlzRG_KundeAnlegenActionPerformed(evt);
             }
         });
 
+        jtfOrtRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfOrtRG_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfOrtRG_KundeAnlegenActionPerformed(evt);
             }
         });
 
+        jLabel158.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel158.setText("Staat:");
+
+        jtfStaatRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPRechnungsdatenLayout = new javax.swing.GroupLayout(jPRechnungsdaten);
         jPRechnungsdaten.setLayout(jPRechnungsdatenLayout);
@@ -213,13 +253,13 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtfHNrRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jtfHNrRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
                                     .addGap(12, 12, 12)
-                                    .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jtfStaatRG_KundeAnlegen)
+                                    .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jtfStaatRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPRechnungsdatenLayout.createSequentialGroup()
-                                            .addComponent(jtfPlzRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfPlzRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(jtfOrtRG_KundeAnlegen))))))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPRechnungsdatenLayout.createSequentialGroup()
@@ -230,13 +270,13 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel155))
                             .addGap(31, 31, 31)
                             .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jcbAnredeRG_KundeAnlegen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jtfVornameRG_KundeAnlegen)
-                                .addComponent(jtfFirmaRG_KundeAnlegen)
+                                .addComponent(jcbAnredeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtfVornameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtfFirmaRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jtfNameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jtfStraßeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jLabel158))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPRechnungsdatenLayout.setVerticalGroup(
             jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,61 +284,80 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel152)
-                    .addComponent(jcbAnredeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbAnredeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel153)
-                    .addComponent(jtfNameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtfVornameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfVornameRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel154))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel155)
-                    .addComponent(jtfFirmaRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jtfFirmaRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel156)
                     .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtfHNrRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jtfStraßeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtfHNrRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfStraßeRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel157)
                     .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtfPlzRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jtfOrtRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtfPlzRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfOrtRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPRechnungsdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel158)
-                    .addComponent(jtfStaatRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfStaatRG_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPLieferdaten.setBorder(javax.swing.BorderFactory.createTitledBorder("Lieferdaten"));
+        jPLieferdaten.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Lieferdaten", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
+        jLabel159.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel159.setText("Anrede");
 
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau", "Herr" }));
 
+        jLabel160.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel160.setText("Name:");
 
+        jtfName2_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel161.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel161.setText("Vorname:");
 
+        jtfVorname2_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel162.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel162.setText("Firma:");
 
+        jtfFirma2_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfFirma2_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfFirma2_KundeAnlegenActionPerformed(evt);
             }
         });
 
+        jLabel163.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel163.setText("Straße, HNr. :");
 
+        jtfStraße2_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel164.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel164.setText("PLZ, Ort:");
 
+        jtfPlz2_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel165.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel165.setText("Staat:");
+
+        jtfStaat2_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPLieferdatenLayout = new javax.swing.GroupLayout(jPLieferdaten);
         jPLieferdaten.setLayout(jPLieferdatenLayout);
@@ -313,12 +372,12 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jLabel160)
                             .addComponent(jLabel161)
                             .addComponent(jLabel162))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, 190, Short.MAX_VALUE)
-                            .addComponent(jtfName2_KundeAnlegen)
-                            .addComponent(jtfVorname2_KundeAnlegen)
-                            .addComponent(jtfFirma2_KundeAnlegen)))
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfName2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfVorname2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfFirma2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPLieferdatenLayout.createSequentialGroup()
                         .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel163)
@@ -326,9 +385,9 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jLabel165))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfStraße2_KundeAnlegen)
-                            .addComponent(jtfPlz2_KundeAnlegen)
-                            .addComponent(jtfStaat2_KundeAnlegen))))
+                            .addComponent(jtfStraße2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfPlz2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfStaat2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(23, 23, 23))
         );
         jPLieferdatenLayout.setVerticalGroup(
@@ -337,34 +396,35 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel160)
-                    .addComponent(jtfName2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfName2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel161)
-                    .addComponent(jtfVorname2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfVorname2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel162)
-                    .addComponent(jtfFirma2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jtfFirma2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel163)
-                    .addComponent(jtfStraße2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfStraße2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel164)
-                    .addComponent(jtfPlz2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jtfPlz2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel165)
-                    .addComponent(jtfStaat2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfStaat2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
+        jbSpeichern.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSpeichern.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern.setText("Speichern");
 
@@ -380,10 +440,10 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                     .addGroup(KundeAnlegenLayout.createSequentialGroup()
                         .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 727, Short.MAX_VALUE)
+                                .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(KundeAnlegenLayout.createSequentialGroup()
                                     .addGap(311, 311, 311)
@@ -401,8 +461,8 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                                                 .addComponent(jLabel147))
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jtfGPID_KundeAnlegen)
-                                                .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))))
+                                                .addComponent(jtfGPID_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGroup(KundeAnlegenLayout.createSequentialGroup()
                                     .addContainerGap()
                                     .addComponent(jPKontakt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -410,7 +470,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                                     .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 34, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         KundeAnlegenLayout.setVerticalGroup(
@@ -418,16 +478,16 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             .addGroup(KundeAnlegenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel14)
-                .addGap(20, 20, 20)
+                .addGap(21, 21, 21)
                 .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel147)
-                    .addComponent(jtfGPID_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfGPID_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel148)
-                    .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jrbLieferadresseIdentisch_KundeAnlegen)
@@ -437,10 +497,11 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jPLieferdaten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(abbrechen_KundeAnlegen)
-                    .addComponent(jbSpeichern)))
+                    .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -456,11 +517,11 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 634, Short.MAX_VALUE)
+            .addGap(0, 680, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
+                    .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -468,8 +529,9 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void abbrechen_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abbrechen_KundeAnlegenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_abbrechen_KundeAnlegenActionPerformed
 
@@ -478,10 +540,12 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfGPID_KundeAnlegenActionPerformed
 
     private void jrbLieferadresseIdentisch_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
+        //Citak
         jPLieferdaten.setVisible(false);
     }//GEN-LAST:event_jrbLieferadresseIdentisch_KundeAnlegenActionPerformed
 
     private void jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
+        //Citak
         jPLieferdaten.setVisible(true);
     }//GEN-LAST:event_jrbAbweichendeLieferadresse_KundeAnlegenActionPerformed
 

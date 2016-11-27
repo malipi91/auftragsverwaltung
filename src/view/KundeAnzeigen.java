@@ -5,10 +5,12 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 19.11.16 Citak Erstellung
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Citak Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class KundeAnzeigen extends javax.swing.JInternalFrame {
 
     /**
@@ -37,9 +39,10 @@ public class KundeAnzeigen extends javax.swing.JInternalFrame {
 
         KundeAnzeigen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel13.setText("Kunde anzeigen");
 
+        zurueck_KundeAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         zurueck_KundeAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         zurueck_KundeAnzeigen.setText("Zurück");
         zurueck_KundeAnzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -55,9 +58,9 @@ public class KundeAnzeigen extends javax.swing.JInternalFrame {
             .addGroup(KundeAnzeigenLayout.createSequentialGroup()
                 .addGap(297, 297, 297)
                 .addGroup(KundeAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(zurueck_KundeAnzeigen)
+                    .addComponent(zurueck_KundeAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
-                .addContainerGap(596, Short.MAX_VALUE))
+                .addContainerGap(553, Short.MAX_VALUE))
             .addGroup(KundeAnzeigenLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator19)
@@ -71,7 +74,7 @@ public class KundeAnzeigen extends javax.swing.JInternalFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(191, 191, 191)
-                .addComponent(zurueck_KundeAnzeigen)
+                .addComponent(zurueck_KundeAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -88,11 +91,11 @@ public class KundeAnzeigen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 319, Short.MAX_VALUE)
+            .addGap(0, 336, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(KundeAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(KundeAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -100,7 +103,10 @@ public class KundeAnzeigen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void zurueck_KundeAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zurueck_KundeAnzeigenActionPerformed
-
+/*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
+        this.setVisible(false);
     }//GEN-LAST:event_zurueck_KundeAnzeigenActionPerformed
 
 

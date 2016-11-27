@@ -5,10 +5,12 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 17.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class ZKBearbeiten extends javax.swing.JInternalFrame {
 
     /**
@@ -42,9 +44,10 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
         ZKBearbeiten.setMinimumSize(new java.awt.Dimension(500, 500));
         ZKBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel76.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel76.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel76.setText("Zahlungskonditionen Bearbeiten");
 
+        jbAbbrechen_ZKBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKBearbeiten.setText("Abbrechen");
         jbAbbrechen_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
@@ -53,6 +56,7 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
             }
         });
 
+        jbBearbeiten_ZKBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbBearbeiten_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
         jbBearbeiten_ZKBearbeiten.setText("Bearbeiten");
         jbBearbeiten_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +65,7 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel124.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel124.setText("ZK-ID:");
 
         javax.swing.GroupLayout ZKBearbeitenLayout = new javax.swing.GroupLayout(ZKBearbeiten);
@@ -71,7 +76,7 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
             .addGroup(ZKBearbeitenLayout.createSequentialGroup()
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ZKBearbeitenLayout.createSequentialGroup()
-                        .addGap(297, 297, 297)
+                        .addGap(252, 252, 252)
                         .addComponent(jLabel76))
                     .addGroup(ZKBearbeitenLayout.createSequentialGroup()
                         .addGap(289, 289, 289)
@@ -79,12 +84,12 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
                             .addGroup(ZKBearbeitenLayout.createSequentialGroup()
                                 .addComponent(jLabel124)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(ZKBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jbBearbeiten_ZKBearbeiten)
+                                .addComponent(jbBearbeiten_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbAbbrechen_ZKBearbeiten)))))
-                .addContainerGap(470, Short.MAX_VALUE))
+                                .addComponent(jbAbbrechen_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(430, Short.MAX_VALUE))
         );
         ZKBearbeitenLayout.setVerticalGroup(
             ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,11 +101,11 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel124)
-                    .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbBearbeiten_ZKBearbeiten)
-                    .addComponent(jbAbbrechen_ZKBearbeiten))
+                    .addComponent(jbBearbeiten_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -121,7 +126,7 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ZKBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                    .addComponent(ZKBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -129,8 +134,9 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAbbrechen_ZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKBearbeitenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_ZKBearbeitenActionPerformed
 

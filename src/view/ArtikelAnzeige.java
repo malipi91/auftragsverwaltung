@@ -7,10 +7,12 @@ package view;
 
 import java.text.DecimalFormatSymbols;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 14.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class ArtikelAnzeige extends javax.swing.JInternalFrame {
 
     /**
@@ -18,6 +20,21 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
      */
     public ArtikelAnzeige() {
         initComponents();
+        //Mehmet Impram 27.11.2016
+        jtfArtikelID_ArtikelAnzeigen.setEnabled(false);
+        jtfartikelname_ArtikelAnzeigen.setEnabled(false);
+        jtffrei_ArtikelAnzeigen.setEnabled(false);
+        jtfreserviert_ArtikelAnzeigen.setEnabled(false);
+        jtfzulauf_ArtikelAnzeigen.setEnabled(false);
+        jtfverkauft_ArtikelAnzeigen.setEnabled(false);
+        jtfartikeltext_ArtikelAnzeigen.setEnabled(false);
+        jtfbestelltext_ArtikelAnzeigen.setEnabled(false);
+        jtfeinzelwertnetto_ArtikelAnzeigen.setEnabled(false);
+        jtfeinzelwertbrutto_ArtikelAnzeigen.setEnabled(false);
+        jtfbestellwertnetto_ArtikelAnzeigen.setEnabled(false);
+        jtfbestellwertbrutto_ArtikelAnzeigen.setEnabled(false);
+        jcbmehrwertsteuer_ArtikelAnzeigen.setEnabled(false);
+                
         
          //Mechmet Impram
         jtfArtikelID_ArtikelAnzeigen.setDocument(new UniversalDokument(false, true, "", 5));
@@ -101,6 +118,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         jLabel54.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel54.setText("(Brutto):");
 
+        jtfbestellwertnetto_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfbestellwertnetto_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfbestellwertnetto_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
@@ -113,11 +131,14 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         jLabel50.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel50.setText("Bestelltext:");
 
+        jtfbestelltext_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfbestelltext_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfbestelltext_ArtikelAnzeigenActionPerformed(evt);
             }
         });
+
+        jtfartikeltext_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel55.setText("MwST-Satz:");
@@ -152,18 +173,23 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         jLabel42.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel42.setText("Artikel-ID:");
 
+        jtfeinzelwertnetto_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfeinzelwertnetto_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfeinzelwertnetto_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfbestellwertbrutto_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfbestellwertbrutto_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfbestellwertbrutto_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtffrei_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtffrei_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtffrei_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfzulauf_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfzulauf_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfzulauf_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfartikelname_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfartikelname_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfartikelname_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
         jtfartikelname_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -182,6 +208,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             }
         });
 
+        jtfreserviert_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfreserviert_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfreserviert_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
         jtfreserviert_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -200,9 +227,11 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             }
         });
 
+        jtfverkauft_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfverkauft_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfverkauft_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfeinzelwertbrutto_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfeinzelwertbrutto_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfeinzelwertbrutto_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
 
@@ -229,6 +258,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
 
         jLabel169.setText("€");
 
+        jLabel140.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel140.setText("Artikeltext:");
 
         javax.swing.GroupLayout ArtikelAnzeigeLayout = new javax.swing.GroupLayout(ArtikelAnzeige);
@@ -239,96 +269,81 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtikelAnzeigeLayout.createSequentialGroup()
-                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel53)
-                                    .addComponent(jLabel55))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jcbmehrwertsteuer_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtikelAnzeigeLayout.createSequentialGroup()
-                                .addComponent(jLabel51)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel54)
-                                    .addComponent(jLabel52))
-                                .addGap(27, 27, 27))
-                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel44)
-                                    .addComponent(jLabel43)
-                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                                .addComponent(jLabel46)
-                                                .addGap(74, 74, 74)
-                                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jtffrei_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jtfzulauf_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(103, 103, 103)
-                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel48)
-                                            .addComponent(jLabel47)))
-                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                        .addGap(118, 118, 118)
-                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jtfbestelltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                                        .addComponent(jtfbestellwertnetto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jLabel167))
-                                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                                        .addComponent(jtfeinzelwertnetto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jLabel166, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(62, 62, 62)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)))
-                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtfverkauft_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtfreserviert_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel140)
-                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jtfartikeltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(jtfbestellwertbrutto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jtfeinzelwertbrutto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel168)
-                                                    .addComponent(jLabel169))))
-                                        .addGap(100, 100, 100))
-                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                                        .addComponent(jbSpeichern_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(24, 24, 24)
-                                        .addComponent(jbbearbeiten_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jbabbrechen_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(28, Short.MAX_VALUE))))
                     .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
                         .addComponent(jLabel42)
                         .addGap(57, 57, 57)
                         .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtfartikelname_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfArtikelID_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 641, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                        .addComponent(jLabel50)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel55)
+                            .addComponent(jLabel44)
+                            .addComponent(jLabel43)
+                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                        .addComponent(jLabel46)
+                                        .addGap(74, 74, 74)
+                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jtffrei_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfzulauf_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(103, 103, 103)
+                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel47)
+                                    .addComponent(jLabel48))
+                                .addGap(26, 26, 26)
+                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfverkauft_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtfreserviert_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtikelAnzeigeLayout.createSequentialGroup()
+                                .addComponent(jbSpeichern_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbbearbeiten_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbabbrechen_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfbestelltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel51)
+                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                        .addGap(173, 173, 173)
+                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                                .addComponent(jtfbestellwertnetto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel167))
+                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                                .addComponent(jtfeinzelwertnetto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel166, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                                .addComponent(jcbmehrwertsteuer_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabel53)
+                                    .addComponent(jLabel50))
+                                .addGap(108, 108, 108)
+                                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel140)
+                                    .addComponent(jtfartikeltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                                .addComponent(jLabel54)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jtfbestellwertbrutto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                                .addComponent(jLabel52)
+                                                .addGap(32, 32, 32)
+                                                .addComponent(jtfeinzelwertbrutto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel168)
+                                            .addComponent(jLabel169))))))
+                        .addContainerGap(613, Short.MAX_VALUE))))
             .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
                 .addGap(334, 334, 334)
@@ -351,7 +366,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(jtfartikelname_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel44)
@@ -361,13 +376,13 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                     .addComponent(jtffrei_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47)
                     .addComponent(jtfreserviert_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 20, Short.MAX_VALUE)
-                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(18, 24, Short.MAX_VALUE)
+                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jtfzulauf_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfverkauft_ArtikelAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel46)
-                        .addComponent(jLabel48)))
+                        .addComponent(jLabel48)
+                        .addComponent(jtfverkauft_ArtikelAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
@@ -376,16 +391,16 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                     .addComponent(jLabel140))
                 .addGap(2, 2, 2)
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfbestelltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfartikeltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 20, Short.MAX_VALUE)
+                    .addComponent(jtfartikeltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfbestelltext_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 24, Short.MAX_VALUE)
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
                     .addComponent(jLabel52)
-                    .addComponent(jtfeinzelwertbrutto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel168)
                     .addComponent(jtfeinzelwertnetto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel166))
+                    .addComponent(jLabel166)
+                    .addComponent(jtfeinzelwertbrutto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfbestellwertnetto_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -401,9 +416,9 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                     .addComponent(jLabel56))
                 .addGap(19, 19, 19)
                 .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbSpeichern_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbbearbeiten_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbabbrechen_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbSpeichern_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbbearbeiten_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbabbrechen_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(127, 127, 127))
         );
 
@@ -411,11 +426,11 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 959, Short.MAX_VALUE)
+            .addGap(0, 1395, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ArtikelAnzeige, javax.swing.GroupLayout.DEFAULT_SIZE, 935, Short.MAX_VALUE)
+                    .addComponent(ArtikelAnzeige, javax.swing.GroupLayout.DEFAULT_SIZE, 1375, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
@@ -424,7 +439,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ArtikelAnzeige, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                    .addComponent(ArtikelAnzeige, javax.swing.GroupLayout.DEFAULT_SIZE, 792, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -445,6 +460,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
 
     private void jbbearbeiten_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbearbeiten_ArtikelAnzeigenActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbbearbeiten_ArtikelAnzeigenActionPerformed
 
     private void jtfreserviert_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfreserviert_ArtikelAnzeigenActionPerformed
@@ -452,8 +468,9 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfreserviert_ArtikelAnzeigenActionPerformed
 
     private void jbabbrechen_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbabbrechen_ArtikelAnzeigenActionPerformed
-         // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbabbrechen_ArtikelAnzeigenActionPerformed
 

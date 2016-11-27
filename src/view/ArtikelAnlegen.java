@@ -8,10 +8,12 @@ package view;
 import java.text.DecimalFormatSymbols;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 15.11.16 Impram Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Impram Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class ArtikelAnlegen extends javax.swing.JInternalFrame {
 
     /**
@@ -98,6 +100,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
 
         jLabel58.setText("%");
 
+        jtfeinzelwertbrutto_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfeinzelwertbrutto_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfeinzelwertbrutto_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
         jtfeinzelwertbrutto_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -106,6 +109,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jtfverkauft_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfverkauft_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfverkauft_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
@@ -119,9 +123,11 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jtfbestellwertnetto_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfbestellwertnetto_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfbestellwertnetto_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfreserviert_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfreserviert_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfreserviert_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
@@ -144,27 +150,33 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         jLabel61.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel61.setText("(Brutto):");
 
+        jtfartikelname_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfartikelname_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfartikelname_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfbestelltext_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfbestelltext_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfbestelltext_ArtikelAnlegenActionPerformed(evt);
             }
         });
 
+        jtfbestellwertbrutto_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfbestellwertbrutto_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfbestellwertbrutto_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfzulauf_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfzulauf_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfzulauf_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
+        jtfartikeltext_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfartikeltext_ArtikelAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfartikeltext_ArtikelAnlegenActionPerformed(evt);
             }
         });
 
+        jtffrei_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtffrei_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtffrei_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
@@ -183,6 +195,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         jLabel63.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel63.setText("Bestelltext:");
 
+        jtfeinzelwertnetto_ArtikelAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfeinzelwertnetto_ArtikelAnlegen.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfeinzelwertnetto_ArtikelAnlegen.setPreferredSize(new java.awt.Dimension(6, 25));
 
@@ -244,9 +257,9 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                             .addContainerGap()
                             .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtikelAnlegenLayout.createSequentialGroup()
-                                    .addComponent(jbSpeichern_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbSpeichern_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jbAbbrechen_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbAbbrechen_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(235, 235, 235))
                                 .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -254,8 +267,8 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                                             .addComponent(jLabel64)
                                             .addGap(61, 61, 61)
                                             .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jtfartikelname_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                                .addComponent(jtfartikelid_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                .addComponent(jtfartikelname_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jtfartikelid_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addComponent(jLabel63, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel71, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +281,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                                                     .addComponent(jLabel39))
                                                 .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                                                     .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(76, 76, 76)
+                                                    .addGap(103, 103, 103)
                                                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jtffrei_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(jtfzulauf_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -303,8 +316,8 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                                             .addGap(43, 43, 43)
                                             .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jtfverkauft_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                                    .addComponent(jtfreserviert_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addComponent(jtfverkauft_ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jtfreserviert_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGroup(ArtikelAnlegenLayout.createSequentialGroup()
                                                     .addComponent(jtfeinzelwertbrutto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -329,11 +342,11 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                 .addGap(16, 16, 16)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel64)
-                    .addComponent(jtfartikelid_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfartikelid_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel65)
-                    .addComponent(jtfartikelname_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfartikelname_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -341,16 +354,16 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel67)
-                    .addComponent(jtffrei_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtffrei_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel69)
                     .addComponent(jtfverkauft_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel68)
                     .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtfzulauf_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfzulauf_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel70)
-                        .addComponent(jtfreserviert_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtfreserviert_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -364,19 +377,19 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
-                    .addComponent(jtfeinzelwertnetto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfeinzelwertnetto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel170)
                     .addComponent(jLabel62)
-                    .addComponent(jtfeinzelwertbrutto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfeinzelwertbrutto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel172))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfbestellwertnetto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfbestellwertnetto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel60)
                     .addComponent(jLabel171)
                     .addComponent(jLabel61)
                     .addComponent(jLabel173, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfbestellwertbrutto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfbestellwertbrutto_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel72)
@@ -384,9 +397,9 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel58))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ArtikelAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAbbrechen_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSpeichern_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                    .addComponent(jbAbbrechen_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSpeichern_ArtikelAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -405,7 +418,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
             .addGap(0, 773, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addComponent(ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
+                    .addComponent(ArtikelAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -417,12 +430,15 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfeinzelwertbrutto_ArtikelAnlegenActionPerformed
 
     private void jbAbbrechen_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
      
     }//GEN-LAST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
-//Mehmet Impram 25.11.2016
+        /*----------------------------------------------------------*/
+        /* 20.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
     private boolean istVollstaendig(){
     boolean istVollstaendig = false;
     String fehlermeldung = "";
@@ -463,7 +479,9 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
     } else {
         JOptionPane.showMessageDialog(this, fehlermeldung, "Unvollständig", JOptionPane.WARNING_MESSAGE);
     }return istVollstaendig;
+        
 }
+    
 
     private void jbSpeichern_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnlegenActionPerformed
         // TODO add your handling code here:

@@ -38,7 +38,7 @@
           <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="ArtikelAnlegen" pref="776" max="32767" attributes="0"/>
+                  <Component id="ArtikelAnlegen" pref="788" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -66,9 +66,9 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jbSpeichern_ArtikelAnlegen" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jbSpeichern_ArtikelAnlegen" min="-2" pref="130" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbAbbrechen_ArtikelAnlegen" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jbAbbrechen_ArtikelAnlegen" min="-2" pref="130" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -77,8 +77,8 @@
                                               <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jtfartikelname_ArtikelAnlegen" alignment="0" pref="150" max="32767" attributes="0"/>
-                                                  <Component id="jtfartikelid_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jtfartikelname_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  <Component id="jtfartikelid_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Component id="jLabel63" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -94,7 +94,7 @@
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel67" min="-2" pref="34" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jtffrei_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                                           <Component id="jtfzulauf_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
@@ -140,8 +140,8 @@
                                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jtfverkauft_ArtikelAnlegen" alignment="0" pref="150" max="32767" attributes="0"/>
-                                                      <Component id="jtfreserviert_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtfverkauft_ArtikelAnlegen" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtfreserviert_ArtikelAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jtfeinzelwertbrutto_ArtikelAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
@@ -180,12 +180,12 @@
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel64" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfartikelid_ArtikelAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfartikelid_ArtikelAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel65" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfartikelname_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfartikelname_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator11" min="-2" pref="10" max="-2" attributes="0"/>
@@ -194,7 +194,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel67" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtffrei_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtffrei_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel69" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtfverkauft_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
@@ -202,9 +202,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel68" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="jtfzulauf_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfzulauf_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel70" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfreserviert_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfreserviert_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -220,20 +220,20 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfeinzelwertnetto_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfeinzelwertnetto_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel170" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel62" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfeinzelwertbrutto_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfeinzelwertbrutto_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel172" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jtfbestellwertnetto_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfbestellwertnetto_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel171" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel61" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel173" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="jtfbestellwertbrutto_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfbestellwertbrutto_ArtikelAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -243,10 +243,10 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbAbbrechen_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbSpeichern_ArtikelAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbAbbrechen_ArtikelAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbSpeichern_ArtikelAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="34" max="32767" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -273,6 +273,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfeinzelwertbrutto_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -286,6 +289,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfverkauft_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -313,6 +319,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfbestellwertnetto_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -323,6 +332,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfreserviert_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -374,6 +386,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfartikelname_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -383,12 +398,20 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfbestelltext_ArtikelAnlegen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfbestelltext_ArtikelAnlegenActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfbestellwertbrutto_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -399,6 +422,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfzulauf_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -408,12 +434,20 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfartikeltext_ArtikelAnlegen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfartikeltext_ArtikelAnlegenActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtffrei_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
@@ -456,6 +490,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jtfeinzelwertnetto_ArtikelAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[6, 25]"/>
             </Property>
