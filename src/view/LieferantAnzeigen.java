@@ -9,6 +9,7 @@ package view;
 /* Datum Name Was */
 /* 19.11.16 Citak Erstellung
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Citak Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class LieferantAnzeigen extends javax.swing.JInternalFrame {
 
@@ -38,9 +39,10 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
 
         LieferantAnzeigen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel10.setText("Lieferant anzeigen");
 
+        jbzurueck_LieferantAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbzurueck_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbzurueck_LieferantAnzeigen.setText("Zurück");
         jbzurueck_LieferantAnzeigen.addActionListener(new java.awt.event.ActionListener() {
@@ -57,7 +59,7 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
                 .addGroup(LieferantAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LieferantAnzeigenLayout.createSequentialGroup()
                         .addGap(246, 246, 246)
-                        .addComponent(jbzurueck_LieferantAnzeigen))
+                        .addComponent(jbzurueck_LieferantAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(LieferantAnzeigenLayout.createSequentialGroup()
                         .addGap(297, 297, 297)
                         .addComponent(jLabel10))
@@ -72,7 +74,7 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(157, 157, 157)
-                .addComponent(jbzurueck_LieferantAnzeigen)
+                .addComponent(jbzurueck_LieferantAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -89,11 +91,11 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 290, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(10, 10, 10)
-                    .addComponent(LieferantAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                    .addComponent(LieferantAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
                     .addGap(11, 11, 11)))
         );
 

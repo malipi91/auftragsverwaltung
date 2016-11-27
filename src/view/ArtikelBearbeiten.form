@@ -66,12 +66,14 @@
                                   <Component id="jLabel5" min="-2" pref="106" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                   <Component id="jtfArtikelID_ArtikelBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jbLupe_ArtikelBearbeiten" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="jbBearbeiten_ArtikelBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="jbBearbeiten_ArtikelBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jbLöschen_ArtikelBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="jbLöschen_ArtikelBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -88,9 +90,9 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jbSpeichernArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbSpeichernArtikelBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jbAbbrechenArtikelBearbeiten" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbAbbrechenArtikelBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="311" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -108,20 +110,21 @@
                       <Component id="jtfArtikelID_ArtikelBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtfArtikelname_ArtikelBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jbLupe_ArtikelBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbBearbeiten_ArtikelBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jbLöschen_ArtikelBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jbBearbeiten_ArtikelBearbeiten" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbLöschen_ArtikelBearbeiten" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbAbbrechenArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbSpeichernArtikelBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbAbbrechenArtikelBearbeiten" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbSpeichernArtikelBearbeiten" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="317" max="32767" attributes="0"/>
+                  <EmptySpace pref="323" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -645,6 +648,13 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JButton" name="jbLupe_ArtikelBearbeiten">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/view/lupe.png"/>
+            </Property>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

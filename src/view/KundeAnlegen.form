@@ -35,11 +35,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="634" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="680" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="KundeAnlegen" pref="620" max="32767" attributes="0"/>
+                  <Component id="KundeAnlegen" pref="654" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -66,10 +66,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jbSpeichern" min="-2" pref="105" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="727" max="32767" attributes="0"/>
+                                  <Component id="jbSpeichern" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="abbrechen_KundeAnlegen" min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Component id="abbrechen_KundeAnlegen" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -91,8 +91,8 @@
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jtfGPID_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jtfKreditlimit_KundenAnlegen" alignment="0" pref="150" max="32767" attributes="0"/>
+                                                  <Component id="jtfGPID_KundeAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  <Component id="jtfKreditlimit_KundenAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -107,7 +107,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -119,17 +119,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Component id="jSeparator20" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel147" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfGPID_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfGPID_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel148" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfKreditlimit_KundenAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfKreditlimit_KundenAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -142,11 +142,12 @@
                       <Component id="jPKontakt" alignment="0" max="32767" attributes="0"/>
                       <Component id="jPRechnungsdaten" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="abbrechen_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbSpeichern" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="abbrechen_KundeAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbSpeichern" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -155,13 +156,16 @@
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="0"/>
+              <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Kunde Anlegen"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="abbrechen_KundeAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/abbruch2.png"/>
             </Property>
@@ -175,11 +179,20 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel147">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="GP-ID:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfGPID_KundeAnlegen">
           <Properties>
+            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
@@ -188,13 +201,27 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel148">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Kreditlimit:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfKreditlimit_KundenAnlegen">
+          <Properties>
+            <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrbLieferadresseIdentisch_KundeAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lieferadresse identisch"/>
           </Properties>
           <Events>
@@ -203,6 +230,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrbAbweichendeLieferadresse_KundeAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="abweichende Lieferadresse"/>
           </Properties>
           <Events>
@@ -213,7 +243,9 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Kontakt"/>
+                <TitledBorder title="Kontakt">
+                  <Font PropertyName="font" name="Tahoma" size="14" style="0"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -230,11 +262,11 @@
                       </Group>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jtfTelefon_KundeAnlegen" alignment="0" pref="159" max="32767" attributes="0"/>
-                          <Component id="jrfTelefax_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfEMail_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jtfTelefon_KundeAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jrfTelefax_KundeAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jtfEMail_KundeAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -244,16 +276,16 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel149" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfTelefon_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfTelefon_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel150" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jrfTelefax_KundeAnlegen" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrfTelefax_KundeAnlegen" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jtfEMail_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfEMail_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel151" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -264,27 +296,51 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel149">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Telefon:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfTelefon_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfTelefon_KundeAnlegenActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel150">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Telefax:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jrfTelefax_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel151">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="E-Mail:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfEMail_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -292,7 +348,9 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Rechnungsdaten"/>
+                <TitledBorder title="Rechnungsdaten">
+                  <Font PropertyName="font" name="Tahoma" size="14" style="0"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -312,14 +370,14 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jtfHNrRG_KundeAnlegen" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="jtfHNrRG_KundeAnlegen" min="-2" pref="44" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jtfStaatRG_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jtfStaatRG_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jtfPlzRG_KundeAnlegen" min="-2" pref="56" max="-2" attributes="0"/>
+                                                  <Component id="jtfPlzRG_KundeAnlegen" min="-2" pref="57" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jtfOrtRG_KundeAnlegen" max="32767" attributes="0"/>
                                               </Group>
@@ -336,9 +394,9 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jcbAnredeRG_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jtfVornameRG_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jtfFirmaRG_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jcbAnredeRG_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <Component id="jtfVornameRG_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <Component id="jtfFirmaRG_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                                       <Component id="jtfNameRG_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                                       <Component id="jtfStraßeRG_KundeAnlegen" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   </Group>
@@ -346,7 +404,7 @@
                           </Group>
                           <Component id="jLabel158" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -356,43 +414,43 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel152" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jcbAnredeRG_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jcbAnredeRG_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel153" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfNameRG_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfNameRG_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jtfVornameRG_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfVornameRG_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel154" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel155" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfFirmaRG_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfFirmaRG_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel156" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jtfHNrRG_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtfStraßeRG_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtfHNrRG_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jtfStraßeRG_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel157" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jtfPlzRG_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtfOrtRG_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtfPlzRG_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jtfOrtRG_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel158" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfStaatRG_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfStaatRG_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -402,11 +460,17 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel152">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Anrede"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="jcbAnredeRG_KundeAnlegen">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
                     <StringItem index="0" value="-"/>
@@ -421,55 +485,113 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel153">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Name:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfNameRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel154">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Vorname:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfVornameRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel155">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Firma:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfFirmaRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel156">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Stra&#xdf;e,HNr. :"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfStra&#xdf;eRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfHNrRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel157">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="PLZ, Ort:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfPlzRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfPlzRG_KundeAnlegenActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfOrtRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfOrtRG_KundeAnlegenActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel158">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Staat:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfStaatRG_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -477,7 +599,9 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Lieferdaten"/>
+                <TitledBorder title="Lieferdaten">
+                  <Font PropertyName="font" name="Tahoma" size="14" style="0"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -495,12 +619,12 @@
                                   <Component id="jLabel161" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel162" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="32" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jComboBox1" alignment="0" pref="190" max="32767" attributes="0"/>
-                                  <Component id="jtfName2_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtfVorname2_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtfFirma2_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jComboBox1" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jtfName2_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jtfVorname2_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jtfFirma2_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -511,9 +635,9 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jtfStraße2_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtfPlz2_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtfStaat2_KundeAnlegen" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtfStraße2_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jtfPlz2_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jtfStaat2_KundeAnlegen" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -527,37 +651,37 @@
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel159" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel160" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfName2_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfName2_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel161" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfVorname2_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfVorname2_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel162" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfFirma2_KundeAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfFirma2_KundeAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel163" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfStraße2_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfStraße2_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel164" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfPlz2_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfPlz2_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel165" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfStaat2_KundeAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfStaat2_KundeAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="73" max="32767" attributes="0"/>
                   </Group>
@@ -567,11 +691,17 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel159">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Anrede"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="jComboBox1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
                     <StringItem index="0" value="-"/>
@@ -586,53 +716,104 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel160">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Name:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfName2_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel161">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Vorname:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfVorname2_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel162">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Firma:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfFirma2_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfFirma2_KundeAnlegenActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel163">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Stra&#xdf;e, HNr. :"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfStra&#xdf;e2_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel164">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="PLZ, Ort:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfPlz2_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel165">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Staat:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfStaat2_KundeAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JButton" name="jbSpeichern">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/speichern2.png"/>
             </Property>

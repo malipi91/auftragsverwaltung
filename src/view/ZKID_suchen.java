@@ -9,6 +9,7 @@ package view;
  /* Datum Name Was */
  /* 17.11.16 Yoeruek Erstellung*/
  /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+ /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*----------------------------------------------------------*/
 public class ZKID_suchen extends javax.swing.JInternalFrame {
 
@@ -47,9 +48,10 @@ public class ZKID_suchen extends javax.swing.JInternalFrame {
 
         ZKID_suchen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel80.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel80.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel80.setText("Zahlungskondition-ID Suchen");
 
+        jbAbbrechen_ZKIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKIDSuchen.setText("Abbrechen");
         jbAbbrechen_ZKIDSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -58,6 +60,7 @@ public class ZKID_suchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jbAnzeigen_ZKIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAnzeigen_ZKIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_ZKIDSuchen.setText("Anzeigen");
         jbAnzeigen_ZKIDSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -66,13 +69,25 @@ public class ZKID_suchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel126.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel126.setText("Lieferzeit-Sofort:");
 
+        jLabel127.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel127.setText("Lieferzeit-Wunsch:");
 
+        jtfLieferzeitSofort_ZKIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfLieferzeitWunsch_ZKIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel128.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel128.setText("Skontozeit 1:");
 
+        jLabel129.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel129.setText("Mahnzeit:");
+
+        jtfSkontozeit1_ZKIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfMahnzeit1_ZKIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout ZKID_suchenLayout = new javax.swing.GroupLayout(ZKID_suchen);
         ZKID_suchen.setLayout(ZKID_suchenLayout);
@@ -90,25 +105,25 @@ public class ZKID_suchen extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel127))
                                 .addGap(28, 28, 28)
                                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtfLieferzeitSofort_ZKIDSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                    .addComponent(jtfLieferzeitWunsch_ZKIDSuchen))
+                                    .addComponent(jtfLieferzeitSofort_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtfLieferzeitWunsch_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(99, 99, 99)
                                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel128)
                                     .addComponent(jLabel129))
                                 .addGap(31, 31, 31)
                                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtfSkontozeit1_ZKIDSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                    .addComponent(jtfMahnzeit1_ZKIDSuchen)))
+                                    .addComponent(jtfSkontozeit1_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtfMahnzeit1_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(ZKID_suchenLayout.createSequentialGroup()
-                                .addComponent(jbAnzeigen_ZKIDSuchen)
+                                .addComponent(jbAnzeigen_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbAbbrechen_ZKIDSuchen)
+                                .addComponent(jbAbbrechen_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(1, 1, 1))))
                     .addGroup(ZKID_suchenLayout.createSequentialGroup()
                         .addGap(301, 301, 301)
                         .addComponent(jLabel80)))
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
         ZKID_suchenLayout.setVerticalGroup(
             ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,19 +135,19 @@ public class ZKID_suchen extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel126)
-                    .addComponent(jtfLieferzeitSofort_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfLieferzeitSofort_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel128)
-                    .addComponent(jtfSkontozeit1_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfSkontozeit1_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel127)
-                    .addComponent(jtfLieferzeitWunsch_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfLieferzeitWunsch_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel129)
-                    .addComponent(jtfMahnzeit1_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfMahnzeit1_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(ZKID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAnzeigen_ZKIDSuchen)
-                    .addComponent(jbAbbrechen_ZKIDSuchen))
+                    .addComponent(jbAnzeigen_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_ZKIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -149,11 +164,11 @@ public class ZKID_suchen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 296, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(37, 37, 37)
-                    .addComponent(ZKID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                    .addComponent(ZKID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
                     .addGap(37, 37, 37)))
         );
 

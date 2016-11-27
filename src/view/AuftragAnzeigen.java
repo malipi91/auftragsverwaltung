@@ -9,6 +9,7 @@ package view;
 /* Datum Name Was */
 /* 15.11.16 Yoeruek Erstellung*/
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     /**
@@ -182,6 +183,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlZKID.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlZKID.setText("Zahlungskondition-ID");
 
+        jtfZKID_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfZKID_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfZKID_azActionPerformed(evt);
@@ -208,8 +210,12 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlAuftragswertbrutto_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragswertbrutto_az.setText("Auftragswert(brutto)");
 
+        jtfAuftragswertbrutto_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         jlAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragswertnetto_az.setText("Auftragswert (netto)");
+
+        jtfAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout AuftragAnzeigenLayout = new javax.swing.GroupLayout(AuftragAnzeigen);
         AuftragAnzeigen.setLayout(AuftragAnzeigenLayout);
@@ -354,10 +360,10 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -377,7 +383,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
+                    .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 

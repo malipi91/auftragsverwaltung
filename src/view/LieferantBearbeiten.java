@@ -8,6 +8,7 @@ package view;
 /*----------------------------------------------------------*/
 /* Datum Name Was */
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class LieferantBearbeiten extends javax.swing.JInternalFrame {
 
@@ -40,6 +41,7 @@ public class LieferantBearbeiten extends javax.swing.JInternalFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setText("Lieferant Bearbeiten");
 
+        jbzurueck_LieferantBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbzurueck_LieferantBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbzurueck_LieferantBearbeiten.setText("Zurück");
         jbzurueck_LieferantBearbeiten.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +60,7 @@ public class LieferantBearbeiten extends javax.swing.JInternalFrame {
                         .addGroup(LieferantBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(LieferantBearbeitenLayout.createSequentialGroup()
                                 .addGap(356, 356, 356)
-                                .addComponent(jbzurueck_LieferantBearbeiten))
+                                .addComponent(jbzurueck_LieferantBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(LieferantBearbeitenLayout.createSequentialGroup()
                                 .addGap(346, 346, 346)
                                 .addComponent(jLabel12)))
@@ -74,7 +76,7 @@ public class LieferantBearbeiten extends javax.swing.JInternalFrame {
                 .addGap(15, 15, 15)
                 .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(165, 165, 165)
-                .addComponent(jbzurueck_LieferantBearbeiten)
+                .addComponent(jbzurueck_LieferantBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -95,7 +97,7 @@ public class LieferantBearbeiten extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(4, 4, 4)
-                    .addComponent(LieferantBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                    .addComponent(LieferantBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
                     .addGap(5, 5, 5)))
         );
 

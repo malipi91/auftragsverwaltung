@@ -11,6 +11,7 @@ import java.text.DecimalFormatSymbols;
 /* Datum Name Was */
 /* 15.11.16 Impram Erstellung*/
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragSuchen extends javax.swing.JInternalFrame {
 
@@ -79,11 +80,15 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
 
         AuftragSuchen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        titel_as.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titel_as.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         titel_as.setText("Auftrag Suchen");
 
+        jlAuftragsnr_as.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragsnr_as.setText("Auftrags-ID:");
 
+        jtfAuftragsID_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jbZurueck_AutragSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbZurueck_AutragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/zurück.png"))); // NOI18N
         jbZurueck_AutragSuchen.setText("Zurück");
         jbZurueck_AutragSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -92,8 +97,10 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel26.setText("Suchkriterium:");
 
+        jcbSuchkriterium_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbSuchkriterium_AuftragSuchen.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Auftrags-ID", "Kundenname", "Lieferantenname", "Lieferdatum", "Erfassungsdatum", "Status", "Auftragswert", "Auftragsart" }));
         jcbSuchkriterium_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,43 +108,62 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel27.setText("Kundenname:");
 
+        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel28.setText("Lieferantenname:");
 
+        jLabel29.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel29.setText("Lieferdatum:");
 
+        jLabel30.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel30.setText("Erfassungsdatum:");
 
+        jtfKundenName_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfKundenName_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfKundenName_AuftragSuchenActionPerformed(evt);
             }
         });
 
+        jtfLieferantenname_AuftragSuche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel31.setText("Status");
 
+        jtfMinAuftragswert_AuftragSuche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfMinAuftragswert_AuftragSuche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfMinAuftragswert_AuftragSucheActionPerformed(evt);
             }
         });
 
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel32.setText("Auftragswert");
 
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel33.setText("Auftragsart");
 
+        jcbStatusArt_AuftragSuche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbStatusArt_AuftragSuche.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "erfasst", "freigegeben", "abgeschlossen" }));
 
+        jcbStatus_AuftragSuche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbStatus_AuftragSuche.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "Barauftrag", "Sofortauftrag", "Terminauftrag", "Bestellauftrag" }));
 
+        jLabel34.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel34.setText("bis");
 
+        jtfMaxAuftragswert_AuftragSuche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jbSuchen_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSuchen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragSuchen.setText("Suchen");
 
+        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel35.setText("€");
 
+        jLabel36.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel36.setText("€");
 
         jtTabelle_AuftragSuche.setModel(new javax.swing.table.DefaultTableModel(
@@ -249,6 +275,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         ));
         jScrollPane4.setViewportView(jtTabelle_AuftragSuche);
 
+        jbAnzeigen_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAnzeigen_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_AuftragSuchen.setText("Anzeigen");
         jbAnzeigen_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -267,7 +294,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                     .addGroup(AuftragSuchenLayout.createSequentialGroup()
                         .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(AuftragSuchenLayout.createSequentialGroup()
-                                .addGap(404, 404, 404)
+                                .addGap(314, 314, 314)
                                 .addComponent(titel_as))
                             .addGroup(AuftragSuchenLayout.createSequentialGroup()
                                 .addGap(38, 38, 38)
@@ -282,45 +309,45 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                                             .addComponent(jLabel30))
                                         .addGap(35, 35, 35)
                                         .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jtfLieferantenname_AuftragSuche)
-                                            .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jtfAuftragsID_AuftragSuchen)
+                                            .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                            .addComponent(jtfLieferantenname_AuftragSuche, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                            .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                            .addComponent(jtfAuftragsID_AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                             .addComponent(jcbSuchkriterium_AuftragSuchen, 0, 150, Short.MAX_VALUE)
-                                            .addComponent(jtfKundenName_AuftragSuchen))
+                                            .addComponent(jtfKundenName_AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createSequentialGroup()
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createSequentialGroup()
+                                                .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel31)
+                                                    .addComponent(jLabel32))
+                                                .addGap(5, 5, 5)
+                                                .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jcbStatusArt_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(AuftragSuchenLayout.createSequentialGroup()
+                                                        .addComponent(jtfMinAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(1, 1, 1)
+                                                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(11, 11, 11)
+                                                        .addComponent(jLabel34)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(jtfMaxAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(jLabel36)))
+                                                .addGap(7, 7, 7))
+                                            .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jbSuchen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(AuftragSuchenLayout.createSequentialGroup()
                                                     .addComponent(jLabel33)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createSequentialGroup()
-                                                    .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel31)
-                                                        .addComponent(jLabel32))
-                                                    .addGap(5, 5, Short.MAX_VALUE)
-                                                    .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(AuftragSuchenLayout.createSequentialGroup()
-                                                            .addComponent(jtfMinAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                            .addComponent(jLabel35)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(jLabel34)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(jtfMaxAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(jLabel36))
-                                                        .addComponent(jcbStatusArt_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addComponent(jbSuchen_AuftragSuchen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(AuftragSuchenLayout.createSequentialGroup()
-                                            .addComponent(jbAnzeigen_AuftragSuchen)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jbZurueck_AutragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(4, 4, 4))))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jbAnzeigen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbZurueck_AutragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         AuftragSuchenLayout.setVerticalGroup(
@@ -333,20 +360,20 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
-                    .addComponent(jcbSuchkriterium_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                    .addComponent(jcbSuchkriterium_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAuftragsnr_as)
-                    .addComponent(jtfAuftragsID_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfAuftragsID_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel31)
-                    .addComponent(jcbStatusArt_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbStatusArt_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jtfKundenName_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfMinAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfKundenName_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfMinAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel32)
-                    .addComponent(jtfMaxAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfMaxAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel35)
                     .addComponent(jLabel34)
                     .addComponent(jLabel36))
@@ -354,25 +381,25 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel28)
                     .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtfLieferantenname_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfLieferantenname_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel33)
-                        .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel29)
-                    .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel30)
                     .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jbSuchen_AuftragSuchen)))
+                        .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbSuchen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAnzeigen_AuftragSuchen)
-                    .addComponent(jbZurueck_AutragSuchen))
+                    .addComponent(jbAnzeigen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbZurueck_AutragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -389,11 +416,11 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
+            .addGap(0, 734, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
+                    .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 

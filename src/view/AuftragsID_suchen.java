@@ -9,6 +9,7 @@ package view;
 /* Datum Name Was */
 /* 14.11.16 Yoeruek Erstellung*/
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragsID_suchen extends javax.swing.JInternalFrame {
 
@@ -49,19 +50,25 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
         AuftragsID_suchen.setName(""); // NOI18N
         AuftragsID_suchen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel88.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel88.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel88.setText("Auftrags-ID suchen");
 
+        jLabel89.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel89.setText("Kundenname:");
 
+        jtfKundenname_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel90.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel90.setText("Lieferantenname:");
 
+        jtfLieferantenname_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfLieferantenname_AuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfLieferantenname_AuftragsIDSuchenActionPerformed(evt);
             }
         });
 
+        jcbDatumAuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jcbDatumAuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Erfassungsdatum", "Lieferdatum", "Abschlussdatum" }));
         jcbDatumAuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,10 +76,13 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel91.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel91.setText("Status:");
 
+        jcbStatus_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbStatus_AuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erfasst", "freigegeben", "abgeschlossen", "" }));
 
+        jbAbbrechen_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_AuftragsIDSuchen.setText("Abbrechen");
         jbAbbrechen_AuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +91,7 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jbSuchen_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSuchen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragsIDSuchen.setText("Suchen");
         jbSuchen_AuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -99,33 +110,33 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
                     .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
                         .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                                .addGap(242, 242, 242)
+                                .addGap(290, 290, 290)
                                 .addComponent(jLabel88))
                             .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
                                 .addGap(86, 86, 86)
                                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                                        .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jbAbbrechen_AuftragsIDSuchen))
+                                        .addComponent(jbAbbrechen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
                                         .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel90))
                                         .addGap(33, 33, 33)
                                         .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jtfLieferantenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jtfKundenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jtfLieferantenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfKundenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(79, 79, 79)
                                         .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
                                                 .addComponent(jcbDatumAuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(24, 24, 24)
-                                                .addComponent(jtfDatum_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jtfDatum_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
                                                 .addComponent(jLabel91)
                                                 .addGap(108, 108, 108)
-                                                .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                                .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -139,19 +150,19 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
                 .addGap(41, 41, 41)
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel89)
-                    .addComponent(jtfKundenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfDatum_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfKundenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfDatum_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jcbDatumAuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel90)
-                    .addComponent(jtfLieferantenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfLieferantenname_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel91)
-                    .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAbbrechen_AuftragsIDSuchen)
-                    .addComponent(jbSuchen_AuftragsIDSuchen))
+                    .addComponent(jbAbbrechen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -159,20 +170,20 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 756, Short.MAX_VALUE)
+            .addGap(0, 833, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(AuftragsID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                    .addComponent(AuftragsID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 303, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(17, 17, 17)
-                    .addComponent(AuftragsID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                    .addComponent(AuftragsID_suchen, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
                     .addGap(18, 18, 18)))
         );
 

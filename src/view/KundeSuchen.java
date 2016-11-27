@@ -9,6 +9,7 @@ package view;
 /* Datum Name Was */
 /* 18.11.16 Yoeruek Erstellung*/
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class KundeSuchen extends javax.swing.JInternalFrame {
 
@@ -44,9 +45,10 @@ public class KundeSuchen extends javax.swing.JInternalFrame {
 
         KundeSuchen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("Kunde Suchen");
 
+        jbAbbrechen_KundeSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_KundeSuchen.setText("Abbrechen");
         jbAbbrechen_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -55,16 +57,20 @@ public class KundeSuchen extends javax.swing.JInternalFrame {
             }
         });
 
+        jcbSuchkriterium_KundeSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jcbSuchkriterium_KundeSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Name", "Vorname", "PLZ", "Typ" }));
 
+        jtfSuchkriterium_KundeSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfSuchkriterium_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfSuchkriterium_KundeSuchenActionPerformed(evt);
             }
         });
 
+        jbSuchen_KundeSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSuchen_KundeSuchen.setText("Suchen");
 
+        jbAnzeigen_KundeSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAnzeigen_KundeSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
         jbAnzeigen_KundeSuchen.setText("Anzeigen");
         jbAnzeigen_KundeSuchen.addActionListener(new java.awt.event.ActionListener() {
@@ -193,9 +199,9 @@ public class KundeSuchen extends javax.swing.JInternalFrame {
                         .addGroup(KundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(KundeSuchenLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jbAnzeigen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jbAnzeigen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbAbbrechen_KundeSuchen))
+                                .addComponent(jbAbbrechen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(KundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(KundeSuchenLayout.createSequentialGroup()
                                     .addGap(375, 375, 375)
@@ -206,7 +212,7 @@ public class KundeSuchen extends javax.swing.JInternalFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jtfSuchkriterium_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(44, 44, 44)
-                                    .addComponent(jbSuchen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jbSuchen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(KundeSuchenLayout.createSequentialGroup()
                                     .addGap(44, 44, 44)
                                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -222,15 +228,15 @@ public class KundeSuchen extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(KundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcbSuchkriterium_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfSuchkriterium_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSuchen_KundeSuchen))
+                    .addComponent(jcbSuchkriterium_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSuchkriterium_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSuchen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(KundeSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAnzeigen_KundeSuchen)
-                    .addComponent(jbAbbrechen_KundeSuchen))
+                    .addComponent(jbAnzeigen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_KundeSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -247,11 +253,11 @@ public class KundeSuchen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGap(0, 536, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(KundeSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+                    .addComponent(KundeSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
