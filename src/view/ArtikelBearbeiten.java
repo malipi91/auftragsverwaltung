@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.text.DecimalFormatSymbols;
 import javax.swing.JOptionPane;
 
 /*----------------------------------------------------------*/
@@ -26,7 +27,23 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         jtfArtikelID_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
         //Artikel Id kann man nicht bearbeiten
         jtfArtikelID_ArtikelBearbeiten.setEnabled(false);
-        //Kommen noch die anderen felder.
+        //27.11.2016
+        jtfArtikelname_ArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
+        jtffreiArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+        jtfverkauftArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+        jtfzulaufArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+        jtfreserviertArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+        jtfBestellTextArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
+        jtfArtikelTextArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
+        jtfEinzelwertNettoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+        jtfEinzelwertNettoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+        jtfEinzelwertBruttoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+        jtfEinzelwertBruttoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+        jtfBestellwertNettoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+        jtfBestellwertNettoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+        jtfBestellwertBruttoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+        jtfBestellwertBruttoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+        
 
         
     }
@@ -279,7 +296,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                             .addComponent(jLabel10)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel13)
-                        .addGap(114, 114, 114)
+                        .addGap(108, 108, 108)
                         .addComponent(jcbMWSTArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel20)))
@@ -380,7 +397,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jtfArtikelname_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 41, Short.MAX_VALUE)))
+                        .addGap(0, 48, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtikelBearbeitenLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -427,7 +444,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 1026, Short.MAX_VALUE)
+                .addComponent(ArtikelBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
