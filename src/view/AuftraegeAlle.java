@@ -250,6 +250,11 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jtAuftrageAlle);
 
         jbAnzeigen_AuftraegeAlle.setText("Anzeigen");
+        jbAnzeigen_AuftraegeAlle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAnzeigen_AuftraegeAlleActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -295,6 +300,10 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbAnzeigen_AuftraegeAlleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_AuftraegeAlleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbAnzeigen_AuftraegeAlleActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

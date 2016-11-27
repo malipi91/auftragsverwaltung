@@ -106,6 +106,8 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         SeiteZwei = new javax.swing.JPanel();
+        jifAuftragBearbeiten = new view.AuftragBearbeiten();
+        jifArtikelBearbeiten = new view.ArtikelBearbeiten();
         jifAuftraegeAlle = new view.AuftraegeAlle();
         jifArtikelSuche = new view.ArtikelSuche();
         jifZKID_suchen = new view.ZKID_suchen();
@@ -121,11 +123,9 @@ public class StartAV extends javax.swing.JFrame {
         jifLieferantSuchen = new view.LieferantSuchen();
         jifLieferantBearbeiten = new view.LieferantBearbeiten();
         jifLieferantAnzeigen = new view.LieferantAnzeigen();
-        jifArtikelBearbeiten = new view.ArtikelBearbeiten();
         jifArtikelAnzeige = new view.ArtikelAnzeige();
         jifAuftragsID_suchen = new view.AuftragsID_suchen();
         jifAuftragSuchen = new view.AuftragSuchen();
-        jifAuftragBearbeiten = new view.AuftragBearbeiten();
         jifArtikelAnlegen = new view.ArtikelAnlegen();
         jifAuftragAnzeigen = new view.AuftragAnzeigen();
         jifAuftragAnlegen = new view.AuftragAnlegen();
@@ -195,9 +195,6 @@ public class StartAV extends javax.swing.JFrame {
         StartseiteLayout.setHorizontalGroup(
             StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StartseiteLayout.createSequentialGroup()
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 225, Short.MAX_VALUE))
-            .addGroup(StartseiteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
@@ -212,6 +209,9 @@ public class StartAV extends javax.swing.JFrame {
                                 .addComponent(jtfBenutzername_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(StartseiteLayout.createSequentialGroup()
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 225, Short.MAX_VALUE))
         );
         StartseiteLayout.setVerticalGroup(
             StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,8 +252,14 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(SeiteZwei);
         SeiteZwei.setBounds(0, 0, 2000, 1100);
 
-        jifAuftraegeAlle.setClosable(true);
-        jifAuftraegeAlle.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jifAuftragBearbeiten.setVisible(false);
+        desktopPane.add(jifAuftragBearbeiten);
+        jifAuftragBearbeiten.setBounds(0, 0, 1174, 877);
+
+        jifArtikelBearbeiten.setVisible(false);
+        desktopPane.add(jifArtikelBearbeiten);
+        jifArtikelBearbeiten.setBounds(0, 0, 1096, 917);
+
         jifAuftraegeAlle.setVisible(false);
         desktopPane.add(jifAuftraegeAlle);
         jifAuftraegeAlle.setBounds(0, 0, 1087, 764);
@@ -314,10 +320,6 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(jifLieferantAnzeigen);
         jifLieferantAnzeigen.setBounds(0, 0, 1057, 318);
 
-        jifArtikelBearbeiten.setVisible(false);
-        desktopPane.add(jifArtikelBearbeiten);
-        jifArtikelBearbeiten.setBounds(0, 0, 1056, 318);
-
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
         jifArtikelAnzeige.setBounds(0, 0, 975, 846);
@@ -330,17 +332,13 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(jifAuftragSuchen);
         jifAuftragSuchen.setBounds(0, 0, 800, 754);
 
-        jifAuftragBearbeiten.setVisible(false);
-        desktopPane.add(jifAuftragBearbeiten);
-        jifAuftragBearbeiten.setBounds(0, 0, 638, 347);
-
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
         jifArtikelAnlegen.setBounds(0, 0, 991, 821);
 
         jifAuftragAnzeigen.setVisible(false);
         desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 1058, 859);
+        jifAuftragAnzeigen.setBounds(0, 0, 1060, 866);
 
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
