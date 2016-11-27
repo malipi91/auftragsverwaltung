@@ -628,12 +628,16 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfMenge_AuftragAnlegenActionPerformed
 
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 18.11.2016  Citak  erstellen der Methode                 */
+    /* 28.11.2016 Citak überarbeiten der Methode                */ 
+    /*----------------------------------------------------------*/ 
     private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
-        /*----------------------------------------------------------*/
- /* 18.11.16 Citak Die Daten werden in der Gui-Maske geschrieben und nach 
-                          bestÃ¤tigung des Speicher Buttons werden die Daten in 
-                          die Datenbank gespeichert */
- /*----------------------------------------------------------*/
+ 
+ /*Die Daten werden in der Gui-Maske geschrieben und nach 
+  Bestätigung des Speicher Buttons werden die Daten in die Datenbank gespeichert */
 
         Auftragsstatus aStatus = new Auftragsstatus();
         String auftrags_ID = "1122";
@@ -650,16 +654,19 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         } catch (NumberFormatException ex) {
             
         }
+        //zum Testen angelegt
         System.out.println("Result: " + beschreibung + erfassungsdatum);
-
+        //Anlegen eines neuen Auftrags
         Auftrag auftrag = new Auftrag(auftrags_ID, beschreibung, erfassungsdatum, lieferdatum,
                 auftragsart, auftragswert, aStatus.ueberfuehreAuftragsStatus(status), abschlussDatum);
         try {
+            //Es wird ein neuer Auftrag in die Datenbank aufgenommen
             DAOAuftrag daoAuftrag = new DAOAuftrag();
             daoAuftrag.legeNeueAuftragAn(auftrag);
         } catch (SQLException ex) {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
+          
         //Auftragspositionen werden aus der Tabelle ausgelesen, in einen 
         //Auftragspositionenobjekt aufganeommen und in die Datenbank geschrieben.
         for (int i = 0; i < jTAuftragsposition.getRowCount(); i++) {
