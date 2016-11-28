@@ -5,15 +5,13 @@
  */
 package main;
 
-import controller.Controller;
 
 /**
  *
  * @author Duygu Citak
  */
 public class Main {
-    
-    static Controller controller;
+  
 
     /**
      * Diese Klasse wird nur dazu benutzt alle nötigen
@@ -21,7 +19,6 @@ public class Main {
      * View anzuzeigen
      */
     public static void main(String [] args){
-        controller = new Controller();
-
+        
 }
 }
