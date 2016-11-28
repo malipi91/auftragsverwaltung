@@ -36,13 +36,14 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
         jbBearbeiten_ZKBearbeiten = new javax.swing.JButton();
         jLabel124 = new javax.swing.JLabel();
         jtfZKID_ZKBearbeiten = new javax.swing.JTextField();
+        jbLupeZKID_ZKBearbeiten = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         ZKBearbeiten.setMaximumSize(new java.awt.Dimension(2000, 2000));
         ZKBearbeiten.setMinimumSize(new java.awt.Dimension(500, 500));
-        ZKBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 800));
+        ZKBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jLabel76.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel76.setText("Zahlungskonditionen Bearbeiten");
@@ -68,6 +69,8 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
         jLabel124.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel124.setText("ZK-ID:");
 
+        jbLupeZKID_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+
         javax.swing.GroupLayout ZKBearbeitenLayout = new javax.swing.GroupLayout(ZKBearbeiten);
         ZKBearbeiten.setLayout(ZKBearbeitenLayout);
         ZKBearbeitenLayout.setHorizontalGroup(
@@ -80,16 +83,18 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
                         .addComponent(jLabel76))
                     .addGroup(ZKBearbeitenLayout.createSequentialGroup()
                         .addGap(289, 289, 289)
-                        .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ZKBearbeitenLayout.createSequentialGroup()
                                 .addComponent(jLabel124)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbLupeZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(ZKBearbeitenLayout.createSequentialGroup()
                                 .addComponent(jbBearbeiten_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jbAbbrechen_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(430, Short.MAX_VALUE))
+                .addContainerGap(361, Short.MAX_VALUE))
         );
         ZKBearbeitenLayout.setVerticalGroup(
             ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,33 +106,28 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel124)
-                    .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLupeZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBearbeiten_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(646, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1043, Short.MAX_VALUE)
+            .addGap(0, 950, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 1019, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 526, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(ZKBearbeiten, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -152,6 +152,7 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator22;
     private javax.swing.JButton jbAbbrechen_ZKBearbeiten;
     private javax.swing.JButton jbBearbeiten_ZKBearbeiten;
+    private javax.swing.JButton jbLupeZKID_ZKBearbeiten;
     private javax.swing.JTextField jtfZKID_ZKBearbeiten;
     // End of variables declaration//GEN-END:variables
 }
