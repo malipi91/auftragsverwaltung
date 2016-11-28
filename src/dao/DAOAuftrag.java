@@ -22,7 +22,6 @@ import util.Zusatzfunktionen;
  * @author marti
  * Änderungen zum Testen
  * 2 Einträge zum Testen
- * 3 Eitnröge Testen
  */
 public class DAOAuftrag {
 
