@@ -10,11 +10,10 @@ import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 
-/**
- *
- * @author Hicran Yoeruek
- * 25.11.2016 Erstellung der Klasse 
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 25.11.16 Yoeruek angelegt */
+/*----------------------------------------------------------*/
 public class UniversalDokument extends PlainDocument {
 
         private int laenge;

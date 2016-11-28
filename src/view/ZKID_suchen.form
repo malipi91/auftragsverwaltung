@@ -35,11 +35,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="278" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="296" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="ZKID_suchen" pref="208" max="32767" attributes="0"/>
+                  <Component id="ZKID_suchen" pref="222" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -70,8 +70,8 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jtfLieferzeitSofort_ZKIDSuchen" alignment="0" pref="150" max="32767" attributes="0"/>
-                                      <Component id="jtfLieferzeitWunsch_ZKIDSuchen" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtfLieferzeitSofort_ZKIDSuchen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jtfLieferzeitWunsch_ZKIDSuchen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -80,14 +80,14 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jtfSkontozeit1_ZKIDSuchen" alignment="0" pref="150" max="32767" attributes="0"/>
-                                      <Component id="jtfMahnzeit1_ZKIDSuchen" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtfSkontozeit1_ZKIDSuchen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jtfMahnzeit1_ZKIDSuchen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jbAnzeigen_ZKIDSuchen" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jbAnzeigen_ZKIDSuchen" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jbAbbrechen_ZKIDSuchen" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jbAbbrechen_ZKIDSuchen" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -97,7 +97,7 @@
                           <Component id="jLabel80" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="298" max="32767" attributes="0"/>
+                  <EmptySpace pref="257" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -111,21 +111,21 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel126" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfLieferzeitSofort_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfLieferzeitSofort_ZKIDSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel128" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfSkontozeit1_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfSkontozeit1_ZKIDSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel127" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfLieferzeitWunsch_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfLieferzeitWunsch_ZKIDSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel129" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfMahnzeit1_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfMahnzeit1_ZKIDSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbAnzeigen_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbAbbrechen_ZKIDSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbAnzeigen_ZKIDSuchen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbAbbrechen_ZKIDSuchen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -136,7 +136,7 @@
         <Component class="javax.swing.JLabel" name="jLabel80">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="0"/>
+              <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Zahlungskondition-ID Suchen"/>
           </Properties>
@@ -145,6 +145,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbAbbrechen_ZKIDSuchen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/abbruch2.png"/>
             </Property>
@@ -156,6 +159,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbAnzeigen_ZKIDSuchen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/anzeigen.png"/>
             </Property>
@@ -167,31 +173,63 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel126">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lieferzeit-Sofort:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel127">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lieferzeit-Wunsch:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfLieferzeitSofort_ZKIDSuchen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfLieferzeitWunsch_ZKIDSuchen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel128">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Skontozeit 1:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel129">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Mahnzeit:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfSkontozeit1_ZKIDSuchen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfMahnzeit1_ZKIDSuchen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

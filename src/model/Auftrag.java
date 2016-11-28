@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author marti
@@ -20,7 +22,7 @@ public class Auftrag {
     private int auftragswert;
     private String Status;
     private String abschlussdatum; 
-    private Auftragsposition auftragspositionen;
+    private ArrayList<Auftragsposition> auftragspositionen ;
     private Geschaeftspartner geschaeftspartner;
     private String geschaeftspartnerID;
     
@@ -56,24 +58,24 @@ public class Auftrag {
      * @param Status
      * @param abschlussdatum 
      */
-    
-//    Hicran, erzeuge einen Konstruktor um in die Datenbank einzuschreiben
-    public Auftrag(String auftragstext,String Erfassungsdatum,String Lieferdatum,
-            String auftragsart, String Status,
-            String abschlussdatum
-            ){
-        this.standardAnschrift =standardAnschrift;
-        this.auftragstext = auftragstext;
-        this.Erfassungsdatum = Erfassungsdatum;
-        this.Lieferdatum = Lieferdatum;
-        this.Status = Status;
-        this.auftragswert = 0;
-        this.abschlussdatum = abschlussdatum;
-        this.auftragspositionen = auftragspositionen;
-        this.auftragsart = auftragsart;
-        this.geschaeftspartner = geschaeftspartner;
-        
-    }
+//    
+////    Hicran, erzeuge einen Konstruktor um in die Datenbank einzuschreiben
+//    public Auftrag(String auftragstext,String Erfassungsdatum,String Lieferdatum,
+//            String auftragsart, String Status,
+//            String abschlussdatum
+//            ){
+//        this.standardAnschrift =standardAnschrift;
+//        this.auftragstext = auftragstext;
+//        this.Erfassungsdatum = Erfassungsdatum;
+//        this.Lieferdatum = Lieferdatum;
+//        this.Status = Status;
+//        this.auftragswert = 0;
+//        this.abschlussdatum = abschlussdatum;
+//        this.auftragspositionen = auftragspositionen;
+//        this.auftragsart = auftragsart;
+//        this.geschaeftspartner = geschaeftspartner;
+//        
+//    }
 
     public String getAuftrags_ID() {
         return auftrags_ID;
@@ -147,11 +149,11 @@ public class Auftrag {
         this.abschlussdatum = abschlussdatum;
     }
 
-    public Auftragsposition getAuftragspositionen() {
+    public ArrayList<Auftragsposition> getAuftragspositionen() {
         return auftragspositionen;
     }
 
-    public void setAuftragspositionen(Auftragsposition auftragspositionen) {
+    public void setAuftragspositionen(ArrayList<Auftragsposition> auftragspositionen) {
         this.auftragspositionen = auftragspositionen;
     }
 

@@ -39,7 +39,7 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ZKBearbeiten" pref="504" max="32767" attributes="0"/>
+                  <Component id="ZKBearbeiten" pref="512" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -67,7 +67,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="252" max="-2" attributes="0"/>
                           <Component id="jLabel76" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -76,17 +76,17 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel124" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jtfZKID_ZKBearbeiten" min="-2" pref="162" max="-2" attributes="0"/>
+                                  <Component id="jtfZKID_ZKBearbeiten" min="-2" pref="175" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jbBearbeiten_ZKBearbeiten" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jbBearbeiten_ZKBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jbAbbrechen_ZKBearbeiten" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jbAbbrechen_ZKBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="470" max="32767" attributes="0"/>
+                  <EmptySpace pref="430" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -100,12 +100,12 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel124" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfZKID_ZKBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfZKID_ZKBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jbBearbeiten_ZKBearbeiten" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbAbbrechen_ZKBearbeiten" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbBearbeiten_ZKBearbeiten" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbAbbrechen_ZKBearbeiten" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -116,7 +116,7 @@
         <Component class="javax.swing.JLabel" name="jLabel76">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="0"/>
+              <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Zahlungskonditionen Bearbeiten"/>
           </Properties>
@@ -125,6 +125,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbAbbrechen_ZKBearbeiten">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/abbruch2.png"/>
             </Property>
@@ -136,6 +139,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbBearbeiten_ZKBearbeiten">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/bearbeiten1.png"/>
             </Property>
@@ -147,6 +153,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel124">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ZK-ID:"/>
           </Properties>
         </Component>

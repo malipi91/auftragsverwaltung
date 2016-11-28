@@ -35,11 +35,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="509" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="536" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="KundeSuchen" pref="487" max="32767" attributes="0"/>
+                  <Component id="KundeSuchen" pref="510" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -64,9 +64,9 @@
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jbAnzeigen_KundeSuchen" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="jbAnzeigen_KundeSuchen" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jbAbbrechen_KundeSuchen" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jbAbbrechen_KundeSuchen" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -79,7 +79,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jtfSuchkriterium_KundeSuchen" min="-2" pref="150" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                      <Component id="jbSuchen_KundeSuchen" min="-2" pref="99" max="-2" attributes="0"/>
+                                      <Component id="jbSuchen_KundeSuchen" min="-2" pref="130" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
@@ -103,16 +103,16 @@
                   <Component id="jSeparator15" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jcbSuchkriterium_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfSuchkriterium_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbSuchen_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbSuchkriterium_KundeSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jtfSuchkriterium_KundeSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jbSuchen_KundeSuchen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                   <Component id="jScrollPane6" min="-2" pref="241" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbAnzeigen_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbAbbrechen_KundeSuchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbAnzeigen_KundeSuchen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbAbbrechen_KundeSuchen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -123,13 +123,16 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="0"/>
+              <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Kunde Suchen"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jbAbbrechen_KundeSuchen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/abbruch2.png"/>
             </Property>
@@ -143,6 +146,9 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="jcbSuchkriterium_KundeSuchen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
                 <StringItem index="0" value="ID"/>
@@ -158,17 +164,28 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfSuchkriterium_KundeSuchen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfSuchkriterium_KundeSuchenActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbSuchen_KundeSuchen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Suchen"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jbAnzeigen_KundeSuchen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/anzeigen.png"/>
             </Property>

@@ -47,16 +47,17 @@ public class DAOAuftrag {
     */
         String sql = "insert into auftrag "
                 + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
-                + "Lieferdatum,AStatus, Abschlussdatum) "
-                + "values (?,?,?,?,?,?,?)";
+                + "Auftragswert,Lieferdatum,AStatus, Abschlussdatum) "
+                + "values (?,?,?,?,?,?,?,?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, letzteID);
         stmt.setString(2, auftrag.getAuftragsart());
         stmt.setString(3, auftrag.getAuftragstext());
         stmt.setTimestamp(4, java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
-        stmt.setDate(5, java.sql.Date.valueOf(auftrag.getLieferdatum()));
-        stmt.setString(6, auftrag.getStatus());
-        stmt.setDate(7, java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
+        stmt.setInt(5,auftrag.getAuftragswert());
+        stmt.setDate(6, java.sql.Date.valueOf(auftrag.getLieferdatum()));
+        stmt.setString(7, auftrag.getStatus());
+        stmt.setDate(8, java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
 
         try {
             stmt.executeUpdate();

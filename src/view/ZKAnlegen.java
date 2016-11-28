@@ -5,10 +5,12 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 19.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class ZKAnlegen extends javax.swing.JInternalFrame {
 
     /**
@@ -70,9 +72,10 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
 
         ZKAnlegen.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel78.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel78.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel78.setText("Zahlungskonditionen Anlegen");
 
+        jbAbbrechen_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbAbbrechen_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/abbruch2.png"))); // NOI18N
         jbAbbrechen_ZKAnlegen.setText("Abbrechen");
         jbAbbrechen_ZKAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +84,7 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jbSpeichern_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSpeichern_ZKAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ZKAnlegen.setText("Speichern");
         jbSpeichern_ZKAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -89,30 +93,58 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel97.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel97.setText("ZK-ID:");
 
+        jtfZKID_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel98.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel98.setText("Auftragsart:");
 
+        jtfAuftragsart_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel99.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel99.setText("Lieferzeit-Sofort:");
 
+        jtfLieferzeitSofort_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel100.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel100.setText("Sperrzeit-Wunsch:");
+
+        jtfSperrzeitWunsch_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Skonto"));
 
+        jLabel101.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel101.setText("Skontofrist 1:");
 
+        jLabel102.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel102.setText("Skontofrist 2:");
 
+        jLabel103.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel103.setText("Skontosatz 1:");
 
+        jtfSkontofrist1_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfSkontofrist2_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfSkontosatz1_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel104.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel104.setText("Skontosatz 2:");
 
+        jtfSkontosatz2_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel108.setText("Tage");
 
+        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel109.setText("Tage");
 
+        jLabel110.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel110.setText("%");
 
+        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel111.setText("%");
 
         jSeparator29.setBackground(new java.awt.Color(200, 200, 200));
@@ -131,10 +163,10 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel104))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtfSkontosatz1_ZKAnlegen)
-                    .addComponent(jtfSkontofrist1_ZKAnlegen)
-                    .addComponent(jtfSkontofrist2_ZKAnlegen)
-                    .addComponent(jtfSkontosatz2_ZKAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                    .addComponent(jtfSkontosatz1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontofrist1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontofrist2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontosatz2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel108)
@@ -150,40 +182,52 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel101)
-                    .addComponent(jtfSkontofrist1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontofrist1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel108))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel102)
-                    .addComponent(jtfSkontofrist2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontofrist2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel109))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator29, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel103)
-                    .addComponent(jtfSkontosatz1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontosatz1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel110))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel104)
-                    .addComponent(jtfSkontosatz2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSkontosatz2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel111))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Mahnzeit"));
 
+        jLabel105.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel105.setText("Mahnzeit 1:");
 
+        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel106.setText("Mahnzeit 2:");
 
+        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel107.setText("Mahnzeit 3:");
 
+        jtfMahnzeit1_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfMahnzeit2_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jtfMahnzeit3_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel119.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel119.setText("Tage");
 
+        jLabel120.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel120.setText("Tage");
 
+        jLabel121.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel121.setText("Tage");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -198,8 +242,8 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel107))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtfMahnzeit1_ZKAnlegen)
-                    .addComponent(jtfMahnzeit2_ZKAnlegen)
+                    .addComponent(jtfMahnzeit1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfMahnzeit2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfMahnzeit3_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,17 +258,17 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel105)
-                    .addComponent(jtfMahnzeit1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfMahnzeit1_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel119))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel106)
-                    .addComponent(jtfMahnzeit2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfMahnzeit2_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel120))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel107)
-                    .addComponent(jtfMahnzeit3_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfMahnzeit3_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel121))
                 .addContainerGap(111, Short.MAX_VALUE))
         );
@@ -267,13 +311,13 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                                     .addGap(32, 32, 32)
                                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(ZKAnlegenLayout.createSequentialGroup()
-                            .addComponent(jbSpeichern_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbSpeichern_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbAbbrechen_ZKAnlegen)))
+                            .addComponent(jbAbbrechen_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(ZKAnlegenLayout.createSequentialGroup()
                         .addGap(281, 281, 281)
                         .addComponent(jLabel78)))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
         ZKAnlegenLayout.setVerticalGroup(
             ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,23 +329,23 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                 .addGap(24, 24, 24)
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel97)
-                    .addComponent(jtfZKID_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfZKID_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel98)
-                    .addComponent(jtfAuftragsart_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfAuftragsart_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
-                    .addComponent(jtfLieferzeitSofort_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfLieferzeitSofort_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel100)
-                    .addComponent(jtfSperrzeitWunsch_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfSperrzeitWunsch_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(79, 79, 79)
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbSpeichern_ZKAnlegen)
-                    .addComponent(jbAbbrechen_ZKAnlegen))
+                    .addComponent(jbSpeichern_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAbbrechen_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -318,11 +362,11 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 556, Short.MAX_VALUE)
+            .addGap(0, 583, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ZKAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
+                    .addComponent(ZKAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -330,8 +374,9 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAbbrechen_ZKAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ZKAnlegenActionPerformed
-        // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_ZKAnlegenActionPerformed
 

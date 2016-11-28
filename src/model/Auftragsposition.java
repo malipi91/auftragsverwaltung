@@ -15,11 +15,11 @@ public class Auftragsposition {
 
     private String auftragskopfId;
     private int positionsnummer;
-    private String artikelID;
+    private int artikelID;
     private int menge;
     private int einzelwert;
 
-    public Auftragsposition(String auftragskopfId, int positionsnummer, int menge, int einzelwert, String artikelID) {
+    public Auftragsposition(String auftragskopfId, int positionsnummer, int menge, int einzelwert, int artikelID) {
 
         this.auftragskopfId = auftragskopfId;
         this.positionsnummer = positionsnummer;
@@ -45,11 +45,11 @@ public class Auftragsposition {
         this.positionsnummer = positionsnummer;
     }
 
-    public String getArtikelID() {
+    public int getArtikelID() {
         return artikelID;
     }
 
-    public void setArtikelID(String ArtikelID) {
+    public void setArtikelID(int ArtikelID) {
         this.artikelID = artikelID;
     }
 

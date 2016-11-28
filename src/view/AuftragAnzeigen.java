@@ -5,16 +5,31 @@
  */
 package view;
 
-/**
- *
- * @author Hicran Yoeruek
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 15.11.16 Yoeruek Erstellung*/
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*----------------------------------------------------------*/
 public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     /**
      * Creates new form AuftragAnzeigen
      */
     public AuftragAnzeigen() {
         initComponents();
+        jftfLieferdatum_az.setEnabled(false);
+        jftfAbschlussdatum_az.setEnabled(false);
+        jftfErfassungsdatum_az.setEnabled(false);
+        jtaBeschreibung_az.setEnabled(false);
+        jtfAuftragswertbrutto_az.setEnabled(false);
+        jtfAuftragswertnetto_az.setEnabled(false);
+        jtfGPID_az.setEnabled(false);
+        jtfGPName_az.setEnabled(false);
+        jtfGPadresse_az.setEnabled(false);
+        jtfZKID_az.setEnabled(false);
+        jcbAuftragsart_az.setEnabled(false);
+        jcbStatus_az.setEnabled(false);
+        jtTabellePosition_AuftragAnzeigen.setEnabled(false);
         
 //        jtfAuftragsid_az.setEnabled(false);
         
@@ -42,7 +57,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlLieferdatum = new javax.swing.JLabel();
         jbSpeichern_az = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtTabellePosition_AuftragAnzeigen = new javax.swing.JTable();
         jbBearbeiten_az = new javax.swing.JButton();
         jbZurueck_az = new javax.swing.JButton();
         titel_az = new javax.swing.JLabel();
@@ -61,7 +76,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlAuftragswertnetto_az = new javax.swing.JLabel();
         jtfAuftragswertnetto_az = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        jfftfLieferdatum_az = new javax.swing.JFormattedTextField();
+        jftfLieferdatum_az = new javax.swing.JFormattedTextField();
         jftfAbschlussdatum_az = new javax.swing.JFormattedTextField();
         jftfErfassungsdatum_az = new javax.swing.JFormattedTextField();
 
@@ -122,7 +137,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtTabellePosition_AuftragAnzeigen.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -135,8 +150,8 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                 "Positionsnr.", "Artikel-ID", "Artikelname", "Menge", "Einzelwert", "Gesamtwert"
             }
         ));
-        jTable1.setAutoscrolls(false);
-        jScrollPane1.setViewportView(jTable1);
+        jtTabellePosition_AuftragAnzeigen.setAutoscrolls(false);
+        jScrollPane1.setViewportView(jtTabellePosition_AuftragAnzeigen);
 
         jbBearbeiten_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbBearbeiten_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
@@ -168,6 +183,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlZKID.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlZKID.setText("Zahlungskondition-ID");
 
+        jtfZKID_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfZKID_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfZKID_azActionPerformed(evt);
@@ -194,8 +210,12 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlAuftragswertbrutto_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragswertbrutto_az.setText("Auftragswert(brutto)");
 
+        jtfAuftragswertbrutto_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         jlAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragswertnetto_az.setText("Auftragswert (netto)");
+
+        jtfAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout AuftragAnzeigenLayout = new javax.swing.GroupLayout(AuftragAnzeigen);
         AuftragAnzeigen.setLayout(AuftragAnzeigenLayout);
@@ -242,7 +262,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                                         .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
                                             .addComponent(jlLieferdatum)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jfftfLieferdatum_az, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jftfLieferdatum_az, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
                                             .addComponent(jlErfassungsdatum)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -282,7 +302,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                         .addGap(174, 174, 174)
                         .addComponent(jftfErfassungsdatum_az, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jfftfLieferdatum_az, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jftfLieferdatum_az, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
                         .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
@@ -340,10 +360,10 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -363,7 +383,11 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
+<<<<<<< HEAD
                     .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
+=======
+                    .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
                     .addContainerGap()))
         );
 
@@ -382,17 +406,10 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAuftragsart_azActionPerformed
 
-    private void jbSpeichern_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_azActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSpeichern_azActionPerformed
-
-    private void jbBearbeiten_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_azActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbBearbeiten_azActionPerformed
-
     private void jbZurueck_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbZurueck_azActionPerformed
-                // Hicran Yoeruek
-        // Schließt das Fenster nach Betätigung des Abbrech Buttons komplett.
+        /*----------------------------------------------------------*/
+        /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
+        /*----------------------------------------------------------*/
         this.setVisible(false);
     }//GEN-LAST:event_jbZurueck_azActionPerformed
 
@@ -400,21 +417,28 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfZKID_azActionPerformed
 
+    private void jbBearbeiten_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_azActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbBearbeiten_azActionPerformed
+
+    private void jbSpeichern_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_azActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSpeichern_azActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragAnzeigen;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton jbBearbeiten_az;
     private javax.swing.JButton jbSpeichern_az;
     private javax.swing.JButton jbZurueck_az;
     private javax.swing.JComboBox<String> jcbAuftragsart_az;
     private javax.swing.JComboBox<String> jcbStatus_az;
-    private javax.swing.JFormattedTextField jfftfLieferdatum_az;
     private javax.swing.JFormattedTextField jftfAbschlussdatum_az;
     private javax.swing.JFormattedTextField jftfErfassungsdatum_az;
+    private javax.swing.JFormattedTextField jftfLieferdatum_az;
     private javax.swing.JLabel jlAbschlussdatum;
     private javax.swing.JLabel jlAuftragsart;
     private javax.swing.JLabel jlAuftragsid;
@@ -428,6 +452,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlLieferdatum;
     private javax.swing.JLabel jlStatus;
     private javax.swing.JLabel jlZKID;
+    private javax.swing.JTable jtTabellePosition_AuftragAnzeigen;
     private javax.swing.JTextArea jtaBeschreibung_az;
     private javax.swing.JTextField jtfAuftragsid_az;
     private javax.swing.JTextField jtfAuftragswertbrutto_az;

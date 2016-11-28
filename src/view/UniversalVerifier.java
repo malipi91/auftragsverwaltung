@@ -10,11 +10,10 @@ import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-/**
- *
- * @author Hicran Yoeruek
- * 25.11.2016 Erstellung der Klasse
- */
+/*----------------------------------------------------------*/
+/* Datum Name Was */
+/* 25.11.16 Yoeruek angelegt */
+/*----------------------------------------------------------*/
 public class UniversalVerifier extends InputVerifier {
 
         private String regEx;

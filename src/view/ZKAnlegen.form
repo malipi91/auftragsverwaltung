@@ -35,11 +35,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="556" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="583" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ZKAnlegen" pref="534" max="32767" attributes="0"/>
+                  <Component id="ZKAnlegen" pref="557" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -103,9 +103,9 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jbSpeichern_ZKAnlegen" min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="jbSpeichern_ZKAnlegen" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jbAbbrechen_ZKAnlegen" min="-2" max="-2" attributes="0"/>
+                              <Component id="jbAbbrechen_ZKAnlegen" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -113,7 +113,7 @@
                           <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="264" max="32767" attributes="0"/>
+                  <EmptySpace pref="219" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -127,16 +127,16 @@
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel97" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfZKID_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfZKID_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfAuftragsart_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfAuftragsart_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfLieferzeitSofort_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfLieferzeitSofort_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel100" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfSperrzeitWunsch_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfSperrzeitWunsch_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -145,8 +145,8 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbSpeichern_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbAbbrechen_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbSpeichern_ZKAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbAbbrechen_ZKAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -157,7 +157,7 @@
         <Component class="javax.swing.JLabel" name="jLabel78">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="0"/>
+              <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Zahlungskonditionen Anlegen"/>
           </Properties>
@@ -166,6 +166,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbAbbrechen_ZKAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/abbruch2.png"/>
             </Property>
@@ -177,6 +180,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jbSpeichern_ZKAnlegen">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/speichern2.png"/>
             </Property>
@@ -188,31 +194,63 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel97">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ZK-ID:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfZKID_ZKAnlegen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel98">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Auftragsart:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfAuftragsart_ZKAnlegen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel99">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lieferzeit-Sofort:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfLieferzeitSofort_ZKAnlegen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel100">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Sperrzeit-Wunsch:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfSperrzeitWunsch_ZKAnlegen">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
@@ -236,10 +274,10 @@
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jtfSkontosatz1_ZKAnlegen" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfSkontofrist1_ZKAnlegen" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfSkontofrist2_ZKAnlegen" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfSkontosatz2_ZKAnlegen" alignment="0" pref="150" max="32767" attributes="0"/>
+                          <Component id="jtfSkontosatz1_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jtfSkontofrist1_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jtfSkontofrist2_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jtfSkontosatz2_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -259,13 +297,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel101" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfSkontofrist1_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfSkontofrist1_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel108" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel102" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfSkontofrist2_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfSkontofrist2_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel109" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -273,13 +311,13 @@
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel103" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfSkontosatz1_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfSkontosatz1_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel110" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel104" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfSkontosatz2_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfSkontosatz2_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel111" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="45" max="32767" attributes="0"/>
@@ -290,49 +328,93 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel101">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Skontofrist 1:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel102">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Skontofrist 2:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel103">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Skontosatz 1:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfSkontofrist1_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfSkontofrist2_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfSkontosatz1_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel104">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Skontosatz 2:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfSkontosatz2_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel108">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tage"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel109">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tage"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel110">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="%"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel111">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="%"/>
               </Properties>
             </Component>
@@ -369,8 +451,8 @@
                       </Group>
                       <EmptySpace pref="67" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jtfMahnzeit1_ZKAnlegen" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jtfMahnzeit2_ZKAnlegen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jtfMahnzeit1_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jtfMahnzeit2_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jtfMahnzeit3_ZKAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -389,19 +471,19 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel105" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfMahnzeit1_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfMahnzeit1_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel119" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel106" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfMahnzeit2_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfMahnzeit2_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel107" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtfMahnzeit3_ZKAnlegen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfMahnzeit3_ZKAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jLabel121" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="111" max="32767" attributes="0"/>
@@ -412,37 +494,70 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel105">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mahnzeit 1:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel106">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mahnzeit 2:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel107">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mahnzeit 3:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMahnzeit1_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMahnzeit2_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMahnzeit3_ZKAnlegen">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel119">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tage"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel120">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tage"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel121">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tage"/>
               </Properties>
             </Component>
