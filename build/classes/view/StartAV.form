@@ -370,9 +370,36 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jbanmelden_Startseite" max="32767" attributes="0"/>
+                                      <Component id="jtfBenutzername_Startseite" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jpwpasswort_Startseite" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+=======
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="Startseite" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="800" max="32767" attributes="0"/>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jSeparator3" min="-2" pref="1175" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="225" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -513,37 +540,11 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="view.ArtikelAnlegen" name="jifArtikelAnlegen">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="view.ArtikelAnzeige" name="jifArtikelAnzeige">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="view.ArtikelBearbeiten" name="jifArtikelBearbeiten">
-          <Properties>
-            <Property name="visible" type="boolean" value="false"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
+<<<<<<< HEAD
         <Component class="view.AuftragBearbeiten" name="jifAuftragBearbeiten">
+=======
+        <Component class="view.ArtikelAnlegen" name="jifArtikelAnlegen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -553,7 +554,25 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
+        <Component class="view.ArtikelBearbeiten" name="jifArtikelBearbeiten">
+=======
+        <Component class="view.ArtikelAnzeige" name="jifArtikelAnzeige">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+<<<<<<< HEAD
         <Component class="view.AuftraegeAlle" name="jifAuftraegeAlle">
+=======
+        <Component class="view.ArtikelBearbeiten" name="jifArtikelBearbeiten">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -563,7 +582,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.ArtikelSuche" name="jifArtikelSuche">
+=======
+        <Component class="view.AuftragBearbeiten" name="jifAuftragBearbeiten">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -573,7 +596,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.ZKID_suchen" name="jifZKID_suchen">
+=======
+        <Component class="view.AuftraegeAlle" name="jifAuftraegeAlle">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -583,7 +610,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.ZKSuchen" name="jifZKSuchen">
+=======
+        <Component class="view.ArtikelSuche" name="jifArtikelSuche">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -593,7 +624,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.ZKAnlegen" name="jifZKAnlegen">
+=======
+        <Component class="view.ZKID_suchen" name="jifZKID_suchen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -603,7 +638,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.ZKBearbeiten" name="jifZKBearbeiten">
+=======
+        <Component class="view.ZKSuchen" name="jifZKSuchen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -613,7 +652,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.ZKAnzeigen" name="jifZKAnzeigen">
+=======
+        <Component class="view.ZKAnlegen" name="jifZKAnlegen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -623,7 +666,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.KundeSuchen" name="jifKundeSuchen">
+=======
+        <Component class="view.ZKBearbeiten" name="jifZKBearbeiten">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -633,7 +680,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.KundeBearbeiten" name="jifKundeBearbeiten">
+=======
+        <Component class="view.ZKAnzeigen" name="jifZKAnzeigen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -643,7 +694,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.KundeAnlegen" name="jifKundeAnlegen">
+=======
+        <Component class="view.KundeSuchen" name="jifKundeSuchen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -653,7 +708,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.KundeAnzeigen" name="jifKundeAnzeigen">
+=======
+        <Component class="view.KundeBearbeiten" name="jifKundeBearbeiten">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -663,7 +722,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.LieferantAnlegen" name="jifLieferantAnlegen">
+=======
+        <Component class="view.KundeAnlegen" name="jifKundeAnlegen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -673,7 +736,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.LieferantSuchen" name="jifLieferantSuchen">
+=======
+        <Component class="view.KundeAnzeigen" name="jifKundeAnzeigen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -683,7 +750,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.LieferantBearbeiten" name="jifLieferantBearbeiten">
+=======
+        <Component class="view.LieferantAnlegen" name="jifLieferantAnlegen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -693,7 +764,11 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="view.LieferantAnzeigen" name="jifLieferantAnzeigen">
+=======
+        <Component class="view.LieferantSuchen" name="jifLieferantSuchen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
@@ -703,7 +778,39 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
+        <Component class="view.ArtikelAnzeige" name="jifArtikelAnzeige">
+=======
+        <Component class="view.LieferantBearbeiten" name="jifLieferantBearbeiten">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+<<<<<<< HEAD
         <Component class="view.AuftragsID_suchen" name="jifAuftragsID_suchen">
+=======
+        <Component class="view.LieferantAnzeigen" name="jifLieferantAnzeigen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
+          <Properties>
+            <Property name="visible" type="boolean" value="false"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+<<<<<<< HEAD
+        <Component class="view.AuftragSuchen" name="jifAuftragSuchen">
+=======
+        <Component class="view.AuftragsID_suchen" name="jifAuftragsID_suchen">
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
           <Properties>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>

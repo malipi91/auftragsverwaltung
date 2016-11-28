@@ -28,7 +28,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
+          <Component id="AuftragAnlegen" alignment="0" pref="830" max="32767" attributes="0"/>
+=======
           <Component id="AuftragAnlegen" alignment="0" pref="842" max="32767" attributes="0"/>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
       </Group>
     </DimensionLayout>
   </Layout>
@@ -54,6 +58,15 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
+                                  <Component id="jSpeichern_aa" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jbAbbrechen_aa" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="Auftragsposition_AuftragAnlegen" alignment="0" min="-2" pref="866" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="235" max="32767" attributes="0"/>
+=======
                                   <Component id="jSpeichern_aa" min="-2" pref="130" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jbAbbrechen_aa" min="-2" pref="130" max="-2" attributes="0"/>
@@ -61,6 +74,7 @@
                               <Component id="Auftragsposition_AuftragAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -124,7 +138,11 @@
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
+                      <Component id="jtfGPID_aa" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
                       <Component id="jtfGPID_aa" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
                       <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jftfErfassungsdatum_aa" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
@@ -138,7 +156,11 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel73" alignment="3" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
+                      <Component id="jcbStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
                       <Component id="jcbStatus" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
                       <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jftfAbschlussdatum_AuftragAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
@@ -153,7 +175,11 @@
                       <Component id="jbAbbrechen_aa" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jSpeichern_aa" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
+<<<<<<< HEAD
+                  <EmptySpace pref="42" max="32767" attributes="0"/>
+=======
                   <EmptySpace pref="36" max="32767" attributes="0"/>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
               </Group>
           </Group>
         </DimensionLayout>

@@ -383,7 +383,11 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
+<<<<<<< HEAD
+                    .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
+=======
                     .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
                     .addContainerGap()))
         );
 

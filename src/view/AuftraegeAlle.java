@@ -260,6 +260,8 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
                 jbAnzeigen_AuftraegeAlleActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+=======
 
         jbBearbeiten_AuftraegeAlle.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbBearbeiten_AuftraegeAlle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
@@ -278,6 +280,7 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
                 jbAbbrechen_AuftraegeAlleActionPerformed(evt);
             }
         });
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -337,6 +340,8 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbAnzeigen_AuftraegeAlleActionPerformed
 
+<<<<<<< HEAD
+=======
     private void jbBearbeiten_AuftraegeAlleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AuftraegeAlleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbBearbeiten_AuftraegeAlleActionPerformed
@@ -348,6 +353,7 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_AuftraegeAlleActionPerformed
 
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
