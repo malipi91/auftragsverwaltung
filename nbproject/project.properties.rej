@@ -1,0 +1,16 @@
+diff a/nbproject/project.properties b/nbproject/project.properties	(rejected hunks)
+@@ -111,13 +111,10 @@
+ dist.javadoc.dir=${dist.dir}/javadoc
+ endorsed.classpath=
+ excludes=
+-file.reference.junit-4.12.jar=C:\\Users\\samet\\Downloads\\SSD Daten\\Neuer Ordner\\junit-4.12.jar
+-file.reference.mysql-connector-java-5.1.40-bin.jar=C:\\Users\\samet\\Desktop\\mysql-connector-java-5.1.40\\mysql-connector-java-5.1.40-bin.jar
+ includes=**
+ jar.compress=false
+ javac.classpath=\
+-    ${file.reference.mysql-connector-java-5.1.40-bin.jar}:\
+-    ${file.reference.junit-4.12.jar}:\
++    ${file.reference.mysql-connector-java-5.1.40-bin.jar-3}:\
+     ${libs.junit_4.classpath}
+ # Space-separated list of extra javac options
+ javac.compilerargs=

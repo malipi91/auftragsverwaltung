@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import model.Auftrag;
 import util.DBConnection;
 import util.Zusatzfunktionen;
@@ -72,9 +73,9 @@ public class DAOAuftrag {
     }
 
     /*----------------------------------------------------------*/
- /* Datum Name Was                                           */
- /* 14.11.16 MaLi Anlegen der Klasse                         */
- /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 14.11.16 MaLi Anlegen der Klasse                         */
+    /*----------------------------------------------------------*/
     /**
      * Die Methode liest anhand der Auftragskopf-ID einen Datensatz aus der
      * Datenbank und liefert diesen als Auftrags-Objekt aus.
@@ -120,5 +121,43 @@ public class DAOAuftrag {
         }
         // Ausgabe des Auftrags-Objekts.
         return auftrag;
+    }
+    
+    public ArrayList<Auftrag> gibAlleAuftraege(int anzahl) throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs = null;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select * from auftrag";
+        // Erzeugen eines leeren Auftrags-Objekt.
+        ArrayList<Auftrag> auftraege = new ArrayList<>();
+        try{
+        rs = stmt.executeQuery(sql);
+        rs.first();
+        while(rs.next() && anzahl != 0){
+            if(!rs.getString("LKZ").equals("w"));
+            Auftrag auftrag = new Auftrag();
+            auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
+            auftrag.setAuftragsart(rs.getString("Auftragsart"));
+            auftrag.setErfassungsdatum(rs.getString("Erfassungsdatum"));
+            auftrag.setAuftragswert(rs.getInt("Auftragswert"));
+            auftrag.setLieferdatum(rs.getString("Lieferdatum"));
+            auftrag.setStatus(rs.getString("Auftragsstatus"));
+            auftrag.setAbschlussdatum(rs.getString("Abschlussdatum"));
+            auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+            auftraege.add(auftrag);
+            anzahl = anzahl -1;
+        }
+        return auftraege;
+        } catch(SQLException e){
+            System.out.println(e);
+            System.out.println("Fehler in der Speicherung von Aufträgen.");
+            return null;
+        }
     }
 }
