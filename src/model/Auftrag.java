@@ -42,10 +42,6 @@ public class Auftrag {
         this.abschlussdatum = abschlussdatum;
         
     }
-
-    public Auftrag(String beschreibung, String erfassungsdatum, String lieferdatum, String auftragsart, String ueberfuehreAuftragsStatus, String abschlussDatum) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public void setzeGeschaeftspartnerID(String id){
         this.geschaeftspartnerID = id;
