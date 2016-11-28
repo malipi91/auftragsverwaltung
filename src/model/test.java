@@ -8,6 +8,7 @@ package model;
 import dao.DAOAdresse;
 import dao.DAOAuftrag;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,10 +18,10 @@ public class test {
     
     
     public static void main(String [ ] args) throws SQLException{
-        Auftrag adr = new Auftrag();
-        DAOAuftrag adresse = new DAOAuftrag();
-        adr = adresse.erhalteAuftragFuerID("2");
-        System.out.println(adr.getAuftragsart());
+        ArrayList<Auftrag> auftraege = new ArrayList<>();
+        DAOAuftrag auftrag = new DAOAuftrag();
+        auftraege = auftrag.gibAlleAuftraege(20);
+        System.out.println(auftraege.toString());
     }
     
 }
