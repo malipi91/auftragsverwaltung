@@ -48,7 +48,6 @@ public class DAOAuftragsposition {
      /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
     /* 24.11.16 Duygu Citak Anlegen der Methode                 */
-    /* 28.11.2018 Überarbeiten der Methode                                                         */
     /*----------------------------------------------------------*/
     
     
@@ -56,7 +55,8 @@ public class DAOAuftragsposition {
     *Diese Methode legt durch Eingabe der einzelnen Werte in die GUI einen neuen Auftrag 
     * in die Datenbank     
     */
-            String sql = "insert into auftragsposition "
+    
+        String sql = "insert into auftragsposition "
             + "(Auftragskopf_ID,Positionsnummer,Menge,Einzelwert,"
             + "Materialnummer "
             + "values (?,?,?,?,?)";
@@ -66,6 +66,7 @@ public class DAOAuftragsposition {
         stmt.setInt(3, auftragsposition.getMenge());
         stmt.setInt(4, auftragsposition.getEinzelwert());
         stmt.setInt(6, auftragsposition.getArtikelID());
+
            
         try{
             stmt.executeUpdate();
