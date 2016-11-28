@@ -20,6 +20,8 @@ import util.Zusatzfunktionen;
 /**
  *
  * @author marti
+ * Änderungen zum Testen
+ * 2 Einträge zum Testen
  */
 public class DAOAuftrag {
 
@@ -33,7 +35,7 @@ public class DAOAuftrag {
         zf = new Zusatzfunktionen();
     }
 
-    public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
+        public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
         String letzteID = dd.bekommeLetzteID(TAB_AUFTRAG);
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();

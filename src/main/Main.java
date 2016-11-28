@@ -6,12 +6,12 @@
 package main;
 
 
+
 /**
  *
  * @author Duygu Citak
  */
 public class Main {
-  
 
     /**
      * Diese Klasse wird nur dazu benutzt alle nötigen
@@ -19,6 +19,6 @@ public class Main {
      * View anzuzeigen
      */
     public static void main(String [] args){
-        
+
 }
 }
