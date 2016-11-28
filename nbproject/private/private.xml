@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -7,3 +8,70 @@
         </group>
     </open-files>
 </project-private>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group/>
+    </open-files>
+</project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftraegeAlle.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeAnlegen.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/StartAV.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnlegen.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> eb17742eb3cc2c22dd61384aded0c7c2779c5d91
+=======
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group/>
+    </open-files>
+</project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftraegeAlle.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeAnlegen.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/StartAV.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnlegen.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> eb17742eb3cc2c22dd61384aded0c7c2779c5d91
+>>>>>>> 9c7244a3014cef5ab3fc58bb8b93b8b02c1aa919
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/dao/DAOAuftragsposition.java</file>
+            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/view/ArtikelAnlegen.java</file>
+            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> de8a59619662a39701afcec0babbaeba09a36464
+>>>>>>> a94a9608da57fc63a952ed242d28ede8cb87f239
