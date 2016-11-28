@@ -20,6 +20,7 @@ import util.Zusatzfunktionen;
 /**
  *
  * @author marti
+ * Änderungen zum Testen
  */
 public class DAOAuftrag {
 
