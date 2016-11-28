@@ -1,0 +1,9 @@
+diff a/nbproject/private/private.properties b/nbproject/private/private.properties	(rejected hunks)
+@@ -3,7 +3,6 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+ =======
+-file.reference.junit-4.12.jar=C:\\Users\\Duygu Citak\\Desktop\\DB\\mysql-connector-java-5.1.40\\mysql-connector-java-5.1.40-bin.jar
+ >>>>>>> 867c7ec39cd1211ce6cd8ba99c1160545bee6456
+ =======
+ <<<<<<< HEAD
