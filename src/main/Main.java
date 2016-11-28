@@ -5,20 +5,13 @@
  */
 package main;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/hicran
+
 /**
  *
  * @author Duygu Citak
  */
 public class Main {
-<<<<<<< HEAD
-    
-=======
-  
->>>>>>> origin/hicran
 
     /**
      * Diese Klasse wird nur dazu benutzt alle nötigen
@@ -26,11 +19,6 @@ public class Main {
      * View anzuzeigen
      */
     public static void main(String [] args){
-<<<<<<< HEAD
-       
 
-=======
-        
->>>>>>> origin/hicran
 }
 }
