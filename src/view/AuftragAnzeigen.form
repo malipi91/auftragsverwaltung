@@ -39,11 +39,7 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
-                  <Component id="AuftragAnzeigen" pref="804" max="32767" attributes="0"/>
-=======
                   <Component id="AuftragAnzeigen" pref="812" max="32767" attributes="0"/>
->>>>>>> de8a59619662a39701afcec0babbaeba09a36464
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>

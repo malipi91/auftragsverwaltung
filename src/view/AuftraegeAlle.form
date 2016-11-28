@@ -132,8 +132,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbAnzeigen_AuftraegeAlleActionPerformed"/>
           </Events>
-<<<<<<< HEAD
-=======
         </Component>
         <Component class="javax.swing.JButton" name="jbBearbeiten_AuftraegeAlle">
           <Properties>
@@ -162,7 +160,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbAbbrechen_AuftraegeAlleActionPerformed"/>
           </Events>
->>>>>>> de8a59619662a39701afcec0babbaeba09a36464
         </Component>
       </SubComponents>
     </Container>
