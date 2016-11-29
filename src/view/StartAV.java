@@ -268,97 +268,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
-<<<<<<< HEAD
-        jifArtikelAnlegen.setBounds(0, 0, 904, 725);
 
-        jifArtikelAnzeige.setVisible(false);
-        desktopPane.add(jifArtikelAnzeige);
-        jifArtikelAnzeige.setBounds(0, 0, 995, 681);
-
-        jifArtikelBearbeiten.setVisible(false);
-        desktopPane.add(jifArtikelBearbeiten);
-        jifArtikelBearbeiten.setBounds(0, 0, 871, 773);
-
-        jifAuftragBearbeiten.setVisible(false);
-        desktopPane.add(jifAuftragBearbeiten);
-        jifAuftragBearbeiten.setBounds(0, 0, 1174, 870);
-
-        jifAuftraegeAlle.setVisible(false);
-        desktopPane.add(jifAuftraegeAlle);
-        jifAuftraegeAlle.setBounds(0, 0, 1075, 754);
-
-        jifArtikelSuche.setVisible(false);
-        desktopPane.add(jifArtikelSuche);
-        jifArtikelSuche.setBounds(0, 0, 1059, 712);
-
-        jifZKID_suchen.setVisible(false);
-        desktopPane.add(jifZKID_suchen);
-        jifZKID_suchen.setBounds(0, 0, 1057, 329);
-
-        jifZKSuchen.setVisible(false);
-        desktopPane.add(jifZKSuchen);
-        jifZKSuchen.setBounds(0, 0, 1054, 556);
-
-        jifZKAnlegen.setVisible(false);
-        desktopPane.add(jifZKAnlegen);
-        jifZKAnlegen.setBounds(0, 0, 1060, 616);
-
-        jifZKBearbeiten.setVisible(false);
-        desktopPane.add(jifZKBearbeiten);
-        jifZKBearbeiten.setBounds(0, 0, 1059, 567);
-
-        jifZKAnzeigen.setVisible(false);
-        desktopPane.add(jifZKAnzeigen);
-        jifZKAnzeigen.setBounds(0, 0, 1058, 578);
-
-        jifKundeSuchen.setVisible(false);
-        desktopPane.add(jifKundeSuchen);
-        jifKundeSuchen.setBounds(0, 0, 1059, 569);
-
-        jifKundeBearbeiten.setVisible(false);
-        desktopPane.add(jifKundeBearbeiten);
-        jifKundeBearbeiten.setBounds(0, 0, 1054, 347);
-
-        jifKundeAnlegen.setVisible(false);
-        desktopPane.add(jifKundeAnlegen);
-        jifKundeAnlegen.setBounds(0, 0, 1057, 713);
-
-        jifKundeAnzeigen.setVisible(false);
-        desktopPane.add(jifKundeAnzeigen);
-        jifKundeAnzeigen.setBounds(0, 0, 1058, 369);
-
-        jifLieferantAnlegen.setVisible(false);
-        desktopPane.add(jifLieferantAnlegen);
-        jifLieferantAnlegen.setBounds(0, 0, 840, 744);
-
-        jifLieferantSuchen.setVisible(false);
-        desktopPane.add(jifLieferantSuchen);
-        jifLieferantSuchen.setBounds(0, 0, 1039, 546);
-
-        jifLieferantBearbeiten.setVisible(false);
-        desktopPane.add(jifLieferantBearbeiten);
-        jifLieferantBearbeiten.setBounds(0, 0, 1057, 323);
-
-        jifLieferantAnzeigen.setVisible(false);
-        desktopPane.add(jifLieferantAnzeigen);
-        jifLieferantAnzeigen.setBounds(0, 0, 1057, 323);
-
-        jifAuftragsID_suchen.setVisible(false);
-        desktopPane.add(jifAuftragsID_suchen);
-        jifAuftragsID_suchen.setBounds(0, 0, 849, 336);
-
-        jifAuftragSuchen.setVisible(false);
-        desktopPane.add(jifAuftragSuchen);
-        jifAuftragSuchen.setBounds(0, 0, 800, 767);
-
-        jifAuftragAnzeigen.setVisible(false);
-        desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 1058, 867);
-
-        jifAuftragAnlegen.setVisible(false);
-        desktopPane.add(jifAuftragAnlegen);
-        jifAuftragAnlegen.setBounds(0, 0, 1154, 871);
-=======
         jifArtikelAnlegen.setBounds(0, 0, 966, 840);
 
         jifArtikelID_suchen.setVisible(false);
@@ -452,7 +362,7 @@ public class StartAV extends javax.swing.JFrame {
         jifZKSuchen.setVisible(false);
         desktopPane.add(jifZKSuchen);
         jifZKSuchen.setBounds(0, 0, 966, 840);
->>>>>>> 9ef2ef446ef4d6b62e34ec052284a0a318539d45
+
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
