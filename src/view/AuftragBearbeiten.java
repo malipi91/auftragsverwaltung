@@ -14,32 +14,17 @@ package view;
 /*----------------------------------------------------------*/
 public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 
-    
     /**
      * Creates new form AuftragBearbeiten
      */
     public AuftragBearbeiten() {
         initComponents();
-        //wird von selbst generiert
         jtfGPID_AuftragBearbeiten.setEnabled(false);
         jtfGPName_AuftragBearbeiten.setEnabled(false);
         jtfZKIDAuftragBearbeiten.setEnabled(false);
         jtfGesamtwert_AuftragBearbeiten.setEnabled(false);
         jtfPositionsID_AuftragBearbeiten.setEnabled(false);
         jftfErfassungsdatumAuftragBearbeiten.setEnabled(false);
-        
-        // Am Anfang deaktiviert
-        jcbAuftragsart_AuftragBearbeiten.setEnabled(false);
-        jcbStatus_AuftragBearbeiten.setEnabled(false);
-        jftfLieferdatumAuftragBearbeiten.setEnabled(false);
-        jftfAbschlussdatumAuftragBearbeiten.setEnabled(false);
-        jtaBeschreibungAuftragBearbeiten.setEnabled(false);
-        jtfArtikelID_AuftragBearbeiten.setEnabled(false);
-        jtfMenge_AuftragBearbeiten.setEnabled(false);
-        jtfEinzelwert_AuftragBearbeiten.setEnabled(false);
-        jtfArtikelname_AuftragBearbeiten.setEnabled(false);
-                
-                
     }
 
     /**
@@ -55,25 +40,25 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jbAbbrechen_AuftragBearbeiten = new javax.swing.JButton();
         jSeparator10 = new javax.swing.JSeparator();
-        jbLupeAuftragsID_AuftragBearbeiten = new javax.swing.JButton();
+        jbSuchen_AuftragBearbeiten = new javax.swing.JButton();
         jLabel87 = new javax.swing.JLabel();
         jtfAuftragsID_AuftragBearbeiten = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jpUnterPanel_AuftragBearbeiten = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jcbAuftragsart_AuftragBearbeiten = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel141 = new javax.swing.JLabel();
         jtfZKIDAuftragBearbeiten = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jcbStatus_AuftragBearbeiten = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jftfErfassungsdatumAuftragBearbeiten = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
         jftfLieferdatumAuftragBearbeiten = new javax.swing.JFormattedTextField();
         jftfAbschlussdatumAuftragBearbeiten = new javax.swing.JFormattedTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jtaBeschreibungAuftragBearbeiten = new javax.swing.JTextField();
+        jtfBeschreibungAuftragBearbeiten = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jtfGPID_AuftragBearbeiten = new javax.swing.JTextField();
@@ -95,13 +80,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbLupe_AuftragBearbeiten = new javax.swing.JButton();
         jbMinus_AuftragBearbeiten = new javax.swing.JButton();
         jbPlus_AuftragBearbeiten = new javax.swing.JButton();
-        jbBearbeiten_AutfragBearbeiten = new javax.swing.JButton();
-        jbSpeichern_AuftragBearbeiten = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        AuftragBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 900));
+        AuftragBearbeiten.setPreferredSize(new java.awt.Dimension(1200, 800));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("Auftrag Bearbeiten");
@@ -115,11 +98,12 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             }
         });
 
-        jbLupeAuftragsID_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbLupeAuftragsID_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
-        jbLupeAuftragsID_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+        jbSuchen_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbSuchen_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbSuchen_AuftragBearbeiten.setText("Suchen");
+        jbSuchen_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLupeAuftragsID_AuftragBearbeitenActionPerformed(evt);
+                jbSuchen_AuftragBearbeitenActionPerformed(evt);
             }
         });
 
@@ -139,8 +123,8 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jLabel49.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel49.setText("Auftragsart:");
 
-        jcbAuftragsart_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jcbAuftragsart_AuftragBearbeiten.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Barauftrag", "Sofortauftrag. Terminaufrtrag", "Bestellauftrag" }));
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Barauftrag", "Sofortauftrag. Terminaufrtrag", "Bestellauftrag" }));
 
         jLabel141.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel141.setText("ZK-ID:");
@@ -155,8 +139,8 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setText("Erfassungsdatum:");
 
-        jcbStatus_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jcbStatus_AuftragBearbeiten.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "freigegeben", "erfasst", "abgeschlossen" }));
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "freigegeben", "erfasst", "abgeschlossen" }));
 
         jftfErfassungsdatumAuftragBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
         jftfErfassungsdatumAuftragBearbeiten.setPreferredSize(new java.awt.Dimension(109, 25));
@@ -179,9 +163,9 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jLabel4.setText("Abschlussdatum:");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel7.setText("Auftragstext:");
+        jLabel7.setText("Beschreibung");
 
-        jtaBeschreibungAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtfBeschreibungAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel9.setText("GP-ID:");
@@ -209,13 +193,13 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jtfArtikelname_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel12.setText("Menge:");
+        jLabel12.setText("Menge");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel13.setText("Einzelwert:");
+        jLabel13.setText("Einzelwert");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel14.setText("Gesamtwert:");
+        jLabel14.setText("Gesamtwert");
 
         jtfMenge_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -457,13 +441,13 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpUnterPanel_AuftragBearbeitenLayout.createSequentialGroup()
                                             .addComponent(jLabel1)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jcbStatus_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpUnterPanel_AuftragBearbeitenLayout.createSequentialGroup()
                                             .addComponent(jLabel9)
                                             .addGap(102, 102, 102)
                                             .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jtfGPID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jcbAuftragsart_AuftragBearbeiten, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jtfGPName_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addComponent(jLabel5))
                                 .addGap(187, 187, 187)
@@ -482,7 +466,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                                 .addGap(7, 7, 7))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpUnterPanel_AuftragBearbeitenLayout.createSequentialGroup()
                                 .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jtaBeschreibungAuftragBearbeiten, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfBeschreibungAuftragBearbeiten, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createSequentialGroup()
                                         .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel6)
@@ -526,7 +510,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                     .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createSequentialGroup()
                         .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel49)
-                            .addComponent(jcbAuftragsart_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jftfErfassungsdatumAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -544,13 +528,13 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jcbStatus_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel141)
                             .addComponent(jtfZKIDAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
+                        .addGap(36, 36, 36)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtaBeschreibungAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfBeschreibungAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
                         .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jpUnterPanel_AuftragBearbeitenLayout.createSequentialGroup()
@@ -583,89 +567,69 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jbBearbeiten_AutfragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbBearbeiten_AutfragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
-        jbBearbeiten_AutfragBearbeiten.setText("Bearbeiten");
-        jbBearbeiten_AutfragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbBearbeiten_AutfragBearbeitenActionPerformed(evt);
-            }
-        });
-
-        jbSpeichern_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbSpeichern_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
-        jbSpeichern_AuftragBearbeiten.setText("Speichern");
-
         javax.swing.GroupLayout AuftragBearbeitenLayout = new javax.swing.GroupLayout(AuftragBearbeiten);
         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
         AuftragBearbeitenLayout.setHorizontalGroup(
             AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator10)
             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel87)
-                        .addGap(65, 65, 65)
-                        .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbLupeAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(jbBearbeiten_AutfragBearbeiten)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addGap(425, 425, 425)
-                        .addComponent(jLabel8))
-                    .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                                .addComponent(jbSpeichern_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jpUnterPanel_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                            .addGap(67, 67, 67)
+                            .addComponent(jLabel87)
+                            .addGap(65, 65, 65)
+                            .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(27, 27, 27)
+                            .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                            .addGap(425, 425, 425)
+                            .addComponent(jLabel8))
+                        .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
+                            .addGap(51, 51, 51)
+                            .addComponent(jpUnterPanel_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 913, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         AuftragBearbeitenLayout.setVerticalGroup(
             AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jbLupeAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel87)
-                            .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-
-                    .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jbBearbeiten_AutfragBearbeiten)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel87)
+                    .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jpUnterPanel_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSpeichern_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
-
+                .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 1158, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 1158, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 837, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 837, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -678,30 +642,20 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jbAbbrechen_AuftragBearbeitenActionPerformed
 
-    private void jbLupeAuftragsID_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeAuftragsID_AuftragBearbeitenActionPerformed
+    private void jbSuchen_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
-    }//GEN-LAST:event_jbLupeAuftragsID_AuftragBearbeitenActionPerformed
+    }//GEN-LAST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
     private void jftfAbschlussdatumAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
 
-    private void jbBearbeiten_AutfragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AutfragBearbeitenActionPerformed
-        jcbAuftragsart_AuftragBearbeiten.setEnabled(true);
-        jcbStatus_AuftragBearbeiten.setEnabled(true);
-        jftfLieferdatumAuftragBearbeiten.setEnabled(true);
-        jftfAbschlussdatumAuftragBearbeiten.setEnabled(true);
-        jtaBeschreibungAuftragBearbeiten.setEnabled(true);
-        jtfArtikelID_AuftragBearbeiten.setEnabled(true);
-        jtfMenge_AuftragBearbeiten.setEnabled(true);
-        jtfEinzelwert_AuftragBearbeiten.setEnabled(true);
-        jtfArtikelname_AuftragBearbeiten.setEnabled(true);
-    }//GEN-LAST:event_jbBearbeiten_AutfragBearbeitenActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragBearbeiten;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -722,23 +676,19 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JButton jbAbbrechen_AuftragBearbeiten;
-    private javax.swing.JButton jbBearbeiten_AutfragBearbeiten;
-    private javax.swing.JButton jbLupeAuftragsID_AuftragBearbeiten;
     private javax.swing.JButton jbLupe_AuftragBearbeiten;
     private javax.swing.JButton jbMinus_AuftragBearbeiten;
     private javax.swing.JButton jbPlus_AuftragBearbeiten;
-    private javax.swing.JButton jbSpeichern_AuftragBearbeiten;
-    private javax.swing.JComboBox<String> jcbAuftragsart_AuftragBearbeiten;
-    private javax.swing.JComboBox<String> jcbStatus_AuftragBearbeiten;
+    private javax.swing.JButton jbSuchen_AuftragBearbeiten;
     private javax.swing.JFormattedTextField jftfAbschlussdatumAuftragBearbeiten;
     private javax.swing.JFormattedTextField jftfErfassungsdatumAuftragBearbeiten;
     private javax.swing.JFormattedTextField jftfLieferdatumAuftragBearbeiten;
     private javax.swing.JPanel jpUnterPanel_AuftragBearbeiten;
     private javax.swing.JTable jtPositionsnr_AuftragBearbeiten;
-    private javax.swing.JTextField jtaBeschreibungAuftragBearbeiten;
     private javax.swing.JTextField jtfArtikelID_AuftragBearbeiten;
     private javax.swing.JTextField jtfArtikelname_AuftragBearbeiten;
     private javax.swing.JTextField jtfAuftragsID_AuftragBearbeiten;
+    private javax.swing.JTextField jtfBeschreibungAuftragBearbeiten;
     private javax.swing.JTextField jtfEinzelwert_AuftragBearbeiten;
     private javax.swing.JTextField jtfGPID_AuftragBearbeiten;
     private javax.swing.JTextField jtfGPName_AuftragBearbeiten;
