@@ -13,7 +13,7 @@ package view;
  /*----------------------------------------------------------*/
 public class ArtikelSuche extends javax.swing.JInternalFrame {
     
-    ArtikelAnzeige blubb;
+    ArtikelAnzeige ArtAnzeige;
     
     /**
      * Creates new form ArtikelSuche
@@ -24,7 +24,7 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
     
     // Ausgabe von Artikel Anzeige Maske nach betätigung des Anzeige Buttons
     public void setArtikelAnzeige(ArtikelAnzeige aa) {
-        this.blubb = aa;
+        this.ArtAnzeige = aa;
     }
 
     /**
@@ -182,9 +182,8 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
 
 //        jbAnzeigen_ArtikelSuche.addActionListener(artikelanzeige);
 //        artikelanzeige.show();
-
         //Artikel Anzeige wird sichtbar
-        blubb.setVisible(true);
+        ArtAnzeige.setVisible(true);
     }//GEN-LAST:event_jbAnzeigen_ArtikelSucheActionPerformed
 
     private void jbAbbrechen_ArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelSucheActionPerformed
