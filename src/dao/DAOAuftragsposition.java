@@ -8,6 +8,8 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.swing.JTable;
 import model.Auftragsposition;
 import util.DBConnection;
 import util.Zusatzfunktionen;
@@ -17,6 +19,14 @@ import util.Zusatzfunktionen;
  * @author marti
  */
 public class DAOAuftragsposition {
+
+    public static Auftragsposition position_aus_Tabelle(ArrayList<Auftragsposition> auftragsPositionen, Auftragsposition auftragsposition) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static Auftragsposition position_aus_Tabelle(JTable jTAuftragsposition) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */

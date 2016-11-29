@@ -5,15 +5,26 @@
  */
 package view;
 
+import dao.DAOArtikel;
 import dao.DAOAuftrag;
 import dao.DAOAuftragsposition;
+import dao.DAOKunde;
+import dao.DAOLieferant;
+import dao.DAOZahlungskondition;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import model.Artikel;
 import model.Auftrag;
 import model.Auftragsposition;
 import model.Auftragsstatus;
+import model.Kunde;
+import model.Lieferant;
+import model.Zahlungskondition;
+import org.omg.CORBA.portable.ApplicationException;
 
 /*----------------------------------------------------------*/
  /* Datum Name Was */
@@ -22,17 +33,77 @@ import model.Auftragsstatus;
  /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*----------------------------------------------------------*/
 public class AuftragAnlegen extends javax.swing.JInternalFrame {
-
+    
+    // Variablendeklaration Citak 29.11.2016
+    
+    private DAOAuftrag daoAuftrag;
+    private DAOArtikel daoArtikel;
+    private DAOAuftragsposition auftragsposition;
+    private int naechste_id;
+    private int naechste_positionsnummer = 0;
+    private Artikel artikel;
+    private int geschaeftspartner_id;
+    private int zahlungsbedingungs_id;
+    private String auftragsart;
+    private String geschaeftspartnername;
+    private boolean abweichendeLieferadresse;
+    private java.sql.Date abschlussdatum;
+    private String text;
+    private double auftragswert;
+    private String benutzername = "";
+    private int auftrags_id;
+    private int positions_id;
+    private int artikel_id;
+    private int menge;
+    private String artikelname;
+    private double einzelwert_netto;
+    private double sum_gesamtWert = 0;
+    private java.util.Date util_lieferdatum;
+    private java.util.Date aktuelles_datum_erfassung;
+    private java.util.Date aktuelles_datum_abschluss;
+    private ArrayList<Auftragsposition> auftragsPositionen;
+    private ArrayList<Auftragsposition> geloeschte_positionen;
+    private boolean bestell_auftrag;
+    private boolean bar_auftrag;
+    private boolean sofortauftrag;
+    private boolean terminauftrag;
+    private Kunde kunde;
+    private Lieferant lieferant;
+    private boolean abw_lieferAdresse;
+    private Zahlungskondition zk;
+    private DAOZahlungskondition daoZk;
+    
+    
+    //Konstantendeklaration Citak 29.11.2016
+    private final String statusErfasst = "erfasst";
+    private final String statusAbgeschlossen = "Abgeschlossen";
+    private final String auftragskopf_Fehlermeldung = "Fehler";
+    private final String auftragsArtBar= "Barauftrag";
+    private final String auftragsArtSofort= "Sofortauftrag";
+    private final String auftragsArtTermin= "Terminauftrag";
+    private final String auftragsArtBestellauf= "Bestellauftrag";
+    private final String geschaeftsPartner_leer = "Bitte erst einen auswählen!";
+    private final String position_loeschen = "Soll die ausgewählte Position wirklich gelöscht werden?";
+    private final String auftragspos_exp = "Die Auftragsposition konnte nicht gelöscht werden";
+    
+    
+    
     /**
      * Creates new form AuftragAnlegen
      */
-    public AuftragAnlegen() {
+    public AuftragAnlegen() throws SQLException {
         initComponents();
         jtfAuftragsid_aa.setEnabled(false);
         jtfGesamtwert_AuftragAnlegen.setEnabled(false);
         jftfAbschlussdatum_AuftragAnlegen.setEnabled(false);
         jtfPositionsID_AuftragAnlegen.setEnabled(false);
         jtfArtikelname_AuftragAnlegen.setEnabled(false);
+        
+        // Erstelle der Instanzen
+        this.auftragsPositionen = new ArrayList<>();
+        this.daoAuftrag = new DAOAuftrag();
+        this.daoArtikel = new DAOArtikel();
+          
 
     }
 
@@ -406,8 +477,18 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jScrollPane8.setViewportView(jTAuftragsposition);
 
         jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/minus2.png"))); // NOI18N
+        jbMinus_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMinus_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/plus2.png"))); // NOI18N
+        jbPlus_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPlus_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Auftragsposition_AuftragAnlegenLayout = new javax.swing.GroupLayout(Auftragsposition_AuftragAnlegen);
         Auftragsposition_AuftragAnlegen.setLayout(Auftragsposition_AuftragAnlegenLayout);
@@ -496,6 +577,12 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jSpeichern_aa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jSpeichern_aaActionPerformed(evt);
+            }
+        });
+
+        jftfErfassungsdatum_aa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jftfErfassungsdatum_aaActionPerformed(evt);
             }
         });
 
@@ -603,7 +690,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
+            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
         );
 
         pack();
@@ -683,6 +770,96 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
+    private void jftfErfassungsdatum_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfErfassungsdatum_aaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jftfErfassungsdatum_aaActionPerformed
+
+    private void jbPlus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlus_AuftragAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbPlus_AuftragAnlegenActionPerformed
+
+    private void jbMinus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMinus_AuftragAnlegenActionPerformed
+//         position_loeschen();
+        
+    }//GEN-LAST:event_jbMinus_AuftragAnlegenActionPerformed
+
+        
+      /**
+     * Citak 29.11.2016 
+     * holt die Werte der einzelnen Positionen in der Oberfläche
+     * und speichert diese in die Instanz Variablen
+     */
+    private void position_belegen() {
+        auftrags_id = Integer.parseInt(jtfAuftragsid_aa.getText());
+        positions_id = Integer.parseInt(jtfPositionsID_AuftragAnlegen.getText());
+        try {artikel_id = Integer.parseInt(jtfArtikelID_AuftragAnlegen.getText());
+        } catch (NumberFormatException nfexception) {
+            artikel_id = 0;
+        }try {menge = Integer.parseInt(jtfMenge_AuftragAnlegen.getText());
+        } catch (NumberFormatException nfe) {
+            menge = 0;
+        }try {einzelwert_netto = Integer.parseInt(jtfEinzelwert_AuftragAnlegen.getText());
+        } catch (Exception ex) {
+            einzelwert_netto = 0;
+        }
+    }
+    
+    
+    //leert die Auftragspositionstabelle 
+       private void position_text_leeren() {
+        
+        jtfPositionsID_AuftragAnlegen.setText("");
+        jtfMenge_AuftragAnlegen.setText("");
+        jtfArtikelname_AuftragAnlegen.setText("");
+        jtfArtikelID_AuftragAnlegen.setText("");
+        jtfEinzelwert_AuftragAnlegen.setText("");
+        jtfGesamtwert_AuftragAnlegen.setText("");
+    }
+
+    
+    /** 29.11.2016 Citak
+     * Mit dieser Methode kann eine Auftragsposition gelöscht werden.
+     */
+//    private void position_loeschen() {
+//        
+//        try {
+//            // Auftraspositions obj wird aus tabelle selektiert
+//            Auftragsposition auftragsposition = DAOAuftragsposition.position_aus_Tabelle(jTAuftragsposition);
+//            // Message geht raus um den benutzer zu informieren
+//            int loesche = JOptionPane.showConfirmDialog(null,
+//                    position_loeschen,
+//                    Integer.toString(JOptionPane.YES_NO_OPTION,
+//                    JOptionPane.QUESTION_MESSAGE));
+//            // position soll gelöscht werden
+//            if (loesche == JOptionPane.YES_OPTION) {
+//                // Position wird gelöscht(LKZ gesetzt)
+//                auftragsposition = DAOAuftragsposition.position_aus_Tabelle(auftragsPositionen, auftragsposition);
+//            }
+//          // Positions textfelder werden geleert
+//            position_text_leeren();
+//            
+//        } catch (Exception e) {
+//            // Exception wird gefangen und verarbeitet und eine passende Fehlermeldung geht raus
+//            // über eine Joptionpane
+//            System.out.println(auftragspos_exp);
+//        }
+//    }
+    
+    private boolean lieferdatum_pruefen(){
+    
+        boolean lieferdatum_korrekt = true; 
+        
+//        Date lieferdatum = jftfLieferdatum.getDate();
+//        
+        
+        
+        
+        
+        return false;
+    
+    
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragAnlegen;
@@ -727,4 +904,5 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfMenge_AuftragAnlegen;
     private javax.swing.JTextField jtfPositionsID_AuftragAnlegen;
     // End of variables declaration//GEN-END:variables
+
 }
