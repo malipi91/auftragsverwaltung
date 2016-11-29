@@ -36,6 +36,8 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
         jbAnzeigen_AuftraegeAlle = new javax.swing.JButton();
         jbBearbeiten_AuftraegeAlle = new javax.swing.JButton();
         jbAbbrechen_AuftraegeAlle = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jtfAuftragsIDGesamtAuftragMin = new javax.swing.JTextField();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -281,6 +283,13 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel2.setText("Auftrags-ID");
+
+        jtfAuftragsIDGesamtAuftragMin.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jtfAuftragsIDGesamtAuftragMin.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfAuftragsIDGesamtAuftragMin.setPreferredSize(new java.awt.Dimension(6, 25));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -302,6 +311,12 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
                 .addGap(405, 405, 405)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(50, 50, 50)
+                .addComponent(jtfAuftragsIDGesamtAuftragMin, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,9 +325,13 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jtfAuftragsIDGesamtAuftragMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(103, 103, 103)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_AuftraegeAlle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -352,6 +371,7 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
@@ -359,5 +379,6 @@ public class AuftraegeAlle extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbAnzeigen_AuftraegeAlle;
     private javax.swing.JButton jbBearbeiten_AuftraegeAlle;
     private javax.swing.JTable jtAuftrageAlle;
+    private javax.swing.JTextField jtfAuftragsIDGesamtAuftragMin;
     // End of variables declaration//GEN-END:variables
 }

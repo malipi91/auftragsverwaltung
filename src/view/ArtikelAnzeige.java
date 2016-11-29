@@ -15,10 +15,14 @@ import java.text.DecimalFormatSymbols;
 /*----------------------------------------------------------*/
 public class ArtikelAnzeige extends javax.swing.JInternalFrame {
 
+ 
     /**
      * Creates new form ArtikelAnzeige
      */
     public ArtikelAnzeige() {
+//          getArtikelSuche();
+          
+          
         initComponents();
         //Mehmet Impram 27.11.2016
 //        jtfArtikelID_ArtikelAnzeigen.setEnabled(false);
@@ -555,4 +559,6 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfverkauft_ArtikelAnzeigen;
     private javax.swing.JTextField jtfzulauf_ArtikelAnzeigen;
     // End of variables declaration//GEN-END:variables
+
+
 }

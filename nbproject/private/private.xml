@@ -16,10 +16,9 @@
         <group>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragsID_suchen.java</file>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelID_suchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnzeige.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftraegeAlle.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnlegen.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeSuchen.java</file>
+            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/StartAV.java</file>
         </group>
     </open-files>
 </project-private>
