@@ -179,7 +179,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jLabel4.setText("Abschlussdatum:");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel7.setText("Beschreibung");
+        jLabel7.setText("Auftragstext:");
 
         jtaBeschreibungAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -209,13 +209,13 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jtfArtikelname_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel12.setText("Menge");
+        jLabel12.setText("Menge:");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel13.setText("Einzelwert");
+        jLabel13.setText("Einzelwert:");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel14.setText("Gesamtwert");
+        jLabel14.setText("Gesamtwert:");
 
         jtfMenge_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -687,7 +687,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
 
     private void jbBearbeiten_AutfragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_AutfragBearbeitenActionPerformed
-  jcbAuftragsart_AuftragBearbeiten.setEnabled(true);
+        jcbAuftragsart_AuftragBearbeiten.setEnabled(true);
         jcbStatus_AuftragBearbeiten.setEnabled(true);
         jftfLieferdatumAuftragBearbeiten.setEnabled(true);
         jftfAbschlussdatumAuftragBearbeiten.setEnabled(true);
