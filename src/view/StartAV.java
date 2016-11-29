@@ -101,6 +101,7 @@ public class StartAV extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPopupMenu1 = new javax.swing.JPopupMenu();
         desktopPane = new javax.swing.JDesktopPane();
+        SeiteZwei = new javax.swing.JPanel();
         Startseite = new javax.swing.JPanel();
         jtfBenutzername_Startseite = new javax.swing.JTextField();
         jpwpasswort_Startseite = new javax.swing.JPasswordField();
@@ -109,30 +110,30 @@ public class StartAV extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jbanmelden_Startseite = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
-        SeiteZwei = new javax.swing.JPanel();
         jifArtikelAnlegen = new view.ArtikelAnlegen();
+        jifArtikelID_suchen = new view.ArtikelID_suchen();
         jifArtikelAnzeige = new view.ArtikelAnzeige();
         jifArtikelBearbeiten = new view.ArtikelBearbeiten();
-        jifAuftragBearbeiten = new view.AuftragBearbeiten();
-        jifAuftraegeAlle = new view.AuftraegeAlle();
         jifArtikelSuche = new view.ArtikelSuche();
-        jifZKID_suchen = new view.ZKID_suchen();
-        jifZKSuchen = new view.ZKSuchen();
-        jifZKAnlegen = new view.ZKAnlegen();
-        jifZKBearbeiten = new view.ZKBearbeiten();
-        jifZKAnzeigen = new view.ZKAnzeigen();
-        jifKundeSuchen = new view.KundeSuchen();
-        jifKundeBearbeiten = new view.KundeBearbeiten();
+        jifAuftraegeAlle = new view.AuftraegeAlle();
+        jifAuftragAnlegen = new view.AuftragAnlegen();
+        jifAuftragAnzeigen = new view.AuftragAnzeigen();
+        jifAuftragBearbeiten = new view.AuftragBearbeiten();
+        jifAuftragSuchen = new view.AuftragSuchen();
+        jifAuftragsID_suchen = new view.AuftragsID_suchen();
         jifKundeAnlegen = new view.KundeAnlegen();
         jifKundeAnzeigen = new view.KundeAnzeigen();
+        jifKundeBearbeiten = new view.KundeBearbeiten();
+        jifKundeSuchen = new view.KundeSuchen();
         jifLieferantAnlegen = new view.LieferantAnlegen();
-        jifLieferantSuchen = new view.LieferantSuchen();
-        jifLieferantBearbeiten = new view.LieferantBearbeiten();
         jifLieferantAnzeigen = new view.LieferantAnzeigen();
-        jifAuftragsID_suchen = new view.AuftragsID_suchen();
-        jifAuftragSuchen = new view.AuftragSuchen();
-        jifAuftragAnzeigen = new view.AuftragAnzeigen();
-        jifAuftragAnlegen = new view.AuftragAnlegen();
+        jifLieferantBearbeiten = new view.LieferantBearbeiten();
+        jifLieferantSuchen = new view.LieferantSuchen();
+        jifZKAnlegen = new view.ZKAnlegen();
+        jifZKAnzeigen = new view.ZKAnzeigen();
+        jifZKBearbeiten = new view.ZKBearbeiten();
+        jifZKID_suchen = new view.ZKID_suchen();
+        jifZKSuchen = new view.ZKSuchen();
         menuBar = new javax.swing.JMenuBar();
         jmDatei = new javax.swing.JMenu();
         miAbmelden = new javax.swing.JMenuItem();
@@ -175,6 +176,8 @@ public class StartAV extends javax.swing.JFrame {
 
         desktopPane.setInheritsPopupMenu(true);
 
+        SeiteZwei.setPreferredSize(new java.awt.Dimension(2000, 1100));
+
         Startseite.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         Startseite.setMinimumSize(new java.awt.Dimension(1400, 1000));
         Startseite.setPreferredSize(new java.awt.Dimension(1200, 800));
@@ -209,7 +212,7 @@ public class StartAV extends javax.swing.JFrame {
             StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StartseiteLayout.createSequentialGroup()
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 225, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(StartseiteLayout.createSequentialGroup()
                 .addGap(460, 460, 460)
                 .addGroup(StartseiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,23 +245,22 @@ public class StartAV extends javax.swing.JFrame {
                     .addComponent(jpwpasswort_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbanmelden_Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(793, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        desktopPane.add(Startseite);
-        Startseite.setBounds(0, 0, 1200, 800);
-
-        SeiteZwei.setPreferredSize(new java.awt.Dimension(2000, 1100));
 
         javax.swing.GroupLayout SeiteZweiLayout = new javax.swing.GroupLayout(SeiteZwei);
         SeiteZwei.setLayout(SeiteZweiLayout);
         SeiteZweiLayout.setHorizontalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2000, Short.MAX_VALUE)
+            .addGroup(SeiteZweiLayout.createSequentialGroup()
+                .addComponent(Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 800, Short.MAX_VALUE))
         );
         SeiteZweiLayout.setVerticalGroup(
             SeiteZweiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1100, Short.MAX_VALUE)
+            .addGroup(SeiteZweiLayout.createSequentialGroup()
+                .addComponent(Startseite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 300, Short.MAX_VALUE))
         );
 
         desktopPane.add(SeiteZwei);
@@ -266,6 +268,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
+<<<<<<< HEAD
         jifArtikelAnlegen.setBounds(0, 0, 904, 725);
 
         jifArtikelAnzeige.setVisible(false);
@@ -355,6 +358,101 @@ public class StartAV extends javax.swing.JFrame {
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
         jifAuftragAnlegen.setBounds(0, 0, 1154, 871);
+=======
+        jifArtikelAnlegen.setBounds(0, 0, 966, 840);
+
+        jifArtikelID_suchen.setVisible(false);
+        desktopPane.add(jifArtikelID_suchen);
+        jifArtikelID_suchen.setBounds(0, 0, 1035, 734);
+
+        jifArtikelAnzeige.setVisible(false);
+        desktopPane.add(jifArtikelAnzeige);
+        jifArtikelAnzeige.setBounds(0, 0, 995, 840);
+
+        jifArtikelBearbeiten.setVisible(false);
+        desktopPane.add(jifArtikelBearbeiten);
+        jifArtikelBearbeiten.setBounds(0, 0, 966, 840);
+
+        jifArtikelSuche.setVisible(false);
+        desktopPane.add(jifArtikelSuche);
+        jifArtikelSuche.setBounds(0, 0, 966, 840);
+
+        jifAuftraegeAlle.setVisible(false);
+        desktopPane.add(jifAuftraegeAlle);
+        jifAuftraegeAlle.setBounds(0, 0, 966, 840);
+
+        jifAuftragAnlegen.setVisible(false);
+        desktopPane.add(jifAuftragAnlegen);
+        jifAuftragAnlegen.setBounds(0, 0, 966, 840);
+
+        jifAuftragAnzeigen.setVisible(false);
+        desktopPane.add(jifAuftragAnzeigen);
+        jifAuftragAnzeigen.setBounds(0, 0, 966, 840);
+
+        jifAuftragBearbeiten.setVisible(false);
+        desktopPane.add(jifAuftragBearbeiten);
+        jifAuftragBearbeiten.setBounds(0, 0, 966, 840);
+
+        jifAuftragSuchen.setVisible(false);
+        desktopPane.add(jifAuftragSuchen);
+        jifAuftragSuchen.setBounds(0, 0, 966, 843);
+
+        jifAuftragsID_suchen.setVisible(false);
+        desktopPane.add(jifAuftragsID_suchen);
+        jifAuftragsID_suchen.setBounds(0, 0, 953, 502);
+
+        jifKundeAnlegen.setVisible(false);
+        desktopPane.add(jifKundeAnlegen);
+        jifKundeAnlegen.setBounds(0, 0, 1029, 724);
+
+        jifKundeAnzeigen.setVisible(false);
+        desktopPane.add(jifKundeAnzeigen);
+        jifKundeAnzeigen.setBounds(0, 0, 966, 840);
+
+        jifKundeBearbeiten.setVisible(false);
+        desktopPane.add(jifKundeBearbeiten);
+        jifKundeBearbeiten.setBounds(0, 0, 966, 840);
+
+        jifKundeSuchen.setVisible(false);
+        desktopPane.add(jifKundeSuchen);
+        jifKundeSuchen.setBounds(0, 0, 966, 840);
+
+        jifLieferantAnlegen.setVisible(false);
+        desktopPane.add(jifLieferantAnlegen);
+        jifLieferantAnlegen.setBounds(0, 0, 966, 840);
+
+        jifLieferantAnzeigen.setVisible(false);
+        desktopPane.add(jifLieferantAnzeigen);
+        jifLieferantAnzeigen.setBounds(0, 0, 966, 840);
+
+        jifLieferantBearbeiten.setVisible(false);
+        desktopPane.add(jifLieferantBearbeiten);
+        jifLieferantBearbeiten.setBounds(0, 0, 967, 840);
+
+        jifLieferantSuchen.setVisible(false);
+        desktopPane.add(jifLieferantSuchen);
+        jifLieferantSuchen.setBounds(0, 0, 966, 840);
+
+        jifZKAnlegen.setVisible(false);
+        desktopPane.add(jifZKAnlegen);
+        jifZKAnlegen.setBounds(0, 0, 966, 840);
+
+        jifZKAnzeigen.setVisible(false);
+        desktopPane.add(jifZKAnzeigen);
+        jifZKAnzeigen.setBounds(0, 0, 966, 840);
+
+        jifZKBearbeiten.setVisible(false);
+        desktopPane.add(jifZKBearbeiten);
+        jifZKBearbeiten.setBounds(0, 0, 966, 840);
+
+        jifZKID_suchen.setVisible(false);
+        desktopPane.add(jifZKID_suchen);
+        jifZKID_suchen.setBounds(0, 0, 816, 440);
+
+        jifZKSuchen.setVisible(false);
+        desktopPane.add(jifZKSuchen);
+        jifZKSuchen.setBounds(0, 0, 966, 840);
+>>>>>>> 9ef2ef446ef4d6b62e34ec052284a0a318539d45
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
@@ -971,6 +1069,7 @@ public class StartAV extends javax.swing.JFrame {
     private view.ArtikelAnlegen jifArtikelAnlegen;
     private view.ArtikelAnzeige jifArtikelAnzeige;
     private view.ArtikelBearbeiten jifArtikelBearbeiten;
+    private view.ArtikelID_suchen jifArtikelID_suchen;
     private view.ArtikelSuche jifArtikelSuche;
     private view.AuftraegeAlle jifAuftraegeAlle;
     private view.AuftragAnlegen jifAuftragAnlegen;

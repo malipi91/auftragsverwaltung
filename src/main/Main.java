@@ -12,8 +12,11 @@ package main;
  * @author Duygu Citak
  */
 public class Main {
+<<<<<<< HEAD
     
   
+=======
+>>>>>>> 9ef2ef446ef4d6b62e34ec052284a0a318539d45
 
     /**
      * Diese Klasse wird nur dazu benutzt alle nötigen
@@ -21,7 +24,10 @@ public class Main {
      * View anzuzeigen
      */
     public static void main(String [] args){
+<<<<<<< HEAD
      
+=======
+>>>>>>> 9ef2ef446ef4d6b62e34ec052284a0a318539d45
 
 }
 }
