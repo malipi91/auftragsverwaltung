@@ -280,14 +280,14 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
             }
         });
 
-        jbLupeAuftragsID_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeAuftragsID_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jbLupeAuftragsID_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupeAuftragsID_AuftragSuchenActionPerformed(evt);
             }
         });
 
-        jbLupeGPName_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeGPName_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jbLupeGPName_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupeGPName_AuftragSuchenActionPerformed(evt);
@@ -431,7 +431,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 803, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE))
+                .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE))
         );
 
         pack();

@@ -38,6 +38,7 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
         jtfSuchkriterium_LieferantSuchen = new javax.swing.JTextField();
         jScrollPane7 = new javax.swing.JScrollPane();
         jt_LieferantSuchen = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -178,6 +179,8 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
         ));
         jScrollPane7.setViewportView(jt_LieferantSuchen);
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+
         javax.swing.GroupLayout LieferantSuchenLayout = new javax.swing.GroupLayout(LieferantSuchen);
         LieferantSuchen.setLayout(LieferantSuchenLayout);
         LieferantSuchenLayout.setHorizontalGroup(
@@ -194,7 +197,9 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
                         .addContainerGap()
                         .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantSuchenLayout.createSequentialGroup()
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -218,7 +223,8 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jcbSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfSuchkriterium_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(85, 85, 85)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
@@ -263,6 +269,7 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel LieferantSuchen;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator14;

@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="AuftragAnlegen" alignment="0" pref="812" max="32767" attributes="0"/>
+          <Component id="AuftragAnlegen" alignment="0" pref="816" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -563,7 +563,7 @@
         <Component class="javax.swing.JButton" name="jbLupeGPID_AuftragAnlegen">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/view/lupe.png"/>
+              <Image iconType="3" name="/view/lupe2.png"/>
             </Property>
           </Properties>
           <Events>

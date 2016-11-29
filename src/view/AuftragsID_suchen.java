@@ -78,7 +78,7 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
         });
 
         jbSuchen_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbSuchen_AuftragsIDSuchen.setText("Suchen");
+        jbSuchen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragsIDSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSuchen_AuftragsIDSuchenActionPerformed(evt);
@@ -187,7 +187,7 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel91)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(41, 41, 41))

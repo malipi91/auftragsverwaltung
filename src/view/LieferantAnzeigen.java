@@ -53,7 +53,7 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
             }
         });
 
-        jbLupeGPID_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeGPID_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jbLupeGPID_LieferantAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupeGPID_LieferantAnzeigenActionPerformed(evt);

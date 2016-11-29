@@ -163,7 +163,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         jbSpeichern_ArtikelAnzeigen.setText("Speichern");
         jbSpeichern_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(130, 35));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

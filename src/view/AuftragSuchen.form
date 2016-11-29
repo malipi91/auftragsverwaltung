@@ -36,7 +36,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <EmptySpace min="0" pref="803" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="AuftragSuchen" alignment="0" pref="815" max="32767" attributes="0"/>
+              <Component id="AuftragSuchen" alignment="0" pref="819" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -462,7 +462,7 @@
         <Component class="javax.swing.JButton" name="jbLupeAuftragsID_AuftragSuchen">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/view/lupe.png"/>
+              <Image iconType="3" name="/view/lupe2.png"/>
             </Property>
           </Properties>
           <Events>
@@ -472,7 +472,7 @@
         <Component class="javax.swing.JButton" name="jbLupeGPName_AuftragSuchen">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/view/lupe.png"/>
+              <Image iconType="3" name="/view/lupe2.png"/>
             </Property>
           </Properties>
           <Events>

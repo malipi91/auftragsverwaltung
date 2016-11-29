@@ -403,7 +403,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
 
         jtfAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jbLupeAuftragsID_AuftragAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeAuftragsID_AuftragAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jbLupeAuftragsID_AuftragAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupeAuftragsID_AuftragAnzeigenActionPerformed(evt);
