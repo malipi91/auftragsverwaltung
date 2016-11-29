@@ -25,29 +25,8 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jtfGesamtwert_AuftragBearbeiten.setEnabled(false);
         jtfPositionsID_AuftragBearbeiten.setEnabled(false);
         jftfErfassungsdatumAuftragBearbeiten.setEnabled(false);
-<<<<<<< HEAD
-        
-        // Am Anfang deaktiviert
-//        jcbAuftragsart_AuftragBearbeiten.setEnabled(false);
-//        jcbStatus_AuftragBearbeiten.setEnabled(false);
-//        jftfLieferdatumAuftragBearbeiten.setEnabled(false);
-//        jftfAbschlussdatumAuftragBearbeiten.setEnabled(false);
-//        jtaBeschreibungAuftragBearbeiten.setEnabled(false);
-//        jtfArtikelID_AuftragBearbeiten.setEnabled(false);
-//        jtfMenge_AuftragBearbeiten.setEnabled(false);
-//        jtfEinzelwert_AuftragBearbeiten.setEnabled(false);
-//        jtfArtikelname_AuftragBearbeiten.setEnabled(false);
-                
-                
-=======
->>>>>>> 07b13d7453f5f65d1cacfa89bcb47ca9a24d74c6
     }
-   private void auftragsstatus_erfasst (){
-       this.jtfMenge_AuftragBearbeiten.setVisible(false);
-       jtfMenge_AuftragBearbeiten.setVisible(false);
-       this.jtfMenge_AuftragBearbeiten.setEnabled(false);
-       jtfMenge_AuftragBearbeiten.setEnabled(false);
-   }     
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
