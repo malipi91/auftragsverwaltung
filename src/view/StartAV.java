@@ -111,6 +111,7 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jifArtikelAnlegen = new view.ArtikelAnlegen();
+        jifArtikelID_suchen = new view.ArtikelID_suchen();
         jifArtikelAnzeige = new view.ArtikelAnzeige();
         jifArtikelBearbeiten = new view.ArtikelBearbeiten();
         jifArtikelSuche = new view.ArtikelSuche();
@@ -269,6 +270,10 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(jifArtikelAnlegen);
         jifArtikelAnlegen.setBounds(0, 0, 966, 840);
 
+        jifArtikelID_suchen.setVisible(false);
+        desktopPane.add(jifArtikelID_suchen);
+        jifArtikelID_suchen.setBounds(0, 0, 1035, 734);
+
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
         jifArtikelAnzeige.setBounds(0, 0, 995, 840);
@@ -303,7 +308,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifAuftragsID_suchen.setVisible(false);
         desktopPane.add(jifAuftragsID_suchen);
-        jifAuftragsID_suchen.setBounds(0, 0, 816, 440);
+        jifAuftragsID_suchen.setBounds(0, 0, 953, 502);
 
         jifKundeAnlegen.setVisible(false);
         desktopPane.add(jifKundeAnlegen);
@@ -972,6 +977,7 @@ public class StartAV extends javax.swing.JFrame {
     private view.ArtikelAnlegen jifArtikelAnlegen;
     private view.ArtikelAnzeige jifArtikelAnzeige;
     private view.ArtikelBearbeiten jifArtikelBearbeiten;
+    private view.ArtikelID_suchen jifArtikelID_suchen;
     private view.ArtikelSuche jifArtikelSuche;
     private view.AuftraegeAlle jifAuftraegeAlle;
     private view.AuftragAnlegen jifAuftragAnlegen;
