@@ -182,6 +182,7 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
 
 //        jbAnzeigen_ArtikelSuche.addActionListener(artikelanzeige);
 //        artikelanzeige.show();
+
         //Artikel Anzeige wird sichtbar
         blubb.setVisible(true);
     }//GEN-LAST:event_jbAnzeigen_ArtikelSucheActionPerformed
