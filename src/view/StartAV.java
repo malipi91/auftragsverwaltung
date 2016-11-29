@@ -266,11 +266,9 @@ public class StartAV extends javax.swing.JFrame {
         desktopPane.add(jifArtikelAnlegen);
         jifArtikelAnlegen.setBounds(0, 0, 966, 840);
 
-        jifGPID_suchen.setClosable(true);
-        jifGPID_suchen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         jifGPID_suchen.setVisible(false);
         desktopPane.add(jifGPID_suchen);
-        jifGPID_suchen.setBounds(0, 0, 660, 502);
+        jifGPID_suchen.setBounds(0, 0, 660, 489);
 
         jifArtikelID_suchen.setVisible(false);
         desktopPane.add(jifArtikelID_suchen);
@@ -278,7 +276,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
-        jifArtikelAnzeige.setBounds(0, 0, 995, 840);
+        jifArtikelAnzeige.setBounds(0, 0, 995, 852);
 
         jifArtikelBearbeiten.setVisible(false);
         desktopPane.add(jifArtikelBearbeiten);
@@ -294,15 +292,15 @@ public class StartAV extends javax.swing.JFrame {
 
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
-        jifAuftragAnlegen.setBounds(0, 0, 966, 840);
+        jifAuftragAnlegen.setBounds(0, 0, 966, 844);
 
         jifAuftragAnzeigen.setVisible(false);
         desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 966, 840);
+        jifAuftragAnzeigen.setBounds(0, 0, 966, 848);
 
         jifAuftragBearbeiten.setVisible(false);
         desktopPane.add(jifAuftragBearbeiten);
-        jifAuftragBearbeiten.setBounds(0, 0, 966, 840);
+        jifAuftragBearbeiten.setBounds(0, 0, 1174, 877);
 
         jifAuftragSuchen.setVisible(false);
         desktopPane.add(jifAuftragSuchen);
@@ -314,7 +312,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifKundeAnlegen.setVisible(false);
         desktopPane.add(jifKundeAnlegen);
-        jifKundeAnlegen.setBounds(0, 0, 1029, 724);
+        jifKundeAnlegen.setBounds(0, 0, 966, 728);
 
         jifKundeAnzeigen.setVisible(false);
         desktopPane.add(jifKundeAnzeigen);
@@ -330,11 +328,11 @@ public class StartAV extends javax.swing.JFrame {
 
         jifLieferantAnlegen.setVisible(false);
         desktopPane.add(jifLieferantAnlegen);
-        jifLieferantAnlegen.setBounds(0, 0, 966, 840);
+        jifLieferantAnlegen.setBounds(0, 0, 966, 844);
 
         jifLieferantAnzeigen.setVisible(false);
         desktopPane.add(jifLieferantAnzeigen);
-        jifLieferantAnzeigen.setBounds(0, 0, 966, 840);
+        jifLieferantAnzeigen.setBounds(0, 0, 966, 844);
 
         jifLieferantBearbeiten.setVisible(false);
         desktopPane.add(jifLieferantBearbeiten);
@@ -747,8 +745,11 @@ public class StartAV extends javax.swing.JFrame {
     private void miLieferantSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantSucheActionPerformed
         if (istEingeloggt == true) {
             jifLieferantSuchen.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+        } /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantSucheActionPerformed
@@ -765,8 +766,11 @@ public class StartAV extends javax.swing.JFrame {
     private void miLieferantanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanzeigenActionPerformed
         if (istEingeloggt == true) {
             jifLieferantAnzeigen.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+        } /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantanzeigenActionPerformed
@@ -774,8 +778,11 @@ public class StartAV extends javax.swing.JFrame {
     private void miLieferantanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantanlegenActionPerformed
         if (istEingeloggt == true) {
             jifLieferantAnlegen.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+        } /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantanlegenActionPerformed
@@ -783,8 +790,11 @@ public class StartAV extends javax.swing.JFrame {
     private void miLieferantbearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miLieferantbearbeitenActionPerformed
         if (istEingeloggt == true) {
             jifLieferantBearbeiten.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+        } /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miLieferantbearbeitenActionPerformed
@@ -792,8 +802,12 @@ public class StartAV extends javax.swing.JFrame {
     private void miKundeanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanzeigenActionPerformed
         if (istEingeloggt == true) {
             jifKundeAnzeigen.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+        } 
+        /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundeanzeigenActionPerformed
@@ -801,8 +815,14 @@ public class StartAV extends javax.swing.JFrame {
     private void miKundeanlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundeanlegenActionPerformed
         if (istEingeloggt == true) {
             jifKundeAnlegen.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+            //Blendet Lieferdaten aus  
+            KundeAnlegen.jPLieferdaten.setVisible(false);
+        } 
+        /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundeanlegenActionPerformed
@@ -810,8 +830,12 @@ public class StartAV extends javax.swing.JFrame {
     private void miKundebearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miKundebearbeitenActionPerformed
         if (istEingeloggt == true) {
             jifKundeBearbeiten.setVisible(true);
-        } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
-        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
+        } 
+        /*----------------------------------------------------------*/ 
+        /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
+        Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ 
+        /*----------------------------------------------------------*/ 
+        else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");
         }
     }//GEN-LAST:event_miKundebearbeitenActionPerformed

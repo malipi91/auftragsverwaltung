@@ -354,7 +354,7 @@ public class ZKAnzeigen extends javax.swing.JInternalFrame {
                                             .addComponent(jcbAuftragsart_ZKAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(Mahnzeit_ZKAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
-                        .addGap(361, 361, 361)
+                        .addGap(307, 307, 307)
                         .addComponent(jLabel77)))
                 .addContainerGap(100, Short.MAX_VALUE))
         );

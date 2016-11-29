@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Component id="AuftragAnzeigen" min="-2" pref="950" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
@@ -31,7 +31,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="AuftragAnzeigen" pref="804" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="AuftragAnzeigen" pref="790" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -48,96 +52,90 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jlGPName" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
+                                  <Component id="titel_az" min="-2" pref="195" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jlAuftragsid" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlGPNr" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlAuftragswertbrutto_az" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlAuftragswertnetto_az" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jtfGPID_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                          <Component id="jtfGPName_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                          <Component id="jtfGPadresse_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                          <Component id="jtfAuftragswertbrutto_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                          <Component id="jtfAuftragswertnetto_az" alignment="0" pref="150" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="jtfAuftragsid_az" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="jlGPadresse_az" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="jbLupeAuftragsID_AuftragAnzeigen" min="-2" pref="35" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jlBeschreibung" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jlAbschlussdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlStatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlZKID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlAuftragsart" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlLieferdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlErfassungsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jftfLieferdatum_az" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jftfErfassungsdatum_az" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jcbAuftragsart_az" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jtfZKID_az" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jcbStatus_az" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <Component id="jftfAbschlussdatum_az" min="-2" pref="150" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="jScrollPane2" min="-2" pref="334" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="jbSpeichern_az" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jbBearbeiten_az" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jbZurueck_az" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="jlGPName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
-                              <Component id="titel_az" min="-2" pref="195" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jScrollPane1" alignment="1" min="-2" pref="862" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jlAuftragsid" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlGPNr" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlAuftragswertbrutto_az" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlAuftragswertnetto_az" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jtfGPID_az" alignment="0" pref="150" max="32767" attributes="0"/>
-                                              <Component id="jtfGPName_az" alignment="0" pref="150" max="32767" attributes="0"/>
-                                              <Component id="jtfGPadresse_az" alignment="0" pref="150" max="32767" attributes="0"/>
-                                              <Component id="jtfAuftragswertbrutto_az" alignment="0" pref="150" max="32767" attributes="0"/>
-                                              <Component id="jtfAuftragswertnetto_az" alignment="0" pref="150" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Component id="jtfAuftragsid_az" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="jlGPadresse_az" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                      <Component id="jbLupeAuftragsID_AuftragAnzeigen" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jlLieferdatum" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jftfLieferdatum_az" min="-2" pref="150" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jlErfassungsdatum" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jftfErfassungsdatum_az" min="-2" pref="150" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jlAuftragsart" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jcbAuftragsart_az" min="-2" pref="150" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jlZKID" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jtfZKID_az" min="-2" pref="150" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jlAbschlussdatum" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jlStatus" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jcbStatus_az" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                                  <Component id="jftfAbschlussdatum_az" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jScrollPane2" min="-2" pref="380" max="-2" attributes="0"/>
-                                          <Component id="jlBeschreibung" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
+                      <Component id="jScrollPane1" alignment="1" min="-2" pref="835" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -150,34 +148,25 @@
                   <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
-                          <Component id="jftfErfassungsdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jftfLieferdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlAuftragsid" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jtfAuftragsid_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jlAuftragsart" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jbLupeAuftragsID_AuftragAnzeigen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jcbAuftragsart_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlGPNr" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jtfGPID_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jtfZKID_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jlGPName" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jtfGPName_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jlStatus" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jcbStatus_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -195,10 +184,28 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jlLieferdatum" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="jftfErfassungsdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jftfLieferdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jcbAuftragsart_az" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jtfZKID_az" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jcbStatus_az" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jlAuftragswertbrutto_az" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jtfAuftragswertbrutto_az" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -210,31 +217,26 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="jftfAbschlussdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlAbschlussdatum" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jlAbschlussdatum" min="-2" max="-2" attributes="0"/>
+                              <Component id="jftfAbschlussdatum_az" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Component id="jlBeschreibung" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="128" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="169" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jbZurueck_az" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jbBearbeiten_az" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jbSpeichern_az" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -340,7 +342,7 @@
             <Component class="javax.swing.JTable" name="jtTabellePosition_AuftragAnzeigen">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="6" rowCount="6">
+                  <Table columnCount="6" rowCount="200">
                     <Column editable="true" title="Positionsnr." type="java.lang.Object"/>
                     <Column editable="true" title="Artikel-ID" type="java.lang.Object"/>
                     <Column editable="true" title="Artikelname" type="java.lang.Object"/>

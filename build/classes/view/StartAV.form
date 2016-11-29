@@ -524,8 +524,6 @@
         </Component>
         <Component class="view.GPID_suchen" name="jifGPID_suchen">
           <Properties>
-            <Property name="closable" type="boolean" value="true"/>
-            <Property name="defaultCloseOperation" type="int" value="1"/>
             <Property name="visible" type="boolean" value="false"/>
           </Properties>
           <Constraints>

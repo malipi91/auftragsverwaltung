@@ -19,6 +19,8 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
      */
     public AuftragBearbeiten() {
         initComponents();
+        
+        /* 28.11.2016 Yoeruek Felder werden inaktiv gesetzt*/
         jtfGPID_AuftragBearbeiten.setEnabled(false);
         jtfGPName_AuftragBearbeiten.setEnabled(false);
         jtfZKIDAuftragBearbeiten.setEnabled(false);

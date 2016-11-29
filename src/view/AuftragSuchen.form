@@ -36,7 +36,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <EmptySpace min="0" pref="803" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="AuftragSuchen" alignment="0" pref="803" max="32767" attributes="0"/>
+              <Component id="AuftragSuchen" alignment="0" pref="807" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -157,16 +157,18 @@
                       <Component id="jbLupeAuftragsID_AuftragSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfGPID_AuftragSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jtfMinAuftragswert_AuftragSuche" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfMaxAuftragswert_AuftragSuche" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jbLupeGPName_AuftragSuchen" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfGPID_AuftragSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jtfMinAuftragswert_AuftragSuche" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfMaxAuftragswert_AuftragSuche" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
