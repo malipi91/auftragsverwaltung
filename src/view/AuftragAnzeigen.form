@@ -31,11 +31,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="AuftragAnzeigen" pref="790" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="AuftragAnzeigen" alignment="0" min="-2" pref="800" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -43,7 +39,7 @@
     <Container class="javax.swing.JPanel" name="AuftragAnzeigen">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1200, 800]"/>
+          <Dimension value="[1200, 900]"/>
         </Property>
       </Properties>
 
@@ -236,7 +232,7 @@
                       <Component id="jbBearbeiten_az" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jbSpeichern_az" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="51" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

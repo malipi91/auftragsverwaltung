@@ -15,11 +15,12 @@ import java.text.DecimalFormatSymbols;
 /*----------------------------------------------------------*/
 public class AuftragSuchen extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form AuftragSuchen
-     */
-    public AuftragSuchen() {
+    //Variablendeklaration
+    StartAV myParent;
+
+    public AuftragSuchen(StartAV  parent) {
         initComponents();
+        myParent = parent;
         
        //Mechmet Impram
         jtfAuftragsID_AuftragSuchen.setDocument(new UniversalDokument(false, true, "", 5));
@@ -280,8 +281,18 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         });
 
         jbLupeAuftragsID_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeAuftragsID_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeAuftragsID_AuftragSuchenActionPerformed(evt);
+            }
+        });
 
         jbLupeGPName_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeGPName_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeGPName_AuftragSuchenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AuftragSuchenLayout = new javax.swing.GroupLayout(AuftragSuchen);
         AuftragSuchen.setLayout(AuftragSuchenLayout);
@@ -420,7 +431,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 803, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 807, Short.MAX_VALUE))
+                .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE))
         );
 
         pack();
@@ -448,6 +459,16 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
     private void jbAnzeigen_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_AuftragSuchenActionPerformed
      
     }//GEN-LAST:event_jbAnzeigen_AuftragSuchenActionPerformed
+
+    private void jbLupeAuftragsID_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeAuftragsID_AuftragSuchenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
+        myParent.oeffneArtikelIDSuchen();
+    }//GEN-LAST:event_jbLupeAuftragsID_AuftragSuchenActionPerformed
+
+    private void jbLupeGPName_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeGPName_AuftragSuchenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe GP-ID Suchen */
+        myParent.oeffneGPIDSuchen();
+    }//GEN-LAST:event_jbLupeGPName_AuftragSuchenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

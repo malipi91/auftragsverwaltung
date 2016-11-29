@@ -16,12 +16,10 @@ import javax.swing.JOptionPane;
 /* 27.11.16 Impram  Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
-
-    /**
-     * Creates new form ArtikelBearbeiten
-     */
-    public ArtikelBearbeiten() {
+ 
+    public ArtikelBearbeiten(StartAV parent) {
         initComponents();
+        
 /*----------------------------------------------------------*/
 /* 29.11.16 Yoeruek Felder inaktiv                          */
 /*----------------------------------------------------------*/
@@ -368,7 +366,13 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jbLupe_ArtikelBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupe_ArtikelBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbLupe_ArtikelBearbeiten.setText("Suchen");
+        jbLupe_ArtikelBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupe_ArtikelBearbeitenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ArtikelBearbeitenLayout = new javax.swing.GroupLayout(ArtikelBearbeiten);
         ArtikelBearbeiten.setLayout(ArtikelBearbeitenLayout);
@@ -386,7 +390,7 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                         .addGap(37, 37, 37)
                         .addComponent(jtfArtikelID_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbLupe_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbLupe_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jbBearbeiten_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -411,10 +415,10 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbLupe_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jtfArtikelID_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfArtikelID_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbLupe_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ArtikelBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jbBearbeiten_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jbLöschen_ArtikelBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -531,6 +535,10 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
     private void jtfreserviertArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfreserviertArtikelBearbeitenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfreserviertArtikelBearbeitenActionPerformed
+
+    private void jbLupe_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupe_ArtikelBearbeitenActionPerformed
+
+    }//GEN-LAST:event_jbLupe_ArtikelBearbeitenActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

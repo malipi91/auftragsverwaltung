@@ -12,11 +12,13 @@ package view;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragAnzeigen extends javax.swing.JInternalFrame {
+    
+    //Variablendeklaration
+    StartAV myParent;
 
-
-    public AuftragAnzeigen() {
+    public AuftragAnzeigen(StartAV parent) {
         initComponents();
-        
+        myParent = parent;
         /* 28.11.2016 Yoeruek Felder werden inaktiv gesetzt*/
         jftfLieferdatum_az.setEnabled(false);
         jftfAbschlussdatum_az.setEnabled(false);
@@ -81,7 +83,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        AuftragAnzeigen.setPreferredSize(new java.awt.Dimension(1200, 800));
+        AuftragAnzeigen.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jlAuftragsid.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlAuftragsid.setText("Auftrags-ID:");
@@ -565,7 +567,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                     .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -578,10 +580,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 782, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -619,7 +618,8 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbSpeichern_azActionPerformed
 
     private void jbLupeAuftragsID_AuftragAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeAuftragsID_AuftragAnzeigenActionPerformed
-
+        /* 29.11.16 Yoeruek Öffnet über die Lupe Auftrags-ID Suchen */
+        myParent.oeffneAuftragIDSuchen();
     }//GEN-LAST:event_jbLupeAuftragsID_AuftragAnzeigenActionPerformed
 
 

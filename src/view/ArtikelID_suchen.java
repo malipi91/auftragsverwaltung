@@ -12,9 +12,9 @@ package view;
 
 public class ArtikelID_suchen extends javax.swing.JInternalFrame {
 
-
-    public ArtikelID_suchen() {
+    public ArtikelID_suchen(StartAV parent) {
         initComponents();
+
     }
 
 
@@ -31,6 +31,9 @@ public class ArtikelID_suchen extends javax.swing.JInternalFrame {
         jTable1 = new javax.swing.JTable();
         jbLupe_ArtikelIDsuchen = new javax.swing.JButton();
         jbUebernehmen_ArtikelIDSuchen = new javax.swing.JButton();
+
+        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Artikel-ID Suchen");

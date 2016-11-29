@@ -101,7 +101,6 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         });
 
         jbSuchen_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbSuchen_AuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_AuftragBearbeiten.setText("Suchen");
         jbSuchen_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -584,7 +583,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                             .addGap(65, 65, 65)
                             .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(27, 27, 27)
-                            .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(AuftragBearbeitenLayout.createSequentialGroup()

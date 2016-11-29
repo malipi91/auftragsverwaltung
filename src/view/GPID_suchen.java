@@ -11,12 +11,16 @@ package view;
 /*-----------------------------------------------------------------------*/
 
 public class GPID_suchen extends javax.swing.JInternalFrame {
+    
+    //Variablendeklaration
+    StartAV myParent;
 
     /**
      * Creates new form GPID_suchen
      */
-    public GPID_suchen() {
+    public GPID_suchen(StartAV parent) {
         initComponents();
+        myParent =  parent;
     }
 
 
@@ -157,10 +161,16 @@ public class GPID_suchen extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jButton1.setText("Suchen");
 
         jbUebernehmen_GPIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbUebernehmen_GPIDSuchen.setText("Übernehmen");
+        jbUebernehmen_GPIDSuchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbUebernehmen_GPIDSuchenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -180,7 +190,7 @@ public class GPID_suchen extends javax.swing.JInternalFrame {
                             .addGap(18, 18, 18)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -220,6 +230,10 @@ public class GPID_suchen extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbUebernehmen_GPIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbUebernehmen_GPIDSuchenActionPerformed
+
+    }//GEN-LAST:event_jbUebernehmen_GPIDSuchenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

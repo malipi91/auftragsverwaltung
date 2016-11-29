@@ -164,6 +164,9 @@
               <Image iconType="3" name="/view/lupe.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLupeZKID_ZKBearbeitenActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

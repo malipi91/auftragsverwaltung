@@ -12,12 +12,16 @@ package view;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class ZKAnzeigen extends javax.swing.JInternalFrame {
+    
+    //Variablendeklaration
+    StartAV myParent;
 
     /**
      * Creates new form ZKAnzeigen
      */
-    public ZKAnzeigen() {
+    public ZKAnzeigen(StartAV parent) {
         initComponents();
+        myParent = parent;
     }
 
     /**
@@ -437,7 +441,8 @@ public class ZKAnzeigen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfMahnzeit1_ZKAnzeigenActionPerformed
 
     private void jbLupe_ZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupe_ZKAnzeigenActionPerformed
-
+        /* 30.11.16 Yoeruek Öffnet über die Lupe ZK-ID Suchen */
+        myParent.oeffneZKIDSuchen();
     }//GEN-LAST:event_jbLupe_ZKAnzeigenActionPerformed
 
 

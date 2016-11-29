@@ -22,13 +22,15 @@ import model.Auftragsstatus;
  /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*----------------------------------------------------------*/
 public class AuftragAnlegen extends javax.swing.JInternalFrame {
-
+    
+    //Variablendeklaration
+    StartAV myParent;
     /**
      * Creates new form AuftragAnlegen
      */
-    public AuftragAnlegen() {
+    public AuftragAnlegen(StartAV parent) {
         initComponents();
-        
+        myParent = parent;
     /* 29.11.2016 Yoeruek Felder werden inaktiv gesetzt*/
         jtfAuftragsid_aa.setEnabled(false);
         jtfGesamtwert_AuftragAnlegen.setEnabled(false);
@@ -83,7 +85,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jftfAbschlussdatum_AuftragAnlegen = new javax.swing.JFormattedTextField();
         jftfLieferdatum_aa = new javax.swing.JFormattedTextField();
         jftfErfassungsdatum_aa = new javax.swing.JFormattedTextField();
-        jbLupeGPlID_AuftragAnlegen = new javax.swing.JButton();
+        jbLupeGPID_AuftragAnlegen = new javax.swing.JButton();
         jLabel123 = new javax.swing.JLabel();
         jtfGesamtwert_AuftragAnlegen = new javax.swing.JTextField();
 
@@ -164,6 +166,11 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jtfArtikelID_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jbLupeArtikelID_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeArtikelID_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeArtikelID_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel24.setText("Menge:");
@@ -463,7 +470,12 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
-        jbLupeGPlID_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeGPID_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeGPID_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeGPID_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         jLabel123.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel123.setText("Gesamtwert:");
@@ -509,7 +521,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                                                     .addComponent(jcbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jbLupeGPlID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(jbLupeGPID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(80, 80, 80))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, AuftragAnlegenLayout.createSequentialGroup()
                                         .addComponent(jLabel123)
@@ -547,7 +559,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jtfGPID_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21)
                     .addComponent(jftfErfassungsdatum_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbLupeGPlID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbLupeGPID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
@@ -585,7 +597,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
+            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
         );
 
         pack();
@@ -665,6 +677,16 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
+    private void jbLupeGPID_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeGPID_AuftragAnlegenActionPerformed
+        /* 29.11.16 Yoeruek Öffnet über die Lupe GP-ID Suchen */
+        myParent.oeffneGPIDSuchen();
+    }//GEN-LAST:event_jbLupeGPID_AuftragAnlegenActionPerformed
+
+    private void jbLupeArtikelID_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeArtikelID_AuftragAnlegenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
+        myParent.oeffneArtikelIDSuchen();
+    }//GEN-LAST:event_jbLupeArtikelID_AuftragAnlegenActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragAnlegen;
@@ -690,7 +712,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTAuftragsposition;
     private javax.swing.JButton jbAbbrechen_aa;
     private javax.swing.JButton jbLupeArtikelID_AuftragAnlegen;
-    private javax.swing.JButton jbLupeGPlID_AuftragAnlegen;
+    private javax.swing.JButton jbLupeGPID_AuftragAnlegen;
     private javax.swing.JButton jbMinus_AuftragAnlegen;
     private javax.swing.JButton jbPlus_AuftragAnlegen;
     private javax.swing.JComboBox<String> jcbAuftragsart;

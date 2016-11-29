@@ -36,7 +36,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <EmptySpace min="0" pref="803" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="AuftragSuchen" alignment="0" pref="807" max="32767" attributes="0"/>
+              <Component id="AuftragSuchen" alignment="0" pref="815" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -465,6 +465,9 @@
               <Image iconType="3" name="/view/lupe.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLupeAuftragsID_AuftragSuchenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbLupeGPName_AuftragSuchen">
           <Properties>
@@ -472,6 +475,9 @@
               <Image iconType="3" name="/view/lupe.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLupeGPName_AuftragSuchenActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

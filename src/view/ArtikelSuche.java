@@ -66,7 +66,6 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
         });
 
         jbSuchen_ArtikelSuche.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbSuchen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_ArtikelSuche.setText("Suchen");
 
         jt_ArtikelSuche.setModel(new javax.swing.table.DefaultTableModel(
@@ -140,7 +139,7 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jtfSuchkriterium_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbSuchen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jbSuchen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         ArtikelSucheLayout.setVerticalGroup(

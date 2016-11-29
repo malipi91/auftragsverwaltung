@@ -160,7 +160,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel149)
                     .addComponent(jLabel150)
                     .addComponent(jLabel151))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(jPKontaktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jtfTelefon_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jrfTelefax_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -506,7 +506,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+            .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE)
         );
 
         pack();

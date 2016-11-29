@@ -67,7 +67,6 @@ public class ZKSuchen extends javax.swing.JInternalFrame {
         });
 
         jbSuchen_ZKSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbSuchen_ZKSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
         jbSuchen_ZKSuchen.setText("Suchen");
 
         jLabel79.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -318,9 +317,9 @@ public class ZKSuchen extends javax.swing.JInternalFrame {
                                         .addComponent(jtfSuchkriterium_ZKSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jcbAuftragsart_ZKSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(52, 52, 52)
-                                    .addComponent(jbSuchen_ZKSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jbSuchen_ZKSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(ZKSuchenLayout.createSequentialGroup()
-                        .addGap(241, 241, 241)
+                        .addGap(202, 202, 202)
                         .addComponent(jLabel79)))
                 .addGap(0, 215, Short.MAX_VALUE))
         );

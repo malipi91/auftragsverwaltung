@@ -66,6 +66,11 @@
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jbLupeGPID_LieferantAnzeigen" min="-2" pref="35" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="319" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -75,7 +80,9 @@
                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Component id="jSeparator16" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jbLupeGPID_LieferantAnzeigen" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                   <Component id="jbzurueck_LieferantAnzeigen" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace pref="565" max="32767" attributes="0"/>
               </Group>
@@ -106,6 +113,16 @@
           </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator16">
+        </Component>
+        <Component class="javax.swing.JButton" name="jbLupeGPID_LieferantAnzeigen">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/view/lupe.png"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLupeGPID_LieferantAnzeigenActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

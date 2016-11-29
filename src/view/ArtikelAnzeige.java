@@ -14,13 +14,15 @@ import java.text.DecimalFormatSymbols;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class ArtikelAnzeige extends javax.swing.JInternalFrame {
-
+    
+    //Variablendeklaration
+    StartAV myParent;
  
     /**
      * Creates new form ArtikelAnzeige
      */
-    public ArtikelAnzeige() {
-          
+    public ArtikelAnzeige(StartAV parent) {
+          myParent = parent;
           
         initComponents();
         //Mehmet Impram 27.11.2016
@@ -162,6 +164,11 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         jbSpeichern_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(130, 35));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -513,6 +520,11 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     private void jtfbestellwertnetto_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfbestellwertnetto_ArtikelAnzeigenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfbestellwertnetto_ArtikelAnzeigenActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
+        myParent.oeffneArtikelIDSuchen();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
