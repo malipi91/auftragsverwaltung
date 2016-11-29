@@ -36,7 +36,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <EmptySpace min="0" pref="800" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="ArtikelAnzeige" alignment="0" pref="804" max="32767" attributes="0"/>
+              <Component id="ArtikelAnzeige" alignment="0" pref="808" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

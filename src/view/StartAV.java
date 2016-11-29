@@ -689,6 +689,8 @@ public class StartAV extends javax.swing.JFrame {
     private void miArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miArtikelSucheActionPerformed
         if (istEingeloggt == true) {
             jifArtikelSuche.setVisible(true);
+            //Verbindung von Artikel Suche zu Artikel Anzeigen über Button
+            jifArtikelSuche.setArtikelAnzeige(jifArtikelAnzeige);
         } /*----------------------------------------------------------*/ /* 21.11.16 Samet Variable istEngeloggt, um den Staus des Login zu erfassen
         Bei istEingeloggt=false wird die untesn setehende Fehlermeldung ausgegeben.*/ /*----------------------------------------------------------*/ else {
             JOptionPane.showMessageDialog(null, "Bitte einloggen!");

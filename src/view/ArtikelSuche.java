@@ -6,18 +6,25 @@
 package view;
 
 /*----------------------------------------------------------*/
-/* Datum Name Was */
-/* 18.11.16 Impram Erstellung*/
-/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
-/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
-/*----------------------------------------------------------*/
+ /* Datum Name Was */
+ /* 18.11.16 Impram Erstellung*/
+ /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
+ /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+ /*----------------------------------------------------------*/
 public class ArtikelSuche extends javax.swing.JInternalFrame {
-
+    
+    ArtikelAnzeige blubb;
+    
     /**
      * Creates new form ArtikelSuche
      */
     public ArtikelSuche() {
         initComponents();
+    }
+    
+    // Ausgabe von Artikel Anzeige Maske nach betätigung des Anzeige Buttons
+    public void setArtikelAnzeige(ArtikelAnzeige aa) {
+        this.blubb = aa;
     }
 
     /**
@@ -169,13 +176,23 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAnzeigen_ArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_ArtikelSucheActionPerformed
-       
+//        ArtikelAnzeige artikelanzeige = new ArtikelAnzeige();
+//        JPanel ArtikelSuche = artikelanzeige.getJPanel();
+//        ArtikelSuche.setVisible(true);
+
+//        jbAnzeigen_ArtikelSuche.addActionListener(artikelanzeige);
+//        artikelanzeige.show();
+        //Artikel Anzeige wird sichtbar
+        blubb.setVisible(true);
     }//GEN-LAST:event_jbAnzeigen_ArtikelSucheActionPerformed
 
     private void jbAbbrechen_ArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelSucheActionPerformed
-      /*----------------------------------------------------------*/
-        /* 24.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
-        /*----------------------------------------------------------*/ this.setVisible(false);
+  /*----------------------------------------------------------*/
+ /* 24.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
+ /*----------------------------------------------------------*/
+//        this.setVisible(false);
+        dispose();
+        
     }//GEN-LAST:event_jbAbbrechen_ArtikelSucheActionPerformed
 
 
