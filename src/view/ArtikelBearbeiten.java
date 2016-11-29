@@ -23,26 +23,45 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
     public ArtikelBearbeiten() {
         initComponents();
         
-        //Mechmet Impram
-        jtfArtikelID_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
-        //Artikel Id kann man nicht bearbeiten
-       // jtfArtikelID_ArtikelBearbeiten.setEnabled(false);
-        //27.11.2016
-        jtfArtikelname_ArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
-        jtffreiArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
-        jtfverkauftArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
-        jtfzulaufArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
-        jtfreserviertArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
-        jtfBestellTextArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
-        jtfArtikelTextArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
-        jtfEinzelwertNettoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
-        jtfEinzelwertNettoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        jtfEinzelwertBruttoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
-        jtfEinzelwertBruttoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        jtfBestellwertNettoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
-        jtfBestellwertNettoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
-        jtfBestellwertBruttoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
-        jtfBestellwertBruttoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+        //Die Felder sind ausgegraut und können erst nach betätigung des Bearbeiten Buttons aktiviert werden.
+      
+        jtfArtikelTextArtikelBearbeiten.setEnabled(false);
+        jtfBestellTextArtikelBearbeiten.setEnabled(false);
+        jtfBestellwertBruttoArtikelBearbeiten.setEnabled(false);
+        jtfBestellwertNettoArtikelBearbeiten.setEnabled(false);
+        jtfEinzelwertBruttoArtikelBearbeiten.setEnabled(false);
+        jtfEinzelwertNettoArtikelBearbeiten.setEnabled(false);
+        jtffreiArtikelBearbeiten.setEnabled(false);
+        jtfreserviertArtikelBearbeiten.setEnabled(false);
+        jtfverkauftArtikelBearbeiten.setEnabled(false);
+        jtfzulaufArtikelBearbeiten.setEnabled(false);
+         
+        
+ 
+        
+        
+        
+        
+//        //Mechmet Impram
+//        jtfArtikelID_ArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+//        //Artikel Id kann man nicht bearbeiten
+//       // jtfArtikelID_ArtikelBearbeiten.setEnabled(false);
+//        //27.11.2016
+//        jtfArtikelname_ArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
+//        jtffreiArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+//        jtfverkauftArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+//        jtfzulaufArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+//        jtfreserviertArtikelBearbeiten.setDocument(new UniversalDokument(false, true, "", 5));
+//        jtfBestellTextArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
+//        jtfArtikelTextArtikelBearbeiten.setDocument(new UniversalDokument(true, false, "-, ' ", -1));
+//        jtfEinzelwertNettoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+//        jtfEinzelwertNettoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+//        jtfEinzelwertBruttoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+//        jtfEinzelwertBruttoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+//        jtfBestellwertNettoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+//        jtfBestellwertNettoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
+//        jtfBestellwertBruttoArtikelBearbeiten.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
+//        jtfBestellwertBruttoArtikelBearbeiten.setInputVerifier(new UniversalVerifier("\\d+(\\" + DecimalFormatSymbols.getInstance().getDecimalSeparator() + "\\d\\d)?", "ungultiges format", "Bitte geben sie ein Preis mit 2 Nachkommastellen oder eine ganze Zahl"));
         
 
         
@@ -453,9 +472,19 @@ public class ArtikelBearbeiten extends javax.swing.JInternalFrame {
 //    } return istVollstaendig;
 //}
     private void jbBearbeiten_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_ArtikelBearbeitenActionPerformed
-//if (istVollstaendig()) {
-//            
-//        }       
+      jtfArtikelTextArtikelBearbeiten.setEnabled(true);
+        jtfBestellTextArtikelBearbeiten.setEnabled(true);
+        jtfBestellwertBruttoArtikelBearbeiten.setEnabled(true);
+        jtfBestellwertNettoArtikelBearbeiten.setEnabled(true);
+        jtfEinzelwertBruttoArtikelBearbeiten.setEnabled(true);
+        jtfEinzelwertNettoArtikelBearbeiten.setEnabled(true);
+        jtffreiArtikelBearbeiten.setEnabled(true);
+        jtfreserviertArtikelBearbeiten.setEnabled(true);
+        jtfverkauftArtikelBearbeiten.setEnabled(true);
+        jtfzulaufArtikelBearbeiten.setEnabled(true);
+
+
+
     }//GEN-LAST:event_jbBearbeiten_ArtikelBearbeitenActionPerformed
 
     private void jbLöschen_ArtikelBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschen_ArtikelBearbeitenActionPerformed
