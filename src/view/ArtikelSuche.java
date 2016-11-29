@@ -13,6 +13,7 @@ package view;
  /*----------------------------------------------------------*/
 public class ArtikelSuche extends javax.swing.JInternalFrame {
     
+    //Variablendeklaration
     ArtikelAnzeige ArtAnzeige;
     
     /**

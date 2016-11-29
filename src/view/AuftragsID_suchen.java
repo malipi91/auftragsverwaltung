@@ -265,6 +265,7 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbUebernehmen_AuftragsIDSuchenActionPerformed
 
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragsID_suchen;
     private javax.swing.JLabel jLabel1;

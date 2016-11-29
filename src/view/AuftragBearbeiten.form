@@ -23,15 +23,24 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="AuftragBearbeiten" min="-2" pref="950" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="1158" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="AuftragBearbeiten" min="-2" pref="1158" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="AuftragBearbeiten" min="-2" pref="800" max="-2" attributes="0"/>
+          <EmptySpace min="0" pref="837" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="AuftragBearbeiten" min="-2" pref="837" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -39,7 +48,7 @@
     <Container class="javax.swing.JPanel" name="AuftragBearbeiten">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1200, 900]"/>
+          <Dimension value="[1200, 800]"/>
         </Property>
       </Properties>
 
@@ -47,77 +56,53 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jSeparator10" alignment="0" max="32767" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                          <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbLupeAuftragsID_AuftragBearbeiten" min="-2" pref="35" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jbBearbeiten_AutfragBearbeiten" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="425" max="-2" attributes="0"/>
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jbSpeichern_AuftragBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jpUnterPanel_AuftragBearbeiten" min="-2" pref="861" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="jtfAuftragsID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jbSuchen_AuftragBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="425" max="-2" attributes="0"/>
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <Component id="jpUnterPanel_AuftragBearbeiten" min="-2" pref="913" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <EmptySpace pref="194" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jSeparator10" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jbLupeAuftragsID_AuftragBearbeiten" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtfAuftragsID_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          </Group>
-<<<<<<< HEAD
-=======
-                      </Group>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jbBearbeiten_AutfragBearbeiten" alignment="3" min="-2" max="-2" attributes="0"/>
->>>>>>> 3a13c9e7a5570070ef91cc6a1be5f7b3f00bce38
-                      </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfAuftragsID_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jbSuchen_AuftragBearbeiten" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jpUnterPanel_AuftragBearbeiten" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
                   <Component id="jbAbbrechen_AuftragBearbeiten" min="-2" pref="30" max="-2" attributes="0"/>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
-=======
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbAbbrechen_AuftragBearbeiten" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jbSpeichern_AuftragBearbeiten" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
->>>>>>> 3a13c9e7a5570070ef91cc6a1be5f7b3f00bce38
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -147,7 +132,7 @@
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator10">
         </Component>
-        <Component class="javax.swing.JButton" name="jbLupeAuftragsID_AuftragBearbeiten">
+        <Component class="javax.swing.JButton" name="jbSuchen_AuftragBearbeiten">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="0"/>
@@ -155,9 +140,10 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/lupe.png"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Suchen"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLupeAuftragsID_AuftragBearbeitenActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSuchen_AuftragBearbeitenActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel87">
@@ -222,14 +208,14 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jcbStatus_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  <Component id="jComboBox1" min="-2" pref="150" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="jtfGPID_AuftragBearbeiten" min="-2" pref="150" max="-2" attributes="0"/>
-                                                      <Component id="jcbAuftragsart_AuftragBearbeiten" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox2" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                                                       <Component id="jtfGPName_AuftragBearbeiten" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -256,7 +242,7 @@
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jtaBeschreibungAuftragBearbeiten" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jtfBeschreibungAuftragBearbeiten" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -315,7 +301,7 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jcbAuftragsart_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jComboBox2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="jftfErfassungsdatumAuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
@@ -336,14 +322,14 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jcbStatus_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jComboBox1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="jLabel141" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jtfZKIDAuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jtaBeschreibungAuftragBearbeiten" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="jtfBeschreibungAuftragBearbeiten" min="-2" pref="104" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
@@ -398,7 +384,7 @@
                 <Property name="text" type="java.lang.String" value="Auftragsart:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jcbAuftragsart_AuftragBearbeiten">
+            <Component class="javax.swing.JComboBox" name="jComboBox2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -453,7 +439,7 @@
                 <Property name="text" type="java.lang.String" value="Erfassungsdatum:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jcbStatus_AuftragBearbeiten">
+            <Component class="javax.swing.JComboBox" name="jComboBox1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -525,10 +511,10 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Auftragstext:"/>
+                <Property name="text" type="java.lang.String" value="Beschreibung"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtaBeschreibungAuftragBearbeiten">
+            <Component class="javax.swing.JTextField" name="jtfBeschreibungAuftragBearbeiten">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -615,7 +601,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Menge:"/>
+                <Property name="text" type="java.lang.String" value="Menge"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
@@ -623,7 +609,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Einzelwert:"/>
+                <Property name="text" type="java.lang.String" value="Einzelwert"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
@@ -631,7 +617,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Gesamtwert:"/>
+                <Property name="text" type="java.lang.String" value="Gesamtwert"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMenge_AuftragBearbeiten">
@@ -700,31 +686,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jbBearbeiten_AutfragBearbeiten">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="0"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/view/bearbeiten1.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Bearbeiten"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbBearbeiten_AutfragBearbeitenActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="jbSpeichern_AuftragBearbeiten">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="0"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/view/speichern2.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Speichern"/>
-          </Properties>
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

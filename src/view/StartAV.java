@@ -19,21 +19,16 @@ import javax.swing.text.MaskFormatter;
 import javax.swing.text.PlainDocument;
 
 /*----------------------------------------------------------*/
-/* Datum Name Was */
-/* 11.11.16 Impram angelegt */
+/* Datum    Name    Was */
+/* 11.11.16 Impram  angelegt */
 /* 11.11.16 Yoeruek angelegt */
-/* 16.11.16 Citak angelegt */
+/* 16.11.16 Citak   angelegt */
 /*----------------------------------------------------------*/
 
 
 
 public class StartAV extends javax.swing.JFrame {
 
-    //Hicran passt die RahmengrÃ¶ÃŸe des Fensters an.
-//    @Override
-//    public void setBounds(int x, int y, int width, int height) {
-//        super.setBounds(x, y, 1200, 800); 
-//    }
     //Mehmet Impram 
     private final String ABMELDE_TITEL = "ABMELDEN";
     private final String ABMELDE_TEXT = "Möchten Sie wirklich abmelden";
@@ -111,6 +106,7 @@ public class StartAV extends javax.swing.JFrame {
         jbanmelden_Startseite = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jifArtikelAnlegen = new view.ArtikelAnlegen();
+        jifGPID_suchen = new view.GPID_suchen();
         jifArtikelID_suchen = new view.ArtikelID_suchen();
         jifArtikelAnzeige = new view.ArtikelAnzeige();
         jifArtikelBearbeiten = new view.ArtikelBearbeiten();
@@ -268,12 +264,17 @@ public class StartAV extends javax.swing.JFrame {
 
         jifArtikelAnlegen.setVisible(false);
         desktopPane.add(jifArtikelAnlegen);
-
         jifArtikelAnlegen.setBounds(0, 0, 966, 840);
+
+        jifGPID_suchen.setClosable(true);
+        jifGPID_suchen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jifGPID_suchen.setVisible(false);
+        desktopPane.add(jifGPID_suchen);
+        jifGPID_suchen.setBounds(0, 0, 660, 502);
 
         jifArtikelID_suchen.setVisible(false);
         desktopPane.add(jifArtikelID_suchen);
-        jifArtikelID_suchen.setBounds(0, 0, 1035, 734);
+        jifArtikelID_suchen.setBounds(0, 0, 784, 645);
 
         jifArtikelAnzeige.setVisible(false);
         desktopPane.add(jifArtikelAnzeige);
@@ -362,7 +363,6 @@ public class StartAV extends javax.swing.JFrame {
         jifZKSuchen.setVisible(false);
         desktopPane.add(jifZKSuchen);
         jifZKSuchen.setBounds(0, 0, 966, 840);
-
 
         jmDatei.setMnemonic('f');
         jmDatei.setText("Datei");
@@ -989,6 +989,7 @@ public class StartAV extends javax.swing.JFrame {
     private view.AuftragBearbeiten jifAuftragBearbeiten;
     private view.AuftragSuchen jifAuftragSuchen;
     private view.AuftragsID_suchen jifAuftragsID_suchen;
+    private view.GPID_suchen jifGPID_suchen;
     private view.KundeAnlegen jifKundeAnlegen;
     private view.KundeAnzeigen jifKundeAnzeigen;
     private view.KundeBearbeiten jifKundeBearbeiten;
