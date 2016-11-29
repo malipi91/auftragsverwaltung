@@ -12,6 +12,8 @@ package view;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragAnzeigen extends javax.swing.JInternalFrame {
+    
+    
     /**
      * Creates new form AuftragAnzeigen
      */
@@ -34,6 +36,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
 //        jtfAuftragsid_az.setEnabled(false);
         
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -211,6 +214,11 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jtfAuftragswertnetto_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jbLupeAuftragsID_AuftragAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeAuftragsID_AuftragAnzeigen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeAuftragsID_AuftragAnzeigenActionPerformed(evt);
+            }
+        });
 
         jcbAuftragsart_az.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbAuftragsart_az.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Barauftrag", "Sofortauftrag", "Terminauftrag", "Bestellauftrag" }));
@@ -382,7 +390,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(AuftragAnzeigen, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
         );
 
         pack();
@@ -418,6 +426,11 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     private void jbSpeichern_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_azActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSpeichern_azActionPerformed
+
+    private void jbLupeAuftragsID_AuftragAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeAuftragsID_AuftragAnzeigenActionPerformed
+          
+  
+    }//GEN-LAST:event_jbLupeAuftragsID_AuftragAnzeigenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -20,7 +20,6 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
      * Creates new form ArtikelAnzeige
      */
     public ArtikelAnzeige() {
-//          getArtikelSuche();
           
           
         initComponents();

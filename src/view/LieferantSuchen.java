@@ -211,7 +211,7 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
         LieferantSuchenLayout.setVerticalGroup(
             LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LieferantSuchenLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel16)
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -225,7 +225,7 @@ public class LieferantSuchen extends javax.swing.JInternalFrame {
                 .addGroup(LieferantSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_LieferantSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(326, Short.MAX_VALUE))
+                .addContainerGap(360, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
