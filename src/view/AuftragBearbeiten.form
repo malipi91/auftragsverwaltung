@@ -73,7 +73,7 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="jbSuchen_AuftragBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jbLöschenAuftragBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jbBearbeitenAuftragBearbeiten" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
@@ -103,7 +103,7 @@
                       <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtfAuftragsID_AuftragBearbeiten" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jbSuchen_AuftragBearbeiten" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jbLöschenAuftragBearbeiten" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jbBearbeitenAuftragBearbeiten" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -178,7 +178,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jbL&#xf6;schenAuftragBearbeiten">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="0"/>
@@ -464,6 +464,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbStatusAuftragBearbeitenActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>

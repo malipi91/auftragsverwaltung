@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /*----------------------------------------------------------*/
 /* Datum Name Was */
 /* 15.11.16 Yoeruek Erstellung*/
@@ -14,9 +16,13 @@ package view;
 /*----------------------------------------------------------*/
 public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     //29.11.16 Impram
+    //Konstanten Deklaration für den Status
     private final String status_ist_erfasst = "erfasst";
     private final String status_ist_freigegeben = "freigegeben";
     private final String status_ist_abgeschlossen = "abgeschlossen";
+    private  String aktuelle_status = "";
+    private String ist_status = "";
+    
 
     /**
      * Creates new form AuftragBearbeiten
@@ -48,7 +54,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbSuchen_AuftragBearbeiten = new javax.swing.JButton();
         jLabel87 = new javax.swing.JLabel();
         jtfAuftragsID_AuftragBearbeiten = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jbLöschenAuftragBearbeiten = new javax.swing.JButton();
         jpUnterPanel_AuftragBearbeiten = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jcbAuftragsartAuftragBearbeiten = new javax.swing.JComboBox<>();
@@ -121,9 +127,9 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jtfAuftragsID_AuftragBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
         jtfAuftragsID_AuftragBearbeiten.setPreferredSize(new java.awt.Dimension(6, 25));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
-        jButton1.setText("Löschen");
+        jbLöschenAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbLöschenAuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
+        jbLöschenAuftragBearbeiten.setText("Löschen");
 
         jpUnterPanel_AuftragBearbeiten.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bearbeiten", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
@@ -148,6 +154,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 
         jcbStatusAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbStatusAuftragBearbeiten.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "freigegeben", "erfasst", "abgeschlossen" }));
+        jcbStatusAuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbStatusAuftragBearbeitenActionPerformed(evt);
+            }
+        });
 
         jftfErfassungsdatumAuftragBearbeiten.setMinimumSize(new java.awt.Dimension(6, 25));
         jftfErfassungsdatumAuftragBearbeiten.setPreferredSize(new java.awt.Dimension(109, 25));
@@ -609,7 +620,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                             .addGap(27, 27, 27)
                             .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbLöschenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jbBearbeitenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(AuftragBearbeitenLayout.createSequentialGroup()
@@ -632,7 +643,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                     .addComponent(jLabel87)
                     .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLöschenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBearbeitenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jpUnterPanel_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -688,6 +699,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     this.jtfPositionsID_AuftragBearbeiten.setEnabled(false);
     this.jtfZKIDAuftragBearbeiten.setEnabled(false);
     this.jcbAuftragsartAuftragBearbeiten.setEnabled(false);
+    this.jbSpeichernAuftragBearbeiten.setEnabled(false);
     
     
 }
@@ -704,10 +716,24 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jtfEinzelwert_AuftragBearbeiten.setEnabled(false);
         this.jtfGesamtwert_AuftragBearbeiten.setEnabled(false);
         this.jtPositionsnr_AuftragBearbeiten.setEnabled(false);
+        this.jbBearbeitenAuftragBearbeiten.setEnabled(false);
+        this.jbLöschenAuftragBearbeiten.setEnabled(false);
+        this.jbSpeichernAuftragBearbeiten.setEnabled(false);
+        this.jbAbbrechen_AuftragBearbeiten.setEnabled(false);
+             
         
         
     }
+ //   30.11.2016 Impram
+    //Wenn der Auftragstatus erfasst gewählt wurde , werden folgende Felder
+    //sichtbar.
     private void auftragsstatus_erfasst () {
+        this.jtfEinzelwert_AuftragBearbeiten.setEnabled(true);
+        this.jtfGesamtwert_AuftragBearbeiten.setEnabled(false);
+        this.jtfMenge_AuftragBearbeiten.setEnabled(true);
+        this.jtfBeschreibungAuftragBearbeiten.setEnabled(true);
+        this.jtPositionsnr_AuftragBearbeiten.setEnabled(true);
+        
         
     }
     private void jbSuchen_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSuchen_AuftragBearbeitenActionPerformed
@@ -732,10 +758,37 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                 
     }//GEN-LAST:event_jbBearbeitenAuftragBearbeitenActionPerformed
 
+    private void jcbStatusAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbStatusAuftragBearbeitenActionPerformed
+        // TODO add your handling code here:
+        //Impram 30.11.2016
+        // Es wird der gewählte Status geholt.
+           String fehlermeldung = "";
+    if(this.aktuelle_status.equals(status_ist_erfasst) || aktuelle_status.equals(status_ist_abgeschlossen)){
+        fehlermeldung = "Ein Status wechsel von Erfasst auf Abgeschlossen ist nicht möglich!";
+        JOptionPane.showMessageDialog(this, fehlermeldung, "Nicht Erlaubt", JOptionPane.WARNING_MESSAGE);
+        
+    }
+        aktuelle_status = (String) jcbStatusAuftragBearbeiten.getSelectedItem();
+        //Es wird das gewählte Status mit dem Status ist erfasst verglichen.
+        if (aktuelle_status.equals(status_ist_erfasst)){
+            //Wenn das gleich ist wird die Methode aufgerufen und die Felder
+            // ausgegraut.
+            auftragsstatus_erfasst();
+    }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
+  
+    if (aktuelle_status.equals(status_ist_freigegeben)) {
+        auftragsstatus_freigegeben();
+    }
+    if (aktuelle_status.equals(status_ist_abgeschlossen)){
+        auftragsstatus_freigegeben();
+    }
+ 
+        
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragBearbeiten;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -758,6 +811,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbAbbrechen_AuftragBearbeiten;
     private javax.swing.JButton jbBearbeitenAuftragBearbeiten;
     private javax.swing.JButton jbLupe_AuftragBearbeiten;
+    private javax.swing.JButton jbLöschenAuftragBearbeiten;
     private javax.swing.JButton jbMinus_AuftragBearbeiten;
     private javax.swing.JButton jbPlus_AuftragBearbeiten;
     private javax.swing.JButton jbSpeichernAuftragBearbeiten;
