@@ -60,7 +60,6 @@ public class DAOAuftragsposition {
     /* 24.11.16 Duygu Citak Anlegen der Methode                 */
     /*----------------------------------------------------------*/
     
-    
     /* 
     *Diese Methode legt durch Eingabe der einzelnen Werte in die GUI einen neuen Auftrag 
     * in die Datenbank     
@@ -75,7 +74,7 @@ public class DAOAuftragsposition {
         stmt.setInt(2, auftragsposition.getPositionsnummer());
         stmt.setInt(3, auftragsposition.getMenge());
         stmt.setInt(4, auftragsposition.getEinzelwert());
-        stmt.setInt(6, auftragsposition.getArtikelID());
+        stmt.setString(6, auftragsposition.getArtikelID());
 
            
         try{
@@ -88,6 +87,15 @@ public class DAOAuftragsposition {
             System.out.println(e);
             System.out.println("Objekt wurde nicht hinzugefügt.");
         }    
+    }
+     
+     
+      /*
+     * Es wird eine Auftragsposition gelöscht. Citak 30.11.2016 
+     */
+     public void loescheNeueAuftragsposition(int position) throws SQLException{
+        DBConnection con = new DBConnection();
+        Connection conn = con.createConection();
     }
     
 }

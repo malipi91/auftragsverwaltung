@@ -6,8 +6,11 @@
 package view;
 
 import java.awt.Toolkit;
+import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.InputVerifier;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;

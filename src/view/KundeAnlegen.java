@@ -5,6 +5,14 @@
  */
 package view;
 
+import dao.DAOKunde;
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+import model.Adresse;
+import model.Geschaeftspartner;
+
 /*----------------------------------------------------------*/
 /* Datum Name Was */
 /* 20.11.16 Citak Erstellung
@@ -12,14 +20,60 @@ package view;
 /* 27.11.16 Citak Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class KundeAnlegen extends javax.swing.JInternalFrame {
+    
+    
+    
+    private DAOKunde daoKunde;
+    private int naechste_id_GP;
+    private int naechste_id_adresse;
+    private boolean firma;
+    private boolean firma_liefer;
+    private String hausNrL;
+    private String rechnungsAdresse;
+    private String hausNrR;
+    private String vorname_liefer_adresse;
+    private String nachname_liefer_adresse;
+    private Adresse liefer_adresse;
+    private Geschaeftspartner geschaeftspartner;
+    private final String status_auswaehlen = "Bitte auswählen";
+    private final String con_firma = "Firma";
+    private final String kunde = "Kunde";
+    private String auswaehlen;
 
     /**
      * Creates new form KundeAnlegen
      */
     public KundeAnlegen() {
         initComponents();
+        
     }
 
+    
+        /**
+     * Diese Methode kümmert sich um die erzeugung der Fehlermeldung, wenn nicht
+     * alle Muss Felder ausgefüllt wurden.
+     * @return Fehlertext
+     */
+    public String alle_daten_vollstaendig() {
+        // Variable für den Fehlertext wird erzeugt
+        String fehlertext = "";
+        //
+            
+         if (jcbAnredeRG_KundeAnlegen.getSelectedItem().equals(auswaehlen)) {
+            fehlertext += "Bitte waehlen Sie eine Anrede" + "\n";
+            Border border = BorderFactory.createLineBorder(Color.RED);
+            jcbAnredeRG_KundeAnlegen.setBorder(border);
+        }
+         if (jtfNameRG_KundeAnlegen.getText().equals(auswaehlen)) {
+            fehlertext += "Bitte geben Sie einen Namen ein" + "\n";
+            Border border = BorderFactory.createLineBorder(Color.RED);
+            jtfNameRG_KundeAnlegen.setBorder(border);
+        
+
+       
+    }
+         return fehlertext;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -198,6 +252,11 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
         jLabel153.setText("Name:");
 
         jtfNameRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtfNameRG_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNameRG_KundeAnlegenActionPerformed(evt);
+            }
+        });
 
         jLabel154.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel154.setText("Vorname:");
@@ -437,40 +496,37 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                     .addGroup(KundeAnlegenLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jSeparator20))
-                    .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                        .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                .addGap(0, 727, Short.MAX_VALUE)
-                                .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KundeAnlegenLayout.createSequentialGroup()
+                        .addGap(0, 728, Short.MAX_VALUE)
+                        .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                            .addGap(311, 311, 311)
+                            .addComponent(jLabel14))
+                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                            .addGap(21, 21, 21)
                             .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                    .addGap(311, 311, 311)
-                                    .addComponent(jLabel14))
-                                .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                    .addGap(21, 21, 21)
-                                    .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                            .addComponent(jrbLieferadresseIdentisch_KundeAnlegen)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jrbAbweichendeLieferadresse_KundeAnlegen))
-                                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                            .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel148)
-                                                .addComponent(jLabel147))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jtfGPID_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGroup(KundeAnlegenLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jPKontakt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jrbLieferadresseIdentisch_KundeAnlegen)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(jrbAbweichendeLieferadresse_KundeAnlegen))
+                                .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                                    .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel148)
+                                        .addComponent(jLabel147))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jtfGPID_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtfKreditlimit_KundenAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(KundeAnlegenLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jPKontakt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         KundeAnlegenLayout.setVerticalGroup(
@@ -521,13 +577,14 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
+                    .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void abbrechen_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abbrechen_KundeAnlegenActionPerformed
         /*----------------------------------------------------------*/
         /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
@@ -564,6 +621,10 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     private void jtfFirma2_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfFirma2_KundeAnlegenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfFirma2_KundeAnlegenActionPerformed
+
+    private void jtfNameRG_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNameRG_KundeAnlegenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNameRG_KundeAnlegenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
