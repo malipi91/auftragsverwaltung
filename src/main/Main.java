@@ -5,8 +5,13 @@
  */
 package main;
 
+<<<<<<< HEAD
 import model.Auftrag;
 
+=======
+
+
+>>>>>>> 2604087d0e314ff6aa2b61015f26c444f141521a
 /**
  *
  * @author Duygu Citak
@@ -17,8 +22,14 @@ public class Main {
      * Diese Klasse wird nur dazu benutzt alle nötigen Komponenten zu
      * Initialisieren und die erste View anzuzeigen
      */
+<<<<<<< HEAD
     public static void main(String[] args) {
         System.out.println(System.currentTimeMillis());
         
     }
+=======
+    public static void main(String [] args){
+
+}
+>>>>>>> 2604087d0e314ff6aa2b61015f26c444f141521a
 }

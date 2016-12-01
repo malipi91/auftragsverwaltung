@@ -37,7 +37,6 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
         jLabel97 = new javax.swing.JLabel();
         jtfZKID_ZKAnlegen = new javax.swing.JTextField();
         jLabel98 = new javax.swing.JLabel();
-        jtfAuftragsart_ZKAnlegen = new javax.swing.JTextField();
         jLabel99 = new javax.swing.JLabel();
         jtfLieferzeitSofort_ZKAnlegen = new javax.swing.JTextField();
         jLabel100 = new javax.swing.JLabel();
@@ -66,11 +65,12 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
         jLabel119 = new javax.swing.JLabel();
         jLabel120 = new javax.swing.JLabel();
         jLabel121 = new javax.swing.JLabel();
+        jcbAUftragsart_ZKAnlegen = new javax.swing.JComboBox<>();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        ZKAnlegen.setPreferredSize(new java.awt.Dimension(1200, 800));
+        ZKAnlegen.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jLabel78.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel78.setText("Zahlungskonditionen Anlegen");
@@ -100,8 +100,6 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
 
         jLabel98.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel98.setText("Auftragsart:");
-
-        jtfAuftragsart_ZKAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel99.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel99.setText("Lieferzeit-Sofort:");
@@ -273,6 +271,8 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                 .addContainerGap(111, Short.MAX_VALUE))
         );
 
+        jcbAUftragsart_ZKAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Barauftrag", "Sofortauftrag", "Terminauftrag", "Bestellauftrag" }));
+
         javax.swing.GroupLayout ZKAnlegenLayout = new javax.swing.GroupLayout(ZKAnlegen);
         ZKAnlegen.setLayout(ZKAnlegenLayout);
         ZKAnlegenLayout.setHorizontalGroup(
@@ -298,15 +298,13 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                             .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(ZKAnlegenLayout.createSequentialGroup()
                                     .addGap(46, 46, 46)
-                                    .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(ZKAnlegenLayout.createSequentialGroup()
-                                            .addComponent(jLabel100)
-                                            .addGap(26, 26, 26)
-                                            .addComponent(jtfSperrzeitWunsch_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(ZKAnlegenLayout.createSequentialGroup()
-                                            .addComponent(jLabel98)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jtfAuftragsart_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel100)
+                                        .addComponent(jLabel98))
+                                    .addGap(26, 26, 26)
+                                    .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jcbAUftragsart_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtfSperrzeitWunsch_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(ZKAnlegenLayout.createSequentialGroup()
                                     .addGap(32, 32, 32)
                                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -317,7 +315,7 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                     .addGroup(ZKAnlegenLayout.createSequentialGroup()
                         .addGap(281, 281, 281)
                         .addComponent(jLabel78)))
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         ZKAnlegenLayout.setVerticalGroup(
             ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,7 +329,7 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel97)
                     .addComponent(jtfZKID_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel98)
-                    .addComponent(jtfAuftragsart_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbAUftragsart_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
@@ -346,28 +344,24 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
                 .addGroup(ZKAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSpeichern_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1044, Short.MAX_VALUE)
+            .addGap(0, 950, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 583, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(ZKAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addComponent(ZKAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -412,7 +406,7 @@ public class ZKAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator29;
     private javax.swing.JButton jbAbbrechen_ZKAnlegen;
     private javax.swing.JButton jbSpeichern_ZKAnlegen;
-    private javax.swing.JTextField jtfAuftragsart_ZKAnlegen;
+    private javax.swing.JComboBox<String> jcbAUftragsart_ZKAnlegen;
     private javax.swing.JTextField jtfLieferzeitSofort_ZKAnlegen;
     private javax.swing.JTextField jtfMahnzeit1_ZKAnlegen;
     private javax.swing.JTextField jtfMahnzeit2_ZKAnlegen;

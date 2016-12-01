@@ -49,7 +49,7 @@ public class Auftragsposition {
         return artikelID;
     }
 
-    public void setArtikelID(int ArtikelID) {
+    public void setArtikelID(String ArtikelID) {
         this.artikelID = artikelID;
     }
 

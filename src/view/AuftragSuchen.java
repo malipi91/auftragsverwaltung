@@ -15,16 +15,17 @@ import java.text.DecimalFormatSymbols;
 /*----------------------------------------------------------*/
 public class AuftragSuchen extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form AuftragSuchen
-     */
-    public AuftragSuchen() {
+    //Variablendeklaration
+    StartAV myParent;
+
+    public AuftragSuchen(StartAV  parent) {
         initComponents();
+        myParent = parent;
         
        //Mechmet Impram
         jtfAuftragsID_AuftragSuchen.setDocument(new UniversalDokument(false, true, "", 5));
-        jtfKundenName_AuftragSuchen.setDocument(new UniversalDokument(true, false, ".-' ", -1));
-        jtfLieferantenname_AuftragSuche.setDocument(new UniversalDokument(true, false, ".-' ", -1));
+        jtfGPID_AuftragSuchen.setDocument(new UniversalDokument(true, false, ".-' ", -1));
+//        jtfLieferantenname_AuftragSuche.setDocument(new UniversalDokument(true, false, ".-' ", -1));
 //        jftfLieferdatum_AuftragSuche.setFormatterFactory(erstelleMF("##.##.####"));
 //        jftfErfassungsdatum_AuftragSuche.setFormatterFactory(erstelleMF("##.##.####"));
         jtfMinAuftragswert_AuftragSuche.setDocument(new UniversalDokument(false, true, DecimalFormatSymbols.getInstance().getDecimalSeparator() + "", -1));
@@ -53,11 +54,9 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         jLabel26 = new javax.swing.JLabel();
         jcbSuchkriterium_AuftragSuchen = new javax.swing.JComboBox();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jtfKundenName_AuftragSuchen = new javax.swing.JTextField();
-        jtfLieferantenname_AuftragSuche = new javax.swing.JTextField();
+        jtfGPID_AuftragSuchen = new javax.swing.JTextField();
         jftfLieferdatum_AuftragSuche = new javax.swing.JFormattedTextField();
         jftfErfassungsdatum_AuftragSuche = new javax.swing.JFormattedTextField();
         jLabel31 = new javax.swing.JLabel();
@@ -74,11 +73,13 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jtTabelle_AuftragSuche = new javax.swing.JTable();
         jbAnzeigen_AuftragSuchen = new javax.swing.JButton();
+        jbLupeAuftragsID_AuftragSuchen = new javax.swing.JButton();
+        jbLupeGPName_AuftragSuchen = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        AuftragSuchen.setPreferredSize(new java.awt.Dimension(1200, 800));
+        AuftragSuchen.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         titel_as.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         titel_as.setText("Auftrag Suchen");
@@ -101,7 +102,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         jLabel26.setText("Suchkriterium:");
 
         jcbSuchkriterium_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jcbSuchkriterium_AuftragSuchen.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Auftrags-ID", "Kundenname", "Lieferantenname", "Lieferdatum", "Erfassungsdatum", "Status", "Auftragswert", "Auftragsart" }));
+        jcbSuchkriterium_AuftragSuchen.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Auftrags-ID", "Geschäftspartner-ID", "Lieferdatum", "Erfassungsdatum", "Status", "Auftragswert", "Auftragsart" }));
         jcbSuchkriterium_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbSuchkriterium_AuftragSuchenActionPerformed(evt);
@@ -109,10 +110,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         });
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel27.setText("Kundenname:");
-
-        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel28.setText("Lieferantenname:");
+        jLabel27.setText("Geschäftspartner-ID:");
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel29.setText("Lieferdatum:");
@@ -120,14 +118,12 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         jLabel30.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel30.setText("Erfassungsdatum:");
 
-        jtfKundenName_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jtfKundenName_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
+        jtfGPID_AuftragSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtfGPID_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfKundenName_AuftragSuchenActionPerformed(evt);
+                jtfGPID_AuftragSuchenActionPerformed(evt);
             }
         });
-
-        jtfLieferantenname_AuftragSuche.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel31.setText("Status");
@@ -270,7 +266,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Auftrags-ID", "Status", "Kundenname", "Lieferantenname", "Lieferdatum", "Auftragsart", "Auftragswert"
+                "Auftrags-ID", "GP-ID", "GP-Name", "Status", "Lieferdatum", "Auftragsart", "Auftragswert"
             }
         ));
         jScrollPane4.setViewportView(jtTabelle_AuftragSuche);
@@ -281,6 +277,20 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         jbAnzeigen_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbAnzeigen_AuftragSuchenActionPerformed(evt);
+            }
+        });
+
+        jbLupeAuftragsID_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
+        jbLupeAuftragsID_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeAuftragsID_AuftragSuchenActionPerformed(evt);
+            }
+        });
+
+        jbLupeGPName_AuftragSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
+        jbLupeGPName_AuftragSuchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeGPName_AuftragSuchenActionPerformed(evt);
             }
         });
 
@@ -304,17 +314,19 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                                             .addComponent(jlAuftragsnr_as)
                                             .addComponent(jLabel26)
                                             .addComponent(jLabel27)
-                                            .addComponent(jLabel28)
                                             .addComponent(jLabel29)
                                             .addComponent(jLabel30))
                                         .addGap(35, 35, 35)
                                         .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                            .addComponent(jtfLieferantenname_AuftragSuche, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                            .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                            .addComponent(jtfAuftragsID_AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                            .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jtfAuftragsID_AuftragSuchen)
                                             .addComponent(jcbSuchkriterium_AuftragSuchen, 0, 150, Short.MAX_VALUE)
-                                            .addComponent(jtfKundenName_AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                            .addComponent(jtfGPID_AuftragSuchen))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jbLupeAuftragsID_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jbLupeGPName_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createSequentialGroup()
@@ -342,7 +354,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                                                     .addGap(18, 18, 18)
                                                     .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 190, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuftragSuchenLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jbAnzeigen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,62 +378,60 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                     .addComponent(jlAuftragsnr_as)
                     .addComponent(jtfAuftragsID_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel31)
-                    .addComponent(jcbStatusArt_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27)
-                    .addComponent(jtfKundenName_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfMinAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel32)
-                    .addComponent(jtfMaxAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel36))
-                .addGap(18, 18, 18)
+                    .addComponent(jcbStatusArt_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLupeAuftragsID_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel28)
+                    .addComponent(jbLupeGPName_AuftragSuchen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtfLieferantenname_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel33)
-                        .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel27)
+                        .addComponent(jtfGPID_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfMinAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel32)
+                        .addComponent(jtfMaxAuftragswert_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel35)
+                        .addComponent(jLabel34)
+                        .addComponent(jLabel36)))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel29)
-                    .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel30)
-                    .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(AuftragSuchenLayout.createSequentialGroup()
+                        .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addComponent(jftfLieferdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel30)
+                            .addComponent(jftfErfassungsdatum_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(AuftragSuchenLayout.createSequentialGroup()
+                        .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel33)
+                            .addComponent(jcbStatus_AuftragSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addComponent(jbSuchen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(29, 29, 29)
+                .addGap(32, 32, 32)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(AuftragSuchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbZurueck_AutragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 784, Short.MAX_VALUE)
+            .addGap(0, 950, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addComponent(AuftragSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 734, Short.MAX_VALUE)
+            .addGap(0, 803, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(AuftragSuchen, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE))
         );
 
         pack();
@@ -438,9 +448,9 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbSuchkriterium_AuftragSuchenActionPerformed
 
-    private void jtfKundenName_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfKundenName_AuftragSuchenActionPerformed
+    private void jtfGPID_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfGPID_AuftragSuchenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfKundenName_AuftragSuchenActionPerformed
+    }//GEN-LAST:event_jtfGPID_AuftragSuchenActionPerformed
 
     private void jtfMinAuftragswert_AuftragSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfMinAuftragswert_AuftragSucheActionPerformed
         // TODO add your handling code here:
@@ -450,12 +460,21 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
      
     }//GEN-LAST:event_jbAnzeigen_AuftragSuchenActionPerformed
 
+    private void jbLupeAuftragsID_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeAuftragsID_AuftragSuchenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
+        myParent.oeffneArtikelIDSuchen();
+    }//GEN-LAST:event_jbLupeAuftragsID_AuftragSuchenActionPerformed
+
+    private void jbLupeGPName_AuftragSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeGPName_AuftragSuchenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe GP-ID Suchen */
+        myParent.oeffneGPIDSuchen();
+    }//GEN-LAST:event_jbLupeGPName_AuftragSuchenActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragSuchen;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
@@ -467,6 +486,8 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton jbAnzeigen_AuftragSuchen;
+    private javax.swing.JButton jbLupeAuftragsID_AuftragSuchen;
+    private javax.swing.JButton jbLupeGPName_AuftragSuchen;
     private javax.swing.JButton jbSuchen_AuftragSuchen;
     private javax.swing.JButton jbZurueck_AutragSuchen;
     private javax.swing.JComboBox jcbStatusArt_AuftragSuche;
@@ -477,8 +498,7 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlAuftragsnr_as;
     private javax.swing.JTable jtTabelle_AuftragSuche;
     private javax.swing.JTextField jtfAuftragsID_AuftragSuchen;
-    private javax.swing.JTextField jtfKundenName_AuftragSuchen;
-    private javax.swing.JTextField jtfLieferantenname_AuftragSuche;
+    private javax.swing.JTextField jtfGPID_AuftragSuchen;
     private javax.swing.JTextField jtfMaxAuftragswert_AuftragSuche;
     private javax.swing.JTextField jtfMinAuftragswert_AuftragSuche;
     private javax.swing.JLabel titel_as;

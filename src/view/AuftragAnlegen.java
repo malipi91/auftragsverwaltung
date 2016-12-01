@@ -5,34 +5,116 @@
  */
 package view;
 
+import dao.DAOArtikel;
 import dao.DAOAuftrag;
 import dao.DAOAuftragsposition;
+import dao.DAOKunde;
+import dao.DAOLieferant;
+import dao.DAOZahlungskondition;
+import java.sql.Array;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import model.Artikel;
 import model.Auftrag;
 import model.Auftragsposition;
 import model.Auftragsstatus;
+import model.Kunde;
+import model.Lieferant;
+import model.Zahlungskondition;
+import org.omg.CORBA.portable.ApplicationException;
 
 /*----------------------------------------------------------*/
- /* Datum Name Was */
+ /* Datum    Name    Was */
  /* 15.11.16 Yoeruek Erstellung*/
  /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
  /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*----------------------------------------------------------*/
 public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
+    //Variablendeklaration
+    StartAV myParent;
+
+
+    // Variablendeklaration Citak 29.11.2016
+    private DAOAuftrag daoAuftrag;
+    private DAOArtikel daoArtikel;
+    private DAOAuftragsposition auftragsposition;
+    private int naechste_id;
+    private int naechste_positionsnummer = 0;
+    private Artikel artikel;
+    private int geschaeftspartner_id;
+    private int zahlungsbedingungs_id;
+    private String auftragsart;
+    private String geschaeftspartnername;
+    private boolean abweichendeLieferadresse;
+    private java.sql.Date abschlussdatum;
+    private String text;
+    private double auftragswert;
+    private String benutzername = "";
+    private int auftrags_id;
+    private int positions_id;
+    private int artikel_id;
+    private int menge;
+    private String artikelname;
+    private double einzelwert_netto;
+    private double sum_gesamtWert = 0;
+    private java.util.Date util_lieferdatum;
+    private java.util.Date aktuelles_datum_erfassung;
+    private java.util.Date aktuelles_datum_abschluss;
+    private ArrayList<Auftragsposition> auftragsPositionen;
+    private ArrayList<Auftragsposition> geloeschte_positionen;
+    private boolean bestell_auftrag;
+    private boolean bar_auftrag;
+    private boolean sofortauftrag;
+    private boolean terminauftrag;
+    private Kunde kunde;
+    private Lieferant lieferant;
+    private boolean abw_lieferAdresse;
+    private Zahlungskondition zk;
+    private DAOZahlungskondition daoZk;
+
+    //Konstantendeklaration Citak 29.11.2016
+    private final String statusErfasst = "erfasst";
+    private final String statusAbgeschlossen = "Abgeschlossen";
+    private final String auftragskopf_Fehlermeldung = "Fehler";
+    private final String auftragsArtBar = "Barauftrag";
+    private final String auftragsArtSofort = "Sofortauftrag";
+    private final String auftragsArtTermin = "Terminauftrag";
+    private final String auftragsArtBestellauf = "Bestellauftrag";
+    private final String geschaeftsPartner_leer = "Bitte erst einen auswählen!";
+    private final String position_loeschen = "Soll die ausgewählte Position wirklich gelöscht werden?";
+    private final String auftragspos_exp = "Die Auftragsposition konnte nicht gelöscht werden";
+    private final String gueltige_menge = " Bitte geben Sie eine gueltige Menge an";
+
     /**
      * Creates new form AuftragAnlegen
      */
-    public AuftragAnlegen() {
+    public AuftragAnlegen(StartAV parent) {
         initComponents();
+        myParent = parent;
+    /* 29.11.2016 Yoeruek Felder werden inaktiv gesetzt*/
         jtfAuftragsid_aa.setEnabled(false);
         jtfGesamtwert_AuftragAnlegen.setEnabled(false);
         jftfAbschlussdatum_AuftragAnlegen.setEnabled(false);
         jtfPositionsID_AuftragAnlegen.setEnabled(false);
-        jtfArtikelname_AuftragAnlegen.setEnabled(false);
+        
+
+        // Erstelle der Instanzen
+        this.auftragsPositionen = new ArrayList<>();
+        try {
+            this.daoAuftrag = new DAOAuftrag();
+            this.daoArtikel = new DAOArtikel();
+        } catch (SQLException ex) {
+            Logger.getLogger(AuftragAnlegen.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 
@@ -52,8 +134,6 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jtfAuftragsid_aa = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jtfGPID_aa = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jtfGPname_aa = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jcbAuftragsart = new javax.swing.JComboBox<>();
         jLabel21 = new javax.swing.JLabel();
@@ -70,15 +150,11 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jtfPositionsID_AuftragAnlegen = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jtfArtikelID_AuftragAnlegen = new javax.swing.JTextField();
-        jbLupe_AuftragAnlegen = new javax.swing.JButton();
-        jLabel23 = new javax.swing.JLabel();
+        jbLupeArtikelID_AuftragAnlegen = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
-        jtfArtikelname_AuftragAnlegen = new javax.swing.JTextField();
         jtfMenge_AuftragAnlegen = new javax.swing.JTextField();
         jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
         jtfEinzelwert_AuftragAnlegen = new javax.swing.JTextField();
-        jtfGesamtwert_AuftragAnlegen = new javax.swing.JTextField();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTAuftragsposition = new javax.swing.JTable();
         jbMinus_AuftragAnlegen = new javax.swing.JButton();
@@ -87,6 +163,9 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jftfAbschlussdatum_AuftragAnlegen = new javax.swing.JFormattedTextField();
         jftfLieferdatum_aa = new javax.swing.JFormattedTextField();
         jftfErfassungsdatum_aa = new javax.swing.JFormattedTextField();
+        jbLupeGPID_AuftragAnlegen = new javax.swing.JButton();
+        jLabel123 = new javax.swing.JLabel();
+        jtfGesamtwert_AuftragAnlegen = new javax.swing.JTextField();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -116,14 +195,9 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel2.setText("Geschäftspartner:ID:");
+        jLabel2.setText("Geschäftspartner ID:");
 
         jtfGPID_aa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel17.setText("Geschäftspartner-Name:");
-
-        jtfGPname_aa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel19.setText("Auftragsart:");
@@ -150,12 +224,12 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jScrollPane5.setViewportView(jBeschreibung_aa);
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel41.setText("Status");
+        jLabel41.setText("Status:");
 
         jcbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Erfasst", "Freigegeben", "Abgeschlossen" }));
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel73.setText("Abschlussdatum");
+        jLabel73.setText("Abschlussdatum:");
 
         Auftragsposition_AuftragAnlegen.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Auftragspositionen", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
@@ -169,15 +243,15 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
         jtfArtikelID_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jbLupe_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
-
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel23.setText("Artikelname:");
+        jbLupeArtikelID_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeArtikelID_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeArtikelID_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel24.setText("Menge");
-
-        jtfArtikelname_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setText("Menge:");
 
         jtfMenge_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtfMenge_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
@@ -187,14 +261,9 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         });
 
         jLabel122.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel122.setText("Einzelwert");
-
-        jLabel123.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel123.setText("Gesamtwert:");
+        jLabel122.setText("Einzelwert:");
 
         jtfEinzelwert_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jtfGesamtwert_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jTAuftragsposition.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -406,8 +475,18 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jScrollPane8.setViewportView(jTAuftragsposition);
 
         jbMinus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/minus2.png"))); // NOI18N
+        jbMinus_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMinus_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         jbPlus_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/plus2.png"))); // NOI18N
+        jbPlus_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPlus_AuftragAnlegenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Auftragsposition_AuftragAnlegenLayout = new javax.swing.GroupLayout(Auftragsposition_AuftragAnlegen);
         Auftragsposition_AuftragAnlegen.setLayout(Auftragsposition_AuftragAnlegenLayout);
@@ -417,39 +496,29 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbMinus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbPlus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(15, Short.MAX_VALUE))
-                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel18))
+                        .addGap(95, 95, 95)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel18))
-                                .addGap(95, 95, 95)
-                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtfPositionsID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                                .addComponent(jLabel23)
-                                .addGap(95, 95, 95)
-                                .addComponent(jtfArtikelname_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jtfPositionsID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbLupe_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75)
+                        .addComponent(jbLupeArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel122)
-                            .addComponent(jLabel24)
-                            .addComponent(jLabel123))
+                            .addComponent(jLabel24))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfMenge_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82))))
+                            .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbMinus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbPlus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Auftragsposition_AuftragAnlegenLayout.setVerticalGroup(
             Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,24 +538,14 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel23)
-                                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jtfArtikelname_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel123))))
-                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
-                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel122)
-                                    .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jbLupe_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel18)
+                                .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel122)
+                                .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbLupeArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
@@ -499,6 +558,24 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
+        jbLupeGPID_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
+        jbLupeGPID_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeGPID_AuftragAnlegenActionPerformed(evt);
+            }
+        });
+
+        jLabel123.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel123.setText("Gesamtwert:");
+
+        jtfGesamtwert_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jftfErfassungsdatum_aa.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jftfErfassungsdatum_aaFocusLost(evt);
+            }
+        });
+
         javax.swing.GroupLayout AuftragAnlegenLayout = new javax.swing.GroupLayout(AuftragAnlegen);
         AuftragAnlegen.setLayout(AuftragAnlegenLayout);
         AuftragAnlegenLayout.setHorizontalGroup(
@@ -508,7 +585,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                 .addComponent(jLabel7)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(AuftragAnlegenLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(46, 46, 46)
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(AuftragAnlegenLayout.createSequentialGroup()
                         .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -516,27 +593,33 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                                 .addComponent(jSpeichern_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jbAbbrechen_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(AuftragAnlegenLayout.createSequentialGroup()
                         .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane5)
                             .addGroup(AuftragAnlegenLayout.createSequentialGroup()
-                                .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(AuftragAnlegenLayout.createSequentialGroup()
                                         .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel1)
-                                            .addComponent(jLabel17)
-                                            .addComponent(jLabel41))
-                                        .addGap(39, 39, 39)
-                                        .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jtfGPname_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jtfGPID_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jtfAuftragsid_aa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jcbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel25))
-                                .addGap(106, 106, 106)
+                                            .addComponent(jLabel25)
+                                            .addGroup(AuftragAnlegenLayout.createSequentialGroup()
+                                                .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel2)
+                                                    .addComponent(jLabel1)
+                                                    .addComponent(jLabel41))
+                                                .addGap(63, 63, 63)
+                                                .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jtfGPID_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jtfAuftragsid_aa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jcbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jbLupeGPID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(80, 80, 80))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, AuftragAnlegenLayout.createSequentialGroup()
+                                        .addComponent(jLabel123)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel19)
                                     .addComponent(jLabel21)
@@ -554,7 +637,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         AuftragAnlegenLayout.setVerticalGroup(
             AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AuftragAnlegenLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -569,41 +652,46 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jLabel2)
                     .addComponent(jtfGPID_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21)
-                    .addComponent(jftfErfassungsdatum_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jftfErfassungsdatum_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLupeGPID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jtfGPname_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel22)
-                    .addComponent(jftfLieferdatum_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel73)
-                    .addComponent(jcbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jftfLieferdatum_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel41)
-                    .addComponent(jftfAbschlussdatum_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addComponent(jLabel25)
+                    .addComponent(jcbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AuftragAnlegenLayout.createSequentialGroup()
+                        .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel73)
+                            .addComponent(jftfAbschlussdatum_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel123))
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel25))
+                    .addGroup(AuftragAnlegenLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jtfGesamtwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(47, 47, 47)
                 .addComponent(Auftragsposition_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSpeichern_aa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 1138, Short.MAX_VALUE)
+            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
+            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
         );
 
         pack();
@@ -646,9 +734,9 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         String abschlussDatum = this.jftfAbschlussdatum_AuftragAnlegen.getText();
         int auftragswert = 10;
         try {
-        auftragswert = Integer.parseInt(this.jtfGesamtwert_AuftragAnlegen.getText());
+            auftragswert = Integer.parseInt(this.jtfGesamtwert_AuftragAnlegen.getText());
         } catch (NumberFormatException ex) {
-            
+
         }
         System.out.println("Result: " + beschreibung + erfassungsdatum);
 
@@ -660,29 +748,156 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //Auftragspositionen werden aus der Tabelle ausgelesen, in einen 
-        //Auftragspositionenobjekt aufganeommen und in die Datenbank geschrieben.
-        for (int i = 0; i < jTAuftragsposition.getRowCount(); i++) {
-            //Hier werden die Ausgelesenen Felder rausgenommen und in die Variable geschrieben.
-            int positionsnr = (int) jTAuftragsposition.getValueAt(i, 0);
-            int artikelID = (int) jTAuftragsposition.getValueAt(i, 1);
-            int menge = (int) jTAuftragsposition.getValueAt(i, 3);
-            int einzelwert = (int) jTAuftragsposition.getValueAt(i, 4);
-
-            //Die Daten werden aus der Tabelle geholt
-            Auftragsposition auftragsposition = new Auftragsposition(auftrags_ID, positionsnr, menge, einzelwert, artikelID);
-            try {
-                //Die Daten werden in die Datenbank geschrieben
-                DAOAuftragsposition dAOAuftragsposition = new DAOAuftragsposition();
-                dAOAuftragsposition.legeNeueAuftragspositionAn(auftragsposition);
-            } catch (SQLException ex) {
-                Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+//        //Auftragspositionen werden aus der Tabelle ausgelesen, in einen 
+//        //Auftragspositionenobjekt aufganeommen und in die Datenbank geschrieben.
+//        for (int i = 0; i < jTAuftragsposition.getRowCount(); i++) {
+//            //Hier werden die Ausgelesenen Felder rausgenommen und in die Variable geschrieben.
+//            int positionsnr = (int) jTAuftragsposition.getValueAt(i, 0);
+//            int artikelID = (int) jTAuftragsposition.getValueAt(i, 1);
+//            int menge = (int) jTAuftragsposition.getValueAt(i, 3);
+//            int einzelwert = (int) jTAuftragsposition.getValueAt(i, 4);
+//
+//            //Die Daten werden aus der Tabelle geholt
+//            Auftragsposition auftragsposition = new Auftragsposition(auftrags_ID, positionsnr, menge, einzelwert, artikelID);
+//            try {
+//                //Die Daten werden in die Datenbank geschrieben
+//                DAOAuftragsposition dAOAuftragsposition = new DAOAuftragsposition();
+//                dAOAuftragsposition.legeNeueAuftragspositionAn(auftragsposition);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
 
 
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
+
+    private void jbLupeGPID_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeGPID_AuftragAnlegenActionPerformed
+        /* 29.11.16 Yoeruek Öffnet über die Lupe GP-ID Suchen */
+        myParent.oeffneGPIDSuchen();
+    }//GEN-LAST:event_jbLupeGPID_AuftragAnlegenActionPerformed
+
+    private void jbLupeArtikelID_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeArtikelID_AuftragAnlegenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
+        myParent.oeffneArtikelIDSuchen();
+    }//GEN-LAST:event_jbLupeArtikelID_AuftragAnlegenActionPerformed
+
+    private void jbPlus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlus_AuftragAnlegenActionPerformed
+//        String auftragsID = jtfAuftragsid_aa.getText();
+        String auftragsID = "11111";
+//        int positionsNr = Integer.valueOf(jtfPositionsID_AuftragAnlegen.getText());
+        int positionsNr = 2222;
+        int positionsmenge = Integer.valueOf(jtfMenge_AuftragAnlegen.getText());
+        int einzelwert = Integer.valueOf(jtfEinzelwert_AuftragAnlegen.getText());
+        String artikelID = jtfArtikelID_AuftragAnlegen.getText();
+        DefaultTableModel model = (DefaultTableModel) this.jTAuftragsposition.getModel();
+        model.setValueAt(auftragsID, 0, 0);
+        model.setValueAt(positionsNr, 0, 1);
+        model.setValueAt(positionsmenge, 0, 2);
+        model.setValueAt(einzelwert, 0, 3);
+        model.setValueAt(artikelID, 0, 4);
+        int index = this.jTAuftragsposition.getSelectedRow();
+
+        //model.removeRow(0);
+//         Die Daten werden aus der Tabelle geholt
+        Auftragsposition auftragspos = new Auftragsposition(auftragsID, positionsNr, positionsmenge, einzelwert, artikelID);
+        try {
+            //Die Daten werden in die Datenbank geschrieben
+            DAOAuftragsposition dAOAuftragsposition = new DAOAuftragsposition();
+            System.out.println(auftragspos.toString());
+            dAOAuftragsposition.legeNeueAuftragspositionAn(auftragspos);
+        } catch (SQLException ex) {
+            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jbPlus_AuftragAnlegenActionPerformed
+
+    private void jbMinus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMinus_AuftragAnlegenActionPerformed
+//         position_loeschen();
+
+    }//GEN-LAST:event_jbMinus_AuftragAnlegenActionPerformed
+
+    private void jftfErfassungsdatum_aaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jftfErfassungsdatum_aaFocusLost
+        boolean istGueltig = false;
+        if (!istGueltigesDatum(jftfErfassungsdatum_aa.getText())) {
+            JOptionPane.showMessageDialog(this, "Bitte geben Sie ein gültiges Datum ein", "Fehler Datumsformat", JOptionPane.WARNING_MESSAGE);
+            jftfErfassungsdatum_aa.requestFocusInWindow();
+            //Überprüfung eines eingegebenen Datums 
+        }
+    }//GEN-LAST:event_jftfErfassungsdatum_aaFocusLost
+
+//      /**
+//     * Citak 29.11.2016 
+//     * holt die Werte der einzelnen Positionen in der Oberfläche
+//     * und speichert diese in die Instanz Variablen
+//     */
+//    private void position_belegen() {
+//        auftrags_id = Integer.parseInt(jtfAuftragsid_aa.getText());
+//        positions_id = Integer.parseInt(jtfPositionsID_AuftragAnlegen.getText());
+//        try {artikel_id = Integer.parseInt(jtfArtikelID_AuftragAnlegen.getText());
+//        } catch (NumberFormatException nfexception) {
+//            artikel_id = 0;
+//        }try {menge = Integer.parseInt(jtfMenge_AuftragAnlegen.getText());
+//        } catch (NumberFormatException nfe) {
+//            menge = 0;
+//        }try {einzelwert_netto = Integer.parseInt(jtfEinzelwert_AuftragAnlegen.getText());
+//        } catch (Exception ex) {
+//            einzelwert_netto = 0;
+//        }
+//    }
+    //leert die Auftragspositionstabelle 
+    private void position_text_leeren() {
+
+        jtfPositionsID_AuftragAnlegen.setText("");
+        jtfMenge_AuftragAnlegen.setText("");
+        jtfArtikelname_AuftragAnlegen.setText("");
+        jtfArtikelID_AuftragAnlegen.setText("");
+        jtfEinzelwert_AuftragAnlegen.setText("");
+        jtfGesamtwert_AuftragAnlegen.setText("");
+    }
+
+    /**
+     * 29.11.2016 Citak Mit dieser Methode kann eine Auftragsposition gelöscht
+     * werden.
+     */
+//    private void position_loeschen() {
+//        
+//        try {
+////             Auftraspositions obj wird aus tabelle selektiert
+//            Auftragsposition auftragsposition = DAOAuftragsposition.position_aus_Tabelle(jTAuftragsposition);
+////             Message geht raus um den benutzer zu informieren
+//            int loesche_position = JOptionPane.showMessageDialog(
+//                    
+//                    Integer.toString(JOptionPane.YES_NO_OPTION,
+//                    JOptionPane.QUESTION_MESSAGE));
+////             position soll gelöscht werden
+//            if (loesche_position == JOptionPane.YES_OPTION) {
+////                 Position wird gelöscht(LKZ gesetzt)
+//                auftragsposition = DAOAuftragsposition.position_aus_Tabelle(auftragsPositionen, auftragsposition);
+//            }
+////           Positions textfelder werden geleert
+//            position_text_leeren();
+//            
+//        } catch (Exception e) {
+////             Exception wird gefangen und verarbeitet und eine passende Fehlermeldung geht raus
+////             über eine Joptionpane
+//            System.out.println(auftragspos_exp);
+//        }
+//    }
+    
+    
+    /* Diese Methode erstellt ein Datum. Erstellt von Citak, 30.11.2016 */
+    private boolean istGueltigesDatum(String datum) {
+        boolean istGueltig = false;
+        SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        df.setLenient(false);
+        try {
+            Date date = df.parse(datum);
+            istGueltig = true;
+        } catch (ParseException ex) {
+        }
+        return istGueltig;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragAnlegen;
@@ -691,14 +906,12 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel41;
@@ -709,7 +922,8 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTAuftragsposition;
     private javax.swing.JButton jbAbbrechen_aa;
-    private javax.swing.JButton jbLupe_AuftragAnlegen;
+    private javax.swing.JButton jbLupeArtikelID_AuftragAnlegen;
+    private javax.swing.JButton jbLupeGPID_AuftragAnlegen;
     private javax.swing.JButton jbMinus_AuftragAnlegen;
     private javax.swing.JButton jbPlus_AuftragAnlegen;
     private javax.swing.JComboBox<String> jcbAuftragsart;
@@ -718,13 +932,13 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JFormattedTextField jftfErfassungsdatum_aa;
     private javax.swing.JFormattedTextField jftfLieferdatum_aa;
     private javax.swing.JTextField jtfArtikelID_AuftragAnlegen;
-    private javax.swing.JTextField jtfArtikelname_AuftragAnlegen;
     private javax.swing.JTextField jtfAuftragsid_aa;
     private javax.swing.JTextField jtfEinzelwert_AuftragAnlegen;
+	private javax.swing.JTextField jtfArtikelname_AuftragAnlegen;
     private javax.swing.JTextField jtfGPID_aa;
-    private javax.swing.JTextField jtfGPname_aa;
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
     private javax.swing.JTextField jtfMenge_AuftragAnlegen;
     private javax.swing.JTextField jtfPositionsID_AuftragAnlegen;
     // End of variables declaration//GEN-END:variables
+
 }
