@@ -720,6 +720,10 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jbLöschenAuftragBearbeiten.setEnabled(false);
         this.jbSpeichernAuftragBearbeiten.setEnabled(false);
         this.jbAbbrechen_AuftragBearbeiten.setEnabled(false);
+        this.jftfLieferdatumAuftragBearbeiten.setEnabled(false);
+        this.jftfAbschlussdatumAuftragBearbeiten.setEnabled(false);
+        this.jbLupe_AuftragBearbeiten.setEnabled(false);
+        
              
         
         
@@ -740,6 +744,9 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
+     private void jbSpeich(java.awt.event.ActionEvent evt) {                                                           
+
+    }   
     private void jftfAbschlussdatumAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
