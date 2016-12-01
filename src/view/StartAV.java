@@ -986,7 +986,7 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
          JOptionPane.showMessageDialog(null, INFO_TEXT, INFO_TITEL, JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
-<<<<<<< HEAD
+
 //01.12.2016 Impram
     // Wenn man auf Seite Schliessen Betaätigt erscheint eine meldung
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -1003,9 +1003,6 @@ public class StartAV extends javax.swing.JFrame {
         }     
         
     }//GEN-LAST:event_formWindowClosing
-=======
-    
->>>>>>> 2604087d0e314ff6aa2b61015f26c444f141521a
 
     
     
