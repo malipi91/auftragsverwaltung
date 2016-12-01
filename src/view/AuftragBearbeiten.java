@@ -131,6 +131,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbLöschenAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbLöschenAuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
         jbLöschenAuftragBearbeiten.setText("Löschen");
+        jbLöschenAuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLöschenAuftragBearbeitenActionPerformed(evt);
+            }
+        });
 
         jpUnterPanel_AuftragBearbeiten.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bearbeiten", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
@@ -775,17 +780,23 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             //Wenn das gleich ist wird die Methode aufgerufen und die Felder
             // ausgegraut.
             auftragsstatus_erfasst();
+        }
     }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
+
+    private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbLöschenAuftragBearbeitenActionPerformed
   
-    if (aktuelle_status.equals(status_ist_freigegeben)) {
-        auftragsstatus_freigegeben();
-    }
-    if (aktuelle_status.equals(status_ist_abgeschlossen)){
-        auftragsstatus_freigegeben();
-    }
- 
-        
-    }
+//    if (aktuelle_status.equals(status_ist_freigegeben)) {
+//        auftragsstatus_freigegeben();
+//    }
+//    if (aktuelle_status.equals(status_ist_abgeschlossen){
+//        auftragsstatus_freigegeben();
+//        return null;
+//    }
+// 
+//        
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
