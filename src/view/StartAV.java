@@ -291,11 +291,8 @@ public class StartAV extends javax.swing.JFrame {
 
         jifGPID_suchen.setVisible(false);
         desktopPane.add(jifGPID_suchen);
-<<<<<<< HEAD
-        jifGPID_suchen.setBounds(0, 0, 660, 489);
-=======
+
         jifGPID_suchen.setBounds(0, 0, 660, 482);
->>>>>>> origin/mehmet
 
         jifArtikelID_suchen.setClosable(true);
         jifArtikelID_suchen.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -321,21 +318,7 @@ public class StartAV extends javax.swing.JFrame {
 
         jifAuftragAnlegen.setVisible(false);
         desktopPane.add(jifAuftragAnlegen);
-<<<<<<< HEAD
-        jifAuftragAnlegen.setBounds(0, 0, 966, 844);
 
-        jifAuftragAnzeigen.setVisible(false);
-        desktopPane.add(jifAuftragAnzeigen);
-        jifAuftragAnzeigen.setBounds(0, 0, 966, 848);
-
-        jifAuftragBearbeiten.setVisible(false);
-        desktopPane.add(jifAuftragBearbeiten);
-        jifAuftragBearbeiten.setBounds(0, 0, 1174, 877);
-
-        jifAuftragSuchen.setVisible(false);
-        desktopPane.add(jifAuftragSuchen);
-        jifAuftragSuchen.setBounds(0, 0, 966, 847);
-=======
         jifAuftragAnlegen.setBounds(0, 0, 966, 833);
 
         jifAuftragAnzeigen.setVisible(false);
@@ -349,7 +332,6 @@ public class StartAV extends javax.swing.JFrame {
         jifAuftragSuchen.setVisible(false);
         desktopPane.add(jifAuftragSuchen);
         jifAuftragSuchen.setBounds(0, 0, 966, 836);
->>>>>>> origin/mehmet
 
         jifAuftragsID_suchen.setVisible(false);
         desktopPane.add(jifAuftragsID_suchen);
@@ -357,19 +339,12 @@ public class StartAV extends javax.swing.JFrame {
 
         jifKundeAnlegen.setVisible(false);
         desktopPane.add(jifKundeAnlegen);
-<<<<<<< HEAD
-        jifKundeAnlegen.setBounds(0, 0, 966, 736);
 
-        jifKundeAnzeigen.setVisible(false);
-        desktopPane.add(jifKundeAnzeigen);
-        jifKundeAnzeigen.setBounds(0, 0, 990, 840);
-=======
         jifKundeAnlegen.setBounds(0, 0, 1029, 717);
 
         jifKundeAnzeigen.setVisible(false);
         desktopPane.add(jifKundeAnzeigen);
         jifKundeAnzeigen.setBounds(0, 0, 966, 833);
->>>>>>> origin/mehmet
 
         jifKundeBearbeiten.setVisible(false);
         desktopPane.add(jifKundeBearbeiten);
@@ -385,11 +360,8 @@ public class StartAV extends javax.swing.JFrame {
 
         jifLieferantAnzeigen.setVisible(false);
         desktopPane.add(jifLieferantAnzeigen);
-<<<<<<< HEAD
-        jifLieferantAnzeigen.setBounds(0, 0, 966, 844);
-=======
+
         jifLieferantAnzeigen.setBounds(0, 0, 966, 837);
->>>>>>> origin/mehmet
 
         jifLieferantBearbeiten.setVisible(false);
         desktopPane.add(jifLieferantBearbeiten);

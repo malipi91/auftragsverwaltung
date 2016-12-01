@@ -38,11 +38,10 @@ import org.omg.CORBA.portable.ApplicationException;
  /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*----------------------------------------------------------*/
 public class AuftragAnlegen extends javax.swing.JInternalFrame {
-<<<<<<< HEAD
-    
+
     //Variablendeklaration
     StartAV myParent;
-=======
+
 
     // Variablendeklaration Citak 29.11.2016
     private DAOAuftrag daoAuftrag;
@@ -95,7 +94,6 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private final String auftragspos_exp = "Die Auftragsposition konnte nicht gelöscht werden";
     private final String gueltige_menge = " Bitte geben Sie eine gueltige Menge an";
 
->>>>>>> origin/duygu
     /**
      * Creates new form AuftragAnlegen
      */
@@ -560,7 +558,6 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
             }
         });
 
-<<<<<<< HEAD
         jbLupeGPID_AuftragAnlegen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jbLupeGPID_AuftragAnlegen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -573,14 +570,12 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
         jtfGesamtwert_AuftragAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-=======
         jftfErfassungsdatum_aa.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jftfErfassungsdatum_aaFocusLost(evt);
             }
         });
 
->>>>>>> origin/duygu
         javax.swing.GroupLayout AuftragAnlegenLayout = new javax.swing.GroupLayout(AuftragAnlegen);
         AuftragAnlegen.setLayout(AuftragAnlegenLayout);
         AuftragAnlegenLayout.setHorizontalGroup(
@@ -696,11 +691,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
-=======
             .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
->>>>>>> origin/duygu
         );
 
         pack();
@@ -780,7 +771,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
-<<<<<<< HEAD
+
     private void jbLupeGPID_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeGPID_AuftragAnlegenActionPerformed
         /* 29.11.16 Yoeruek Öffnet über die Lupe GP-ID Suchen */
         myParent.oeffneGPIDSuchen();
@@ -791,7 +782,6 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         myParent.oeffneArtikelIDSuchen();
     }//GEN-LAST:event_jbLupeArtikelID_AuftragAnlegenActionPerformed
 
-=======
     private void jbPlus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlus_AuftragAnlegenActionPerformed
 //        String auftragsID = jtfAuftragsid_aa.getText();
         String auftragsID = "11111";
@@ -908,8 +898,6 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         }
         return istGueltig;
     }
-    
->>>>>>> origin/duygu
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragAnlegen;
@@ -946,6 +934,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfArtikelID_AuftragAnlegen;
     private javax.swing.JTextField jtfAuftragsid_aa;
     private javax.swing.JTextField jtfEinzelwert_AuftragAnlegen;
+	private javax.swing.JTextField jtfArtikelname_AuftragAnlegen;
     private javax.swing.JTextField jtfGPID_aa;
     private javax.swing.JTextField jtfGesamtwert_AuftragAnlegen;
     private javax.swing.JTextField jtfMenge_AuftragAnlegen;
