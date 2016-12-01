@@ -698,7 +698,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAbbrechen_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_aaActionPerformed
-        /*----------------------------------------------------------*/
+  /*----------------------------------------------------------*/
  /* 24.11.16 Yoeruek Schließt das Fenster nach Betätigung des Abbrech Buttons */
  /*----------------------------------------------------------*/
         this.setVisible(false);
