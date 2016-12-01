@@ -18,9 +18,15 @@ import model.Auftrag;
 import util.DBConnection;
 import util.Zusatzfunktionen;
 
+
+/*----------------------------------------------------------*/
+/* Datum Name Was                                           */
+/* 14.11.16 MaLi Anlegen der Klasse                         */
+/* 14.11.16 HiYö Erweitern der Klasse                       */
+/*----------------------------------------------------------*/
 /**
- *
- * @author marti
+ * Diese Klasse bündelt Methoden die auf die DB-Tabelle Auftrag zugreift.
+ * @author Martin Lipinski
  * Änderungen zum Testen
  * 2 Einträge zum Testen
  */
@@ -35,20 +41,21 @@ public class DAOAuftrag {
         dd = new DAODataDictionary();
         zf = new Zusatzfunktionen();
     }
-
-        public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 14.11.16 Hicran Yörük Anlegen der Methode                */
+    /*----------------------------------------------------------*/
+    /* 
+    * Diese Methode legt durch Eingabe der Werte in die GUI einen neuen Auftrag 
+    * in die Datenbank     
+    */
+    public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
         String letzteID = dd.bekommeLetzteID(TAB_AUFTRAG);
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();
 
-        /*----------------------------------------------------------*/
- /* Datum Name Was                                           */
- /* 14.11.16 Hicran Yörük Anlegen der Methode                 */
- /*----------------------------------------------------------*/
- /* 
-    *Diese Methode legt durch Eingabe der Werte in die GUI einen neuen Auftrag 
-    * in die Datenbank     
-    */
+    
         String sql = "insert into auftrag "
                 + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
                 + "Auftragswert,Lieferdatum,AStatus, Abschlussdatum) "
@@ -77,7 +84,7 @@ public class DAOAuftrag {
 
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
-    /* 14.11.16 MaLi Anlegen der Klasse                         */
+    /* 14.11.16 MaLi Anlegen der Methode                        */
     /*----------------------------------------------------------*/
     /**
      * Die Methode liest anhand der Auftragskopf-ID einen Datensatz aus der
