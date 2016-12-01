@@ -185,4 +185,6 @@ public class Auftrag {
     public void loescheAuftragsposition(Auftragsposition pos){
         
     }
+    
+    
 }

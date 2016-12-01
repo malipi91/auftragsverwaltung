@@ -41,6 +41,9 @@ public class DAODataDictionary {
     // Speichert die Datensatz ID des Datensatzes LastID_GP im DD.
     private final String LETZTE_LIEFERANT_ID;
     
+   // Speichert die Datensatz ID des Datensatzes LASTID_AP im DD. Citak 30.11.2016
+    private final String LETZTE_AUFTRAGSPOSITION_ID;
+    
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
     /* 17.11.16 MaLi Anlegen des Konstruktors.                  */
@@ -65,6 +68,9 @@ public class DAODataDictionary {
         this.LETZTE_LIEFERANT_ID = "6";
         // Übergabe der Datensatz ID LastID_LF.
         this.LETZTE_KUNDE_ID = "7";
+       // Übergabe der Datensatz ID LASTID_AP.
+        this.LETZTE_AUFTRAGSPOSITION_ID = "8";
+        
     }
     
     /*----------------------------------------------------------*/
@@ -166,10 +172,21 @@ public class DAODataDictionary {
                 // Ausgabe der Fehlermeldung. 
                 System.out.println("Statement nicht ausgeführt!");
             }
+            //Erweitert am 30.11.2016 Citak
+        }else if(tabelle.equals("auftragsposition")){
+            try{
+                // Erweiterung der SQL-Abfrage, weil die letzte Auftrags ID 
+                // benötigt wird.
+                sql = sql + " dd_id = " + LETZTE_AUFTRAGSPOSITION_ID;
+                // Ausführen der SQL-Abfrage.
+                rs = stmt.executeQuery(sql);
+            }catch(SQLException e){
+                // Ausgabe der Fehlermeldung. 
+                System.out.println("Statement nicht ausgeführt!");
+            }
         // Weitere Unterscheidung, ob es sich um die Auftragstabelle handelt.
         // Angelegt von Hr. Lipinski
         } 
-        
         // Schleife zur Ausgabe des ResultSets.
         while(rs.next()){
             // Speichern der abgefragten letzten ID.
@@ -263,9 +280,22 @@ public class DAODataDictionary {
                 System.out.println(e);
                 System.out.println("Objekt wurde nicht hinzugefügt.");
             }
+            //Erweitert am 30.11.2016 Citak 
+         } else if("auftragsposition".equals(tabelle)){
+            sql = "UPDATE datadictionary SET wert = ? WHERE dd_id = ?";
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, String.valueOf(this.inkrementiereLetzteID(this.bekommeLetzteID(tabelle))));
+            stmt.setInt(2, 6);
+            try{
+                stmt.executeUpdate();
+                conn.close();
+            } catch (SQLException e){
+                System.out.println(e);
+                System.out.println("Objekt wurde nicht hinzugefügt.");
+            }
         }
-        
     }
+    
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */

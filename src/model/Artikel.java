@@ -28,6 +28,10 @@ public class Artikel {
         
     }
 
+    Artikel(String string, String text_artikel, String text_bestellung, int i, int i0, int i1, int i2, int i3, int i4, int i5, String string0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getArtikel_ID() {
         return artikel_ID;
     }

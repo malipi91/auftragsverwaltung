@@ -5,7 +5,7 @@
  */
 package main;
 
-
+import model.Auftrag;
 
 /**
  *
@@ -14,11 +14,13 @@ package main;
 public class Main {
 
     /**
-     * Diese Klasse wird nur dazu benutzt alle nötigen
-     * Komponenten zu Initialisieren und die erste
-     * View anzuzeigen
+     * Diese Klasse wird nur dazu benutzt alle nötigen Komponenten zu
+     * Initialisieren und die erste View anzuzeigen
      */
-    public static void main(String [] args){
+    public static void main(String[] args) {
+        System.out.println(System.currentTimeMillis());
+        
+    }
+}
 
-}
-}
+
