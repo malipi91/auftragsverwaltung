@@ -5,6 +5,7 @@
  */
 package dao;
 
+import java.sql.SQLException;
 import model.Adresse;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -22,6 +23,8 @@ public class DAOAdresseTest {
     public DAOAdresseTest() {
     }
     
+    DAOAdresse Ad;
+    
     @BeforeClass
     public static void setUpClass() {
     }
@@ -32,6 +35,7 @@ public class DAOAdresseTest {
     
     @Before
     public void setUp() {
+        
     }
     
     @After
@@ -43,13 +47,10 @@ public class DAOAdresseTest {
      */
     @Test
     public void testLegeNeueAdresseAn() throws Exception {
-        Adresse whs = new Adresse("1","Neidenburer",45899,"43","GE","DE","31.12.9999","Kunde");
-        Adresse adresse = null;
-        DAOAdresse instance = new DAOAdresse();
-        instance.legeNeueAdresseAn(adresse);
-        
-        
-        
+        Adresse adresseTest = new Adresse("332", "Hering", "25", 45968, "Gladbeck", "DE", "1480600612165");       
+        Ad = new DAOAdresse();
+        Ad.legeNeueAdresseAn(adresseTest);
+        assertEquals(45968, adresseTest.gibPLZ());
         
     }
     

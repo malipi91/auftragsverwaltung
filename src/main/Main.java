@@ -5,32 +5,20 @@
  */
 package main;
 
-<<<<<<< HEAD
-=======
+import model.Auftrag;
 
->>>>>>> origin/hicran
 /**
  *
  * @author Duygu Citak
  */
 public class Main {
-<<<<<<< HEAD
-    
-=======
-  
->>>>>>> origin/hicran
 
     /**
-     * Diese Klasse wird nur dazu benutzt alle nötigen
-     * Komponenten zu Initialisieren und die erste
-     * View anzuzeigen
+     * Diese Klasse wird nur dazu benutzt alle nötigen Komponenten zu
+     * Initialisieren und die erste View anzuzeigen
      */
-    public static void main(String [] args){
-<<<<<<< HEAD
-       
-
-=======
+    public static void main(String[] args) {
+        System.out.println(System.currentTimeMillis());
         
->>>>>>> origin/hicran
-}
+    }
 }

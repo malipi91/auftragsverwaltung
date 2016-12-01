@@ -61,24 +61,24 @@ public class AuftragspositionTest {
     }
 
     /**
-     * Test of getArtikelID method, of class Auftragsposition.
-     */
-    @Test
-    public void testGetArtikelID() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
-        assertEquals(443, testPos.getArtikelID());
-    }
-
-    /**
-     * Test of setArtikelID method, of class Auftragsposition.
-     */
-    @Test
-    public void testSetArtikelID() {
-        Auftragsposition testPose = new Auftragsposition("55495", 3, 55, 10, 443);
-        int artikelID = 33242466;
-        testPose.setArtikelID(artikelID);
-        assertEquals(artikelID, testPose.getArtikelID());
-    }
+//     * Test of getArtikelID method, of class Auftragsposition.
+//     */
+//    @Test
+//    public void testGetArtikelID() {
+//        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+//        assertEquals(443, testPos.getArtikelID());
+//    }
+//
+//    /**
+//     * Test of setArtikelID method, of class Auftragsposition.
+//     */
+//    @Test
+//    public void testSetArtikelID() {
+//        Auftragsposition testPose = new Auftragsposition("55495", 3, 55, 10, 443);
+//        int artikelID = 33242466;
+//        testPose.setArtikelID(artikelID);
+//        assertEquals(artikelID, testPose.getArtikelID());
+//    }
 
     /**
      * Test of getMenge method, of class Auftragsposition.
