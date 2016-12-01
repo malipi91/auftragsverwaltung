@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -34,7 +35,7 @@ public void legeNeueAdresseAn(Adresse adresse) throws SQLException{
     stmt.setString(3, "18");
     stmt.setInt(4, 46348);
     stmt.setString(5, "Raesfeld");
-    stmt.setDate(6, java.sql.Date.valueOf("2013-09-04"));
+    stmt.setDate(6, new Date(Long.parseLong(adresse.gibGueltigkeit())));;
     
     try{
     stmt.executeUpdate();

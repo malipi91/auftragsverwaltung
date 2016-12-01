@@ -46,7 +46,7 @@ public class Adresse {
      * @param gueltig_bis Parameter zur Übermittlung der Gültigkeit der Adresse.
      * @param typ Paramater zur Identifizierung der Stammadresse.
      */
-    public Adresse(String ad_ID, String strasse, int plz, String hausnummer, String ort, String staat, String gueltig_bis, String typ){
+    public Adresse(String ad_ID, String strasse, String hausnummer, int plz, String ort, String staat, String gueltig_bis){
         this.adress_ID = ad_ID;
         this.strasse = strasse;
         this.staat = staat;
