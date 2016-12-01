@@ -77,14 +77,14 @@
                                           <Component id="jtfSuchkriterium_ZKSuchen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                           <Component id="jcbAuftragsart_ZKSuchen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                      <Component id="jbSuchen_ZKSuchen" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbSuchen_ZKSuchen" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
                           <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -108,7 +108,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jcbSuchkriterium_ZKSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jtfSuchkriterium_ZKSuchen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jbSuchen_ZKSuchen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jbSuchen_ZKSuchen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="jScrollPane9" min="-2" pref="258" max="-2" attributes="0"/>
@@ -117,7 +117,7 @@
                       <Component id="jbAbbrechen_ZKSuchen" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jbAnzeigen_ZKSuchen" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="316" max="32767" attributes="0"/>
+                  <EmptySpace pref="321" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -159,7 +159,6 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/lupe.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Suchen"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel79">

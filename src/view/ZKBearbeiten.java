@@ -12,12 +12,15 @@ package view;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class ZKBearbeiten extends javax.swing.JInternalFrame {
+    //Variablendeklaration
+    StartAV myParent;
 
     /**
      * Creates new form ZKBearbeiten
      */
-    public ZKBearbeiten() {
+    public ZKBearbeiten(StartAV parent) {
         initComponents();
+        myParent = parent;
     }
 
     /**
@@ -70,6 +73,11 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
         jLabel124.setText("ZK-ID:");
 
         jbLupeZKID_ZKBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupeZKID_ZKBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeZKID_ZKBearbeitenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ZKBearbeitenLayout = new javax.swing.GroupLayout(ZKBearbeiten);
         ZKBearbeiten.setLayout(ZKBearbeitenLayout);
@@ -104,10 +112,11 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel124)
-                    .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbLupeZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbLupeZKID_ZKBearbeiten, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel124)
+                        .addComponent(jtfZKID_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(ZKBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBearbeiten_ZKBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -143,6 +152,11 @@ public class ZKBearbeiten extends javax.swing.JInternalFrame {
     private void jbBearbeiten_ZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_ZKBearbeitenActionPerformed
 
     }//GEN-LAST:event_jbBearbeiten_ZKBearbeitenActionPerformed
+
+    private void jbLupeZKID_ZKBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeZKID_ZKBearbeitenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe ZK-ID Suchen */
+        myParent.oeffneZKIDSuchen();
+    }//GEN-LAST:event_jbLupeZKID_ZKBearbeitenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

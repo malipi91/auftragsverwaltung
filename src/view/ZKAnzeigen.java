@@ -12,12 +12,16 @@ package view;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class ZKAnzeigen extends javax.swing.JInternalFrame {
+    
+    //Variablendeklaration
+    StartAV myParent;
 
     /**
      * Creates new form ZKAnzeigen
      */
-    public ZKAnzeigen() {
+    public ZKAnzeigen(StartAV parent) {
         initComponents();
+        myParent = parent;
     }
 
     /**
@@ -302,7 +306,7 @@ public class ZKAnzeigen extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jbLupe_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbLupe_ZKAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jbLupe_ZKAnzeigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbLupe_ZKAnzeigenActionPerformed(evt);
@@ -354,7 +358,7 @@ public class ZKAnzeigen extends javax.swing.JInternalFrame {
                                             .addComponent(jcbAuftragsart_ZKAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(Mahnzeit_ZKAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(ZKAnzeigenLayout.createSequentialGroup()
-                        .addGap(361, 361, 361)
+                        .addGap(307, 307, 307)
                         .addComponent(jLabel77)))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
@@ -437,7 +441,8 @@ public class ZKAnzeigen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfMahnzeit1_ZKAnzeigenActionPerformed
 
     private void jbLupe_ZKAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupe_ZKAnzeigenActionPerformed
-
+        /* 30.11.16 Yoeruek Öffnet über die Lupe ZK-ID Suchen */
+        myParent.oeffneZKIDSuchen();
     }//GEN-LAST:event_jbLupe_ZKAnzeigenActionPerformed
 
 

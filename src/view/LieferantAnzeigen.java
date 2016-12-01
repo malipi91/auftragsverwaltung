@@ -12,12 +12,13 @@ package view;
 /* 27.11.16 Citak Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class LieferantAnzeigen extends javax.swing.JInternalFrame {
+    
+    //Variablendeklaration
+    StartAV myParent;
 
-    /**
-     * Creates new form LieferantAnzeigen
-     */
-    public LieferantAnzeigen() {
+    public LieferantAnzeigen(StartAV parent) {
         initComponents();
+        myParent = parent;
     }
 
     /**
@@ -33,6 +34,7 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
         jLabel10 = new javax.swing.JLabel();
         jbzurueck_LieferantAnzeigen = new javax.swing.JButton();
         jSeparator16 = new javax.swing.JSeparator();
+        jbLupeGPID_LieferantAnzeigen = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -51,6 +53,13 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
             }
         });
 
+        jbLupeGPID_LieferantAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
+        jbLupeGPID_LieferantAnzeigen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLupeGPID_LieferantAnzeigenActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout LieferantAnzeigenLayout = new javax.swing.GroupLayout(LieferantAnzeigen);
         LieferantAnzeigen.setLayout(LieferantAnzeigenLayout);
         LieferantAnzeigenLayout.setHorizontalGroup(
@@ -65,6 +74,10 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
                         .addComponent(jLabel10))
                     .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LieferantAnzeigenLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jbLupeGPID_LieferantAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(319, 319, 319))
         );
         LieferantAnzeigenLayout.setVerticalGroup(
             LieferantAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -73,7 +86,9 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
                 .addComponent(jLabel10)
                 .addGap(9, 9, 9)
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jbLupeGPID_LieferantAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(125, 125, 125)
                 .addComponent(jbzurueck_LieferantAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(565, Short.MAX_VALUE))
         );
@@ -105,11 +120,17 @@ public class LieferantAnzeigen extends javax.swing.JInternalFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jbzurueck_LieferantAnzeigenActionPerformed
 
+    private void jbLupeGPID_LieferantAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeGPID_LieferantAnzeigenActionPerformed
+        /* 30.11.16 Yoeruek Öffnet über die Lupe GP-ID Suchen */
+        myParent.oeffneGPIDSuchen();
+    }//GEN-LAST:event_jbLupeGPID_LieferantAnzeigenActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel LieferantAnzeigen;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JSeparator jSeparator16;
+    private javax.swing.JButton jbLupeGPID_LieferantAnzeigen;
     private javax.swing.JButton jbzurueck_LieferantAnzeigen;
     // End of variables declaration//GEN-END:variables
 }

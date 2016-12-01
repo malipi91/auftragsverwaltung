@@ -5,12 +5,14 @@
  */
 package view;
 
-/*----------------------------------------------------------*/
- /* Datum Name Was */
- /* 18.11.16 Impram Erstellung*/
- /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
- /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
- /*----------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/* Datum Name Was                                                        */
+/* 18.11.16 Impram Erstellung                                            */
+/* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, */
+/*                  da Code für eine Klasse zu lang.                     */
+/* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
+/*-----------------------------------------------------------------------*/
+
 public class ArtikelSuche extends javax.swing.JInternalFrame {
     
     //Variablendeklaration
@@ -23,7 +25,7 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
         initComponents();
     }
     
-    // Ausgabe von Artikel Anzeige Maske nach betätigung des Anzeige Buttons
+    /* 29.11.16 Yoeruek Ausgabe von Artikel Anzeige Maske nach betätigung des Anzeige Buttons */
     public void setArtikelAnzeige(ArtikelAnzeige aa) {
         this.ArtAnzeige = aa;
     }
@@ -65,7 +67,6 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
 
         jbSuchen_ArtikelSuche.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSuchen_ArtikelSuche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
-        jbSuchen_ArtikelSuche.setText("Suchen");
 
         jt_ArtikelSuche.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,13 +133,13 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
                 .addComponent(jbAbbrechen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(ArtikelSucheLayout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ArtikelSucheLayout.createSequentialGroup()
                         .addComponent(jcbArtikelID_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jtfSuchkriterium_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbSuchen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbSuchen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         ArtikelSucheLayout.setVerticalGroup(
@@ -151,7 +152,7 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
                 .addGap(38, 38, 38)
                 .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jcbArtikelID_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSuchen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSuchen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfSuchkriterium_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,7 +160,7 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
                 .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAnzeigen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbAbbrechen_ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,22 +178,17 @@ public class ArtikelSuche extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAnzeigen_ArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_ArtikelSucheActionPerformed
-//        ArtikelAnzeige artikelanzeige = new ArtikelAnzeige();
-//        JPanel ArtikelSuche = artikelanzeige.getJPanel();
-//        ArtikelSuche.setVisible(true);
 
-//        jbAnzeigen_ArtikelSuche.addActionListener(artikelanzeige);
-//        artikelanzeige.show();
-        //Artikel Anzeige wird sichtbar
+        /*29.11.16 Yoeruek Artikel Anzeige wird sichtbar*/
         ArtAnzeige.setVisible(true);
     }//GEN-LAST:event_jbAnzeigen_ArtikelSucheActionPerformed
 
     private void jbAbbrechen_ArtikelSucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbbrechen_ArtikelSucheActionPerformed
-  /*----------------------------------------------------------*/
+  /*--------------------------------------------------------------------------*/
  /* 24.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
- /*----------------------------------------------------------*/
-//        this.setVisible(false);
-        dispose();
+ /*-------------------------------------------------------------------------*/
+        this.setVisible(false);
+//        dispose();
         
     }//GEN-LAST:event_jbAbbrechen_ArtikelSucheActionPerformed
 
