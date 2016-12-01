@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /*----------------------------------------------------------*/
 /* Datum Name Was */
 /* 15.11.16 Yoeruek Erstellung*/
@@ -38,6 +40,25 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         
     }
 
+     /*------------------------------------------------------------*/
+     /* 01.12.16 Yoeruek Prüfung nach Pflichtfeldern, falls nichts */ 
+     /*            angegeben ist wird eine Fehlermeldung ausgegeben*/
+     /*------------------------------------------------------------*/
+    public boolean istVollstaendig(){
+        Boolean vollstaendig = false;
+        String fehlermeldung = "";
+        if(jtfAuftragsid_az.getText().equals("")) {
+            fehlermeldung = "Geben Sie bitte eine Auftrags-ID ein!";
+            jtfAuftragsid_az.requestFocusInWindow();
+        }
+        if(fehlermeldung.equals("")){
+            vollstaendig = true;
+        }else{
+            JOptionPane.showMessageDialog(this, fehlermeldung,"Unvollständig" ,JOptionPane.WARNING_MESSAGE);
+        }return vollstaendig;
+    }
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -53,7 +74,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jtfGPName_az = new javax.swing.JTextField();
         jlErfassungsdatum = new javax.swing.JLabel();
         jlLieferdatum = new javax.swing.JLabel();
-        jbSpeichern_az = new javax.swing.JButton();
+        jbAnzeigen_az = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtTabellePosition_AuftragAnzeigen = new javax.swing.JTable();
         jbBearbeiten_az = new javax.swing.JButton();
@@ -120,12 +141,12 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         jlLieferdatum.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jlLieferdatum.setText("Lieferdatum:");
 
-        jbSpeichern_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbSpeichern_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
-        jbSpeichern_az.setText("Speichern");
-        jbSpeichern_az.addActionListener(new java.awt.event.ActionListener() {
+        jbAnzeigen_az.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbAnzeigen_az.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
+        jbAnzeigen_az.setText("Anzeigen");
+        jbAnzeigen_az.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSpeichern_azActionPerformed(evt);
+                jbAnzeigen_azActionPerformed(evt);
             }
         });
 
@@ -482,7 +503,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                 .addContainerGap(38, Short.MAX_VALUE)
                 .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(AuftragAnzeigenLayout.createSequentialGroup()
-                        .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbAnzeigen_az, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -566,7 +587,7 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
                 .addGroup(AuftragAnzeigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbZurueck_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBearbeiten_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSpeichern_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbAnzeigen_az, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
@@ -613,9 +634,11 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbBearbeiten_azActionPerformed
 
-    private void jbSpeichern_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_azActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSpeichern_azActionPerformed
+    private void jbAnzeigen_azActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_azActionPerformed
+         if(istVollstaendig()){
+    
+        }   
+    }//GEN-LAST:event_jbAnzeigen_azActionPerformed
 
     private void jbLupeAuftragsID_AuftragAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLupeAuftragsID_AuftragAnzeigenActionPerformed
         /* 29.11.16 Yoeruek Öffnet über die Lupe Auftrags-ID Suchen */
@@ -628,9 +651,9 @@ public class AuftragAnzeigen extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JButton jbAnzeigen_az;
     private javax.swing.JButton jbBearbeiten_az;
     private javax.swing.JButton jbLupeAuftragsID_AuftragAnzeigen;
-    private javax.swing.JButton jbSpeichern_az;
     private javax.swing.JButton jbZurueck_az;
     private javax.swing.JComboBox<String> jcbAuftragsart_az;
     private javax.swing.JComboBox<String> jcbStatus_az;

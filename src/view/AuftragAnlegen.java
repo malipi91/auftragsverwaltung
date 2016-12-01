@@ -126,20 +126,19 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         Boolean vollstaendig = false;
         String fehlermeldung = "";
         if(jtfGPID_aa.getText().equals("")) {
-            fehlermeldung = "Geben Sie bitte eine GP-ID an.";
+            fehlermeldung = "Geben Sie bitte eine GP-ID ein!";
             jtfGPID_aa.requestFocusInWindow();
-            
         }else if (jcbStatus.getSelectedIndex() == 0){
-            fehlermeldung = "Geben Sie bitte einen Status an.";
+            fehlermeldung = "Geben Sie bitte einen Status ein!";
             jcbStatus.requestFocusInWindow();
         }else if (jftfLieferdatum_aa.getText().equals("")){
-            fehlermeldung = "Geben Sie bitte ein Lieferdatum an.";
+            fehlermeldung = "Geben Sie bitte ein Lieferdatum ein!";
             jftfLieferdatum_aa.requestFocusInWindow();
         } else if (jtfArtikelID_AuftragAnlegen.getText().equals("")){
-            fehlermeldung = "Geben Sie bitte eine Artikel-ID an.";
+            fehlermeldung = "Geben Sie bitte eine Artikel-ID ein!";
             jtfArtikelID_AuftragAnlegen.requestFocusInWindow();
         } else if (jtfMenge_AuftragAnlegen.getText().equals("")){
-            fehlermeldung = "Geben Sie bitte die Menge an.";
+            fehlermeldung = "Geben Sie bitte die Menge ein!";
             jtfMenge_AuftragAnlegen.requestFocusInWindow();
         } 
         if(fehlermeldung.equals("")){
@@ -729,7 +728,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 862, Short.MAX_VALUE)
+            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE)
         );
 
         pack();
@@ -760,7 +759,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                           bestÃ¤tigung des Speicher Buttons werden die Daten in 
                           die Datenbank gespeichert */
  /*----------------------------------------------------------*/
-
+        if(istVollstaendig()){
         Auftragsstatus aStatus = new Auftragsstatus();
         String auftrags_ID = "1122";
 //        this.jtfArtikelID_AuftragAnlegen.getText();
@@ -786,6 +785,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
+         }
 //        //Auftragspositionen werden aus der Tabelle ausgelesen, in einen 
 //        //Auftragspositionenobjekt aufganeommen und in die Datenbank geschrieben.
 //        for (int i = 0; i < jTAuftragsposition.getRowCount(); i++) {
