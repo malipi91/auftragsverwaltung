@@ -5,6 +5,9 @@
  */
 package view;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /*----------------------------------------------------------*/
@@ -798,11 +801,27 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 
     private void jbSpeichernAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
+        if(istSemantischRichtig()){
+        
+        }
         
         
         
     }//GEN-LAST:event_jbSpeichernAuftragBearbeitenActionPerformed
-  
+ // Impram 1.12.2016
+    //Von Citak die Methode kopiert um die Datumsfelder mit einander zuvergleichen
+    //Ob das größer oder kleiner ist. Zusätzlich wird das Form verglichen.
+    private boolean istGueltigesDatum(String datum) {
+        boolean istGueltig = false;
+        SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        df.setLenient(false);
+        try {
+            Date date = df.parse(datum);
+            istGueltig = true;
+        } catch (ParseException ex) {
+        }
+        return istGueltig;
+    }
     
 
 
@@ -854,4 +873,15 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfPositionsID_AuftragBearbeiten;
     private javax.swing.JTextField jtfZKIDAuftragBearbeiten;
     // End of variables declaration//GEN-END:variables
+// 1.12.2016 Impram
+    //Überprüft die Datumsfelder ob die korrekt eingegeben wurde.
+    private boolean istSemantischRichtig() {
+     boolean istSemantischRichtig = false;
+     if (!istGueltigesDatum(jftfAbschlussdatumAuftragBearbeiten.getText())){
+         JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum ein!", "Falsches Datum ", JOptionPane.WARNING_MESSAGE);
+         jftfAbschlussdatumAuftragBearbeiten.requestFocusInWindow();
+     }
+     return istSemantischRichtig;
+    
+}
 }
