@@ -7,6 +7,7 @@ package dao;
 
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -56,11 +57,11 @@ public class DAOAuftrag {
         stmt.setString(1, letzteID);
         stmt.setString(2, auftrag.getAuftragsart());
         stmt.setString(3, auftrag.getAuftragstext());
-        stmt.setTimestamp(4, java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
+        stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
         stmt.setInt(5,auftrag.getAuftragswert());
-        stmt.setDate(6, java.sql.Date.valueOf(auftrag.getLieferdatum()));
+        stmt.setDate(6, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getLieferdatum()));
         stmt.setString(7, auftrag.getStatus());
-        stmt.setDate(8, java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
+        stmt.setDate(8, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
 
         try {
             stmt.executeUpdate();
