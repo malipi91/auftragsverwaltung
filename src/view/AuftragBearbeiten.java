@@ -598,6 +598,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbSpeichernAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSpeichernAuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichernAuftragBearbeiten.setText("Speichern");
+        jbSpeichernAuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSpeichernAuftragBearbeitenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AuftragBearbeitenLayout = new javax.swing.GroupLayout(AuftragBearbeiten);
         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
@@ -744,9 +749,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
-     private void jbSpeich(java.awt.event.ActionEvent evt) {                                                           
-
-    }   
+    
     private void jftfAbschlussdatumAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
@@ -781,9 +784,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             //Wenn das gleich ist wird die Methode aufgerufen und die Felder
             // ausgegraut.
             auftragsstatus_erfasst();
-    }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
-  
-    if (aktuelle_status.equals(status_ist_freigegeben)) {
+            if (aktuelle_status.equals(status_ist_freigegeben)) {
         auftragsstatus_freigegeben();
     }
     if (aktuelle_status.equals(status_ist_abgeschlossen)){
@@ -792,7 +793,17 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
  
         
     }
+    }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
+
+    private void jbSpeichernAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernAuftragBearbeitenActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_jbSpeichernAuftragBearbeitenActionPerformed
+  
     
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragBearbeiten;
