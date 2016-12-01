@@ -21,7 +21,11 @@ public class test {
         ArrayList<Auftrag> auftraege = new ArrayList<>();
         DAOAuftrag auftrag = new DAOAuftrag();
         auftraege = auftrag.gibAlleAuftraege(20);
-        System.out.println(auftraege.toString());
+        
+        for(int i = 0; i < auftraege.size(); i++){
+            System.out.println("Durgang: " + i);
+            System.out.println(auftraege.get(i).getAuftrags_ID());
+        }
     }
     
 }
