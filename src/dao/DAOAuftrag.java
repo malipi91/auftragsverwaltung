@@ -125,6 +125,17 @@ public class DAOAuftrag {
         return auftrag;
     }
     
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 28.11.16 MaLi Anlegen der Klasse                         */
+    /*----------------------------------------------------------*/
+    /**
+     * Diese Methode zeigt eine bestimmte Anzahl der Aufträge an. 
+     * @param anzahl Die Anzahl der anzuzeigenden Auftraege.
+     * @return gibt eine ArrayList vom Auftrag aus.
+     * @throws SQLException
+     */
     public ArrayList<Auftrag> gibAlleAuftraege(int anzahl) throws SQLException{
         // Erzeugen eines neuen DBConnection Objekts.
         DBConnection con = new DBConnection();
@@ -135,36 +146,72 @@ public class DAOAuftrag {
         // Erzeugen eines Statements Objekts über das Objekt der Connection.
         Statement stmt = conn.createStatement();
         // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
-        String sql = "select * from auftrag";
+        String sql = "select * from auftrag order by Erfassungsdatum";
         // Erzeugen eines leeren Auftrags-Objekt.
         ArrayList<Auftrag> auftraege = new ArrayList<>();
+        
         try{
-        rs = stmt.executeQuery(sql);
-        rs.first();
-        while(rs.next() && anzahl != 0){
-            if(rs.getString("LKZ") == "w"){
-                System.out.println("Ich werde nicht angezeigt!");
-            }else {
-                Auftrag auftrag = new Auftrag();
-                auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
-                auftrag.setAuftragsart(rs.getString("Auftragsart"));
-                auftrag.setErfassungsdatum(rs.getString("Erfassungsdatum"));
-                auftrag.setAuftragswert(rs.getInt("Auftragswert"));
-                auftrag.setLieferdatum(rs.getString("Lieferdatum"));
-                auftrag.setStatus(rs.getString("AStatus"));
-                auftrag.setAbschlussdatum(rs.getString("Abschlussdatum"));
-                auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
-                auftraege.add(auftrag);
-                System.out.println("Ich werde gepspeichert!");
-            }
-            
-            anzahl = anzahl -1;
+            // Ausführen der Statements
+            rs = stmt.executeQuery(sql);
+
+            // Schleife zum Speichern alle Auftragsobjekte
+            while(rs.next() && anzahl != 0){
+                
+                // Prüft ob LKZ gesetzt ist
+                if(rs.getString("LKZ") == null){
+                    Auftrag auftrag = new Auftrag();
+                    auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
+                    auftrag.setAuftragsart(rs.getString("Auftragsart"));
+                    auftrag.setErfassungsdatum(rs.getString("Erfassungsdatum"));
+                    auftrag.setAuftragswert(rs.getInt("Auftragswert"));
+                    auftrag.setLieferdatum(rs.getString("Lieferdatum"));
+                    auftrag.setStatus(rs.getString("AStatus"));
+                    auftrag.setAbschlussdatum(rs.getString("Abschlussdatum"));
+                    auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+                    auftraege.add(auftrag);
+                    System.out.println("Ich werde gepspeichert!");
+                }
+                // Reduziert die Anzahl.
+                anzahl = anzahl -1;
         }
-        return auftraege;
+            
+            // Schließt die Verbindung zur DB.
+            conn.close();
+            
+            // Gibt die Auftrags ArrayList aus.
+            return auftraege;
+        
+        // Fehlerbehandlung
         } catch(SQLException e){
             System.out.println(e);
             System.out.println("Fehler in der Speicherung von Aufträgen.");
             return null;
         }
+    }
+    
+    
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 01.12.16 MaLi Anlegen der Klasse                         */
+    /*----------------------------------------------------------*/
+    /**
+     * Methode zum Löschen eines Auftrags anhand der ID.
+     * @param id Auftragskopf-ID die gelöscht werden soll.
+     * @throws SQLException
+     */
+    public void loescheAuftrag(String id) throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // Lösch-Statement
+        String sql = "Update Auftrag SET LKZ='w' where Auftragskopf_ID=" + id;
+        
+        // Ausführen des Statements
+        stmt.executeUpdate(sql);
+        conn.close();
     }
 }
