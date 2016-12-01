@@ -23,7 +23,7 @@ public class AuftragspositionTest {
     @Test
     public void testGetAuftragskopfId() {
         
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         assertEquals("55495",testPos.getAuftragskopfId());
         
     }
@@ -33,7 +33,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testSetAuftragskopfId() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         String auftragskopfID = "33323232";
         testPos.setAuftragskopfId(auftragskopfID);
         assertEquals(auftragskopfID,testPos.getAuftragskopfId());
@@ -45,7 +45,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testGetPositionsnummer() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         assertEquals(3, testPos.getPositionsnummer());
     }
 
@@ -54,7 +54,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testSetPositionsnummer() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         int positionsnummer = 7;
         testPos.setPositionsnummer(positionsnummer);
         assertEquals(positionsnummer, testPos.getPositionsnummer());
@@ -85,7 +85,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testGetMenge() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         testPos.getMenge();
     }
 
@@ -94,7 +94,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testSetMenge() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         int menge = 555;
         testPos.setMenge(menge);
         assertEquals(menge,testPos.getMenge());
@@ -105,7 +105,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testGetEinzelwert() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         testPos.getEinzelwert();
     }
 
@@ -114,7 +114,7 @@ public class AuftragspositionTest {
      */
     @Test
     public void testSetEinzelwert() {
-        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, 443);
+        Auftragsposition testPos = new Auftragsposition("55495", 3, 55, 10, "443");
         int einzelwert = 658;
         testPos.setEinzelwert(einzelwert);
         assertEquals(einzelwert, testPos.getEinzelwert());

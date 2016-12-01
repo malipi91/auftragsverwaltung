@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  *
  * @author samet
  */
-public class ArtikeTest {
+public class ArtikelTest {
     
     
     
