@@ -104,15 +104,19 @@ public class DAOAuftrag {
             // Ausführen des SQL-Befehls.
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                // Die Informationen aus der DB werden an das Auftrags-Objekt übergeben.
-                auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
-                auftrag.setAuftragstext(rs.getString("Auftragstext"));
-                auftrag.setAuftragsart(rs.getString("Auftragsart"));
-                auftrag.setErfassungsdatum("Erfassungsdatum");
-                auftrag.setAbschlussdatum("Abschlussdatum");
-                auftrag.setLieferdatum(rs.getString("Lieferdatum"));
-                auftrag.setAuftragswert(rs.getInt("Auftragswert"));
-                auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+                if(rs.getString("LKZ") == null){
+                    // Die Informationen aus der DB werden an das Auftrags-Objekt übergeben.
+                    auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
+                    auftrag.setAuftragstext(rs.getString("Auftragstext"));
+                    auftrag.setAuftragsart(rs.getString("Auftragsart"));
+                    auftrag.setErfassungsdatum(rs.getString("Erfassungsdatum"));
+                    auftrag.setAbschlussdatum(rs.getString("Abschlussdatum"));
+                    auftrag.setLieferdatum(rs.getString("Lieferdatum"));
+                    auftrag.setAuftragswert(rs.getInt("Auftragswert"));
+                    auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+                } else {
+                    return null;
+                }
             }
             // DB-Verbindung wird geschlossen.
             conn.close();
@@ -128,7 +132,8 @@ public class DAOAuftrag {
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
-    /* 28.11.16 MaLi Anlegen der Klasse                         */
+    /* 28.11.16 MaLi Anlegen der Methode                        */
+    /* 01.12.16 MaLi Überarbeiten der Methode                   */
     /*----------------------------------------------------------*/
     /**
      * Diese Methode zeigt eine bestimmte Anzahl der Aufträge an. 
@@ -170,6 +175,8 @@ public class DAOAuftrag {
                     auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
                     auftraege.add(auftrag);
                     System.out.println("Ich werde gepspeichert!");
+                } else {
+                    return null;
                 }
                 // Reduziert die Anzahl.
                 anzahl = anzahl -1;
@@ -193,7 +200,7 @@ public class DAOAuftrag {
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
-    /* 01.12.16 MaLi Anlegen der Klasse                         */
+    /* 01.12.16 MaLi Anlegen der Methode                        */
     /*----------------------------------------------------------*/
     /**
      * Methode zum Löschen eines Auftrags anhand der ID.

@@ -28,6 +28,10 @@ public class Auftragsposition {
         this.einzelwert = einzelwert;
 
     }
+
+    public Auftragsposition() {
+        
+    }
     
     public String getAuftragskopfId() {
         return this.auftragskopfId;
