@@ -142,17 +142,22 @@ public class DAOAuftrag {
         rs = stmt.executeQuery(sql);
         rs.first();
         while(rs.next() && anzahl != 0){
-            if(!rs.getString("LKZ").equals("w"));
-            Auftrag auftrag = new Auftrag();
-            auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
-            auftrag.setAuftragsart(rs.getString("Auftragsart"));
-            auftrag.setErfassungsdatum(rs.getString("Erfassungsdatum"));
-            auftrag.setAuftragswert(rs.getInt("Auftragswert"));
-            auftrag.setLieferdatum(rs.getString("Lieferdatum"));
-            auftrag.setStatus(rs.getString("Auftragsstatus"));
-            auftrag.setAbschlussdatum(rs.getString("Abschlussdatum"));
-            auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
-            auftraege.add(auftrag);
+            if(rs.getString("LKZ") == "w"){
+                System.out.println("Ich werde nicht angezeigt!");
+            }else {
+                Auftrag auftrag = new Auftrag();
+                auftrag.setAuftrags_ID(rs.getString("Auftragskopf_ID"));
+                auftrag.setAuftragsart(rs.getString("Auftragsart"));
+                auftrag.setErfassungsdatum(rs.getString("Erfassungsdatum"));
+                auftrag.setAuftragswert(rs.getInt("Auftragswert"));
+                auftrag.setLieferdatum(rs.getString("Lieferdatum"));
+                auftrag.setStatus(rs.getString("AStatus"));
+                auftrag.setAbschlussdatum(rs.getString("Abschlussdatum"));
+                auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+                auftraege.add(auftrag);
+                System.out.println("Ich werde gepspeichert!");
+            }
+            
             anzahl = anzahl -1;
         }
         return auftraege;
