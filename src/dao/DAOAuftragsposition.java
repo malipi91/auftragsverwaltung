@@ -8,6 +8,8 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.swing.JTable;
 import model.Auftragsposition;
 import util.DBConnection;
 import util.Zusatzfunktionen;
@@ -17,6 +19,14 @@ import util.Zusatzfunktionen;
  * @author marti
  */
 public class DAOAuftragsposition {
+
+    public static Auftragsposition position_aus_Tabelle(ArrayList<Auftragsposition> auftragsPositionen, Auftragsposition auftragsposition) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static Auftragsposition position_aus_Tabelle(JTable jTAuftragsposition) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
@@ -50,7 +60,6 @@ public class DAOAuftragsposition {
     /* 24.11.16 Duygu Citak Anlegen der Methode                 */
     /*----------------------------------------------------------*/
     
-    
     /* 
     *Diese Methode legt durch Eingabe der einzelnen Werte in die GUI einen neuen Auftrag 
     * in die Datenbank     
@@ -65,7 +74,7 @@ public class DAOAuftragsposition {
         stmt.setInt(2, auftragsposition.getPositionsnummer());
         stmt.setInt(3, auftragsposition.getMenge());
         stmt.setInt(4, auftragsposition.getEinzelwert());
-        stmt.setInt(6, auftragsposition.getArtikelID());
+        stmt.setString(6, auftragsposition.getArtikelID());
 
            
         try{
@@ -78,6 +87,15 @@ public class DAOAuftragsposition {
             System.out.println(e);
             System.out.println("Objekt wurde nicht hinzugefügt.");
         }    
+    }
+     
+     
+      /*
+     * Es wird eine Auftragsposition gelöscht. Citak 30.11.2016 
+     */
+     public void loescheNeueAuftragsposition(int position) throws SQLException{
+        DBConnection con = new DBConnection();
+        Connection conn = con.createConection();
     }
     
 }

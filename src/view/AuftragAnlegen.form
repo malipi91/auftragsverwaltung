@@ -28,7 +28,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Component id="AuftragAnlegen" alignment="0" pref="816" max="32767" attributes="0"/>
+=======
+          <Component id="AuftragAnlegen" alignment="0" pref="854" max="32767" attributes="0"/>
+>>>>>>> origin/duygu
       </Group>
     </DimensionLayout>
   </Layout>
@@ -58,7 +62,7 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jbAbbrechen_aa" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="Auftragsposition_AuftragAnlegen" alignment="0" min="-2" pref="866" max="-2" attributes="0"/>
+                              <Component id="Auftragsposition_AuftragAnlegen" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -355,7 +359,13 @@
                                   <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+<<<<<<< HEAD
                               <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+=======
+                              <EmptySpace pref="15" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+>>>>>>> origin/duygu
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jtfPositionsID_AuftragAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="jtfArtikelID_AuftragAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
@@ -526,6 +536,9 @@
                   <Image iconType="3" name="/view/minus2.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbMinus_AuftragAnlegenActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jbPlus_AuftragAnlegen">
               <Properties>
@@ -533,6 +546,9 @@
                   <Image iconType="3" name="/view/plus2.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbPlus_AuftragAnlegenActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -559,6 +575,9 @@
         <Component class="javax.swing.JFormattedTextField" name="jftfLieferdatum_aa">
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="jftfErfassungsdatum_aa">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jftfErfassungsdatum_aaFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbLupeGPID_AuftragAnlegen">
           <Properties>
