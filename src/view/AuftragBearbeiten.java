@@ -783,22 +783,38 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             //Wenn das gleich ist wird die Methode aufgerufen und die Felder
             // ausgegraut.
             auftragsstatus_erfasst();
+        }
     }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
+<<<<<<< HEAD
     }
     private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
         if(istVollstaendig()){
     
         }   
+=======
+
+    private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
+        // TODO add your handling code here:
+>>>>>>> origin/duygu
     }//GEN-LAST:event_jbLöschenAuftragBearbeitenActionPerformed
   
 //    if (aktuelle_status.equals(status_ist_freigegeben)) {
 //        auftragsstatus_freigegeben();
 //    }
+<<<<<<< HEAD
 //    if (aktuelle_status.equals(status_ist_abgeschlossen)){
 //        auftragsstatus_freigegeben();
 //    }
 //// 
         
+=======
+//    if (aktuelle_status.equals(status_ist_abgeschlossen){
+//        auftragsstatus_freigegeben();
+//        return null;
+//    }
+// 
+//        
+>>>>>>> origin/duygu
     
     
 

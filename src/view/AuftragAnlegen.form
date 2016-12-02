@@ -29,10 +29,14 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Component id="AuftragAnlegen" alignment="0" pref="866" max="32767" attributes="0"/>
 =======
           <Component id="AuftragAnlegen" alignment="0" pref="854" max="32767" attributes="0"/>
 >>>>>>> 5ce2c42ecfa33869d916620093ece0bf3d28c074
+=======
+          <Component id="AuftragAnlegen" alignment="0" pref="854" max="32767" attributes="0"/>
+>>>>>>> origin/duygu
       </Group>
     </DimensionLayout>
   </Layout>
@@ -361,6 +365,7 @@
                                   <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -370,6 +375,8 @@
                                   </Group>
                                   <Component id="jtfPositionsID_AuftragAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
 =======
+=======
+>>>>>>> origin/duygu
                               <EmptySpace pref="15" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">

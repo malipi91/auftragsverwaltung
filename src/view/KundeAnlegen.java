@@ -67,9 +67,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             fehlertext += "Bitte geben Sie einen Namen ein" + "\n";
             Border border = BorderFactory.createLineBorder(Color.RED);
             jtfNameRG_KundeAnlegen.setBorder(border);
-        
-
-       
+             
     }
          return fehlertext;
     }
