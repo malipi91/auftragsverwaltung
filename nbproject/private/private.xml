@@ -1,73 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/duygu
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/LieferantAnzeigen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelBearbeiten.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragSuchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ZKSuchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelSuche.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragsID_suchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/LieferantBearbeiten.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftraegeAlle.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeSuchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ZKAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelID_suchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ZKAnzeigen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/GPID_suchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnzeige.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ZKID_suchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/LieferantSuchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/StartAV.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragBearbeiten.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeAnzeigen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeBearbeiten.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/dao/DAODataDictionary.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/LieferantAnlegen.java</file>
-=======
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/AuftragBearbeiten.java</file>
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/StartAV.java</file>
->>>>>>> origin/mehmet
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/model/testsZusammengefasst.java</file>
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/src/dao/DAOAuftragsposition.java</file>
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/model/testeLos.java</file>
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/dao/DAOAuftragspositionTest.java</file>
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/src/model/Auftragsposition.java</file>
+            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/dao/DAOAuftragTest.java</file>
         </group>
     </open-files>
 </project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOAuftragsposition.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Auftrag.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Auftragsposition.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/test.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/main/Main.java</file>
-        </group>
-    </open-files>
-</project-private>
->>>>>>> martin
-=======
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/view/StartAV.java</file>
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/model/Auftragsposition.java</file>
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/dao/DAODataDictionary.java</file>
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-        </group>
-    </open-files>
-</project-private>
->>>>>>> origin/duygu
