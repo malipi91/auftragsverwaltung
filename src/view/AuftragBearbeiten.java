@@ -42,6 +42,17 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jftfErfassungsdatumAuftragBearbeiten.setEnabled(false);
         jtfArtikelID_AuftragBearbeiten.setEnabled(false);
     }
+    
+    // 1.12.2016 Impram
+    //Überprüft die Datumsfelder ob die korrekt eingegeben wurde.
+    private boolean istSemantischRichtig() {
+        boolean istSemantischRichtig = false;
+        if (!istGueltigesDatum(jftfAbschlussdatumAuftragBearbeiten.getText())){
+            JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum ein!", "Falsches Datum ", JOptionPane.WARNING_MESSAGE);
+            jftfAbschlussdatumAuftragBearbeiten.requestFocusInWindow();
+        }
+        return istSemantischRichtig;
+    }
 
      /*--------------------------------------------------------------*/
      /* 01.12.16 Yoeruek Prüfung nach Pflichtfeldern, falls nichts   */ 
@@ -58,7 +69,8 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             vollstaendig = true;
         }else{
             JOptionPane.showMessageDialog(this, fehlermeldung,"Unvollständig" ,JOptionPane.WARNING_MESSAGE);
-        }return vollstaendig;
+        }
+        return vollstaendig;
     }
     
     
@@ -705,7 +717,9 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jbAbbrechen_AuftragBearbeitenActionPerformed
-//29.11.2016 Impram
+    
+
+    //29.11.2016 Impram
     //In dieser Methode werden die Felder ausgegraut bei einem Status wechsel
     //zur freigegeben.
     private void auftragsstatus_freigegeben (){
@@ -725,7 +739,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 }
     
     
-//30.11.2016 Impram
+    //30.11.2016 Impram
     //In dieser Methode werden alle Felder ausgegraut wenn der Status abgeschlossen ist.
     private void auftragsstatus_abgeschlossen (){
         this.jcbStatusAuftragBearbeiten.setEnabled(false);
@@ -741,22 +755,14 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jbBearbeitenAuftragBearbeiten.setEnabled(false);
         this.jbLöschenAuftragBearbeiten.setEnabled(false);
         this.jbSpeichernAuftragBearbeiten.setEnabled(false);
-<<<<<<< HEAD
-        this.jbAbbrechen_AuftragBearbeiten.setEnabled(false);  
-=======
         this.jbAbbrechen_AuftragBearbeiten.setEnabled(false);
         this.jftfLieferdatumAuftragBearbeiten.setEnabled(false);
         this.jftfAbschlussdatumAuftragBearbeiten.setEnabled(false);
-        this.jbLupe_AuftragBearbeiten.setEnabled(false);
-        
-             
-        
-        
->>>>>>> origin/mehmet
+        this.jbLupe_AuftragBearbeiten.setEnabled(false);    
     }
     
     
- //   30.11.2016 Impram
+    //   30.11.2016 Impram
     //Wenn der Auftragstatus erfasst gewählt wurde , werden folgende Felder
     //sichtbar.
     private void auftragsstatus_erfasst () {
@@ -765,15 +771,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jtfMenge_AuftragBearbeiten.setEnabled(true);
         this.jtfBeschreibungAuftragBearbeiten.setEnabled(true);
         this.jtPositionsnr_AuftragBearbeiten.setEnabled(true);
-   
     }
-<<<<<<< HEAD
-=======
     private void jbSuchen_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
     }//GEN-LAST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
->>>>>>> origin/mehmet
     
     private void jftfAbschlussdatumAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
@@ -794,75 +796,53 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbBearbeitenAuftragBearbeitenActionPerformed
 
     private void jcbStatusAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbStatusAuftragBearbeitenActionPerformed
-        // TODO add your handling code here:
+
         //Impram 30.11.2016
         // Es wird der gewählte Status geholt.
            String fehlermeldung = "";
-    if(this.aktuelle_status.equals(status_ist_erfasst) || aktuelle_status.equals(status_ist_abgeschlossen)){
-        fehlermeldung = "Ein Status wechsel von Erfasst auf Abgeschlossen ist nicht möglich!";
-        JOptionPane.showMessageDialog(this, fehlermeldung, "Nicht Erlaubt", JOptionPane.WARNING_MESSAGE);
-        
-    }
+        if(this.aktuelle_status.equals(status_ist_erfasst) || aktuelle_status.equals(status_ist_abgeschlossen)){
+            fehlermeldung = "Ein Status wechsel von Erfasst auf Abgeschlossen ist nicht möglich!";
+            JOptionPane.showMessageDialog(this, fehlermeldung, "Nicht Erlaubt", JOptionPane.WARNING_MESSAGE);  
+        }
         aktuelle_status = (String) jcbStatusAuftragBearbeiten.getSelectedItem();
         //Es wird das gewählte Status mit dem Status ist erfasst verglichen.
         if (aktuelle_status.equals(status_ist_erfasst)){
             //Wenn das gleich ist wird die Methode aufgerufen und die Felder
             // ausgegraut.
             auftragsstatus_erfasst();
-<<<<<<< HEAD
         }
+        if (aktuelle_status.equals(status_ist_freigegeben)) {
+                auftragsstatus_freigegeben();
+            }
+        if (aktuelle_status.equals(status_ist_abgeschlossen)){
+                auftragsstatus_freigegeben();
+        }
+        
     }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
-<<<<<<< HEAD
-=======
-            if (aktuelle_status.equals(status_ist_freigegeben)) {
-        auftragsstatus_freigegeben();
-    }
-    if (aktuelle_status.equals(status_ist_abgeschlossen)){
-        auftragsstatus_freigegeben();
->>>>>>> origin/mehmet
-    }
+
     private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
         if(istVollstaendig()){
     
-        }   
-=======
-
-    private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
-        // TODO add your handling code here:
->>>>>>> origin/duygu
+        } 
     }//GEN-LAST:event_jbLöschenAuftragBearbeitenActionPerformed
   
 //    if (aktuelle_status.equals(status_ist_freigegeben)) {
 //        auftragsstatus_freigegeben();
 //    }
-<<<<<<< HEAD
-//    if (aktuelle_status.equals(status_ist_abgeschlossen)){
-//        auftragsstatus_freigegeben();
-//    }
-//// 
         
-<<<<<<< HEAD
-=======
+
 //    if (aktuelle_status.equals(status_ist_abgeschlossen){
 //        auftragsstatus_freigegeben();
 //        return null;
 //    }
 // 
-//        
->>>>>>> origin/duygu
-    
-=======
-    }
-    }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
+//                                                                
 
     private void jbSpeichernAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
         if(istSemantischRichtig()){
         
-        }
-        
-        
-        
+        }     
     }//GEN-LAST:event_jbSpeichernAuftragBearbeitenActionPerformed
  // Impram 1.12.2016
     //Von Citak die Methode kopiert um die Datumsfelder mit einander zuvergleichen
@@ -878,7 +858,6 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         }
         return istGueltig;
     }
->>>>>>> origin/mehmet
     
 
 
@@ -929,15 +908,5 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfPositionsID_AuftragBearbeiten;
     private javax.swing.JTextField jtfZKIDAuftragBearbeiten;
     // End of variables declaration//GEN-END:variables
-// 1.12.2016 Impram
-    //Überprüft die Datumsfelder ob die korrekt eingegeben wurde.
-    private boolean istSemantischRichtig() {
-     boolean istSemantischRichtig = false;
-     if (!istGueltigesDatum(jftfAbschlussdatumAuftragBearbeiten.getText())){
-         JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum ein!", "Falsches Datum ", JOptionPane.WARNING_MESSAGE);
-         jftfAbschlussdatumAuftragBearbeiten.requestFocusInWindow();
-     }
-     return istSemantischRichtig;
-    
-}
+
 }
