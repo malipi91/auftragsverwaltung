@@ -24,7 +24,7 @@ public class UniversalDokument extends PlainDocument {
             this.laenge = laenge;
             this.erlaubteZeichen = zeichen;
             if (sindBErlaubt) {
-                this.erlaubteZeichen = this.erlaubteZeichen + "wertzuiopÃ¼asdfghjklÃ¶Ã¤yxcvbnm" + "QWERTZUIOPÃœASDFGHJKLÃ–Ã„YXCVBNM";
+                this.erlaubteZeichen = this.erlaubteZeichen + "qwertzuiopÃ¼asdfghjklÃ¶Ã¤yxcvbnm" + "QWERTZUIOPÃœASDFGHJKLÃ–Ã„YXCVBNM";
 
             }
             if (sindZErlaubt) {
