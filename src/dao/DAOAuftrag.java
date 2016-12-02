@@ -229,4 +229,40 @@ public class DAOAuftrag {
         stmt.executeUpdate(sql);
         conn.close();
     }
+    
+//    public void bearbeiteAuftrag(String id, Auftrag auftrag) throws SQLException{
+//        // Erzeugen eines neuen DBConnection Objekts.
+//        DBConnection con = new DBConnection();
+//        // Übergabe der Connection an ein Connection Objekt.
+//        Connection conn = con.createConection();
+//        // UpdateString 
+//        String sql = "update auftrag set auftragsart=" + auftrag.getAuftragsart() +
+//                ", auftragstext= " + auftrag.getAuftragstext() +
+//                ", erfassungsdatum= " + auftrag.getErfassungsdatum() +
+//                ", auftragswert= " + auftrag.getAuftragswert() +
+//                ", lieferdatum= " + auftrag.getLieferdatum() +
+//                + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
+//                + "Auftragswert,Lieferdatum,AStatus, Abschlussdatum) "
+//                + "values (?,?,?,?,?,?,?,?)";
+//        PreparedStatement stmt = conn.prepareStatement(sql);
+//        stmt.setString(1, letzteID);
+//        stmt.setString(2, auftrag.getAuftragsart());
+//        stmt.setString(3, auftrag.getAuftragstext());
+//        stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
+//        stmt.setInt(5,auftrag.getAuftragswert());
+//        stmt.setDate(6, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getLieferdatum()));
+//        stmt.setString(7, auftrag.getStatus());
+//        stmt.setDate(8, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
+//
+//        try {
+//            stmt.executeUpdate();
+//            dd.erhoeheLetzteID(TAB_AUFTRAG);
+//            //Datenbankverbindung wird geschlossen
+//            conn.close();
+//            // Ausgabe der Fehlermeldung 
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//            System.out.println("Objekt wurde nicht hinzugefügt.");
+//        }
+//    }
 }

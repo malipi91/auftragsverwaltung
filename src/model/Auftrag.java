@@ -96,6 +96,10 @@ public class Auftrag {
     public Adresse getStandardAnschrift() {
         return standardAnschrift;
     }
+    
+    public int getAuftragswert(){
+        return this.auftragswert;
+    }
 
     public void setStandardAnschrift(Adresse standardAnschrift) {
         this.standardAnschrift = standardAnschrift;
@@ -123,10 +127,6 @@ public class Auftrag {
 
     public void setAuftragsart(String auftragsart) {
         this.auftragsart = auftragsart;
-    }
-
-    public int getAuftragswert() {
-        return auftragswert;
     }
 
     public void setAuftragswert(int auftragswert) {
