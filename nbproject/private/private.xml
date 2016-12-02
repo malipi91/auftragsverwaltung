@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragsID_suchen.java</file>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragSuchen.java</file>
@@ -10,6 +11,17 @@
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/StartAV.java</file>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragBearbeiten.java</file>
             <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
+=======
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOAuftragsposition.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Auftrag.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Auftragsposition.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/view/StartAV.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/test.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/main/Main.java</file>
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Artikel.java</file>
+>>>>>>> 5ce2c42ecfa33869d916620093ece0bf3d28c074
         </group>
     </open-files>
 </project-private>

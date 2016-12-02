@@ -496,15 +496,10 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             .addGroup(KundeAnlegenLayout.createSequentialGroup()
                 .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(KundeAnlegenLayout.createSequentialGroup()
-
-                        .addContainerGap()
-                        .addComponent(jSeparator20))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KundeAnlegenLayout.createSequentialGroup()
-                        .addGap(0, 728, Short.MAX_VALUE)
                         .addComponent(jbSpeichern, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(abbrechen_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(KundeAnlegenLayout.createSequentialGroup()
                             .addGap(311, 311, 311)
                             .addComponent(jLabel14))
@@ -530,7 +525,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         KundeAnlegenLayout.setVerticalGroup(
             KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -570,6 +565,8 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 950, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -577,7 +574,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+                    .addComponent(KundeAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
