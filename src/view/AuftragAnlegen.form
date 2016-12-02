@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="AuftragAnlegen" alignment="0" pref="854" max="32767" attributes="0"/>
+          <Component id="AuftragAnlegen" alignment="0" pref="866" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -364,12 +364,6 @@
                                       <Component id="jbLupeArtikelID_AuftragAnlegen" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jtfPositionsID_AuftragAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
-                              <EmptySpace pref="15" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtfPositionsID_AuftragAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="jtfArtikelID_AuftragAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
