@@ -29,7 +29,11 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
-          <Component id="AuftragAnlegen" alignment="0" pref="816" max="32767" attributes="0"/>
+<<<<<<< HEAD
+          <Component id="AuftragAnlegen" alignment="0" pref="866" max="32767" attributes="0"/>
+=======
+          <Component id="AuftragAnlegen" alignment="0" pref="854" max="32767" attributes="0"/>
+>>>>>>> 5ce2c42ecfa33869d916620093ece0bf3d28c074
 =======
           <Component id="AuftragAnlegen" alignment="0" pref="854" max="32767" attributes="0"/>
 >>>>>>> origin/duygu
@@ -247,7 +251,7 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
-                <StringItem index="0" value="-"/>
+                <StringItem index="0" value=""/>
                 <StringItem index="1" value="Barauftrag"/>
                 <StringItem index="2" value="Sofortauftrag"/>
                 <StringItem index="3" value="Terminauftrag"/>
@@ -318,7 +322,7 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="-"/>
+                <StringItem index="0" value=""/>
                 <StringItem index="1" value="Erfasst"/>
                 <StringItem index="2" value="Freigegeben"/>
                 <StringItem index="3" value="Abgeschlossen"/>
@@ -353,37 +357,45 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jScrollPane8" min="-2" pref="779" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
 <<<<<<< HEAD
-                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+<<<<<<< HEAD
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jtfArtikelID_AuftragAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbLupeArtikelID_AuftragAnlegen" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jtfPositionsID_AuftragAnlegen" min="-2" pref="150" max="-2" attributes="0"/>
 =======
+=======
+>>>>>>> origin/duygu
                               <EmptySpace pref="15" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
->>>>>>> origin/duygu
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jtfPositionsID_AuftragAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="jtfArtikelID_AuftragAnlegen" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+>>>>>>> 5ce2c42ecfa33869d916620093ece0bf3d28c074
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jbLupeArtikelID_AuftragAnlegen" min="-2" pref="35" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel122" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jtfMenge_AuftragAnlegen" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="jtfEinzelwert_AuftragAnlegen" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jScrollPane8" min="-2" pref="779" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -396,9 +408,9 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jbPlus_AuftragAnlegen" min="-2" pref="35" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -406,26 +418,34 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jtfPositionsID_AuftragAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfMenge_AuftragAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jtfMenge_AuftragAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jLabel20" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jtfEinzelwert_AuftragAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jtfArtikelID_AuftragAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                                  <Component id="jbLupeArtikelID_AuftragAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <Component id="jLabel20" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jtfPositionsID_AuftragAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel122" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="jLabel18" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfArtikelID_AuftragAnlegen" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel122" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jtfEinzelwert_AuftragAnlegen" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jbLupeArtikelID_AuftragAnlegen" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Component id="jScrollPane8" min="-2" pref="173" max="-2" attributes="0"/>
                           </Group>
                       </Group>
