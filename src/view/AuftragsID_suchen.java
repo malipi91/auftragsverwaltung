@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /*----------------------------------------------------------*/
 /* Datum    Name    Was */
 /* 14.11.16 Yoeruek Erstellung*/
@@ -17,6 +19,27 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
     public AuftragsID_suchen(StartAV parent) {
         initComponents();
     }
+    
+    /*-------------------------------------------------------------*/
+    /* 01.12.16 Yoeruek Prüfung nach Pflichtfeldern, falls nichts  */ 
+    /*            angegeben ist wird eine Fehlermeldung ausgegeben */
+    /*-------------------------------------------------------------*/
+    public boolean istVollstaendig(){
+        Boolean vollstaendig = false;
+        String fehlermeldung = "";
+        if(jcbDatumAuftragsIDSuchen.getSelectedIndex() == 0){
+            fehlermeldung = "Bitte wählen Sie ein Suchkriterium für das Datum aus!";
+            jcbDatumAuftragsIDSuchen.requestFocusInWindow();
+        } else if (jcbStatus_AuftragsIDSuchen.getSelectedIndex() == 0){
+            fehlermeldung = "Bitte geben Sie den Status ein!";
+            jcbStatus_AuftragsIDSuchen.requestFocusInWindow();
+        } 
+        if(fehlermeldung.equals("")){
+            vollstaendig = true;
+        }else{
+            JOptionPane.showMessageDialog(this, fehlermeldung,"Unvollständig" ,JOptionPane.WARNING_MESSAGE);
+        }return vollstaendig;
+    }
 
 
     @SuppressWarnings("unchecked")
@@ -26,8 +49,6 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
         AuftragsID_suchen = new javax.swing.JPanel();
         jLabel88 = new javax.swing.JLabel();
         jSeparator23 = new javax.swing.JSeparator();
-        jLabel89 = new javax.swing.JLabel();
-        jtfGPID_AuftragsIDSuchen = new javax.swing.JTextField();
         jcbDatumAuftragsIDSuchen = new javax.swing.JComboBox<>();
         jtfDatum_AuftragsIDSuchen = new javax.swing.JTextField();
         jLabel91 = new javax.swing.JLabel();
@@ -48,11 +69,6 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
 
         jLabel88.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel88.setText("Auftrags-ID suchen");
-
-        jLabel89.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel89.setText("Geschäftspartner-ID:");
-
-        jtfGPID_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jcbDatumAuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jcbDatumAuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Erfassungsdatum", "Lieferdatum", "Abschlussdatum" }));
@@ -166,29 +182,25 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbUebernehmen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtfGPName_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                                    .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(57, 57, 57)
-                                    .addComponent(jtfGPID_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                                    .addComponent(jcbDatumAuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtfDatum_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                                    .addComponent(jLabel91)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                        .addGap(33, 33, 33)
+                        .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                                .addComponent(jtfGPName_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
+                                .addComponent(jcbDatumAuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jtfDatum_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
+                                .addComponent(jLabel91)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(41, 41, 41))
         );
@@ -201,11 +213,8 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(AuftragsID_suchenLayout.createSequentialGroup()
-                        .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel89)
-                            .addComponent(jtfGPID_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
                         .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(jtfGPName_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -216,12 +225,11 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel91)
-                            .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jcbStatus_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(jbUebernehmen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(AuftragsID_suchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbUebernehmen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSuchen_AuftragsIDSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
@@ -246,7 +254,9 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jcbDatumAuftragsIDSuchenActionPerformed
 
     private void jbSuchen_AuftragsIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSuchen_AuftragsIDSuchenActionPerformed
-       
+         if(istVollstaendig()){
+    
+        }   
     }//GEN-LAST:event_jbSuchen_AuftragsIDSuchenActionPerformed
 
     private void jbUebernehmen_AuftragsIDSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbUebernehmen_AuftragsIDSuchenActionPerformed
@@ -262,7 +272,6 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
     private javax.swing.JPanel AuftragsID_suchen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator23;
@@ -272,7 +281,6 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jcbDatumAuftragsIDSuchen;
     private javax.swing.JComboBox<String> jcbStatus_AuftragsIDSuchen;
     private javax.swing.JTextField jtfDatum_AuftragsIDSuchen;
-    private javax.swing.JTextField jtfGPID_AuftragsIDSuchen;
     private javax.swing.JTextField jtfGPName_AuftragsIDSuchen;
     // End of variables declaration//GEN-END:variables
 }
