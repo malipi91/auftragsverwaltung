@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Kunde extends Geschaeftspartner{
  
-    public Kunde(int geschaeftspartnerID, String geschaeftspartnerTyp, int kreditlimit, String name, Adresse anschrift, String telefon, String fax, String email, String erfassungsdatum, String titel) {
+    public Kunde(String geschaeftspartnerID, String geschaeftspartnerTyp, int kreditlimit, String name, Adresse anschrift, String telefon, String fax, String email, String erfassungsdatum, String titel) {
         super(geschaeftspartnerID, geschaeftspartnerTyp, kreditlimit, name, anschrift, telefon, fax, email, erfassungsdatum, titel);
     }
  
