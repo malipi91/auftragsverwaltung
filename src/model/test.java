@@ -6,6 +6,7 @@
 package model;
 
 import dao.DAOAdresse;
+import dao.DAOArtikel;
 import dao.DAOAuftrag;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,12 +19,13 @@ public class test {
     
     
     public static void main(String [ ] args) throws SQLException{
-        ArrayList<Auftrag> auftraege = new ArrayList<>();
         DAOAuftrag auftrag = new DAOAuftrag();
+        System.out.println(auftrag.findeLetzteID());
         Auftrag auf = new Auftrag();
-        auf = auftrag.erhalteAuftragFuerID("1");
-        auf.setAuftragswert(10020);
-        auftrag.bearbeiteAuftrag("1", auf);
+        auf.setAuftragstext("test12345");
+        auf.setAbschlussdatum("2016-01-01");
+        auf.setLieferdatum("2017-03-01");
+        auftrag.legeNeueAuftragAn(auf);
     }
     
 }

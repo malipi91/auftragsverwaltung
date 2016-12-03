@@ -6,6 +6,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -110,7 +111,7 @@ public class DAOArtikel {
         // Erzeugen eines Statements Objekts über das Objekt der Connection.
         Statement stmt = conn.createStatement();
         // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
-        String sql = "select * from artikel order by Artikel_ID";
+        String sql = "select * from artikel order by Erfassungsdatum";
         // Erzeugen eines leeren Auftrags-Objekt.
         ArrayList<Artikel> artikelliste = new ArrayList<>();
         
@@ -267,6 +268,86 @@ public class DAOArtikel {
         } catch (SQLException e) {
             System.out.println(e);
             System.out.println("Objekt wurde nicht geändert");
+        }
+    }
+    
+    public String findeLetzteID() throws SQLException{
+        
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs = null;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select Artikel_ID, LKZ from artikel order by Erfassungsdatum ASC";
+        String erg = "";
+        try{
+            // Ausführen der Statements
+            rs = stmt.executeQuery(sql);
+
+            // Schleife zum Speichern alle Auftragsobjekte
+            while(rs.next()){
+                
+                // Prüft ob LKZ gesetzt ist
+                if(rs.getString("LKZ") == null){
+                    erg = rs.getString("Artikel_ID");
+                } else {
+                    return null;
+                }
+            }
+            // Schließt die Verbindung zur DB.
+            conn.close();
+            
+            // Gibt die letzte Artikel_ID aus.
+            return erg;  
+        // Fehlerbehandlung
+        } catch(SQLException e){
+            System.out.println(e);
+            System.out.println("Fehler beim Auslesen der letzten ID.");
+            return null;
+        }
+    }
+    
+    public String erhoeheLetzteID() throws SQLException{
+        String id = this.findeLetzteID();
+        int idInt = Integer.parseInt(id);
+        idInt = idInt + 1;
+        return String.valueOf(idInt);
+    }
+    public void legeNeuenArtikelAn(Artikel artikel) throws SQLException{
+        DBConnection con = new DBConnection();
+        Connection conn = con.createConection();
+
+    
+        String sql = "insert into artikel "
+                + "(Artikel_ID,Artikeltext,Bestelltext,Einzelwert,"
+                + "MwSt_Satz,Bestellwert,Bestandsmenge_RESERVIERT, "
+                + "Bestandsmenge_ZULAUF, Bestandsmenge_FREI, "
+                + "Bestandsmenge_VERKAUFT) "
+                + "values (?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, this.erhoeheLetzteID());
+        stmt.setString(2, artikel.getArtikeltext());
+        stmt.setString(3, artikel.getBestelltext());
+        stmt.setInt(4, artikel.getEinzelwert());
+        stmt.setInt(5,artikel.getMwst_satz());
+        stmt.setInt(6, artikel.getBestellwert());
+        stmt.setInt(7, artikel.getBestandsmenge_reserviert());
+        stmt.setInt(8, artikel.getBestandsmenge_zulauf());
+        stmt.setInt(9, artikel.getBestandsmenge_frei());
+        stmt.setInt(10, artikel.getBestandsmenge_verkauft());
+
+        try {
+            stmt.executeUpdate();
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Objekt wurde nicht hinzugefügt.");
         }
     }
 }

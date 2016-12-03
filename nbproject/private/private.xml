@@ -3,64 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/model/testsZusammengefasst.java</file>
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/src/dao/DAOAuftragsposition.java</file>
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/model/testeLos.java</file>
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/dao/DAOAuftragspositionTest.java</file>
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/src/model/Auftragsposition.java</file>
-            <file>file:/C:/Users/samet/Documents/auftragsverwaltung/test/dao/DAOAuftragTest.java</file>
-        </group>
-    </open-files>
-</project-private>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragsID_suchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragSuchen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/StartAV.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragBearbeiten.java</file>
-<<<<<<< HEAD
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
-=======
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeAnzeigen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/KundeBearbeiten.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/dao/DAODataDictionary.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/ArtikelAnlegen.java</file>
-            <file>file:/C:/Users/User/Documents/auftragsverwaltung/src/view/LieferantAnlegen.java</file>
-=======
->>>>>>> 2604087d0e314ff6aa2b61015f26c444f141521a
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/AuftragBearbeiten.java</file>
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/AuftragAnzeigen.java</file>
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-            <file>file:/C:/Users/mehmet_impram/Documents/auftragsverwaltung/src/view/StartAV.java</file>
->>>>>>> origin/mehmet
-        </group>
-    </open-files>
-</project-private>
->>>>>>> origin/mehmet
-=======
+            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOArtikel.java</file>
             <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOAuftragsposition.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Auftrag.java</file>
             <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/dao/DAOAuftrag.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Auftragsposition.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/view/StartAV.java</file>
             <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/test.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
-            <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/main/Main.java</file>
             <file>file:/C:/Users/marti/Documents/auftragsverwaltung/src/model/Artikel.java</file>
->>>>>>> 5ce2c42ecfa33869d916620093ece0bf3d28c074
-=======
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/view/StartAV.java</file>
-            <file>file:/C:/Users/Duygu%20Citak/Documents/auftragsverwaltung/src/view/AuftragAnlegen.java</file>
->>>>>>> origin/duygu
         </group>
     </open-files>
 </project-private>
->>>>>>> 91dcb6e21b13b160fb35ba0446c6d17ee869e1ac

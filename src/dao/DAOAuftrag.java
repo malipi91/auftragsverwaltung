@@ -52,28 +52,26 @@ public class DAOAuftrag {
     * in die Datenbank     
     */
     public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
-        String letzteID = dd.bekommeLetzteID(TAB_AUFTRAG);
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();
 
     
         String sql = "insert into auftrag "
-                + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
+                + "(Auftragskopf_ID,Auftragsart,Auftragstext,"
                 + "Auftragswert,Lieferdatum,AStatus, Abschlussdatum) "
-                + "values (?,?,?,?,?,?,?,?)";
+                + "values (?,?,?,?,?,?,?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
-        stmt.setString(1, letzteID);
+        stmt.setString(1, this.erhoeheLetzteID());
         stmt.setString(2, auftrag.getAuftragsart());
         stmt.setString(3, auftrag.getAuftragstext());
-        stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
-        stmt.setInt(5,auftrag.getAuftragswert());
-        stmt.setDate(6, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getLieferdatum()));
-        stmt.setString(7, auftrag.getStatus());
-        stmt.setDate(8, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
+//        stmt.setTimestamp(4, new Date(java.sql.Timestamp.valueOf(zf.gebeTimestamp())));
+        stmt.setInt(4,auftrag.getAuftragswert());
+        stmt.setDate(5, java.sql.Date.valueOf(auftrag.getLieferdatum()));
+        stmt.setString(6, auftrag.getStatus());
+        stmt.setDate(7, java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
 
         try {
             stmt.executeUpdate();
-            dd.erhoeheLetzteID(TAB_AUFTRAG);
             //Datenbankverbindung wird geschlossen
             conn.close();
             // Ausgabe der Fehlermeldung 
@@ -283,4 +281,51 @@ public class DAOAuftrag {
             System.out.println("Objekt wurde nicht geändert");
         }
     }
+    
+    public String findeLetzteID() throws SQLException{
+        
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs = null;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select Auftragskopf_ID, LKZ from auftrag order by Erfassungsdatum DESC";
+        String erg = "";
+        try{
+            // Ausführen der Statements
+            rs = stmt.executeQuery(sql);
+
+            // Schleife zum Speichern alle Auftragsobjekte
+
+                
+                // Prüft ob LKZ gesetzt ist
+                if(rs.first() && rs.getString("LKZ") == null){
+                    erg = rs.getString("Auftragskopf_ID");
+                } else {
+                    return null;
+                }
+            // Schließt die Verbindung zur DB.
+            conn.close();
+            
+            // Gibt die letzte Artikel_ID aus.
+            return erg;  
+        // Fehlerbehandlung
+        } catch(SQLException e){
+            System.out.println(e);
+            System.out.println("Fehler beim Auslesen der letzten ID.");
+            return null;
+        }
+    }
+    
+    public String erhoeheLetzteID() throws SQLException{
+        String id = this.findeLetzteID();
+        int idInt = Integer.parseInt(id);
+        int erg = idInt + 1;
+        return String.valueOf(erg);
+    }
+    
 }
