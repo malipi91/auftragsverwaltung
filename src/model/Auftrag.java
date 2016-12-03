@@ -44,6 +44,19 @@ public class Auftrag {
         
         
     }
+    public Auftrag(String id, String text, String erfassungsdatum, 
+            String lieferdatum, String auftragsart, int auftragswert, 
+            String status, String abschlussdatum, String gpid){
+        this.auftrags_ID = id;
+        this.auftragstext = text;
+        this.Erfassungsdatum = erfassungsdatum;
+        this.Lieferdatum = lieferdatum;
+        this.auftragsart = auftragsart;
+        this.auftragswert = auftragswert;
+        this.Status = status;
+        this.abschlussdatum = abschlussdatum;
+        this.geschaeftspartnerID = gpid;
+    }
     
     public void setzeGeschaeftspartnerID(String id){
         this.geschaeftspartnerID = id;

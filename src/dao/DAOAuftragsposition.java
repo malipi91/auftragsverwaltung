@@ -12,14 +12,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JTable;
-import model.Auftrag;
 import model.Auftragsposition;
 import util.DBConnection;
 import util.Zusatzfunktionen;
 
+/*----------------------------------------------------------*/
+/* Datum Name Was                                           */
+/* 24.11.16 Duygu Citak Anlegen der Klasse                  */
+/* 03.12.16 MaLi Überabeiten der Methoden und Erweiter      */
+/*----------------------------------------------------------*/
 /**
  *
- * @author marti
+ * @author Martin Lipinski 
  */
 public class DAOAuftragsposition {
 
@@ -273,5 +277,53 @@ public class DAOAuftragsposition {
         }
         // Ausgabe des Auftrags-Objekts.
         return auftragsposition;
+    }
+        
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Diese Methode dient zum Ändern von bestehenden Auftragspositionen. 
+     * Positionsnummer und Auftrags-ID werden allerdings nicht geändert!
+     * 
+     * @param id die ID des Auftrags
+     * @param pos die Position die geändert werden soll
+     * @param auftragspos ein Auftragspositions-Objekt
+     * @throws SQLException
+     */
+    public void bearbeiteAuftrag(String id, int pos, Auftragsposition auftragspos) 
+            throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // UpdateString zum Ausführen des Updates
+        String sql = "update auftragsposition set Menge=?,Einzelwert=?, "
+                + "Materialnummer=? WHERE Auftragskopf_ID=" + id 
+                + " AND Positionsnummer=" + pos;
+        
+        // Übergabe des Strings an das PreparedStatement
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Zuweisung der zu übergebenden Werte aus dem Auftrags-Objekt.
+        stmt.setInt(1, auftragspos.getMenge());
+        stmt.setInt(2, auftragspos.getEinzelwert());
+        stmt.setString(3, auftragspos.getArtikelID());
+//        stmt.setString(8, gp.getGPID());
+        
+        try {
+            
+            //Ausführen des Statements
+            stmt.execute();
+            
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Objekt wurde nicht geändert");
+        }
     }
 }

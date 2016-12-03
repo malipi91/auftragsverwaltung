@@ -20,12 +20,10 @@ public class test {
     public static void main(String [ ] args) throws SQLException{
         ArrayList<Auftrag> auftraege = new ArrayList<>();
         DAOAuftrag auftrag = new DAOAuftrag();
-        auftraege = auftrag.gibAlleAuftraege(20);
-        
-        for(int i = 0; i < auftraege.size(); i++){
-            System.out.println("Durgang: " + i);
-            System.out.println(auftraege.get(i).getAuftrags_ID());
-        }
+        Auftrag auf = new Auftrag();
+        auf = auftrag.erhalteAuftragFuerID("1");
+        auf.setAuftragswert(10020);
+        auftrag.bearbeiteAuftrag("1", auf);
     }
     
 }

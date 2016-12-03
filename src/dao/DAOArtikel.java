@@ -6,12 +6,14 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import model.Artikel;
 import model.Auftrag;
+import model.Geschaeftspartner;
 import util.DBConnection;
 
 
@@ -175,5 +177,96 @@ public class DAOArtikel {
         // Ausführen des Statements
         stmt.executeUpdate(sql);
         conn.close();
+    }
+   
+   
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Diese Methode dient zum dem Ändern eines bestehenden Artikels. Es werden
+     * lediglich die Stammdaten geändert. Bestandsmengen werden nicht verwaltet.
+     * 
+     * @param id die ID des zu änderden Artikels
+     * @param artikel ein Artikel-Objekt 
+     * @throws SQLException
+     */
+    public void bearbeiteArtikel(String id, Artikel artikel) throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // UpdateString zum Ausführen des Updates
+        String sql = "update artikel set Artikeltext=?,Bestelltext=?, "
+                + "Einzelwert=?, MwST_Satz=?, Bestellwert=? WHERE Artikel_ID=" 
+                + id;
+        
+        // Übergabe des Strings an das PreparedStatement
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Zuweisung der zu übergebenden Werte aus dem Artikel-Objekt.
+        stmt.setString(1, artikel.getArtikeltext());
+        stmt.setString(2, artikel.getBestelltext());
+        stmt.setInt(3, artikel.getEinzelwert());
+        stmt.setInt(4, artikel.getMwst_satz());
+        stmt.setInt(5, artikel.getBestellwert());
+//        stmt.setString(8, gp.getGPID());
+        
+        try {
+            
+            //Ausführen des Statements
+            stmt.execute();
+            
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Objekt wurde nicht geändert");
+        }
+    }
+    
+    /**
+     * Diese Methode dient zum verwalten der Bestandsmengen eines Artikels. 
+     * Es werden lediglich die Bewegungsdaten für die Bestandsmenge geändert.
+     * @param id Die ID des Artikels das geändert werden soll
+     * @param artikel Artikel-Objekts das die Bestandsmengen enthält
+     * @throws SQLException
+     */
+    public void verwalteBestandsmengen(String id, Artikel artikel) throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // UpdateString zum Ausführen des Updates
+        String sql = "update artikel set BESTANDSMENGE_RESERVIERT=?,"
+                + "BESTANDSMENGE_ZULAUF=?, BESTANDSMENGE_VERKAUFT=?, "
+                + "BESTANDSMENGE_FREI=? WHERE Artikel_ID=" + id;
+        
+        // Übergabe des Strings an das PreparedStatement
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Zuweisung der zu übergebenden Werte aus dem Artikel-Objekt.
+        stmt.setInt(1, artikel.getBestandsmenge_reserviert());
+        stmt.setInt(2, artikel.getBestandsmenge_zulauf());
+        stmt.setInt(3, artikel.getBestandsmenge_verkauft());
+        stmt.setInt(4, artikel.getBestandsmenge_frei());
+//        stmt.setString(8, gp.getGPID());
+        
+        try {
+            
+            //Ausführen des Statements
+            stmt.execute();
+            
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Objekt wurde nicht geändert");
+        }
     }
 }

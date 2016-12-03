@@ -15,6 +15,7 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import model.Auftrag;
+import model.Geschaeftspartner;
 import util.DBConnection;
 import util.Zusatzfunktionen;
 
@@ -267,39 +268,56 @@ public class DAOAuftrag {
         conn.close();
     }
     
-//    public void bearbeiteAuftrag(String id, Auftrag auftrag) throws SQLException{
-//        // Erzeugen eines neuen DBConnection Objekts.
-//        DBConnection con = new DBConnection();
-//        // Übergabe der Connection an ein Connection Objekt.
-//        Connection conn = con.createConection();
-//        // UpdateString 
-//        String sql = "update auftrag set auftragsart=" + auftrag.getAuftragsart() +
-//                ", auftragstext= " + auftrag.getAuftragstext() +
-//                ", erfassungsdatum= " + auftrag.getErfassungsdatum() +
-//                ", auftragswert= " + auftrag.getAuftragswert() +
-//                ", lieferdatum= " + auftrag.getLieferdatum() +
-//                + "(Auftragskopf_ID,Auftragsart,Auftragstext,Erfassungsdatum,"
-//                + "Auftragswert,Lieferdatum,AStatus, Abschlussdatum) "
-//                + "values (?,?,?,?,?,?,?,?)";
-//        PreparedStatement stmt = conn.prepareStatement(sql);
-//        stmt.setString(1, letzteID);
-//        stmt.setString(2, auftrag.getAuftragsart());
-//        stmt.setString(3, auftrag.getAuftragstext());
-//        stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
-//        stmt.setInt(5,auftrag.getAuftragswert());
-//        stmt.setDate(6, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getLieferdatum()));
-//        stmt.setString(7, auftrag.getStatus());
-//        stmt.setDate(8, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
-//
-//        try {
-//            stmt.executeUpdate();
-//            dd.erhoeheLetzteID(TAB_AUFTRAG);
-//            //Datenbankverbindung wird geschlossen
-//            conn.close();
-//            // Ausgabe der Fehlermeldung 
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//            System.out.println("Objekt wurde nicht hinzugefügt.");
-//        }
-//    }
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Diese Methode dient zum Ändern von bestehenden Aufträgen.
+     * 
+     * @param id die ID des zu änderden Auftrags
+     * @param auftrag ein Auftrags-Objekt, dass die Änderungen enthält
+     * @throws SQLException
+     */
+    public void bearbeiteAuftrag(String id, Auftrag auftrag) throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Geschaeftsparnter - Objekt erzeugen
+        Geschaeftspartner gp = new Geschaeftspartner();
+        // Geschäftspartner zuweisen zum Auslesen der GP-ID
+        gp = auftrag.getGeschaeftspartner();
+        // UpdateString zum Ausführen des Updates
+        String sql = "update auftrag set Auftragsart=?,Auftragstext=?, "
+                + "Erfassungsdatum=?, Auftragswert=?, Lieferdatum=?, AStatus=?, "
+                + "Abschlussdatum=? WHERE Auftragskopf_ID=" + id;
+        
+        // Übergabe des Strings an das PreparedStatement
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Zuweisung der zu übergebenden Werte aus dem Auftrags-Objekt.
+        stmt.setString(1, auftrag.getAuftragsart());
+        stmt.setString(2, auftrag.getAuftragstext());
+        stmt.setString(3, auftrag.getErfassungsdatum());
+        stmt.setInt(4, auftrag.getAuftragswert());
+        stmt.setString(5, auftrag.getLieferdatum());
+        stmt.setString(6, auftrag.getStatus());
+        stmt.setString(7, auftrag.getAbschlussdatum());
+//        stmt.setString(8, gp.getGPID());
+        
+        try {
+            
+            //Ausführen des Statements
+            stmt.execute();
+            
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Objekt wurde nicht geändert");
+        }
+    }
 }
