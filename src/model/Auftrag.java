@@ -42,6 +42,19 @@ public class Auftrag {
         this.abschlussdatum = abschlussdatum;
         
     }
+    public Auftrag(String id, String text, String erfassungsdatum, 
+            String lieferdatum, String auftragsart, int auftragswert, 
+            String status, String abschlussdatum, String gpid){
+        this.auftrags_ID = id;
+        this.auftragstext = text;
+        this.Erfassungsdatum = erfassungsdatum;
+        this.Lieferdatum = lieferdatum;
+        this.auftragsart = auftragsart;
+        this.auftragswert = auftragswert;
+        this.Status = status;
+        this.abschlussdatum = abschlussdatum;
+        this.geschaeftspartnerID = gpid;
+    }
     
     public void setzeGeschaeftspartnerID(String id){
         this.geschaeftspartnerID = id;
@@ -96,6 +109,10 @@ public class Auftrag {
     public Adresse getStandardAnschrift() {
         return standardAnschrift;
     }
+    
+    public int getAuftragswert(){
+        return this.auftragswert;
+    }
 
     public void setStandardAnschrift(Adresse standardAnschrift) {
         this.standardAnschrift = standardAnschrift;
@@ -123,10 +140,6 @@ public class Auftrag {
 
     public void setAuftragsart(String auftragsart) {
         this.auftragsart = auftragsart;
-    }
-
-    public int getAuftragswert() {
-        return auftragswert;
     }
 
     public void setAuftragswert(int auftragswert) {
