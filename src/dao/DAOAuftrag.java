@@ -65,11 +65,20 @@ public class DAOAuftrag {
         stmt.setString(1, letzteID);
         stmt.setString(2, auftrag.getAuftragsart());
         stmt.setString(3, auftrag.getAuftragstext());
-        stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Timestamp.valueOf(zf.gebeTimestamp()));
+        stmt.setString(4, auftrag.getErfassungsdatum());
+        
+//stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));
+//java.sql.Timestamp.valueOf(auftrag.getErfassungsdatum());
+
+        
         stmt.setInt(5,auftrag.getAuftragswert());
-        stmt.setDate(6, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getLieferdatum()));
+        stmt.setString(6, auftrag.getLieferdatum());
+//stmt.setDate(6, new Date(Long.parseLong(auftrag.getLieferdatum())));
+//java.sql.Date.valueOf(auftrag.getLieferdatum()));
         stmt.setString(7, auftrag.getStatus());
-        stmt.setDate(8, new Date(Long.parseLong(auftrag.getLieferdatum())));//java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
+        stmt.setString(8, auftrag.getAbschlussdatum());
+//stmt.setDate(8, new Date(Long.parseLong(auftrag.getLieferdatum())));
+//java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
 
         try {
             stmt.executeUpdate();
@@ -299,11 +308,14 @@ public class DAOAuftrag {
         // Zuweisung der zu übergebenden Werte aus dem Auftrags-Objekt.
         stmt.setString(1, auftrag.getAuftragsart());
         stmt.setString(2, auftrag.getAuftragstext());
-        stmt.setDate(3, new Date(Long.parseLong(auftrag.getErfassungsdatum())));//stmt.setString(3, auftrag.getErfassungsdatum());
+//        stmt.setDate(3, new Date(Long.parseLong(auftrag.getErfassungsdatum())));
+        stmt.setString(3, auftrag.getErfassungsdatum());
         stmt.setInt(4, auftrag.getAuftragswert());
-        stmt.setDate(5, new Date(Long.parseLong(auftrag.getLieferdatum())));//stmt.setString(5, auftrag.getLieferdatum());
+//        stmt.setDate(5, new Date(Long.parseLong(auftrag.getLieferdatum())));
+        stmt.setString(5, auftrag.getLieferdatum());
         stmt.setString(6, auftrag.getStatus());
-        stmt.setDate(7, new Date(Long.parseLong(auftrag.getAbschlussdatum())));//stmt.setString(7, auftrag.getAbschlussdatum());
+//        stmt.setDate(7, new Date(Long.parseLong(auftrag.getAbschlussdatum())));
+        stmt.setString(7, auftrag.getAbschlussdatum());
 //        stmt.setString(8, gp.getGPID());
         
         try {

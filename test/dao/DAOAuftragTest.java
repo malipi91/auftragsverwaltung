@@ -23,13 +23,13 @@ import static org.junit.Assert.*;
 public class DAOAuftragTest {
     
    DAOAuftrag da;
-   String letzteID = "133";
+   String letzteID = "143";
     @Before
     public void setUp() throws SQLException {
         
         
         da = new DAOAuftrag();
-        
+        String datumm = "2016-11-20";
     }
     
     
@@ -42,7 +42,7 @@ public class DAOAuftragTest {
     
     @Test 
     public void testLegeNeuenAuftragAn() throws SQLException{
-        Auftrag auftrag = new Auftrag(letzteID,"test", "1480600612165", "1480600612165", "bar", 4344,"f", "1480600612165");     
+        Auftrag auftrag = new Auftrag(letzteID,"test", "2016.12.16", "2016.12.16", "bar", 435544,"f", "2016.12.16");     
         da.legeNeueAuftragAn(auftrag);
         assertEquals(letzteID,da.erhalteAuftragFuerID(letzteID).getAuftrags_ID());
     }
@@ -59,9 +59,9 @@ public class DAOAuftragTest {
     @Test
     public void testBearbeiteAuftrag() throws SQLException{
       
-      Auftrag auftrag2 = new Auftrag("100","test", "1480600612165", "1480600612165", "bar", 43445555,"f", "1480600612165");     
-      da.bearbeiteAuftrag("100", auftrag2);
-      assertEquals(43445555, da.erhalteAuftragFuerID("100").getAuftragswert());
+      Auftrag auftrag2 = new Auftrag("140","test", "2016.12.16", "2016.12.16", "bar", 1,"f","2016.12.16");     
+      da.bearbeiteAuftrag("140", auftrag2);
+      assertEquals(1, da.erhalteAuftragFuerID("140").getAuftragswert());
     }
     
 }
