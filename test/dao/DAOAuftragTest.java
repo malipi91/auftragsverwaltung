@@ -23,7 +23,7 @@ import static org.junit.Assert.*;
 public class DAOAuftragTest {
     
    DAOAuftrag da;
-    
+   String letzteID = "133";
     @Before
     public void setUp() throws SQLException {
         
@@ -42,23 +42,26 @@ public class DAOAuftragTest {
     
     @Test 
     public void testLegeNeuenAuftragAn() throws SQLException{
-        Auftrag auftrag = new Auftrag("129","test", "1480600612165", "1480600612165", "bar", 4344,"f", "1480600612165");     
+        Auftrag auftrag = new Auftrag(letzteID,"test", "1480600612165", "1480600612165", "bar", 4344,"f", "1480600612165");     
         da.legeNeueAuftragAn(auftrag);
-        assertEquals("129",da.erhalteAuftragFuerID("129").getAuftrags_ID());
+        assertEquals(letzteID,da.erhalteAuftragFuerID(letzteID).getAuftrags_ID());
     }
     
     
     @Test
     public void testLöscheAuftrag() throws SQLException{
         
-        da.loescheAuftrag("129");
-        assertEquals(da.erhalteLKZAuftragFuerID("129").getLKZ(),"w");
+        da.loescheAuftrag(letzteID);
+        assertEquals(da.erhalteLKZAuftragFuerID(letzteID).getLKZ(),"w");
         
     }
     
     @Test
-    public void testGibAlleAuftraege() throws SQLException{
-        assertEquals(9, da.gibAlleAuftraege(5).get(3));          
+    public void testBearbeiteAuftrag() throws SQLException{
+      
+      Auftrag auftrag2 = new Auftrag("100","test", "1480600612165", "1480600612165", "bar", 43445555,"f", "1480600612165");     
+      da.bearbeiteAuftrag("100", auftrag2);
+      assertEquals(43445555, da.erhalteAuftragFuerID("100").getAuftragswert());
     }
     
 }

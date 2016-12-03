@@ -299,11 +299,11 @@ public class DAOAuftrag {
         // Zuweisung der zu übergebenden Werte aus dem Auftrags-Objekt.
         stmt.setString(1, auftrag.getAuftragsart());
         stmt.setString(2, auftrag.getAuftragstext());
-        stmt.setString(3, auftrag.getErfassungsdatum());
+        stmt.setDate(3, new Date(Long.parseLong(auftrag.getErfassungsdatum())));//stmt.setString(3, auftrag.getErfassungsdatum());
         stmt.setInt(4, auftrag.getAuftragswert());
-        stmt.setString(5, auftrag.getLieferdatum());
+        stmt.setDate(5, new Date(Long.parseLong(auftrag.getLieferdatum())));//stmt.setString(5, auftrag.getLieferdatum());
         stmt.setString(6, auftrag.getStatus());
-        stmt.setString(7, auftrag.getAbschlussdatum());
+        stmt.setDate(7, new Date(Long.parseLong(auftrag.getAbschlussdatum())));//stmt.setString(7, auftrag.getAbschlussdatum());
 //        stmt.setString(8, gp.getGPID());
         
         try {
