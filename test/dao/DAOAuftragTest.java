@@ -26,25 +26,35 @@ public class DAOAuftragTest {
     
     @Before
     public void setUp() throws SQLException {
-        Auftrag auftrag = new Auftrag("99999","test", "1480600612165", "1480600612165", "bar", 100,"f", "1480600612165");
+        Auftrag auftrag = new Auftrag("9999901","test", "1480600612165", "1480600612165", "bar", 4344,"f", "1480600612165");
         
         da = new DAOAuftrag();
         da.legeNeueAuftragAn(auftrag);
     }
     
     
-    @Test
-    public void testErhalteAuftragFuerID() throws Exception {
-        Auftrag ergebnis =  da.erhalteAuftragFuerID("8");
-        assertEquals("8", ergebnis.getAuftrags_ID());
-        
-    }
+//    @Test
+//    public void testErhalteAuftragFuerID() throws Exception {
+//        Auftrag ergebnis =  da.erhalteAuftragFuerID("8");
+//        assertEquals("8", ergebnis.getAuftrags_ID());
+//        
+//    }
+//    
+//    @Test 
+//    public void testLegeNeuenAuftragAn() throws SQLException{
+//        Auftrag auftrag2 = new Auftrag("99999","test", "1480600612165", "1480600612165", "bar", 100,"f", "1480600612165");
+//        da.legeNeueAuftragAn(auftrag2);
+//        assertEquals("9",da.erhalteAuftragFuerID("9").getAuftrags_ID());
+//    }
     
-    @Test 
-    public void testLegeNeuenAuftragAn() throws SQLException{
-        Auftrag auftrag2 = new Auftrag("99999","test", "1480600612165", "1480600612165", "bar", 100,"f", "1480600612165");
-        da.legeNeueAuftragAn(auftrag2);
-        assertEquals("9",da.erhalteAuftragFuerID("9").getAuftrags_ID());
+    
+    
+    
+    @Test
+    public void testLöscheAuftrag() throws SQLException{
+        da.loescheAuftrag("93");
+        assertEquals(da.erhalteLKZAuftragFuerID("93").getLKZ(),"w");
+        
     }
     
 //    @Test

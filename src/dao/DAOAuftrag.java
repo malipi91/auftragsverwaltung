@@ -122,6 +122,43 @@ public class DAOAuftrag {
                     auftrag.setLieferdatum(rs.getString("Lieferdatum"));
                     auftrag.setAuftragswert(rs.getInt("Auftragswert"));
                     auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+                    auftrag.setLKZ(rs.getString("LKZ"));
+                } else {
+                    return null;
+                }
+            }
+            // DB-Verbindung wird geschlossen.
+            conn.close();
+        } catch (SQLException e) {
+            // Gibt die Fehlermeldung aus.
+            System.out.println(e);
+            System.out.println("Objekt nicht gefunden!");
+        }
+        // Ausgabe des Auftrags-Objekts.
+        return auftrag;
+    }
+    public Auftrag erhalteLKZAuftragFuerID(String id) throws SQLException {
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select * from auftrag where Auftragskopf_ID= " + id;
+        // Erzeugen eines leeren Auftrags-Objekt.
+        Auftrag auftrag = new Auftrag();
+
+        try {
+            // Ausführen des SQL-Befehls.
+            rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                if(rs.getString("LKZ") != null){
+                    // Die Informationen aus der DB werden an das Auftrags-Objekt übergeben.
+                    
+                    auftrag.setLKZ(rs.getString("LKZ"));
                 } else {
                     return null;
                 }

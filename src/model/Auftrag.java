@@ -25,6 +25,7 @@ public class Auftrag {
     private ArrayList<Auftragsposition> auftragspositionen ;
     private Geschaeftspartner geschaeftspartner;
     private String geschaeftspartnerID;
+    private String LKZ;
     
     public Auftrag(){
         
@@ -40,6 +41,7 @@ public class Auftrag {
         this.auftragswert = auftragswert;
         this.Status = status;
         this.abschlussdatum = abschlussdatum;
+        
         
     }
     
@@ -77,6 +79,13 @@ public class Auftrag {
 //        
 //    }
 
+    public String getLKZ(){
+        return LKZ;
+    }
+    
+    public void setLKZ(String LKZ){
+        this.LKZ = LKZ;
+    }
     public String getAuftrags_ID() {
         return auftrags_ID;
     }
