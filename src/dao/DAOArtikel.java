@@ -5,7 +5,6 @@
  */
 package dao;
 
-<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -23,25 +22,12 @@ import util.DBConnection;
 /* Datum Name Was                                           */
 /* 01.12.16 MaLi Anlegen der Klasse                         */
 /*----------------------------------------------------------*/
-=======
-import java.sql.SQLException;
-import model.Artikel;
-
->>>>>>> origin/hicran
 /**
  * Diese Klasse dient dem Zugriff auf die DB-Tabelle Artikel.
  * @author Martin Lipinski
  */
 public class DAOArtikel {
-    public void legeNeueArtikelAn(Artikel artikel) throws SQLException{
-    }
-    public boolean loescheArtikelMitID(String artikelID)throws SQLException{
-        return true;
-    }
-    public Artikel sucheArtikelFuerID(String artikelID) throws SQLException{
-        Artikel artikel = new Artikel();
-        return artikel;
-    }
+   
     
     
     
@@ -180,7 +166,7 @@ public class DAOArtikel {
      * @param id Artikel-ID die gelöscht werden soll.
      * @throws SQLException
     */
-   public void loescheArtikel(String id) throws SQLException{
+   public void loescheArtikelMitID(String id) throws SQLException{
         // Erzeugen eines neuen DBConnection Objekts.
         DBConnection con = new DBConnection();
         // Übergabe der Connection an ein Connection Objekt.
@@ -332,7 +318,7 @@ public class DAOArtikel {
         idInt = idInt + 1;
         return String.valueOf(idInt);
     }
-    public void legeNeuenArtikelAn(Artikel artikel) throws SQLException{
+    public void legeNeueArtikelAn(Artikel artikel) throws SQLException{
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();
 
@@ -364,5 +350,10 @@ public class DAOArtikel {
             System.out.println(e);
             System.out.println("Objekt wurde nicht hinzugefügt.");
         }
+    }
+    
+     public Artikel sucheArtikelFuerID(String artikelID) throws SQLException{
+        Artikel artikel = new Artikel();
+        return artikel;
     }
 }

@@ -68,6 +68,10 @@ public class DAOAuftrag {
         stmt.setDate(5, java.sql.Date.valueOf(auftrag.getLieferdatum()));
         stmt.setString(6, auftrag.getStatus());
         stmt.setDate(7, java.sql.Date.valueOf(auftrag.getAbschlussdatum()));
+        stmt.setString(4, auftrag.getErfassungsdatum());
+        
+//stmt.setDate(4, new Date(Long.parseLong(auftrag.getLieferdatum())));
+//java.sql.Timestamp.valueOf(auftrag.getErfassungsdatum());
 
         try {
             stmt.executeUpdate();
@@ -120,6 +124,43 @@ public class DAOAuftrag {
                     auftrag.setLieferdatum(rs.getString("Lieferdatum"));
                     auftrag.setAuftragswert(rs.getInt("Auftragswert"));
                     auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
+                    auftrag.setLKZ(rs.getString("LKZ"));
+                } else {
+                    return null;
+                }
+            }
+            // DB-Verbindung wird geschlossen.
+            conn.close();
+        } catch (SQLException e) {
+            // Gibt die Fehlermeldung aus.
+            System.out.println(e);
+            System.out.println("Objekt nicht gefunden!");
+        }
+        // Ausgabe des Auftrags-Objekts.
+        return auftrag;
+    }
+    public Auftrag erhalteLKZAuftragFuerID(String id) throws SQLException {
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select * from auftrag where Auftragskopf_ID= " + id;
+        // Erzeugen eines leeren Auftrags-Objekt.
+        Auftrag auftrag = new Auftrag();
+
+        try {
+            // Ausführen des SQL-Befehls.
+            rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                if(rs.getString("LKZ") != null){
+                    // Die Informationen aus der DB werden an das Auftrags-Objekt übergeben.
+                    
+                    auftrag.setLKZ(rs.getString("LKZ"));
                 } else {
                     return null;
                 }
@@ -259,10 +300,13 @@ public class DAOAuftrag {
         // Zuweisung der zu übergebenden Werte aus dem Auftrags-Objekt.
         stmt.setString(1, auftrag.getAuftragsart());
         stmt.setString(2, auftrag.getAuftragstext());
+//        stmt.setDate(3, new Date(Long.parseLong(auftrag.getErfassungsdatum())));
         stmt.setString(3, auftrag.getErfassungsdatum());
         stmt.setInt(4, auftrag.getAuftragswert());
+//        stmt.setDate(5, new Date(Long.parseLong(auftrag.getLieferdatum())));
         stmt.setString(5, auftrag.getLieferdatum());
         stmt.setString(6, auftrag.getStatus());
+//        stmt.setDate(7, new Date(Long.parseLong(auftrag.getAbschlussdatum())));
         stmt.setString(7, auftrag.getAbschlussdatum());
 //        stmt.setString(8, gp.getGPID());
         

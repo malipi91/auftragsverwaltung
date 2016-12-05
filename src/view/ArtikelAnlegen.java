@@ -6,20 +6,13 @@
 package view;
 
 import dao.DAOArtikel;
-<<<<<<< HEAD
-=======
-import dao.DAOAuftrag;
->>>>>>> origin/hicran
 import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.Artikel;
-<<<<<<< HEAD
-=======
-import model.Auftrag;
->>>>>>> origin/hicran
+
 
 /*----------------------------------------------------------------------------*/
  /* Datum    Name    Was */
@@ -529,20 +522,6 @@ private final String ARTIKEL_ID = "00000";
  /* Mit dieser Methode wird ein Artikel angelegt             */
  /*----------------------------------------------------------*/
     private void jbSpeichern_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnlegenActionPerformed
-<<<<<<< HEAD
-        DAOArtikel daoArtikel = new DAOArtikel();
-        Artikel artikel = new Artikel();
-        try {
-            artikel.setArtikel_ID(daoArtikel.erhoeheLetzteID());
-            artikel.setArtikeltext(this.jtaArtikeltext_ArtikelAnlegen.getText());
-            artikel.setBestelltext(this.jtaBestelltext_ArtikelAnlegen.getText());
-            artikel.setBestellwert(Integer.parseInt(this.jtfbestellwertnetto_ArtikelAnlegen.getText()));
-            artikel.setEinzelwert(Integer.parseInt(this.jtfeinzelwertnetto_ArtikelAnlegen.getText()));
-            daoArtikel.legeNeuenArtikelAn(artikel);
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(ArtikelAnlegen.class.getName()).log(Level.SEVERE, null, ex);
-=======
         // TODO add your handling code here:
         if (istVollstaendig()) {
             //Die Eingabefelder werden den Variablen zugeordnet
@@ -570,8 +549,6 @@ private final String ARTIKEL_ID = "00000";
         } catch (SQLException ex) {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
-
->>>>>>> origin/hicran
         }
         
     }//GEN-LAST:event_jbSpeichern_ArtikelAnlegenActionPerformed
