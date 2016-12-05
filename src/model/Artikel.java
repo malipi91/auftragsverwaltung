@@ -47,6 +47,40 @@ public class Artikel {
             this.bestandsmenge_verkauft = bestandsmenge_verkauft;
             this.bestandsmenge_frei = bestandsmenge_frei;
     }
+    
+    public Artikel(String artikel_ID, String artikeltext, String bestelltext,
+        int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
+        int bestandsmenge_zulauf, int bestandsmenge_verkauft,
+        int bestandsmenge_frei, String gpid) {
+            this.artikel_ID = artikel_ID;
+            this.artikeltext = artikeltext;
+            this.bestelltext = bestelltext;
+            this.einzelwert = einzelwert;
+            this.mwst_satz = mwst_satz;
+            this.bestellwert = bestellwert;
+            this.bestandsmenge_reserviert = bestandsmenge_reserviert;
+            this.bestandsmenge_zulauf = bestandsmenge_zulauf;
+            this.bestandsmenge_verkauft = bestandsmenge_verkauft;
+            this.bestandsmenge_frei = bestandsmenge_frei;
+            this.lieferantenID = gpid;
+    }
+    
+    public Artikel(String artikel_ID, String artikeltext, String bestelltext,
+        int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
+        int bestandsmenge_zulauf, int bestandsmenge_verkauft,
+        int bestandsmenge_frei) {
+            this.artikel_ID = artikel_ID;
+            this.artikeltext = artikeltext;
+            this.bestelltext = bestelltext;
+            this.einzelwert = einzelwert;
+            this.mwst_satz = mwst_satz;
+            this.bestellwert = bestellwert;
+            this.bestandsmenge_reserviert = bestandsmenge_reserviert;
+            this.bestandsmenge_zulauf = bestandsmenge_zulauf;
+            this.bestandsmenge_verkauft = bestandsmenge_verkauft;
+            this.bestandsmenge_frei = bestandsmenge_frei;
+    }
+
 
     public String getArtikel_ID() {
         return artikel_ID;
