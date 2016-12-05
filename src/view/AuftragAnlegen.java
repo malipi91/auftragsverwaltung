@@ -93,6 +93,8 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private final String position_loeschen = "Soll die ausgewählte Position wirklich gelöscht werden?";
     private final String auftragspos_exp = "Die Auftragsposition konnte nicht gelöscht werden";
     private final String gueltige_menge = " Bitte geben Sie eine gueltige Menge an";
+    private Object POSITION_AUSWAHL;
+    private Object POSITION_LOESCHEN;
 
     /**
      * Creates new form AuftragAnlegen
@@ -753,12 +755,14 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfMenge_AuftragAnlegenActionPerformed
 
-    private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
-        /*----------------------------------------------------------*/
- /* 18.11.16 Citak Die Daten werden in der Gui-Maske geschrieben und nach 
-                          bestÃ¤tigung des Speicher Buttons werden die Daten in 
-                          die Datenbank gespeichert */
  /*----------------------------------------------------------*/
+ /* 18.11.2016 Citak Anlegen der Methode                     */
+ /* Mit dieser Methode wird ein Auftrag angelegt             */
+ /*----------------------------------------------------------*/
+    private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
+     /*--------------------------------------------------------------*/
+     /* 18.11.2016 Citak Die eingaben werden in der DB abgespeichert */
+     /*--------------------------------------------------------------*/
         if(istVollstaendig()){
         Auftragsstatus aStatus = new Auftragsstatus();
         String auftrags_ID = "1122";
@@ -786,25 +790,6 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
          }
-//        //Auftragspositionen werden aus der Tabelle ausgelesen, in einen 
-//        //Auftragspositionenobjekt aufganeommen und in die Datenbank geschrieben.
-//        for (int i = 0; i < jTAuftragsposition.getRowCount(); i++) {
-//            //Hier werden die Ausgelesenen Felder rausgenommen und in die Variable geschrieben.
-//            int positionsnr = (int) jTAuftragsposition.getValueAt(i, 0);
-//            int artikelID = (int) jTAuftragsposition.getValueAt(i, 1);
-//            int menge = (int) jTAuftragsposition.getValueAt(i, 3);
-//            int einzelwert = (int) jTAuftragsposition.getValueAt(i, 4);
-//
-//            //Die Daten werden aus der Tabelle geholt
-//            Auftragsposition auftragsposition = new Auftragsposition(auftrags_ID, positionsnr, menge, einzelwert, artikelID);
-//            try {
-//                //Die Daten werden in die Datenbank geschrieben
-//                DAOAuftragsposition dAOAuftragsposition = new DAOAuftragsposition();
-//                dAOAuftragsposition.legeNeueAuftragspositionAn(auftragsposition);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//        }
 
 
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
@@ -820,6 +805,10 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         myParent.oeffneArtikelIDSuchen();
     }//GEN-LAST:event_jbLupeArtikelID_AuftragAnlegenActionPerformed
 
+ /*----------------------------------------------------------*/
+ /* 29.12.2016 Citak Anlegen der Methode                     */
+ /* Mit dieser Methode wird eine Auftragsposition angelegt   */
+ /*----------------------------------------------------------*/
     private void jbPlus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPlus_AuftragAnlegenActionPerformed
 //        String auftragsID = jtfAuftragsid_aa.getText();
         String auftragsID = "11111";
@@ -829,6 +818,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         int einzelwert = Integer.valueOf(jtfEinzelwert_AuftragAnlegen.getText());
         String artikelID = jtfArtikelID_AuftragAnlegen.getText();
         DefaultTableModel model = (DefaultTableModel) this.jTAuftragsposition.getModel();
+        //Die entsprechenden Variablen werden gesetzt. 
         model.setValueAt(auftragsID, 0, 0);
         model.setValueAt(positionsNr, 0, 1);
         model.setValueAt(positionsmenge, 0, 2);
@@ -850,11 +840,46 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jbPlus_AuftragAnlegenActionPerformed
 
+     /*--------------------------------------------------------------------------*/
+     /* 01.12.16 Citak Die Daten werden aus der Datenbank geladen und eine       */
+     /*                 ausgewählt Auftragsposition wird gelöscht.               */
+     /*--------------------------------------------------------------------------*/
+    
     private void jbMinus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMinus_AuftragAnlegenActionPerformed
-//         position_loeschen();
+       int index = -1;
+        //Index wird auf die ausgewählte Zeile gesetzt.
+        index = this.jTAuftragsposition.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) this.jTAuftragsposition.getModel();
+
+        //Fehlerausgabe sobald eine Position nicht markiert wurde. 
+        if (index == -1) {
+            JOptionPane.showMessageDialog(null, this.POSITION_AUSWAHL, "Position nicht ausgewält", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            System.out.println("kopf:  " + index);
+            int positionNr = (int) model.getValueAt(index, 0);
+            String auftragsID = "11111";
+
+//(String)model.getValueAt(index, 0);
+            int antwort = JOptionPane.showConfirmDialog(this, this.POSITION_LOESCHEN, "Position löschen",
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (antwort == JOptionPane.YES_OPTION) {
+                model.removeRow(index);
+
+                try {
+                    //Die Daten werden in die Datenbank geschrieben
+                    DAOAuftragsposition dAOAuftragsposition = new DAOAuftragsposition();
+                    dAOAuftragsposition.loescheNeueAuftragsposition(auftragsID, positionNr);
+                } catch (SQLException ex) {
+                    Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
 
     }//GEN-LAST:event_jbMinus_AuftragAnlegenActionPerformed
-
+ /*----------------------------------------------------------*/
+ /* 30.12.2016 Citak Anlegen der Methode                     */
+ /* Mit dieser Methode wird die Gültigkeit des Datums geprüft*/
+ /*----------------------------------------------------------*/
     private void jftfErfassungsdatum_aaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jftfErfassungsdatum_aaFocusLost
         boolean istGueltig = false;
         if (!istGueltigesDatum(jftfErfassungsdatum_aa.getText())) {
@@ -864,26 +889,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jftfErfassungsdatum_aaFocusLost
 
-//      /**
-//     * Citak 29.11.2016 
-//     * holt die Werte der einzelnen Positionen in der Oberfläche
-//     * und speichert diese in die Instanz Variablen
-//     */
-//    private void position_belegen() {
-//        auftrags_id = Integer.parseInt(jtfAuftragsid_aa.getText());
-//        positions_id = Integer.parseInt(jtfPositionsID_AuftragAnlegen.getText());
-//        try {artikel_id = Integer.parseInt(jtfArtikelID_AuftragAnlegen.getText());
-//        } catch (NumberFormatException nfexception) {
-//            artikel_id = 0;
-//        }try {menge = Integer.parseInt(jtfMenge_AuftragAnlegen.getText());
-//        } catch (NumberFormatException nfe) {
-//            menge = 0;
-//        }try {einzelwert_netto = Integer.parseInt(jtfEinzelwert_AuftragAnlegen.getText());
-//        } catch (Exception ex) {
-//            einzelwert_netto = 0;
-//        }
-//    }
-    //leert die Auftragspositionstabelle 
+  /* 30.11.16 Citak leert die Positionstabelle */
     private void position_text_leeren() {
 
         jtfPositionsID_AuftragAnlegen.setText("");
@@ -893,38 +899,9 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jtfEinzelwert_AuftragAnlegen.setText("");
         jtfGesamtwert_AuftragAnlegen.setText("");
     }
-
-    /**
-     * 29.11.2016 Citak Mit dieser Methode kann eine Auftragsposition gelöscht
-     * werden.
-     */
-//    private void position_loeschen() {
-//        
-//        try {
-////             Auftraspositions obj wird aus tabelle selektiert
-//            Auftragsposition auftragsposition = DAOAuftragsposition.position_aus_Tabelle(jTAuftragsposition);
-////             Message geht raus um den benutzer zu informieren
-//            int loesche_position = JOptionPane.showMessageDialog(
-//                    
-//                    Integer.toString(JOptionPane.YES_NO_OPTION,
-//                    JOptionPane.QUESTION_MESSAGE));
-////             position soll gelöscht werden
-//            if (loesche_position == JOptionPane.YES_OPTION) {
-////                 Position wird gelöscht(LKZ gesetzt)
-//                auftragsposition = DAOAuftragsposition.position_aus_Tabelle(auftragsPositionen, auftragsposition);
-//            }
-////           Positions textfelder werden geleert
-//            position_text_leeren();
-//            
-//        } catch (Exception e) {
-////             Exception wird gefangen und verarbeitet und eine passende Fehlermeldung geht raus
-////             über eine Joptionpane
-//            System.out.println(auftragspos_exp);
-//        }
-//    }
     
     
-    /* Diese Methode erstellt ein Datum. Erstellt von Citak, 30.11.2016 */
+     /* 30.11.16 Citak erstellen eines Datums */
     private boolean istGueltigesDatum(String datum) {
         boolean istGueltig = false;
         SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");

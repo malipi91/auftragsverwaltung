@@ -88,6 +88,9 @@ public class StartAV extends javax.swing.JFrame {
     public void oeffneAuftragIDSuchen() {
         jifAuftragsID_suchen.setVisible(true);
     }
+    public ArtikelBearbeiten getArtikelBearbeiten(){
+        return this.jifArtikelBearbeiten;
+    }
     
 /*------------------------------------------------------------*/
 /* 29.11.16 Yoeruek Methode zum Aufrufen der einzelnen Masken */
@@ -109,7 +112,9 @@ public class StartAV extends javax.swing.JFrame {
     public void oeffneZKIDSuchen(){
         jifZKID_suchen.setVisible(true);
     }
-    
+     public void oeffneArtikelBearbeiten(){
+         this.jifArtikelBearbeiten.setVisible(true);
+     }
 
     
     

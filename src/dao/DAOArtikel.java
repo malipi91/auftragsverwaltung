@@ -5,6 +5,7 @@
  */
 package dao;
 
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -22,11 +23,25 @@ import util.DBConnection;
 /* Datum Name Was                                           */
 /* 01.12.16 MaLi Anlegen der Klasse                         */
 /*----------------------------------------------------------*/
+=======
+import java.sql.SQLException;
+import model.Artikel;
+
+>>>>>>> origin/hicran
 /**
  * Diese Klasse dient dem Zugriff auf die DB-Tabelle Artikel.
  * @author Martin Lipinski
  */
 public class DAOArtikel {
+    public void legeNeueArtikelAn(Artikel artikel) throws SQLException{
+    }
+    public boolean loescheArtikelMitID(String artikelID)throws SQLException{
+        return true;
+    }
+    public Artikel sucheArtikelFuerID(String artikelID) throws SQLException{
+        Artikel artikel = new Artikel();
+        return artikel;
+    }
     
     
     
