@@ -5,10 +5,17 @@
  */
 package view;
 
+import dao.DAOAuftrag;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Auftrag;
+import model.Auftragsstatus;
 
 /*----------------------------------------------------------*/
 /* Datum Name Was */
@@ -18,6 +25,30 @@ import javax.swing.JOptionPane;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragBearbeiten extends javax.swing.JInternalFrame {
+    //2.12.2016 Impram
+    //Variablen Deklaration
+    private String artikelname;
+    private String auftragsart;
+    private java.sql.Date abschlussdatum;
+    private java.sql.Date lieferdatum;
+    private String beschreibungstext;
+    private int menge;
+    private double einzelwert_netto;
+    private double sum_gesamtwert;
+    private boolean bestell_auftrag;
+    private boolean bar_auftrag;
+    private boolean sofortauftrag;
+    private boolean terminauftrag;
+    //Variable  Deklaration für Datum.
+    private String aktDatum;
+    private int aktJahr;
+    private int aktMonat;
+    private int aktTag;
+    
+    
+            
+    
+    
     //29.11.16 Impram
     //Konstanten Deklaration für den Status
     private final String status_ist_erfasst = "erfasst";
@@ -25,6 +56,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private final String status_ist_abgeschlossen = "abgeschlossen";
     private  String aktuelle_status = "";
     private String ist_status = "";
+    private  final String menge_gultig =" Bitte geben Sie eine gültige Menge an.";
     
 
     /**
@@ -42,39 +74,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jftfErfassungsdatumAuftragBearbeiten.setEnabled(false);
         jtfArtikelID_AuftragBearbeiten.setEnabled(false);
     }
-    
-    // 1.12.2016 Impram
-    //Überprüft die Datumsfelder ob die korrekt eingegeben wurde.
-    private boolean istSemantischRichtig() {
-        boolean istSemantischRichtig = false;
-        if (!istGueltigesDatum(jftfAbschlussdatumAuftragBearbeiten.getText())){
-            JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum ein!", "Falsches Datum ", JOptionPane.WARNING_MESSAGE);
-            jftfAbschlussdatumAuftragBearbeiten.requestFocusInWindow();
-        }
-        return istSemantischRichtig;
-    }
 
-     /*--------------------------------------------------------------*/
-     /* 01.12.16 Yoeruek Prüfung nach Pflichtfeldern, falls nichts   */ 
-     /*            angegeben ist wird eine Fehlermeldung ausgegeben  */
-     /*--------------------------------------------------------------*/
-    public boolean istVollstaendig(){
-        Boolean vollstaendig = false;
-        String fehlermeldung = "";
-        if(jtfAuftragsID_AuftragBearbeiten.getText().equals("")) {
-            fehlermeldung = "Geben Sie bitte eine Auftrags-ID ein!";
-            jtfAuftragsID_AuftragBearbeiten.requestFocusInWindow();
-        }
-        if(fehlermeldung.equals("")){
-            vollstaendig = true;
-        }else{
-            JOptionPane.showMessageDialog(this, fehlermeldung,"Unvollständig" ,JOptionPane.WARNING_MESSAGE);
-        }
-        return vollstaendig;
-    }
-    
-    
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -88,6 +88,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jbAbbrechen_AuftragBearbeiten = new javax.swing.JButton();
         jSeparator10 = new javax.swing.JSeparator();
+        jbSuchen_AuftragBearbeiten = new javax.swing.JButton();
         jLabel87 = new javax.swing.JLabel();
         jtfAuftragsID_AuftragBearbeiten = new javax.swing.JTextField();
         jbLöschenAuftragBearbeiten = new javax.swing.JButton();
@@ -147,6 +148,14 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             }
         });
 
+        jbSuchen_AuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbSuchen_AuftragBearbeiten.setText("Suchen");
+        jbSuchen_AuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSuchen_AuftragBearbeitenActionPerformed(evt);
+            }
+        });
+
         jLabel87.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel87.setText("Auftrags-ID:");
 
@@ -157,11 +166,6 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbLöschenAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbLöschenAuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
         jbLöschenAuftragBearbeiten.setText("Löschen");
-        jbLöschenAuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLöschenAuftragBearbeitenActionPerformed(evt);
-            }
-        });
 
         jpUnterPanel_AuftragBearbeiten.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bearbeiten", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
@@ -654,7 +658,9 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                             .addComponent(jLabel87)
                             .addGap(65, 65, 65)
                             .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(139, 139, 139)
+                            .addGap(27, 27, 27)
+                            .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jbLöschenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jbBearbeitenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -677,6 +683,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel87)
                     .addComponent(jtfAuftragsID_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSuchen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbLöschenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBearbeitenAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -685,7 +692,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
                 .addGroup(AuftragBearbeitenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAbbrechen_AuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSpeichernAuftragBearbeiten, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -717,9 +724,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jbAbbrechen_AuftragBearbeitenActionPerformed
-    
-
-    //29.11.2016 Impram
+//29.11.2016 Impram
     //In dieser Methode werden die Felder ausgegraut bei einem Status wechsel
     //zur freigegeben.
     private void auftragsstatus_freigegeben (){
@@ -735,11 +740,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     this.jtfPositionsID_AuftragBearbeiten.setEnabled(false);
     this.jtfZKIDAuftragBearbeiten.setEnabled(false);
     this.jcbAuftragsartAuftragBearbeiten.setEnabled(false);
-    this.jbSpeichernAuftragBearbeiten.setEnabled(false); 
+    this.jbSpeichernAuftragBearbeiten.setEnabled(false);
+    
+    
 }
-    
-    
-    //30.11.2016 Impram
+//30.11.2016 Impram
     //In dieser Methode werden alle Felder ausgegraut wenn der Status abgeschlossen ist.
     private void auftragsstatus_abgeschlossen (){
         this.jcbStatusAuftragBearbeiten.setEnabled(false);
@@ -758,11 +763,13 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jbAbbrechen_AuftragBearbeiten.setEnabled(false);
         this.jftfLieferdatumAuftragBearbeiten.setEnabled(false);
         this.jftfAbschlussdatumAuftragBearbeiten.setEnabled(false);
-        this.jbLupe_AuftragBearbeiten.setEnabled(false);    
+        this.jbLupe_AuftragBearbeiten.setEnabled(false);
+        
+             
+        
+        
     }
-    
-    
-    //   30.11.2016 Impram
+ //   30.11.2016 Impram
     //Wenn der Auftragstatus erfasst gewählt wurde , werden folgende Felder
     //sichtbar.
     private void auftragsstatus_erfasst () {
@@ -771,6 +778,8 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jtfMenge_AuftragBearbeiten.setEnabled(true);
         this.jtfBeschreibungAuftragBearbeiten.setEnabled(true);
         this.jtPositionsnr_AuftragBearbeiten.setEnabled(true);
+        
+        
     }
     private void jbSuchen_AuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
@@ -782,67 +791,92 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
 //Impram 30.11.2016
     private void jbBearbeitenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeitenAuftragBearbeitenActionPerformed
-        if(istVollstaendig()){
-            this.jtfArtikelname_AuftragBearbeiten.setEnabled(true);
-            this.jtfBeschreibungAuftragBearbeiten.setEnabled(true);
-            this.jtfEinzelwert_AuftragBearbeiten.setEnabled(true);
-            this.jtfGesamtwert_AuftragBearbeiten.setEnabled(true);
-            this.jtfMenge_AuftragBearbeiten.setEnabled(true);
-            this.jftfAbschlussdatumAuftragBearbeiten.setEnabled(true);
-            this.jftfLieferdatumAuftragBearbeiten.setEnabled(true);
-            this.jcbAuftragsartAuftragBearbeiten.setEnabled(true);
-            this.jcbStatusAuftragBearbeiten.setEnabled(true);
-        }
+        // TODO add your handling code here:
+        this.jtfArtikelname_AuftragBearbeiten.setEnabled(true);
+        this.jtfBeschreibungAuftragBearbeiten.setEnabled(true);
+        this.jtfEinzelwert_AuftragBearbeiten.setEnabled(true);
+        this.jtfGesamtwert_AuftragBearbeiten.setEnabled(true);
+        this.jtfMenge_AuftragBearbeiten.setEnabled(true);
+        this.jftfAbschlussdatumAuftragBearbeiten.setEnabled(true);
+        this.jftfLieferdatumAuftragBearbeiten.setEnabled(true);
+        this.jcbAuftragsartAuftragBearbeiten.setEnabled(true);
+        this.jcbStatusAuftragBearbeiten.setEnabled(true);
+                
     }//GEN-LAST:event_jbBearbeitenAuftragBearbeitenActionPerformed
 
     private void jcbStatusAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbStatusAuftragBearbeitenActionPerformed
-
+        // TODO add your handling code here:
         //Impram 30.11.2016
         // Es wird der gewählte Status geholt.
            String fehlermeldung = "";
-        if(this.aktuelle_status.equals(status_ist_erfasst) || aktuelle_status.equals(status_ist_abgeschlossen)){
-            fehlermeldung = "Ein Status wechsel von Erfasst auf Abgeschlossen ist nicht möglich!";
-            JOptionPane.showMessageDialog(this, fehlermeldung, "Nicht Erlaubt", JOptionPane.WARNING_MESSAGE);  
-        }
+    if(this.aktuelle_status.equals(status_ist_erfasst) || aktuelle_status.equals(status_ist_abgeschlossen)){
+        fehlermeldung = "Ein Status wechsel von Erfasst auf Abgeschlossen ist nicht möglich!";
+        JOptionPane.showMessageDialog(this, fehlermeldung, "Nicht Erlaubt", JOptionPane.WARNING_MESSAGE);
+        
+    }
         aktuelle_status = (String) jcbStatusAuftragBearbeiten.getSelectedItem();
         //Es wird das gewählte Status mit dem Status ist erfasst verglichen.
         if (aktuelle_status.equals(status_ist_erfasst)){
             //Wenn das gleich ist wird die Methode aufgerufen und die Felder
             // ausgegraut.
             auftragsstatus_erfasst();
-        }
-        if (aktuelle_status.equals(status_ist_freigegeben)) {
-                auftragsstatus_freigegeben();
-            }
-        if (aktuelle_status.equals(status_ist_abgeschlossen)){
-                auftragsstatus_freigegeben();
-        }
+            if (aktuelle_status.equals(status_ist_freigegeben)) {
+        auftragsstatus_freigegeben();
+    }
+    if (aktuelle_status.equals(status_ist_abgeschlossen)){
+        auftragsstatus_freigegeben();
+    }
+ 
         
+    }
     }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
-
-    private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
-        if(istVollstaendig()){
-    
-        } 
-    }//GEN-LAST:event_jbLöschenAuftragBearbeitenActionPerformed
-  
-//    if (aktuelle_status.equals(status_ist_freigegeben)) {
-//        auftragsstatus_freigegeben();
-//    }
-        
-
-//    if (aktuelle_status.equals(status_ist_abgeschlossen){
-//        auftragsstatus_freigegeben();
-//        return null;
-//    }
-// 
-//                                                                
 
     private void jbSpeichernAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
-        if(istSemantischRichtig()){
+       // 1.12.2016 Impram wird die Form der Datumfelder überprüft.
+         if(istSemantischRichtig()){
+             //Die Bearbeitete Felder in der Gui Maske werden nach Betätigung der
+             // Speicher Button in die DB geschrieben.
+            Auftragsstatus aStatus = new Auftragsstatus();
+            String auftragsart = (String) this.jcbAuftragsartAuftragBearbeiten.getSelectedItem();
+            String beschreibung = this.jtfBeschreibungAuftragBearbeiten.getText();
+            //Bei dem Datumsfelder bin ich mir nicht sicher ob das hie rein muss
+            //weil das in der Semantischrichtig methode überprüft wird.
+//            String lieferdatum = this.jftfLieferdatumAuftragBearbeiten.getText();
+//            String abschlussdatum = this.jftfAbschlussdatumAuftragBearbeiten.getText();
+            String artikelname = this.jtfArtikelname_AuftragBearbeiten.getText();
+            int menge = -1;
+            try{
+                //wird geparst da das kein int wert ist.
+                menge = Integer.parseInt(jtfMenge_AuftragBearbeiten.getText());
+            } catch (NumberFormatException ex) {
+                
+            }
+             System.out.println( auftragsart + beschreibung + artikelname + menge);
+             
+             
+              //DAO.MEthodenNAme(aufzrag); 
+             //Es wird ein neues AuftragsObjekt erzeugt.
+             //in dieser Auftragsobjekt werden alle attribute mit setmethode gefüllt.
+             //wenn das Objekt vollständig ist werden die Daten in die Db geschrieben.
+              Auftrag at = new Auftrag();
+              at.setAuftragsart(auftragsart);
+              
+              
+//              try {
+//                  DAOAuftrag daoauftrag = new DAOAuftrag();
+//                     daouftrag.Methodenname von DAOKLASSE FÜR Bearbeiten(auftrag);
+//        } catch (SQLException ex) {
+//            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+              }
         
-        }     
+        
+        
+         
+        
+        
+        
     }//GEN-LAST:event_jbSpeichernAuftragBearbeitenActionPerformed
  // Impram 1.12.2016
     //Von Citak die Methode kopiert um die Datumsfelder mit einander zuvergleichen
@@ -858,7 +892,18 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         }
         return istGueltig;
     }
-    
+   //02.12.2016 Impram die Methode erzeugt das aktuelle datum könnte man benötigen
+    // beim erfassungs eines Auftrages.
+    private void erzeugeAktuellesDatum () {
+Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date ());
+        aktJahr = cal.get(Calendar.YEAR);
+        aktMonat = cal.get(Calendar.MONTH);
+        aktTag = cal.get(Calendar.DATE);
+        SimpleDateFormat fo = new SimpleDateFormat ("dd.MM.yyyy");
+        aktDatum = fo.format(new Date());
+    }
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -889,6 +934,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbMinus_AuftragBearbeiten;
     private javax.swing.JButton jbPlus_AuftragBearbeiten;
     private javax.swing.JButton jbSpeichernAuftragBearbeiten;
+    private javax.swing.JButton jbSuchen_AuftragBearbeiten;
     private javax.swing.JComboBox<String> jcbAuftragsartAuftragBearbeiten;
     private javax.swing.JComboBox<String> jcbStatusAuftragBearbeiten;
     private javax.swing.JFormattedTextField jftfAbschlussdatumAuftragBearbeiten;
@@ -908,5 +954,22 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfPositionsID_AuftragBearbeiten;
     private javax.swing.JTextField jtfZKIDAuftragBearbeiten;
     // End of variables declaration//GEN-END:variables
-
+// 1.12.2016 Impram
+    //Überprüft die Datumsfelder ob die korrekt eingegeben wurde.
+    private boolean istSemantischRichtig() {
+     boolean istSemantischRichtig = false;
+     if (!istGueltigesDatum(jftfAbschlussdatumAuftragBearbeiten.getText())){
+         JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum ein!", "Falsches Datum ", JOptionPane.WARNING_MESSAGE);
+         jftfAbschlussdatumAuftragBearbeiten.requestFocusInWindow();
+         if (!istGueltigesDatum(jftfLieferdatumAuftragBearbeiten.getText())){
+             JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum", "Falsches Datum", JOptionPane.WARNING_MESSAGE);
+             jftfLieferdatumAuftragBearbeiten.requestFocusInWindow();
+            
+         }
+     }else {
+         istSemantischRichtig = true;
+     }
+     return istSemantischRichtig;
+    
+}
 }
