@@ -110,7 +110,9 @@ public class StartAV extends javax.swing.JFrame {
         jifZKID_suchen.setVisible(true);
     }
     
-
+    public void oeffneArtikelBearbeiten(){
+        this.jifArtikelBearbeiten.setVisible(true);
+    }
     
     
     @SuppressWarnings("unchecked")
