@@ -33,19 +33,18 @@ import util.Zusatzfunktionen;
  */
 public class DAOAuftrag {
 
-    private DAODataDictionary dd;
     private Zusatzfunktionen zf;
 
     private final String TAB_AUFTRAG = "auftrag";
 
     public DAOAuftrag() throws SQLException {
-        dd = new DAODataDictionary();
         zf = new Zusatzfunktionen();
     }
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
     /* 14.11.16 Hicran Yörük Anlegen der Methode                */
+    /* 03.12.16 MaLi Überarbeiten der Methode                   */
     /*----------------------------------------------------------*/
     /* 
     * Diese Methode legt durch Eingabe der Werte in die GUI einen neuen Auftrag 

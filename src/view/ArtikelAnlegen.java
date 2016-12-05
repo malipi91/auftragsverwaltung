@@ -5,8 +5,13 @@
  */
 package view;
 
+import dao.DAOArtikel;
+import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Artikel;
 
 /*----------------------------------------------------------------------------*/
  /* Datum    Name    Was */
@@ -514,10 +519,20 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
 
 
     private void jbSpeichern_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnlegenActionPerformed
-        // TODO add your handling code here:
-        if (istVollstaendig()) {
-
+        DAOArtikel daoArtikel = new DAOArtikel();
+        Artikel artikel = new Artikel();
+        try {
+            artikel.setArtikel_ID(daoArtikel.erhoeheLetzteID());
+            artikel.setArtikeltext(this.jtaArtikeltext_ArtikelAnlegen.getText());
+            artikel.setBestelltext(this.jtaBestelltext_ArtikelAnlegen.getText());
+            artikel.setBestellwert(Integer.parseInt(this.jtfbestellwertnetto_ArtikelAnlegen.getText()));
+            artikel.setEinzelwert(Integer.parseInt(this.jtfeinzelwertnetto_ArtikelAnlegen.getText()));
+            daoArtikel.legeNeuenArtikelAn(artikel);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ArtikelAnlegen.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }//GEN-LAST:event_jbSpeichern_ArtikelAnlegenActionPerformed
 
     private void jtfartikelid_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfartikelid_ArtikelAnlegenActionPerformed

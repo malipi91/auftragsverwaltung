@@ -326,4 +326,49 @@ public class DAOAuftragsposition {
             System.out.println("Objekt wurde nicht geändert");
         }
     }
+    
+    public int findeLetztePositionsnummer() throws SQLException{
+        
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs = null;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select Auftragskopf_ID, Positionsnummer, LKZ from auftragsposition order by Positionsnummer";
+        int erg = 0;
+        try{
+            // Ausführen der Statements
+            rs = stmt.executeQuery(sql);
+
+            // Schleife zum Speichern alle Auftragsobjekte
+
+                
+                // Prüft ob LKZ gesetzt ist
+                if(rs.first() && rs.getString("LKZ") == null){
+                    erg = rs.getInt("Positionsnummer");
+                } else {
+                    return 0;
+                }
+            // Schließt die Verbindung zur DB.
+            conn.close();
+            
+            // Gibt die letzte Artikel_ID aus.
+            return erg;  
+        // Fehlerbehandlung
+        } catch(SQLException e){
+            System.out.println(e);
+            System.out.println("Fehler beim Auslesen der letzten ID.");
+            return 0;
+        }
+    }
+    
+    public int erhoeheLetzteID() throws SQLException{
+        int id = this.findeLetztePositionsnummer();
+        int erg = id++;
+        return erg;
+    }
 }
