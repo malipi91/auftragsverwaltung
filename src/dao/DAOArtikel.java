@@ -5,11 +5,23 @@
  */
 package dao;
 
+import java.sql.SQLException;
+import model.Artikel;
+
 /**
  *
  * @author marti
  */
 public class DAOArtikel {
+    public void legeNeueArtikelAn(Artikel artikel) throws SQLException{
+    }
+    public boolean loescheArtikelMitID(String artikelID)throws SQLException{
+        return true;
+    }
+    public Artikel sucheArtikelFuerID(String artikelID) throws SQLException{
+        Artikel artikel = new Artikel();
+        return artikel;
+    }
     
    
 }

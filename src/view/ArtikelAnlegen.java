@@ -5,8 +5,15 @@
  */
 package view;
 
+import dao.DAOArtikel;
+import dao.DAOAuftrag;
+import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Artikel;
+import model.Auftrag;
 
 /*----------------------------------------------------------------------------*/
  /* Datum    Name    Was */
@@ -16,7 +23,7 @@ import javax.swing.JOptionPane;
  /* 27.11.16 Impram  Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*---------------------------------------------------------------------------*/
 public class ArtikelAnlegen extends javax.swing.JInternalFrame {
-
+private final String ARTIKEL_ID = "00000";
     public ArtikelAnlegen() {
         initComponents();
 
@@ -465,16 +472,17 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
-    /*----------------------------------------------------------*/
- /* 20.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
  /*----------------------------------------------------------*/
-    private boolean istVollstaendig() {
+ /* 20.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
+ /* 02.12.2016 Citak Überarbeitung der Methode               */
+ /*----------------------------------------------------------*/
+     private boolean istVollstaendig() {
         boolean istVollstaendig = false;
         String fehlermeldung = "";
-        if (jtfartikelid_ArtikelAnlegen.getText().equals("")) {
-            fehlermeldung = "Bitte geben Sie Artikel ID an";
-            jtfartikelid_ArtikelAnlegen.requestFocusInWindow();
-        } else if (jtfartikelname_ArtikelAnlegen.getText().equals("")) {
+//        if (jtfartikelid_ArtikelAnlegen.getText().equals("")) {
+////            fehlermeldung = "Bitte geben Sie Artikel ID an";
+//           if (jtfartikelid_ArtikelAnlegen.requestFocusInWindow()){
+         if (jtfartikelname_ArtikelAnlegen.getText().equals("")) {
             fehlermeldung = "Bitte geben Sie Artikel Name an";
         } else if (jtffrei_ArtikelAnlegen.getText().equals("")) {
             fehlermeldung = "Bitte die freie Menge eingeben.";
@@ -492,14 +500,9 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
 
         } else if (jtfeinzelwertnetto_ArtikelAnlegen.getText().equals("")) {
             fehlermeldung = "Bitte geben Sie den EinzelWert Netto ein, eine ganze Zahl oder 2 nach Kommastellen";
-        } else if (jtfeinzelwertbrutto_ArtikelAnlegen.getText().equals("")) {
-            fehlermeldung = "Bitte geben Sie den EinzelWert Netto ein, eine ganze Zahl oder 2 nach Kommastellen";
         } else if (jtfbestellwertnetto_ArtikelAnlegen.getText().equals("")) {
             fehlermeldung = "Bitte geben Sie den BestellWert Netto ein, eine ganze Zahl oder 2 nach Kommastellen";
-
-        } else if (jtfbestellwertbrutto_ArtikelAnlegen.getText().equals("")) {
-            fehlermeldung = "Bitte geben Sie den BestellWert Brutto ein, eine ganze Zahl oder 2 nach Kommastellen";
-        } else if (jcbMwst_ArtikelAnlegen.getSelectedIndex() == 0) {
+        }  else if (jcbMwst_ArtikelAnlegen.getSelectedIndex() == 0) {
             fehlermeldung = "Wählen Sie Bitte den MSWT";
         }
 
@@ -511,11 +514,42 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         return istVollstaendig;
 
     }
+    
+    private void rechneBrutto( ){
+    }
 
-
+ /*----------------------------------------------------------*/
+ /* 02.12.2016 Citak Anlegen der Methode                     */
+ /* Mit dieser Methode wird ein Artikel angelegt             */
+ /*----------------------------------------------------------*/
     private void jbSpeichern_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnlegenActionPerformed
         // TODO add your handling code here:
         if (istVollstaendig()) {
+            //Die Eingabefelder werden den Variablen zugeordnet
+            String artikelname =this.jtfartikelname_ArtikelAnlegen.getText();
+            int bestandsmenge_frei = Integer.parseInt(this.jtffrei_ArtikelAnlegen.getText()); 
+            int bestandsmenge_reserviert= Integer.parseInt(this.jtfverkauft_ArtikelAnlegen.getText());
+            int bestandsmenge_zulauf= Integer.parseInt(this.jtfzulauf_ArtikelAnlegen.getText());
+            int bestandsmenge_verkauft= Integer.parseInt(this.jtfreserviert_ArtikelAnlegen.getText());
+            String bestelltext = this.jtaBestelltext_ArtikelAnlegen.getText();
+            String artikeltext = this.jtaArtikeltext_ArtikelAnlegen.getText();
+            int einzelwert_netto = Integer.parseInt(this.jtfeinzelwertnetto_ArtikelAnlegen.getText());
+            int bestellwert_netto = Integer.parseInt(jtfbestellwertnetto_ArtikelAnlegen.getText());
+            int mwst= Integer.parseInt((String)this.jcbMwst_ArtikelAnlegen.getSelectedItem());
+            // Zum testen 
+            System.out.println("Artikelname:" +bestandsmenge_zulauf+ "Bmenge:"+ bestandsmenge_verkauft + "reser:"+ bestelltext+ "dd:"+artikeltext
+            + "hhfs:" +einzelwert_netto+ "fff:"+ bestellwert_netto+ "ff"+mwst );
+            
+
+        Artikel artikel = new Artikel(this.ARTIKEL_ID, artikelname, artikeltext, bestelltext,
+                einzelwert_netto, mwst, bestellwert_netto,bestandsmenge_reserviert,
+                bestandsmenge_zulauf, bestandsmenge_verkauft, bestandsmenge_frei);
+        try {
+            DAOArtikel daoArtikel = new DAOArtikel();
+            daoArtikel.legeNeueArtikelAn(artikel);
+        } catch (SQLException ex) {
+            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         }
     }//GEN-LAST:event_jbSpeichern_ArtikelAnlegenActionPerformed
