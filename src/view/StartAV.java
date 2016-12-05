@@ -114,7 +114,9 @@ public class StartAV extends javax.swing.JFrame {
         this.jifArtikelBearbeiten.setVisible(true);
     }
     
-    
+    public ArtikelBearbeiten getArtikelBearbeiten(){
+        return this.jifArtikelBearbeiten;
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
