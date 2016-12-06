@@ -93,7 +93,7 @@ public class DAOAuftragsposition {
         stmt.setInt(2, auftragsposition.getPositionsnummer());
         stmt.setInt(3, auftragsposition.getMenge());
         stmt.setInt(4, auftragsposition.getEinzelwert());
-        stmt.setString(6, auftragsposition.getArtikelID());
+        stmt.setString(5, auftragsposition.getArtikelID());
         
         try{
             

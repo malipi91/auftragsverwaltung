@@ -22,14 +22,35 @@ public class Artikel {
     private int bestandsmenge_zulauf;
     private int bestandsmenge_verkauft;
     private String lieferantenID;
+    private String LKZ;
     
     
     public Artikel(){
         
     }
 
-    Artikel(String string, String text_artikel, String text_bestellung, int i, int i0, int i1, int i2, int i3, int i4, int i5, String string0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Artikel(String artikel_ID, String text_artikel, String text_bestellung, int einzelwert, int bestellwert, int mwst_satz, int bestand_frei, int bestand_reser, 
+            int bestand_zulauf, int bestand_verkauft, String L_ID) {
+        this.artikel_ID = artikel_ID;
+        this.artikeltext = text_artikel;
+        this.bestelltext = text_bestellung;
+        this.einzelwert = einzelwert;
+        this.bestellwert = bestellwert;
+        this.mwst_satz = mwst_satz;
+        this.bestandsmenge_frei = bestand_frei;
+        this.bestandsmenge_reserviert = bestand_reser;
+        this.bestandsmenge_zulauf = bestand_zulauf;
+        this.bestandsmenge_verkauft = bestand_verkauft;
+        this.lieferantenID = L_ID;
+        
+    }
+    
+    public String getLKZ(){
+        return LKZ;
+    }
+    
+    public void setLKZ(String LKZ){
+        this.LKZ = LKZ;
     }
 
     public String getArtikel_ID() {

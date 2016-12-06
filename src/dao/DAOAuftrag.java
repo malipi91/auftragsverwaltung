@@ -147,6 +147,11 @@ public class DAOAuftrag {
         // Ausgabe des Auftrags-Objekts.
         return auftrag;
     }
+    
+     /* 
+    01.12.16 Samet
+             Methode gibt an, ob ein Auftrag LKZ gestzt ist. */
+    /*----------------------------------------------------------*/
     public Auftrag erhalteLKZAuftragFuerID(String id) throws SQLException {
         // Erzeugen eines neuen DBConnection Objekts.
         DBConnection con = new DBConnection();

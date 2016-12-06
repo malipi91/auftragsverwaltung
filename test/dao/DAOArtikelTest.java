@@ -23,91 +23,53 @@ public class DAOArtikelTest {
     public DAOArtikelTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+    DAOArtikel da;
+   
     
     @Before
     public void setUp() {
+        da = new DAOArtikel();
     }
     
-    @After
-    public void tearDown() {
-    }
+ 
 
     /**
      * Test of erhalteEinenArtikel method, of class DAOArtikel.
-     */
+     */ 
     @Test
     public void testErhalteEinenArtikel() throws Exception {
-        System.out.println("erhalteEinenArtikel");
-        String id = "";
-        DAOArtikel instance = new DAOArtikel();
-        Artikel expResult = null;
-        Artikel result = instance.erhalteEinenArtikel(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Artikel artikelTest = new Artikel("2","testt","test",333,4444,555, 5555,100, 
+            500, 400, "44343");
+        da.legeNeueArtikelAn(artikelTest);
+        
+        
+        
     }
 
-    /**
-     * Test of gibAlleArtikelDetails method, of class DAOArtikel.
-     */
-    @Test
-    public void testGibAlleArtikelDetails() throws Exception {
-        System.out.println("gibAlleArtikelDetails");
-        int anzahl = 0;
-        DAOArtikel instance = new DAOArtikel();
-        ArrayList<Artikel> expResult = null;
-        ArrayList<Artikel> result = instance.gibAlleArtikelDetails(anzahl);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of loescheArtikel method, of class DAOArtikel.
-     */
-    @Test
-    public void testLoescheArtikel() throws Exception {
-        System.out.println("loescheArtikel");
-        String id = "";
-        DAOArtikel instance = new DAOArtikel();
-        instance.loescheArtikel(id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
+//
+//    /**
+//     * Test of loescheArtikel method, of class DAOArtikel.
+//     */
+//    @Test
+//    public void testLoescheArtikel() throws Exception {
+//       
+//        da.loescheArtikel("8847");
+//        assertEquals(da.erhalteEinenArtikel("8847").getLKZ(),"w");
+//
     /**
      * Test of bearbeiteArtikel method, of class DAOArtikel.
      */
-    @Test
-    public void testBearbeiteArtikel() throws Exception {
-        System.out.println("bearbeiteArtikel");
-        String id = "";
-        Artikel artikel = null;
-        DAOArtikel instance = new DAOArtikel();
-        instance.bearbeiteArtikel(id, artikel);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of verwalteBestandsmengen method, of class DAOArtikel.
-     */
-    @Test
-    public void testVerwalteBestandsmengen() throws Exception {
-        System.out.println("verwalteBestandsmengen");
-        String id = "";
-        Artikel artikel = null;
-        DAOArtikel instance = new DAOArtikel();
-        instance.verwalteBestandsmengen(id, artikel);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+//    @Test
+//    public void testBearbeiteArtikel() throws Exception {
+//        Artikel artikel2 = new Artikel("8847","lss", "sddf", 300, 120, 15, 20, 30, 40, 40, "jdfj");
+//        da.bearbeiteArtikel("8847", artikel2);
+//        assertEquals(300,da.erhalteEinenArtikel("8847").getEinzelwert());
+//    }
+//
+//    /**
+//     * Test of verwalteBestandsmengen method, of class DAOArtikel.
+//     */
+//    
 }
+

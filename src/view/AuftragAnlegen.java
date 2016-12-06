@@ -759,7 +759,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                           bestÃ¤tigung des Speicher Buttons werden die Daten in 
                           die Datenbank gespeichert */
  /*----------------------------------------------------------*/
-        if(istVollstaendig()){
+//        if(istVollstaendig()){
         Auftragsstatus aStatus = new Auftragsstatus();
         String auftrags_ID = "1122";
 //        this.jtfArtikelID_AuftragAnlegen.getText();
@@ -785,7 +785,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
-         }
+//         }
 //        //Auftragspositionen werden aus der Tabelle ausgelesen, in einen 
 //        //Auftragspositionenobjekt aufganeommen und in die Datenbank geschrieben.
 //        for (int i = 0; i < jTAuftragsposition.getRowCount(); i++) {

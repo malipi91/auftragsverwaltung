@@ -12,13 +12,14 @@ package model;
  */
 
     
+import dao.DAOArtikelTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;;
 
 @RunWith(Suite.class)
 @SuiteClasses({AuftragModelTest.class,AuftragspositionTest.class, 
-AuftragsstatusTest.class, ZahlungskonditionTest.class, dao.DAOAuftragTest.class })
+AuftragsstatusTest.class, ZahlungskonditionTest.class, dao.DAOAuftragTest.class, DAOArtikelTest.class,})
 public class testsZusammengefasst {
 // hier stehen keine Tests !
 }

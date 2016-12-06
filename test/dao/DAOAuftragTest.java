@@ -24,6 +24,14 @@ public class DAOAuftragTest {
     
    DAOAuftrag da;
    String letzteID = "143";
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
     @Before
     public void setUp() throws SQLException {
         
@@ -31,37 +39,55 @@ public class DAOAuftragTest {
         da = new DAOAuftrag();
         String datumm = "2016-11-20";
     }
-    
-    
-    @Test
-    public void testErhalteAuftragFuerID() throws Exception {
-        Auftrag ergebnis =  da.erhalteAuftragFuerID("98");
-        assertEquals("98", ergebnis.getAuftrags_ID());
-        
-    }
-    
-    @Test 
-    public void testLegeNeuenAuftragAn() throws SQLException{
-        Auftrag auftrag = new Auftrag(letzteID,"test", "2016.12.16", "2016.12.16", "bar", 435544,"f", "2016.12.16");     
-        da.legeNeueAuftragAn(auftrag);
-        assertEquals(letzteID,da.erhalteAuftragFuerID(letzteID).getAuftrags_ID());
+
+    @After
+    public void tearDown() throws Exception {
     }
     
     
-    @Test
-    public void testLöscheAuftrag() throws SQLException{
-        
-        da.loescheAuftrag(letzteID);
-        assertEquals(da.erhalteLKZAuftragFuerID(letzteID).getLKZ(),"w");
-        
-    }
+//    @Test
+//    public void testErhalteAuftragFuerID() throws Exception {
+//        Auftrag ergebnis =  da.erhalteAuftragFuerID("98");
+//        assertEquals("98", ergebnis.getAuftrags_ID());
+//        
+//    }
     
-    @Test
-    public void testBearbeiteAuftrag() throws SQLException{
-      
-      Auftrag auftrag2 = new Auftrag("140","test", "2016.12.16", "2016.12.16", "bar", 1,"f","2016.12.16");     
-      da.bearbeiteAuftrag("140", auftrag2);
-      assertEquals(1, da.erhalteAuftragFuerID("140").getAuftragswert());
-    }
+//    @Test 
+//    public void testLegeNeuenAuftragAn() throws SQLException{
+//        Auftrag auftrag = new Auftrag("147","test", "2016.12.16", "2016.12.16", "bar", 435544,"f", "2016.12.16");     
+//        da.legeNeueAuftragAn(auftrag);
+//        assertEquals("147",da.erhalteAuftragFuerID("147").getAuftrags_ID());
+//    }
+//    
+//    
+//    @Test
+//    public void testLöscheAuftrag() throws SQLException{
+//        
+//        da.loescheAuftrag(letzteID);
+//        assertEquals(da.erhalteLKZAuftragFuerID(letzteID).getLKZ(),"w");
+//        
+//    }
+//    
+//    @Test
+//    public void testBearbeiteAuftrag() throws SQLException{
+//      
+//      Auftrag auftrag2 = new Auftrag("140","test", "2016.12.16", "2016.12.16", "bar", 1,"f","2016.12.16");     
+//      da.bearbeiteAuftrag("140", auftrag2);
+//      assertEquals(1, da.erhalteAuftragFuerID("140").getAuftragswert());
+//    }
+
+    
+
+    /**
+     * Test of erhalteLKZAuftragFuerID method, of class DAOAuftrag.
+     */
+//    @Test
+//    public void testErhalteLKZAuftragFuerID() throws Exception {
+//       assertEquals("w",da.erhalteLKZAuftragFuerID(letzteID).getLKZ());
+//    }
+
+   
+    
+    
     
 }

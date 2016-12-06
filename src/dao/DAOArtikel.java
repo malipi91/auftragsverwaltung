@@ -15,6 +15,7 @@ import model.Artikel;
 import model.Auftrag;
 import model.Geschaeftspartner;
 import util.DBConnection;
+import util.Zusatzfunktionen;
 
 
 /*----------------------------------------------------------*/
@@ -26,9 +27,16 @@ import util.DBConnection;
  * @author Martin Lipinski
  */
 public class DAOArtikel {
+         
+     private DAODataDictionary dd;
+    private Zusatzfunktionen zf;
+    private final String TAB_ARTIKEL = "auftrag";
     
+    public DAOArtikel(){
+        dd = new DAODataDictionary();
+         zf = new Zusatzfunktionen();
     
-    
+    }
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
     /* 14.11.16 MaLi Anlegen der Methode                        */
@@ -41,6 +49,46 @@ public class DAOArtikel {
      * @return gibt ein Artikel-Objekt aus.
      * @throws SQLException
      */
+    
+    public void legeNeueArtikelAn(Artikel artikel) throws SQLException {
+        String letzteID = dd.bekommeLetzteID(TAB_ARTIKEL);
+        DBConnection con = new DBConnection();
+        Connection conn = con.createConection();
+
+    
+        String sql = "insert into artikel "
+                + "(Artikel_ID,Artikeltext,Bestelltext, Einzelwert,"
+                + "MwST_Satz, Bestellwert, Bestandsmenge_RESERVIERT,"
+                + "Bestandsmenge_ZULAUF, Bestandsmenge_VERKAUFT,"
+                + "Bestandsmenge_FREI, GP_ID)";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, artikel.getArtikel_ID());
+        stmt.setString(2, artikel.getArtikeltext());
+//        stmt.setString(3, artikel.getBestelltext());
+//        stmt.setInt(4, artikel.getEinzelwert());
+//        stmt.setInt(5, artikel.getMwst_satz());
+//        stmt.setInt(6, artikel.getBestellwert());
+//        stmt.setInt(7, artikel.getBestandsmenge_reserviert());
+//        stmt.setInt(8, artikel.getBestandsmenge_zulauf());
+//        stmt.setInt(9, artikel.getBestandsmenge_verkauft());
+//        stmt.setInt(10, artikel.getBestandsmenge_frei());
+//        stmt.setString(12,artikel.getLieferantenID());
+        
+
+        try {
+            stmt.executeUpdate();
+            dd.erhoeheLetzteID(TAB_ARTIKEL);
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Artikel wurde nicht hinzugefügt.");
+        }
+    }
+    
+    
+    
     public Artikel erhalteEinenArtikel(String id) throws SQLException {
         
         // Erzeugen eines neuen DBConnection Objekts.
