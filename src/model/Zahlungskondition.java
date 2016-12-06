@@ -22,6 +22,7 @@ public class Zahlungskondition {
     private int mahnzeit_1;
     private int mahnzeit_2;
     private int mahnzeit_3;
+    private String LKZ;
 
     public Zahlungskondition(String zk_ID, String auftragsart, int skontozeit_1, int skontozeit_2, int lieferzeit_sofort, int lieferzeit_wunsch, int skonto_1, int skonto_2, int mahnzeit_1, int mahnzeit_2, int mahnzeit_3) {
         this.zk_ID = zk_ID;
@@ -35,6 +36,17 @@ public class Zahlungskondition {
         this.mahnzeit_1 = mahnzeit_1;
         this.mahnzeit_2 = mahnzeit_2;
         this.mahnzeit_3 = mahnzeit_3;
+    }
+
+    
+    public String getLKZ(){
+        return LKZ;
+    }
+    
+    public void setLKZ(String LKZ){
+        this.LKZ = LKZ;
+    }
+    public Zahlungskondition() {
     }
 
     public String getZk_ID() {
@@ -127,3 +139,27 @@ public class Zahlungskondition {
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
