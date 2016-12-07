@@ -56,6 +56,10 @@ public class Adresse {
         this.gueltig_bis = gueltig_bis;
         this.typ = typ;
     }
+
+    public Adresse(String anrede_r, String vorname_r, String name_r, String strasse_r, String hausnr_r, int plz_r, String ort_r, String staat) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     /*----------------------------------------------------------*/
     /* Datum Name Was */

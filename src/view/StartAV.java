@@ -73,11 +73,11 @@ public class StartAV extends javax.swing.JFrame {
         initComponents();
         //Startseite
         // Mechmet Impram
-//Benutzername Feld akzeptiert nur Buchstaben.
-        jtfBenutzername_Startseite.setDocument(new UniversalDokument(true, false, "-. ' ", -1));
-        // Mechmet Impram
-//Passwort Feld ebenso akzeptiert nur Buchstaben.        
-        jpwpasswort_Startseite.setDocument((new UniversalDokument(true, false, "-. ' ", -1)));
+////Benutzername Feld akzeptiert nur Buchstaben.
+//        jtfBenutzername_Startseite.setDocument(new UniversalDokument(true, false, "-. ' ", -1));
+//        // Mechmet Impram
+////Passwort Feld ebenso akzeptiert nur Buchstaben.        
+//        jpwpasswort_Startseite.setDocument((new UniversalDokument(true, false, "-. ' ", -1)));
 
     }
 /*------------------------------------------------------------*/

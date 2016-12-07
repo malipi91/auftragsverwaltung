@@ -162,6 +162,11 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         jbSpeichern_ArtikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichern_ArtikelAnzeigen.setText("Speichern");
         jbSpeichern_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(130, 35));
+        jbSpeichern_ArtikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSpeichern_ArtikelAnzeigenActionPerformed(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -447,7 +452,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                             .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         ArtikelAnzeigeLayout.setVerticalGroup(
             ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -470,7 +475,7 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                     .addComponent(jbSpeichern_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbbearbeiten_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbabbrechen_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -504,6 +509,19 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     private void jbbearbeiten_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbearbeiten_ArtikelAnzeigenActionPerformed
         // TODO add your handling code here:
         
+        jtfartikelname_ArtikelAnzeigen.setEnabled(true);
+        jtffrei_ArtikelAnzeigen.setEnabled(true);
+        jtfreserviert_ArtikelAnzeigen.setEnabled(true);
+        jtfzulauf_ArtikelAnzeigen.setEnabled(true);
+        jtfverkauft_ArtikelAnzeigen.setEnabled(true);
+        jtaArtikeltext_ArtikelAnzeigen.setEnabled(true);
+        jtaBestelltext_ArtikelAnzeigen.setEnabled(true);
+        jtfeinzelwertnetto_ArtikelAnzeigen.setEnabled(true);
+        jtfeinzelwertbrutto_ArtikelAnzeigen.setEnabled(true);
+        jtfbestellwertnetto_ArtikelAnzeigen.setEnabled(true);
+        jtfbestellwertbrutto_ArtikelAnzeigen.setEnabled(true);
+        jcbmehrwertsteuer_ArtikelAnzeigen.setEnabled(true);
+        
     }//GEN-LAST:event_jbbearbeiten_ArtikelAnzeigenActionPerformed
 
     private void jtfreserviert_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfreserviert_ArtikelAnzeigenActionPerformed
@@ -525,6 +543,22 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
         myParent.oeffneArtikelIDSuchen();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jbSpeichern_ArtikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichern_ArtikelAnzeigenActionPerformed
+        // TODO add your handling code here:
+         jtfartikelname_ArtikelAnzeigen.setEnabled(false);
+        jtffrei_ArtikelAnzeigen.setEnabled(false);
+        jtfreserviert_ArtikelAnzeigen.setEnabled(false);
+        jtfzulauf_ArtikelAnzeigen.setEnabled(false);
+        jtfverkauft_ArtikelAnzeigen.setEnabled(false);
+        jtaArtikeltext_ArtikelAnzeigen.setEnabled(false);
+        jtaBestelltext_ArtikelAnzeigen.setEnabled(false);
+        jtfeinzelwertnetto_ArtikelAnzeigen.setEnabled(false);
+        jtfeinzelwertbrutto_ArtikelAnzeigen.setEnabled(false);
+        jtfbestellwertnetto_ArtikelAnzeigen.setEnabled(false);
+        jtfbestellwertbrutto_ArtikelAnzeigen.setEnabled(false);
+        jcbmehrwertsteuer_ArtikelAnzeigen.setEnabled(false);
+    }//GEN-LAST:event_jbSpeichern_ArtikelAnzeigenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

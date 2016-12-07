@@ -15,12 +15,12 @@ public class Artikel {
     private String artikeltext;
     private String bestelltext;
     private int einzelwert;
-    private int bestellwert;
     private int mwst_satz;
-    private int bestandsmenge_frei;
+    private int bestellwert;
     private int bestandsmenge_reserviert;
     private int bestandsmenge_zulauf;
     private int bestandsmenge_verkauft;
+    private int bestandsmenge_frei;
     private String lieferantenID;
     
     
@@ -28,9 +28,18 @@ public class Artikel {
         
     }
 
+    Artikel(String artikel_ID, String artikeltext, String bestelltext, 
+            int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
+            int bestandsmenge_zulauf, int bestandsmenge_verkauft, 
+            int bestandsmenge_frei) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     Artikel(String string, String text_artikel, String text_bestellung, int i, int i0, int i1, int i2, int i3, int i4, int i5, String string0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+  
 
     public String getArtikel_ID() {
         return artikel_ID;

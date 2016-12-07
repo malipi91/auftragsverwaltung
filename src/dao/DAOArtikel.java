@@ -5,11 +5,17 @@
  */
 package dao;
 
+import model.Artikel;
+
 /**
  *
  * @author marti
  */
 public class DAOArtikel {
+
+    public void legeNeueArtikelAn(Artikel artikel) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
    
 }
