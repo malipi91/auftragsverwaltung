@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JTable;
-import model.Auftrag;
 import model.Auftragsposition;
 import util.DBConnection;
 import util.Zusatzfunktionen;
@@ -95,13 +94,6 @@ public class DAOAuftragsposition {
         stmt.setInt(3, auftragsposition.getMenge());
         stmt.setInt(4, auftragsposition.getEinzelwert());
         stmt.setString(6, auftragsposition.getArtikelID());
-<<<<<<< HEAD
-//        stmt.setInt(2, auftragsposition.getPositionsnummer());
-//        stmt.setInt(3, auftragsposition.getMenge());
-//        stmt.setInt(4, auftragsposition.getEinzelwert());
-//        stmt.setString(6, auftragsposition.getArtikelID());
-=======
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         
         try{
             
@@ -133,7 +125,6 @@ public class DAOAuftragsposition {
      * @param auftragskopf_id Die Auftrags-ID dessen Pos. gelöscht werden soll.
      * @param positionsnummer Die Position die gelöscht werden
      * @throws SQLException
-<<<<<<< HEAD
      */
 
     public void loescheNeueAuftragsposition(String auftragskopf_id, 
@@ -161,98 +152,6 @@ public class DAOAuftragsposition {
     /* 01.12.16 MaLi Anlegen der Methode                        */
     /*----------------------------------------------------------*/
     /**
-     * Diese Methode zeigt die Auftragspositionen zu einem Auftrag an. 
-     * @param auftragskopf_id Die Auftrag-ID zu der die Pos. gehören.
-     * @return gibt eine ArrayList vom Auftragspositionen aus.
-     * @throws SQLException
-     */
-    public ArrayList<Auftragsposition> gibAllePositionen(String auftragskopf_id) 
-            throws SQLException{
-        
-=======
-     */
-
-    public void loescheNeueAuftragsposition(String auftragskopf_id, 
-            int positionsnummer) throws SQLException{
-         
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
-        // Erzeugen eines neuen DBConnection Objekts.
-        DBConnection con = new DBConnection();
-        // Übergabe der Connection an ein Connection Objekt.
-        Connection conn = con.createConection();
-<<<<<<< HEAD
-        // Erzeugen eines SQL ResultSets.
-        ResultSet rs = null;
-        // Erzeugen eines Statements Objekts über das Objekt der Connection.
-        Statement stmt = conn.createStatement();
-        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
-        String sql = "select * from auftragsposition where auftragskopf_ID= " 
-                + auftragskopf_id + " order by Positionsnummer";
-        
-        // Erzeugen eines leeren Auftrags-Objekt.
-        ArrayList<Auftragsposition> auftragspositionen = new ArrayList<>();
-        
-        try{
-            // Ausführen der Statements
-            rs = stmt.executeQuery(sql);
-
-            // Schleife zum Speichern alle Auftragsobjekte
-            while(rs.next()){
-                
-                // Prüft ob LKZ gesetzt ist
-                if(rs.getString("LKZ") == null){
-                    Auftragsposition auftragsposition = new Auftragsposition();
-                    auftragsposition
-                            .setAuftragskopfId(rs.getString("Auftragskopf_ID"));
-                    auftragsposition
-                            .setPositionsnummer(rs.getInt("Positionsnummer"));
-                    auftragsposition
-                            .setEinzelwert(rs.getInt("Einzelwert"));
-                    auftragsposition
-                            .setMenge(rs.getInt("Menge"));
-                    auftragsposition
-                            .setArtikelID(rs.getString("Materialnummer"));
-
-                    auftragspositionen.add(auftragsposition);
-                    System.out.println("Ich werde gepspeichert!");
-                } else {
-                    return null;
-                }               
-        }
-            // Schließt die Verbindung zur DB.
-            conn.close();
-            
-            // Gibt die Auftrags ArrayList aus.
-            return auftragspositionen;
-        
-        // Fehlerbehandlung
-        } catch(SQLException e){
-            System.out.println(e);
-            System.out.println("Fehler in der Speicherung von Aufträgen.");
-            return null;
-        }
-=======
-        // Erzeugen eines Statements Objekts über das Objekt der Connection.
-        Statement stmt = conn.createStatement();
-        // Lösch-Statement
-        String sql = "Update Auftragsposition SET LKZ='w' where "
-                + "Auftragskopf_ID=" + auftragskopf_id + " AND "
-                + "positionsnummer= " + positionsnummer;
-        
-        // Ausführen des Statements
-        stmt.executeUpdate(sql);
-        conn.close();
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
-    }
-    
-    
-    /*----------------------------------------------------------*/
-    /* Datum Name Was                                           */
-    /* 01.12.16 MaLi Anlegen der Methode                        */
-    /*----------------------------------------------------------*/
-    /**
-<<<<<<< HEAD
-=======
      * Diese Methode zeigt die Auftragspositionen zu einem Auftrag an. 
      * @param auftragskopf_id Die Auftrag-ID zu der die Pos. gehören.
      * @return gibt eine ArrayList vom Auftragspositionen aus.
@@ -323,7 +222,6 @@ public class DAOAuftragsposition {
     /* 01.12.16 MaLi Anlegen der Methode                        */
     /*----------------------------------------------------------*/
     /**
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
      * Die Methode liest anhand der Auftragskopf-ID sowie der Positionsnummer
      * eine Position aus der Tabelle Auftragsposition in der DB.
      *
@@ -380,8 +278,6 @@ public class DAOAuftragsposition {
         // Ausgabe des Auftrags-Objekts.
         return auftragsposition;
     }
-<<<<<<< HEAD
-=======
         
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
@@ -475,5 +371,4 @@ public class DAOAuftragsposition {
         int erg = id++;
         return erg;
     }
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 }

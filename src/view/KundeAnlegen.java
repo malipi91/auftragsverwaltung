@@ -7,7 +7,6 @@ package view;
 
 import dao.DAOKunde;
 import java.awt.Color;
-import java.sql.Date;
 import javax.swing.BorderFactory;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
@@ -22,7 +21,8 @@ import model.Geschaeftspartner;
 /*----------------------------------------------------------*/
 public class KundeAnlegen extends javax.swing.JInternalFrame {
     
-        
+    
+    
     private DAOKunde daoKunde;
     private int naechste_id_GP;
     private int naechste_id_adresse;
@@ -117,7 +117,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
         jtfStaatRG_KundeAnlegen = new javax.swing.JTextField();
         jPLieferdaten = new javax.swing.JPanel();
         jLabel159 = new javax.swing.JLabel();
-        jcbAnredeLD_KundeAnlegen = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel160 = new javax.swing.JLabel();
         jtfName2_KundeAnlegen = new javax.swing.JTextField();
         jLabel161 = new javax.swing.JLabel();
@@ -164,11 +164,6 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
         jLabel148.setText("Kreditlimit:");
 
         jtfKreditlimit_KundenAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jtfKreditlimit_KundenAnlegen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfKreditlimit_KundenAnlegenActionPerformed(evt);
-            }
-        });
 
         Group_KundeAnlegen.add(jrbLieferadresseIdentisch_KundeAnlegen);
         jrbLieferadresseIdentisch_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -252,11 +247,6 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
 
         jcbAnredeRG_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbAnredeRG_KundeAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau ", "Herr" }));
-        jcbAnredeRG_KundeAnlegen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbAnredeRG_KundeAnlegenActionPerformed(evt);
-            }
-        });
 
         jLabel153.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel153.setText("Name:");
@@ -389,8 +379,8 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
         jLabel159.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel159.setText("Anrede");
 
-        jcbAnredeLD_KundeAnlegen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jcbAnredeLD_KundeAnlegen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau", "Herr" }));
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Frau", "Herr" }));
 
         jLabel160.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel160.setText("Name:");
@@ -442,7 +432,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jLabel162))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jcbAnredeLD_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfName2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfVorname2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfFirma2_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -464,7 +454,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
-                    .addComponent(jcbAnredeLD_KundeAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPLieferdatenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel160)
@@ -538,11 +528,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-<<<<<<< HEAD
-                .addContainerGap(13, Short.MAX_VALUE))
-=======
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         );
         KundeAnlegenLayout.setVerticalGroup(
             KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -639,59 +625,6 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     private void jtfNameRG_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNameRG_KundeAnlegenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNameRG_KundeAnlegenActionPerformed
-     
-    /* 01.12.16 Citak Methode erstellt.*/
-    private void jbSpeichernActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernActionPerformed
-        
-    /**
-     * Kunde mit Adresse wird hinzugefügt
-     */
-  
-        //Prüfen ob Felder ausgefüllt sind
-        if (alle_daten_vollstaendig().equals("")) {
-            String typ = "";
-            int kreditlimit;
-            if(!jtfKreditlimit_KundenAnlegen.getText().equals("")){
-                 kreditlimit = Integer.parseInt(jtfKreditlimit_KundenAnlegen.getText());
-            }else{
-                kreditlimit = 0;
-            }
-            // Rechnungsdaten werden hinzugefügt
-            String anrede_r = (String) jcbAnredeRG_KundeAnlegen.getSelectedItem();
-            String vorname_r = jtfVornameRG_KundeAnlegen.getText();
-            String name_r = jtfNameRG_KundeAnlegen.getText();
-//            Date geb_dat_r = new Date(.....getDate().getTime());
-          
-            String firmenname_r = jtfFirmaRG_KundeAnlegen.getText();
-            String strasse_r = jtfStraßeRG_KundeAnlegen.getText();
-            String hausnr_r = jtfHNrRG_KundeAnlegen.getText();
-            int plz_r = Integer.parseInt(jtfPlzRG_KundeAnlegen.getText());
-            String ort_r = jtfOrtRG_KundeAnlegen.getText();
-            String staat = jtfStaatRG_KundeAnlegen.getText();
-            
-//            //Rechnugsadresse wird erstellt
-//            this.rechnungsAdresse = new Adresse(naechste_id_adresse, anrede_r, vorname_r,
-//                    name_r, strasse_r, hausnr_r, plz_r, ort_r,
-//                    staat);
-
-            //Prüfen ob abw Lieferadresse ausgewählt ist
-            if (jrbAbweichendeLieferadresse_KundeAnlegen.isSelected()) {
-                String anrede_l = (String) jcbAnredeLD_KundeAnlegen.getSelectedItem();
-                String vorname_l = jtfVorname2_KundeAnlegen.getText();
-                String name_l = jtfName2_KundeAnlegen.getText();
-                
-              return;
-                }
-        }
-    }//GEN-LAST:event_jbSpeichernActionPerformed
-
-    private void jtfKreditlimit_KundenAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfKreditlimit_KundenAnlegenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfKreditlimit_KundenAnlegenActionPerformed
-
-    private void jcbAnredeRG_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAnredeRG_KundeAnlegenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcbAnredeRG_KundeAnlegenActionPerformed
 
  /*----------------------------------------------------------*/
  /* 01.12.2016 Citak Anlegen der Methode                     */
@@ -742,6 +675,7 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup Group_KundeAnlegen;
     private javax.swing.JPanel KundeAnlegen;
     private javax.swing.JButton abbrechen_KundeAnlegen;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
@@ -767,7 +701,6 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPRechnungsdaten;
     private javax.swing.JSeparator jSeparator20;
     private javax.swing.JButton jbSpeichern;
-    private javax.swing.JComboBox<String> jcbAnredeLD_KundeAnlegen;
     private javax.swing.JComboBox<String> jcbAnredeRG_KundeAnlegen;
     private javax.swing.JRadioButton jrbAbweichendeLieferadresse_KundeAnlegen;
     private javax.swing.JRadioButton jrbLieferadresseIdentisch_KundeAnlegen;

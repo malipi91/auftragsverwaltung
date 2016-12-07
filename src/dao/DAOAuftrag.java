@@ -41,20 +41,13 @@ public class DAOAuftrag {
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
     /* 14.11.16 Hicran Yörük Anlegen der Methode                */
-<<<<<<< HEAD
-=======
     /* 03.12.16 MaLi Überarbeiten der Methode                   */
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
     /*----------------------------------------------------------*/
     /* 
     * Diese Methode legt durch Eingabe der Werte in die GUI einen neuen Auftrag 
     * in die Datenbank     
     */
     public void legeNeueAuftragAn(Auftrag auftrag) throws SQLException {
-<<<<<<< HEAD
-        String letzteID = dd.bekommeLetzteID(TAB_AUFTRAG);
-=======
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();
 
@@ -128,8 +121,6 @@ public class DAOAuftrag {
                     auftrag.setLieferdatum(rs.getString("Lieferdatum"));
                     auftrag.setAuftragswert(rs.getInt("Auftragswert"));
                     auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
-<<<<<<< HEAD
-=======
                     auftrag.setLKZ(rs.getString("LKZ"));
                 }
             }
@@ -165,7 +156,6 @@ public class DAOAuftrag {
                     // Die Informationen aus der DB werden an das Auftrags-Objekt übergeben.
                     
                     auftrag.setLKZ(rs.getString("LKZ"));
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
                 } else {
                     return null;
                 }
@@ -273,8 +263,6 @@ public class DAOAuftrag {
         stmt.executeUpdate(sql);
         conn.close();
     }
-<<<<<<< HEAD
-=======
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
@@ -376,5 +364,4 @@ public class DAOAuftrag {
         return String.valueOf(erg);
     }
     
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 }

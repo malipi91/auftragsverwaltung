@@ -20,22 +20,9 @@ public class test {
     
     
     public static void main(String [ ] args) throws SQLException{
-<<<<<<< HEAD
-        ArrayList<Auftrag> auftraege = new ArrayList<>();
-        DAOAuftrag auftrag = new DAOAuftrag();
-        auftraege = auftrag.gibAlleAuftraege(20);
-        
-        for(int i = 0; i < auftraege.size(); i++){
-            System.out.println("Durgang: " + i);
-            System.out.println(auftraege.get(i).getAuftrags_ID());
-        }
-    }
-    
-=======
         DAOZahlungskondition dzk = new DAOZahlungskondition();
         Zahlungskondition zk = new Zahlungskondition();
         zk = dzk.erhalteZahlungskonditionFuerID("2");
         System.out.println(zk.getZk_ID());
     }  
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 }

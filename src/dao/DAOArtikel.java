@@ -5,10 +5,6 @@
  */
 package dao;
 
-<<<<<<< HEAD
-import model.Artikel;
-
-=======
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -26,18 +22,11 @@ import util.DBConnection;
 /* Datum Name Was                                           */
 /* 01.12.16 MaLi Anlegen der Klasse                         */
 /*----------------------------------------------------------*/
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 /**
  * Diese Klasse dient dem Zugriff auf die DB-Tabelle Artikel.
  * @author Martin Lipinski
  */
 public class DAOArtikel {
-<<<<<<< HEAD
-
-    public void legeNeueArtikelAn(Artikel artikel) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-=======
    
     
     
@@ -167,7 +156,6 @@ public class DAOArtikel {
         }
     }
     
->>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
     
     /*----------------------------------------------------------*/
     /* Datum Name Was                                           */
