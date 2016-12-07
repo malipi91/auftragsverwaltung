@@ -31,7 +31,7 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
             fehlermeldung = "Bitte wählen Sie ein Suchkriterium für das Datum aus!";
             jcbDatumAuftragsIDSuchen.requestFocusInWindow();
         } else if (jcbStatus_AuftragsIDSuchen.getSelectedIndex() == 0){
-            fehlermeldung = "Bitte geben Sie den Status ein!";
+            fehlermeldung = "Bitte geben Sie einen Status ein!";
             jcbStatus_AuftragsIDSuchen.requestFocusInWindow();
         } 
         if(fehlermeldung.equals("")){
@@ -82,7 +82,7 @@ public class AuftragsID_suchen extends javax.swing.JInternalFrame {
         jLabel91.setText("Status:");
 
         jcbStatus_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jcbStatus_AuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "erfasst", "freigegeben", "abgeschlossen", "" }));
+        jcbStatus_AuftragsIDSuchen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erfasst", "freigegeben", "abgeschlossen", "" }));
 
         jbUebernehmen_AuftragsIDSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbUebernehmen_AuftragsIDSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
