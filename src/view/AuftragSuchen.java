@@ -19,6 +19,11 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
     //Variablendeklaration
     StartAV myParent;
 
+    //Varibalendeklaration 07.12.2016 Citak
+    private final String Loeschen_Text = "Soll der Auftrag wirklich gelöscht werden?"; 
+    private final String Loeschen_Titel = "Auftrag Löschen";
+    
+    
      /* 06.12.16 Yoeruek Konstruktor, damit beim rein ziehen der Masken in die StartAV keine Probleme entstehen. */
     public AuftragSuchen(){
         initComponents();
@@ -547,9 +552,9 @@ public class AuftragSuchen extends javax.swing.JInternalFrame {
                 Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
-//            JOptionPane.showConfirmDialog(this, Loeschen_Text, Loeschen_Titel, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            //          JOptionPane.showMessageDialog(this, "Soll der Artikel wirklich gelöscht werden?",
-                //                    "Artikel löschen",JOptionPane.CLOSED_OPTION);
+            JOptionPane.showConfirmDialog(this, Loeschen_Text, Loeschen_Titel, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                      JOptionPane.showMessageDialog(this, "Soll der Artikel wirklich gelöscht werden?",
+                                    "Artikel löschen",JOptionPane.CLOSED_OPTION);
         }
         this.setVisible(false);
     }//GEN-LAST:event_jbLöschen_AuftragSuchenActionPerformed
