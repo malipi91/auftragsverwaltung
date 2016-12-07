@@ -5,14 +5,11 @@
  */
 package dao;
 
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import model.Auftrag;
 import model.Geschaeftspartner;
@@ -125,8 +122,6 @@ public class DAOAuftrag {
                     auftrag.setAuftragswert(rs.getInt("Auftragswert"));
                     auftrag.setzeGeschaeftspartnerID(rs.getString("GP_ID"));
                     auftrag.setLKZ(rs.getString("LKZ"));
-                } else {
-                    return null;
                 }
             }
             // DB-Verbindung wird geschlossen.
@@ -348,8 +343,6 @@ public class DAOAuftrag {
                 // Prüft ob LKZ gesetzt ist
                 if(rs.first() && rs.getString("LKZ") == null){
                     erg = rs.getString("Auftragskopf_ID");
-                } else {
-                    return null;
                 }
             // Schließt die Verbindung zur DB.
             conn.close();

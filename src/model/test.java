@@ -8,6 +8,7 @@ package model;
 import dao.DAOAdresse;
 import dao.DAOArtikel;
 import dao.DAOAuftrag;
+import dao.DAOZahlungskondition;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -19,13 +20,9 @@ public class test {
     
     
     public static void main(String [ ] args) throws SQLException{
-        DAOAuftrag auftrag = new DAOAuftrag();
-        System.out.println(auftrag.findeLetzteID());
-        Auftrag auf = new Auftrag();
-        auf.setAuftragstext("test12345");
-        auf.setAbschlussdatum("2016-01-01");
-        auf.setLieferdatum("2017-03-01");
-        auftrag.legeNeueAuftragAn(auf);
-    }
-    
+        DAOZahlungskondition dzk = new DAOZahlungskondition();
+        Zahlungskondition zk = new Zahlungskondition();
+        zk = dzk.erhalteZahlungskonditionFuerID("2");
+        System.out.println(zk.getZk_ID());
+    }  
 }

@@ -37,6 +37,9 @@ public class Zahlungskondition {
         this.mahnzeit_3 = mahnzeit_3;
     }
 
+    public Zahlungskondition() {
+    }
+
     public String getZk_ID() {
         return zk_ID;
     }

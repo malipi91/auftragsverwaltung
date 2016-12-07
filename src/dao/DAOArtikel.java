@@ -230,6 +230,10 @@ public class DAOArtikel {
         }
     }
     
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
     /**
      * Diese Methode dient zum verwalten der Bestandsmengen eines Artikels. 
      * Es werden lediglich die Bewegungsdaten für die Bestandsmenge geändert.
@@ -272,6 +276,16 @@ public class DAOArtikel {
         }
     }
     
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Sucht die letzte Artikel-ID in der Tabelle Artikel.
+     * @return gibt die letzte Artikel-ID aus.
+     * @throws SQLException
+     */
     public String findeLetzteID() throws SQLException{
         
         // Erzeugen eines neuen DBConnection Objekts.
@@ -312,12 +326,31 @@ public class DAOArtikel {
         }
     }
     
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Erhöhte die letzte Artikel-ID anhand der Methode findeLetzteID.
+     * @return erhöhte letzte ID wird ausgegeben.
+     * @throws SQLException
+     */
     public String erhoeheLetzteID() throws SQLException{
         String id = this.findeLetzteID();
         int idInt = Integer.parseInt(id);
         idInt = idInt + 1;
         return String.valueOf(idInt);
     }
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Legt einen neuen Artikel Datensatz in der DB an. 
+     * @param artikel Erhält ein Objekt der Klasse Artikel.  
+     * @throws SQLException
+     */
     public void legeNeueArtikelAn(Artikel artikel) throws SQLException{
         DBConnection con = new DBConnection();
         Connection conn = con.createConection();
@@ -351,6 +384,7 @@ public class DAOArtikel {
             System.out.println("Objekt wurde nicht hinzugefügt.");
         }
     }
+    
     
      public Artikel sucheArtikelFuerID(String artikelID) throws SQLException{
         Artikel artikel = new Artikel();
