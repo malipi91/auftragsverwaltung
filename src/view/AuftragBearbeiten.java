@@ -5,7 +5,17 @@
  */
 package view;
 
+import dao.DAOAuftrag;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Auftrag;
+import model.Auftragsstatus;
 
 /*----------------------------------------------------------*/
 /* Datum Name Was */
@@ -15,6 +25,30 @@ import javax.swing.JOptionPane;
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
 public class AuftragBearbeiten extends javax.swing.JInternalFrame {
+    //2.12.2016 Impram
+    //Variablen Deklaration
+    private String artikelname;
+    private String auftragsart;
+    private java.sql.Date abschlussdatum;
+    private java.sql.Date lieferdatum;
+    private String beschreibungstext;
+    private int menge;
+    private double einzelwert_netto;
+    private double sum_gesamtwert;
+    private boolean bestell_auftrag;
+    private boolean bar_auftrag;
+    private boolean sofortauftrag;
+    private boolean terminauftrag;
+    //Variable  Deklaration für Datum.
+    private String aktDatum;
+    private int aktJahr;
+    private int aktMonat;
+    private int aktTag;
+    
+    
+            
+    
+    
     //29.11.16 Impram
     //Konstanten Deklaration für den Status
     private final String status_ist_erfasst = "erfasst";
@@ -22,6 +56,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private final String status_ist_abgeschlossen = "abgeschlossen";
     private  String aktuelle_status = "";
     private String ist_status = "";
+    private  final String menge_gultig =" Bitte geben Sie eine gültige Menge an.";
     
 
     /**
@@ -131,11 +166,6 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbLöschenAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbLöschenAuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
         jbLöschenAuftragBearbeiten.setText("Löschen");
-        jbLöschenAuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLöschenAuftragBearbeitenActionPerformed(evt);
-            }
-        });
 
         jpUnterPanel_AuftragBearbeiten.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bearbeiten", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
@@ -604,6 +634,11 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         jbSpeichernAuftragBearbeiten.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jbSpeichernAuftragBearbeiten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/speichern2.png"))); // NOI18N
         jbSpeichernAuftragBearbeiten.setText("Speichern");
+        jbSpeichernAuftragBearbeiten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSpeichernAuftragBearbeitenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AuftragBearbeitenLayout = new javax.swing.GroupLayout(AuftragBearbeiten);
         AuftragBearbeiten.setLayout(AuftragBearbeitenLayout);
@@ -726,6 +761,10 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
         this.jbLöschenAuftragBearbeiten.setEnabled(false);
         this.jbSpeichernAuftragBearbeiten.setEnabled(false);
         this.jbAbbrechen_AuftragBearbeiten.setEnabled(false);
+        this.jftfLieferdatumAuftragBearbeiten.setEnabled(false);
+        this.jftfAbschlussdatumAuftragBearbeiten.setEnabled(false);
+        this.jbLupe_AuftragBearbeiten.setEnabled(false);
+        
              
         
         
@@ -746,6 +785,7 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jbSuchen_AuftragBearbeitenActionPerformed
 
+    
     private void jftfAbschlussdatumAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jftfAbschlussdatumAuftragBearbeitenActionPerformed
@@ -780,24 +820,91 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
             //Wenn das gleich ist wird die Methode aufgerufen und die Felder
             // ausgegraut.
             auftragsstatus_erfasst();
-        }
+            if (aktuelle_status.equals(status_ist_freigegeben)) {
+        auftragsstatus_freigegeben();
+    }
+    if (aktuelle_status.equals(status_ist_abgeschlossen)){
+        auftragsstatus_freigegeben();
+    }
+ 
+        
+    }
     }//GEN-LAST:event_jcbStatusAuftragBearbeitenActionPerformed
 
-    private void jbLöschenAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschenAuftragBearbeitenActionPerformed
+    private void jbSpeichernAuftragBearbeitenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernAuftragBearbeitenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbLöschenAuftragBearbeitenActionPerformed
-  
-//    if (aktuelle_status.equals(status_ist_freigegeben)) {
-//        auftragsstatus_freigegeben();
-//    }
-//    if (aktuelle_status.equals(status_ist_abgeschlossen){
-//        auftragsstatus_freigegeben();
-//        return null;
-//    }
-// 
-//        
-    
-    
+       // 1.12.2016 Impram wird die Form der Datumfelder überprüft.
+         if(istSemantischRichtig()){
+             //Die Bearbeitete Felder in der Gui Maske werden nach Betätigung der
+             // Speicher Button in die DB geschrieben.
+            Auftragsstatus aStatus = new Auftragsstatus();
+            String auftragsart = (String) this.jcbAuftragsartAuftragBearbeiten.getSelectedItem();
+            String beschreibung = this.jtfBeschreibungAuftragBearbeiten.getText();
+            //Bei dem Datumsfelder bin ich mir nicht sicher ob das hie rein muss
+            //weil das in der Semantischrichtig methode überprüft wird.
+//            String lieferdatum = this.jftfLieferdatumAuftragBearbeiten.getText();
+//            String abschlussdatum = this.jftfAbschlussdatumAuftragBearbeiten.getText();
+            String artikelname = this.jtfArtikelname_AuftragBearbeiten.getText();
+            int menge = -1;
+            try{
+                //wird geparst da das kein int wert ist.
+                menge = Integer.parseInt(jtfMenge_AuftragBearbeiten.getText());
+            } catch (NumberFormatException ex) {
+                
+            }
+             System.out.println( auftragsart + beschreibung + artikelname + menge);
+             
+             
+              //DAO.MEthodenNAme(aufzrag); 
+             //Es wird ein neues AuftragsObjekt erzeugt.
+             //in dieser Auftragsobjekt werden alle attribute mit setmethode gefüllt.
+             //wenn das Objekt vollständig ist werden die Daten in die Db geschrieben.
+              Auftrag at = new Auftrag();
+              at.setAuftragsart(auftragsart);
+              
+              
+//              try {
+//                  DAOAuftrag daoauftrag = new DAOAuftrag();
+//                     daouftrag.Methodenname von DAOKLASSE FÜR Bearbeiten(auftrag);
+//        } catch (SQLException ex) {
+//            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+              }
+        
+        
+        
+         
+        
+        
+        
+    }//GEN-LAST:event_jbSpeichernAuftragBearbeitenActionPerformed
+ // Impram 1.12.2016
+    //Von Citak die Methode kopiert um die Datumsfelder mit einander zuvergleichen
+    //Ob das größer oder kleiner ist. Zusätzlich wird das Form verglichen.
+    private boolean istGueltigesDatum(String datum) {
+        boolean istGueltig = false;
+        SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        df.setLenient(false);
+        try {
+            Date date = df.parse(datum);
+            istGueltig = true;
+        } catch (ParseException ex) {
+        }
+        return istGueltig;
+    }
+   //02.12.2016 Impram die Methode erzeugt das aktuelle datum könnte man benötigen
+    // beim erfassungs eines Auftrages.
+    private void erzeugeAktuellesDatum () {
+Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date ());
+        aktJahr = cal.get(Calendar.YEAR);
+        aktMonat = cal.get(Calendar.MONTH);
+        aktTag = cal.get(Calendar.DATE);
+        SimpleDateFormat fo = new SimpleDateFormat ("dd.MM.yyyy");
+        aktDatum = fo.format(new Date());
+    }
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AuftragBearbeiten;
@@ -847,4 +954,22 @@ public class AuftragBearbeiten extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfPositionsID_AuftragBearbeiten;
     private javax.swing.JTextField jtfZKIDAuftragBearbeiten;
     // End of variables declaration//GEN-END:variables
+// 1.12.2016 Impram
+    //Überprüft die Datumsfelder ob die korrekt eingegeben wurde.
+    private boolean istSemantischRichtig() {
+     boolean istSemantischRichtig = false;
+     if (!istGueltigesDatum(jftfAbschlussdatumAuftragBearbeiten.getText())){
+         JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum ein!", "Falsches Datum ", JOptionPane.WARNING_MESSAGE);
+         jftfAbschlussdatumAuftragBearbeiten.requestFocusInWindow();
+         if (!istGueltigesDatum(jftfLieferdatumAuftragBearbeiten.getText())){
+             JOptionPane.showMessageDialog(null, "Bitte geben Sie ein gültiges Datum", "Falsches Datum", JOptionPane.WARNING_MESSAGE);
+             jftfLieferdatumAuftragBearbeiten.requestFocusInWindow();
+            
+         }
+     }else {
+         istSemantischRichtig = true;
+     }
+     return istSemantischRichtig;
+    
+}
 }

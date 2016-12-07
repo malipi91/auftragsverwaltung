@@ -93,6 +93,8 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
     private final String POSITION_AUSWAHL = "Bitte wählen sie eine Position aus!";
     private final String auftragspos_exp = "Die Auftragsposition konnte nicht gelöscht werden";
     private final String gueltige_menge = " Bitte geben Sie eine gueltige Menge an";
+    private Object POSITION_AUSWAHL;
+    private Object POSITION_LOESCHEN;
 
     /**
      * Creates new form AuftragAnlegen
@@ -117,6 +119,37 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     }
 
+     /*-------------------------------------------------------------*/
+     /* 01.12.16 Yoeruek Prüfung nach Pflichtfeldern, falls nichts */ 
+     /*            angegeben ist wird eine Fehlermeldung ausgegeben*/
+     /*----------------------------------------------------------*/
+    public boolean istVollstaendig(){
+        Boolean vollstaendig = false;
+        String fehlermeldung = "";
+        if(jtfGPID_aa.getText().equals("")) {
+            fehlermeldung = "Geben Sie bitte eine GP-ID ein!";
+            jtfGPID_aa.requestFocusInWindow();
+        }else if (jcbStatus.getSelectedIndex() == 0){
+            fehlermeldung = "Geben Sie bitte einen Status ein!";
+            jcbStatus.requestFocusInWindow();
+        }else if (jftfLieferdatum_aa.getText().equals("")){
+            fehlermeldung = "Geben Sie bitte ein Lieferdatum ein!";
+            jftfLieferdatum_aa.requestFocusInWindow();
+        } else if (jtfArtikelID_AuftragAnlegen.getText().equals("")){
+            fehlermeldung = "Geben Sie bitte eine Artikel-ID ein!";
+            jtfArtikelID_AuftragAnlegen.requestFocusInWindow();
+        } else if (jtfMenge_AuftragAnlegen.getText().equals("")){
+            fehlermeldung = "Geben Sie bitte die Menge ein!";
+            jtfMenge_AuftragAnlegen.requestFocusInWindow();
+        } 
+        if(fehlermeldung.equals("")){
+            vollstaendig = true;
+        }else{
+            JOptionPane.showMessageDialog(this, fehlermeldung,"Unvollständig" ,JOptionPane.WARNING_MESSAGE);
+        }return vollstaendig;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -201,7 +234,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel19.setText("Auftragsart:");
 
-        jcbAuftragsart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Barauftrag", "Sofortauftrag", "Terminauftrag", "Bestellauftrag" }));
+        jcbAuftragsart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Barauftrag", "Sofortauftrag", "Terminauftrag", "Bestellauftrag" }));
         jcbAuftragsart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAuftragsartActionPerformed(evt);
@@ -225,7 +258,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         jLabel41.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel41.setText("Status:");
 
-        jcbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Erfasst", "Freigegeben", "Abgeschlossen" }));
+        jcbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Erfasst", "Freigegeben", "Abgeschlossen" }));
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel73.setText("Abschlussdatum:");
@@ -502,6 +535,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                             .addComponent(jLabel20)
                             .addComponent(jLabel18))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -511,10 +545,22 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbLupeArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                                .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbLupeArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtfPositionsID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(81, 81, 81)
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel122)
                             .addComponent(jLabel24))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(68, 68, 68)
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtfMenge_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -528,15 +574,16 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
             Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                         .addComponent(jbPlus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbMinus_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                         .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
                                 .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                                     .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel24)
                                         .addComponent(jtfMenge_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -555,6 +602,26 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                                     .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jbLupeArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(21, 21, 21)
+=======
+                                    .addComponent(jtfMenge_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(18, 18, 18)
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfEinzelwert_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel18)
+                                            .addComponent(jtfArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jbLupeArtikelID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(Auftragsposition_AuftragAnlegenLayout.createSequentialGroup()
+                                .addGroup(Auftragsposition_AuftragAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel24)
+                                    .addComponent(jtfPositionsID_AuftragAnlegen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel122)))
+                        .addGap(16, 16, 16)
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
@@ -700,7 +767,11 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 858, Short.MAX_VALUE)
+=======
+            .addComponent(AuftragAnlegen, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE)
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         );
 
         pack();
@@ -730,7 +801,14 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
  /* Mit dieser Methode wird ein Auftrag angelegt             */
  /*----------------------------------------------------------*/
     private void jSpeichern_aaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpeichern_aaActionPerformed
+<<<<<<< HEAD
  
+=======
+     /*--------------------------------------------------------------*/
+     /* 18.11.2016 Citak Die eingaben werden in der DB abgespeichert */
+     /*--------------------------------------------------------------*/
+        if(istVollstaendig()){
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         Auftragsstatus aStatus = new Auftragsstatus();
         String auftrags_ID = "1122";
 //        this.jtfArtikelID_AuftragAnlegen.getText();
@@ -756,6 +834,11 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
         }
+<<<<<<< HEAD
+=======
+         }
+
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 
     }//GEN-LAST:event_jSpeichern_aaActionPerformed
 
@@ -783,12 +866,22 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         int einzelwert = Integer.valueOf(jtfEinzelwert_AuftragAnlegen.getText());
         String artikelID = jtfArtikelID_AuftragAnlegen.getText();
         DefaultTableModel model = (DefaultTableModel) this.jTAuftragsposition.getModel();
+<<<<<<< HEAD
 //        System.out.println("row count : " + letzteIndex);
         model.setValueAt(positionsNr, 0, 0);
         model.setValueAt(artikelID, 0, 1);
         model.setValueAt("", 0, 2);
         model.setValueAt(positionsmenge, 0, 3);
         model.setValueAt(einzelwert, 0, 4);
+=======
+        //Die entsprechenden Variablen werden gesetzt. 
+        model.setValueAt(auftragsID, 0, 0);
+        model.setValueAt(positionsNr, 0, 1);
+        model.setValueAt(positionsmenge, 0, 2);
+        model.setValueAt(einzelwert, 0, 3);
+        model.setValueAt(artikelID, 0, 4);
+        int index = this.jTAuftragsposition.getSelectedRow();
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 
         //model.removeRow(0);
 //         Die Daten werden aus der Tabelle geholt
@@ -803,6 +896,7 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jbPlus_AuftragAnlegenActionPerformed
 
+<<<<<<< HEAD
  /*----------------------------------------------------------*/
  /* 29.12.2016 Citak Anlegen der Methode                     */
  /* Mit dieser Methode wird eine Auftragsposition gelöscht   */
@@ -813,11 +907,28 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         index = this.jTAuftragsposition.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) this.jTAuftragsposition.getModel();
 
+=======
+     /*--------------------------------------------------------------------------*/
+     /* 01.12.16 Citak Die Daten werden aus der Datenbank geladen und eine       */
+     /*                 ausgewählt Auftragsposition wird gelöscht.               */
+     /*--------------------------------------------------------------------------*/
+    
+    private void jbMinus_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMinus_AuftragAnlegenActionPerformed
+       int index = -1;
+        //Index wird auf die ausgewählte Zeile gesetzt.
+        index = this.jTAuftragsposition.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) this.jTAuftragsposition.getModel();
+
+        //Fehlerausgabe sobald eine Position nicht markiert wurde. 
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         if (index == -1) {
             JOptionPane.showMessageDialog(null, this.POSITION_AUSWAHL, "Position nicht ausgewält", JOptionPane.INFORMATION_MESSAGE);
         } else {
             System.out.println("kopf:  " + index);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
             int positionNr = (int) model.getValueAt(index, 0);
             String auftragsID = "11111";
 
@@ -836,8 +947,16 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
                 }
             }
         }
+<<<<<<< HEAD
     }//GEN-LAST:event_jbMinus_AuftragAnlegenActionPerformed
+=======
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 
+    }//GEN-LAST:event_jbMinus_AuftragAnlegenActionPerformed
+ /*----------------------------------------------------------*/
+ /* 30.12.2016 Citak Anlegen der Methode                     */
+ /* Mit dieser Methode wird die Gültigkeit des Datums geprüft*/
+ /*----------------------------------------------------------*/
     private void jftfErfassungsdatum_aaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jftfErfassungsdatum_aaFocusLost
         boolean istGueltig = false;
         if (!istGueltigesDatum(jftfErfassungsdatum_aa.getText())) {
@@ -847,22 +966,36 @@ public class AuftragAnlegen extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jftfErfassungsdatum_aaFocusLost
 
+<<<<<<< HEAD
     private void jtfEinzelwert_AuftragAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfEinzelwert_AuftragAnlegenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfEinzelwert_AuftragAnlegenActionPerformed
 
      /* 30.11.16 Citak leert die Positionstabelle */
+=======
+  /* 30.11.16 Citak leert die Positionstabelle */
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
     private void position_text_leeren() {
 
         jtfPositionsID_AuftragAnlegen.setText("");
         jtfMenge_AuftragAnlegen.setText("");
+<<<<<<< HEAD
+=======
+//        jtfArtikelname_AuftragAnlegen.setText("");
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         jtfArtikelID_AuftragAnlegen.setText("");
         jtfEinzelwert_AuftragAnlegen.setText("");
         jtfGesamtwert_AuftragAnlegen.setText("");
     }
+<<<<<<< HEAD
 
    
      /* 30.11.16 Citak erstellen des Datums */
+=======
+    
+    
+     /* 30.11.16 Citak erstellen eines Datums */
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
     private boolean istGueltigesDatum(String datum) {
         boolean istGueltig = false;
         SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");

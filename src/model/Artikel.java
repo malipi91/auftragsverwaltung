@@ -10,8 +10,9 @@ package model;
  * @author marti
  */
 public class Artikel {
-    
+
     private String artikel_ID;
+    private String artikelname;
     private String artikeltext;
     private String bestelltext;
     private int einzelwert;
@@ -22,12 +23,65 @@ public class Artikel {
     private int bestandsmenge_verkauft;
     private int bestandsmenge_frei;
     private String lieferantenID;
-    
-    
-    public Artikel(){
-        
+
+    public Artikel() {
+
     }
 
+ /*----------------------------------------------------------*/
+ /* 02.12.16 Citak Konstruktor Artikel angelegt              */
+ /*----------------------------------------------------------*/
+    public Artikel(String artikel_ID, String artikelname, String artikeltext, String bestelltext,
+        int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
+        int bestandsmenge_zulauf, int bestandsmenge_verkauft,
+        int bestandsmenge_frei) {
+            this.artikel_ID = artikel_ID;
+            this.artikelname = artikelname;
+            this.artikeltext = artikeltext;
+            this.bestelltext = bestelltext;
+            this.einzelwert = einzelwert;
+            this.mwst_satz = mwst_satz;
+            this.bestellwert = bestellwert;
+            this.bestandsmenge_reserviert = bestandsmenge_reserviert;
+            this.bestandsmenge_zulauf = bestandsmenge_zulauf;
+            this.bestandsmenge_verkauft = bestandsmenge_verkauft;
+            this.bestandsmenge_frei = bestandsmenge_frei;
+    }
+    
+    public Artikel(String artikel_ID, String artikeltext, String bestelltext,
+        int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
+        int bestandsmenge_zulauf, int bestandsmenge_verkauft,
+        int bestandsmenge_frei, String gpid) {
+            this.artikel_ID = artikel_ID;
+            this.artikeltext = artikeltext;
+            this.bestelltext = bestelltext;
+            this.einzelwert = einzelwert;
+            this.mwst_satz = mwst_satz;
+            this.bestellwert = bestellwert;
+            this.bestandsmenge_reserviert = bestandsmenge_reserviert;
+            this.bestandsmenge_zulauf = bestandsmenge_zulauf;
+            this.bestandsmenge_verkauft = bestandsmenge_verkauft;
+            this.bestandsmenge_frei = bestandsmenge_frei;
+            this.lieferantenID = gpid;
+    }
+    
+    public Artikel(String artikel_ID, String artikeltext, String bestelltext,
+        int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
+        int bestandsmenge_zulauf, int bestandsmenge_verkauft,
+        int bestandsmenge_frei) {
+            this.artikel_ID = artikel_ID;
+            this.artikeltext = artikeltext;
+            this.bestelltext = bestelltext;
+            this.einzelwert = einzelwert;
+            this.mwst_satz = mwst_satz;
+            this.bestellwert = bestellwert;
+            this.bestandsmenge_reserviert = bestandsmenge_reserviert;
+            this.bestandsmenge_zulauf = bestandsmenge_zulauf;
+            this.bestandsmenge_verkauft = bestandsmenge_verkauft;
+            this.bestandsmenge_frei = bestandsmenge_frei;
+    }
+
+<<<<<<< HEAD
     Artikel(String artikel_ID, String artikeltext, String bestelltext, 
             int einzelwert, int mwst_satz, int bestellwert, int bestandsmenge_reserviert,
             int bestandsmenge_zulauf, int bestandsmenge_verkauft, 
@@ -38,6 +92,8 @@ public class Artikel {
     Artikel(String string, String text_artikel, String text_bestellung, int i, int i0, int i1, int i2, int i3, int i4, int i5, String string0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+=======
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 
   
 
@@ -128,29 +184,36 @@ public class Artikel {
     public void setLieferantenID(String lieferantenID) {
         this.lieferantenID = lieferantenID;
     }
-    
-    
-    public int pruefeBestand(){
+
+    public String getArtikelname() {
+        return artikelname;
+    }
+
+    public void setArtikelname(String artikelname) {
+        this.artikelname = artikelname;
+    }
+
+    public int pruefeBestand() {
         return 0;
     }
-    
-    public void erhoeheZulauf(){
-        
+
+    public void erhoeheZulauf() {
+
     }
-    
-    public int gibAnzahlReservierterArtikel(){
+
+    public int gibAnzahlReservierterArtikel() {
         return 0;
     }
-    
-    public void erhoeheVerkauft(){
-        
+
+    public void erhoeheVerkauft() {
+
     }
-    
-    public void loescheReservierung(){
-        
+
+    public void loescheReservierung() {
+
     }
-    
-    public String gibLieferantenID(){
+
+    public String gibLieferantenID() {
         return lieferantenID;
     }
 }

@@ -42,7 +42,11 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+<<<<<<< HEAD
                   <Component id="KundeAnlegen" pref="684" max="32767" attributes="0"/>
+=======
+                  <Component id="KundeAnlegen" pref="672" max="32767" attributes="0"/>
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -104,7 +108,11 @@
                           </Group>
                       </Group>
                   </Group>
+<<<<<<< HEAD
                   <EmptySpace pref="13" max="32767" attributes="0"/>
+=======
+                  <EmptySpace max="32767" attributes="0"/>
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
               </Group>
           </Group>
         </DimensionLayout>

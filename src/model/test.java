@@ -6,7 +6,9 @@
 package model;
 
 import dao.DAOAdresse;
+import dao.DAOArtikel;
 import dao.DAOAuftrag;
+import dao.DAOZahlungskondition;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -18,6 +20,7 @@ public class test {
     
     
     public static void main(String [ ] args) throws SQLException{
+<<<<<<< HEAD
         ArrayList<Auftrag> auftraege = new ArrayList<>();
         DAOAuftrag auftrag = new DAOAuftrag();
         auftraege = auftrag.gibAlleAuftraege(20);
@@ -28,4 +31,11 @@ public class test {
         }
     }
     
+=======
+        DAOZahlungskondition dzk = new DAOZahlungskondition();
+        Zahlungskondition zk = new Zahlungskondition();
+        zk = dzk.erhalteZahlungskonditionFuerID("2");
+        System.out.println(zk.getZk_ID());
+    }  
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 }

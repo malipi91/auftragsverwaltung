@@ -185,9 +185,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="L&#xf6;schen"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbL&#xf6;schenAuftragBearbeitenActionPerformed"/>
-          </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jpUnterPanel_AuftragBearbeiten">
           <Properties>
@@ -727,6 +724,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Speichern"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSpeichernAuftragBearbeitenActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

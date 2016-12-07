@@ -6,14 +6,21 @@
 package view;
 
 import dao.DAOArtikel;
+<<<<<<< HEAD
 import dao.DAOAuftrag;
+=======
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 import java.sql.SQLException;
 import java.text.DecimalFormatSymbols;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.Artikel;
+<<<<<<< HEAD
 import model.Auftrag;
+=======
+
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 
 /*----------------------------------------------------------------------------*/
  /* Datum    Name    Was */
@@ -23,9 +30,13 @@ import model.Auftrag;
  /* 27.11.16 Impram  Anpassung der Größenverhältnisse (Schriftart, Layout)*/
  /*---------------------------------------------------------------------------*/
 public class ArtikelAnlegen extends javax.swing.JInternalFrame {
+<<<<<<< HEAD
     
     private final String ARTIKEL_ID = "00000";
 
+=======
+private final String ARTIKEL_ID = "00000";
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
     public ArtikelAnlegen() {
         initComponents();
 
@@ -475,11 +486,17 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_jbAbbrechen_ArtikelAnlegenActionPerformed
+<<<<<<< HEAD
   /*----------------------------------------------------------*/
  /* 20.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
  /* 02.12.2016 Citak Überarbeitung der Methode                 */
+=======
  /*----------------------------------------------------------*/
-    private boolean istVollstaendig() {
+ /* 20.11.16 Impram Schließt das Fenster nach Betätigung des Abbrech Buttons */
+ /* 02.12.2016 Citak Überarbeitung der Methode               */
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
+ /*----------------------------------------------------------*/
+     private boolean istVollstaendig() {
         boolean istVollstaendig = false;
         String fehlermeldung = "";
 //        if (jtfartikelid_ArtikelAnlegen.getText().equals("")) {
@@ -520,8 +537,12 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
     
     private void rechneBrutto( ){
     }
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
  /*----------------------------------------------------------*/
  /* 02.12.2016 Citak Anlegen der Methode                     */
  /* Mit dieser Methode wird ein Artikel angelegt             */
@@ -530,6 +551,10 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         //sobald die eingzugebenden Daten vollstänig sind wird der Artikel angelegt. 
         if (istVollstaendig()) {
+<<<<<<< HEAD
+=======
+            //Die Eingabefelder werden den Variablen zugeordnet
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
             String artikelname =this.jtfartikelname_ArtikelAnlegen.getText();
             int bestandsmenge_frei = Integer.parseInt(this.jtffrei_ArtikelAnlegen.getText()); 
             int bestandsmenge_reserviert= Integer.parseInt(this.jtfverkauft_ArtikelAnlegen.getText());
@@ -543,6 +568,7 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
             // Zum testen 
             System.out.println("Artikelname:" +bestandsmenge_zulauf+ "Bmenge:"+ bestandsmenge_verkauft + "reser:"+ bestelltext+ "dd:"+artikeltext
             + "hhfs:" +einzelwert_netto+ "fff:"+ bestellwert_netto+ "ff"+mwst );
+<<<<<<< HEAD
 
         }
         //Die Daten des neu angelegten Artikels wird geholt. 
@@ -555,6 +581,21 @@ public class ArtikelAnlegen extends javax.swing.JInternalFrame {
 //        } catch (SQLException ex) {
 //            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
 //        }
+=======
+            
+
+        Artikel artikel = new Artikel(this.ARTIKEL_ID, artikelname, artikeltext, bestelltext,
+                einzelwert_netto, mwst, bestellwert_netto,bestandsmenge_reserviert,
+                bestandsmenge_zulauf, bestandsmenge_verkauft, bestandsmenge_frei);
+        try {
+            DAOArtikel daoArtikel = new DAOArtikel();
+            daoArtikel.legeNeueArtikelAn(artikel);
+        } catch (SQLException ex) {
+            Logger.getLogger(StartAV.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
+        
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
     }//GEN-LAST:event_jbSpeichern_ArtikelAnlegenActionPerformed
 
     private void jtfartikelid_ArtikelAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfartikelid_ArtikelAnlegenActionPerformed

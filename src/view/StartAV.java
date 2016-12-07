@@ -38,6 +38,8 @@ public class StartAV extends javax.swing.JFrame {
     //Mehmet Impram 27.11.2016
     private final String INFO_TITEL = "Info zum Anmelden auf das System";
     private final String INFO_TEXT = "Bei Benutzername & Passwort geben sie min. 1 Buchstaben ein ";
+    private final String  BEENDE_TEXT = "Sie sind dabei diesen Programm zuschliessen";
+    private final String BEENDE_TITEL = "Schliessen bestätigen";
     boolean istEingeloggt = false;
     private Object view;
 
@@ -108,9 +110,13 @@ public class StartAV extends javax.swing.JFrame {
         jifZKID_suchen.setVisible(true);
     }
     
-
+    public void oeffneArtikelBearbeiten(){
+        this.jifArtikelBearbeiten.setVisible(true);
+    }
     
-    
+    public ArtikelBearbeiten getArtikelBearbeiten(){
+        return this.jifArtikelBearbeiten;
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -192,6 +198,11 @@ public class StartAV extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImages(null);
         setMinimumSize(new java.awt.Dimension(1400, 1000));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         desktopPane.setInheritsPopupMenu(true);
 
@@ -673,7 +684,7 @@ public class StartAV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void miBeendenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miBeendenActionPerformed
-        System.exit(0);
+//        System.exit(0);
     }//GEN-LAST:event_miBeendenActionPerformed
 
     private void miAbmeldenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAbmeldenActionPerformed
@@ -979,7 +990,23 @@ public class StartAV extends javax.swing.JFrame {
         // TODO add your handling code here:
          JOptionPane.showMessageDialog(null, INFO_TEXT, INFO_TITEL, JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
-    
+
+//01.12.2016 Impram
+    // Wenn man auf Seite Schliessen Betaätigt erscheint eine meldung
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+//        if (!Startseite.isVisible()){
+        int antwort = JOptionPane.showConfirmDialog(this, BEENDE_TEXT, BEENDE_TITEL, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if( antwort == JOptionPane.YES_OPTION) {
+           // System.exit(0);
+//           if  (antwort == JOptionPane.NO_OPTION){
+//                Startseite.setVisible(true);
+////           }
+//          
+//        }
+        }     
+        
+    }//GEN-LAST:event_formWindowClosing
 
     
     

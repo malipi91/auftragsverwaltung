@@ -17,9 +17,14 @@ import model.Auftragsposition;
 import util.DBConnection;
 import util.Zusatzfunktionen;
 
+/*----------------------------------------------------------*/
+/* Datum Name Was                                           */
+/* 24.11.16 Duygu Citak Anlegen der Klasse                  */
+/* 03.12.16 MaLi Überabeiten der Methoden und Erweiter      */
+/*----------------------------------------------------------*/
 /**
  *
- * @author marti
+ * @author Martin Lipinski 
  */
 public class DAOAuftragsposition {
 
@@ -90,10 +95,13 @@ public class DAOAuftragsposition {
         stmt.setInt(3, auftragsposition.getMenge());
         stmt.setInt(4, auftragsposition.getEinzelwert());
         stmt.setString(6, auftragsposition.getArtikelID());
+<<<<<<< HEAD
 //        stmt.setInt(2, auftragsposition.getPositionsnummer());
 //        stmt.setInt(3, auftragsposition.getMenge());
 //        stmt.setInt(4, auftragsposition.getEinzelwert());
 //        stmt.setString(6, auftragsposition.getArtikelID());
+=======
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         
         try{
             
@@ -125,6 +133,7 @@ public class DAOAuftragsposition {
      * @param auftragskopf_id Die Auftrags-ID dessen Pos. gelöscht werden soll.
      * @param positionsnummer Die Position die gelöscht werden
      * @throws SQLException
+<<<<<<< HEAD
      */
 
     public void loescheNeueAuftragsposition(String auftragskopf_id, 
@@ -152,6 +161,98 @@ public class DAOAuftragsposition {
     /* 01.12.16 MaLi Anlegen der Methode                        */
     /*----------------------------------------------------------*/
     /**
+     * Diese Methode zeigt die Auftragspositionen zu einem Auftrag an. 
+     * @param auftragskopf_id Die Auftrag-ID zu der die Pos. gehören.
+     * @return gibt eine ArrayList vom Auftragspositionen aus.
+     * @throws SQLException
+     */
+    public ArrayList<Auftragsposition> gibAllePositionen(String auftragskopf_id) 
+            throws SQLException{
+        
+=======
+     */
+
+    public void loescheNeueAuftragsposition(String auftragskopf_id, 
+            int positionsnummer) throws SQLException{
+         
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+<<<<<<< HEAD
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs = null;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select * from auftragsposition where auftragskopf_ID= " 
+                + auftragskopf_id + " order by Positionsnummer";
+        
+        // Erzeugen eines leeren Auftrags-Objekt.
+        ArrayList<Auftragsposition> auftragspositionen = new ArrayList<>();
+        
+        try{
+            // Ausführen der Statements
+            rs = stmt.executeQuery(sql);
+
+            // Schleife zum Speichern alle Auftragsobjekte
+            while(rs.next()){
+                
+                // Prüft ob LKZ gesetzt ist
+                if(rs.getString("LKZ") == null){
+                    Auftragsposition auftragsposition = new Auftragsposition();
+                    auftragsposition
+                            .setAuftragskopfId(rs.getString("Auftragskopf_ID"));
+                    auftragsposition
+                            .setPositionsnummer(rs.getInt("Positionsnummer"));
+                    auftragsposition
+                            .setEinzelwert(rs.getInt("Einzelwert"));
+                    auftragsposition
+                            .setMenge(rs.getInt("Menge"));
+                    auftragsposition
+                            .setArtikelID(rs.getString("Materialnummer"));
+
+                    auftragspositionen.add(auftragsposition);
+                    System.out.println("Ich werde gepspeichert!");
+                } else {
+                    return null;
+                }               
+        }
+            // Schließt die Verbindung zur DB.
+            conn.close();
+            
+            // Gibt die Auftrags ArrayList aus.
+            return auftragspositionen;
+        
+        // Fehlerbehandlung
+        } catch(SQLException e){
+            System.out.println(e);
+            System.out.println("Fehler in der Speicherung von Aufträgen.");
+            return null;
+        }
+=======
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // Lösch-Statement
+        String sql = "Update Auftragsposition SET LKZ='w' where "
+                + "Auftragskopf_ID=" + auftragskopf_id + " AND "
+                + "positionsnummer= " + positionsnummer;
+        
+        // Ausführen des Statements
+        stmt.executeUpdate(sql);
+        conn.close();
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
+    }
+    
+    
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 01.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+<<<<<<< HEAD
+=======
      * Diese Methode zeigt die Auftragspositionen zu einem Auftrag an. 
      * @param auftragskopf_id Die Auftrag-ID zu der die Pos. gehören.
      * @return gibt eine ArrayList vom Auftragspositionen aus.
@@ -222,6 +323,7 @@ public class DAOAuftragsposition {
     /* 01.12.16 MaLi Anlegen der Methode                        */
     /*----------------------------------------------------------*/
     /**
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
      * Die Methode liest anhand der Auftragskopf-ID sowie der Positionsnummer
      * eine Position aus der Tabelle Auftragsposition in der DB.
      *
@@ -278,4 +380,100 @@ public class DAOAuftragsposition {
         // Ausgabe des Auftrags-Objekts.
         return auftragsposition;
     }
+<<<<<<< HEAD
+=======
+        
+    /*----------------------------------------------------------*/
+    /* Datum Name Was                                           */
+    /* 02.12.16 MaLi Anlegen der Methode                        */
+    /*----------------------------------------------------------*/
+    /**
+     * Diese Methode dient zum Ändern von bestehenden Auftragspositionen. 
+     * Positionsnummer und Auftrags-ID werden allerdings nicht geändert!
+     * 
+     * @param id die ID des Auftrags
+     * @param pos die Position die geändert werden soll
+     * @param auftragspos ein Auftragspositions-Objekt
+     * @throws SQLException
+     */
+    public void bearbeiteAuftrag(String id, int pos, Auftragsposition auftragspos) 
+            throws SQLException{
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // UpdateString zum Ausführen des Updates
+        String sql = "update auftragsposition set Menge=?,Einzelwert=?, "
+                + "Materialnummer=? WHERE Auftragskopf_ID=" + id 
+                + " AND Positionsnummer=" + pos;
+        
+        // Übergabe des Strings an das PreparedStatement
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Zuweisung der zu übergebenden Werte aus dem Auftrags-Objekt.
+        stmt.setInt(1, auftragspos.getMenge());
+        stmt.setInt(2, auftragspos.getEinzelwert());
+        stmt.setString(3, auftragspos.getArtikelID());
+//        stmt.setString(8, gp.getGPID());
+        
+        try {
+            
+            //Ausführen des Statements
+            stmt.execute();
+            
+            //Datenbankverbindung wird geschlossen
+            conn.close();
+            
+            // Ausgabe der Fehlermeldung 
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Objekt wurde nicht geändert");
+        }
+    }
+    
+    public int findeLetztePositionsnummer() throws SQLException{
+        
+        // Erzeugen eines neuen DBConnection Objekts.
+        DBConnection con = new DBConnection();
+        // Übergabe der Connection an ein Connection Objekt.
+        Connection conn = con.createConection();
+        // Erzeugen eines SQL ResultSets.
+        ResultSet rs = null;
+        // Erzeugen eines Statements Objekts über das Objekt der Connection.
+        Statement stmt = conn.createStatement();
+        // SQL-Anweisung die alle Spalten anhand der Auftragskopf_ID liefert.
+        String sql = "select Auftragskopf_ID, Positionsnummer, LKZ from auftragsposition order by Positionsnummer";
+        int erg = 0;
+        try{
+            // Ausführen der Statements
+            rs = stmt.executeQuery(sql);
+
+            // Schleife zum Speichern alle Auftragsobjekte
+
+                
+                // Prüft ob LKZ gesetzt ist
+                if(rs.first() && rs.getString("LKZ") == null){
+                    erg = rs.getInt("Positionsnummer");
+                } else {
+                    return 0;
+                }
+            // Schließt die Verbindung zur DB.
+            conn.close();
+            
+            // Gibt die letzte Artikel_ID aus.
+            return erg;  
+        // Fehlerbehandlung
+        } catch(SQLException e){
+            System.out.println(e);
+            System.out.println("Fehler beim Auslesen der letzten ID.");
+            return 0;
+        }
+    }
+    
+    public int erhoeheLetzteID() throws SQLException{
+        int id = this.findeLetztePositionsnummer();
+        int erg = id++;
+        return erg;
+    }
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
 }

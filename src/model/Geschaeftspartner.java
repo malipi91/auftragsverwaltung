@@ -11,7 +11,7 @@ package model;
  */
 public class Geschaeftspartner {
     
-     private int geschaeftspartnerID;
+     private String geschaeftspartnerID;
      private String geschaeftspartnerTyp;
      private int kreditlimit;
      private String name;
@@ -24,7 +24,7 @@ public class Geschaeftspartner {
      
      
      
-      public Geschaeftspartner(int geschaeftspartnerID, String geschaeftspartnerTyp, int kreditlimit, String name, Adresse anschrift, String telefon,
+      public Geschaeftspartner(String geschaeftspartnerID, String geschaeftspartnerTyp, int kreditlimit, String name, Adresse anschrift, String telefon,
       String fax, String email, String erfassungsdatum, String titel) {
         this.geschaeftspartnerID = geschaeftspartnerID;
         this.geschaeftspartnerTyp= geschaeftspartnerTyp;
@@ -37,6 +37,14 @@ public class Geschaeftspartner {
         this.erfassungsdatum = erfassungsdatum;
         this.titel= titel;
 
+    }
+
+    public Geschaeftspartner() {
+  
+    }
+    
+    public String getGPID(){
+        return this.geschaeftspartnerID;
     }
 }
      

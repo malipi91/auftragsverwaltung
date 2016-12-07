@@ -538,7 +538,11 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
                             .addComponent(jPRechnungsdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jPLieferdaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+<<<<<<< HEAD
                 .addContainerGap(13, Short.MAX_VALUE))
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
         );
         KundeAnlegenLayout.setVerticalGroup(
             KundeAnlegenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -688,6 +692,50 @@ public class KundeAnlegen extends javax.swing.JInternalFrame {
     private void jcbAnredeRG_KundeAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAnredeRG_KundeAnlegenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAnredeRG_KundeAnlegenActionPerformed
+
+ /*----------------------------------------------------------*/
+ /* 01.12.2016 Citak Anlegen der Methode                     */
+ /* Mit dieser Methode wird ein Kunde angelegt               */
+ /*----------------------------------------------------------*/
+    private void jbSpeichernActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSpeichernActionPerformed
+    
+        //Prüfen ob Felder ausgefüllt sind
+        if (alle_daten_vollstaendig().equals("")) {
+            String typ = "";
+            int kreditlimit;
+            if(!jtfKreditlimit_KundenAnlegen.getText().equals("")){
+                 kreditlimit = Integer.parseInt(jtfKreditlimit_KundenAnlegen.getText());
+            }else{
+                kreditlimit = 0;
+            }
+            // Rechnungsdaten werden hinzugefügt
+            String anrede_r = (String) jcbAnredeRG_KundeAnlegen.getSelectedItem();
+            String vorname_r = jtfVornameRG_KundeAnlegen.getText();
+            String name_r = jtfNameRG_KundeAnlegen.getText();
+//            Date geb_dat_r = new Date(.....getDate().getTime());
+          
+            String firmenname_r = jtfFirmaRG_KundeAnlegen.getText();
+            String strasse_r = jtfStraßeRG_KundeAnlegen.getText();
+            String hausnr_r = jtfHNrRG_KundeAnlegen.getText();
+            int plz_r = Integer.parseInt(jtfPlzRG_KundeAnlegen.getText());
+            String ort_r = jtfOrtRG_KundeAnlegen.getText();
+            String staat = jtfStaatRG_KundeAnlegen.getText();
+            
+//            //Rechnugsadresse wird erstellt
+//            this.rechnungsAdresse = new Adresse(naechste_id_adresse, anrede_r, vorname_r,
+//                    name_r, strasse_r, hausnr_r, plz_r, ort_r,
+//                    staat);
+
+            //Prüfen ob abw Lieferadresse ausgewählt ist
+            if (jrbAbweichendeLieferadresse_KundeAnlegen.isSelected()) {
+//                String anrede_l = (String) jcbAnredeLD_KundeAnlegen.getSelectedItem();
+                String vorname_l = jtfVorname2_KundeAnlegen.getText();
+                String name_l = jtfName2_KundeAnlegen.getText();
+                
+              return;
+                }
+        }
+    }//GEN-LAST:event_jbSpeichernActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

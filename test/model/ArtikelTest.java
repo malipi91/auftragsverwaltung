@@ -25,7 +25,7 @@ public class ArtikelTest {
     public void testGetArtikel_ID() {
     
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals("3333", testArtikel.getArtikel_ID());
     }
 
@@ -35,7 +35,7 @@ public class ArtikelTest {
     @Test
     public void testSetArtikel_ID() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         testArtikel.setArtikel_ID("555");
         assertEquals("555",testArtikel.getArtikel_ID());     
     }
@@ -45,7 +45,7 @@ public class ArtikelTest {
      */
     @Test
     public void testGetArtikeltext() {Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
        assertEquals("text artikel",testArtikel.getArtikeltext());
     }
 
@@ -55,7 +55,7 @@ public class ArtikelTest {
     @Test
     public void testSetArtikeltext() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         String artikelText = "geändert";
         testArtikel.setArtikeltext(artikelText);
         assertEquals(artikelText, testArtikel.getArtikeltext());
@@ -75,7 +75,7 @@ public class ArtikelTest {
     @Test
     public void testSetBestelltext() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         String bestellText = "geändert";
         testArtikel.setBestelltext(bestellText);
         assertEquals(bestellText, testArtikel.getBestelltext());
@@ -87,7 +87,7 @@ public class ArtikelTest {
     @Test
     public void testGetEinzelwert() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(5, testArtikel.getEinzelwert());
     }
 
@@ -97,7 +97,7 @@ public class ArtikelTest {
     @Test
     public void testSetEinzelwert() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int einzelwert = 46;
         testArtikel.setEinzelwert(einzelwert);
         assertEquals(einzelwert, testArtikel.getEinzelwert());
@@ -109,7 +109,7 @@ public class ArtikelTest {
     @Test
     public void testGetBestellwert() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(555,testArtikel.getBestellwert());
     }
 
@@ -119,7 +119,7 @@ public class ArtikelTest {
     @Test
     public void testSetBestellwert() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int bestellwert = 556;
         testArtikel.setBestellwert(bestellwert);
         assertEquals(bestellwert,testArtikel.getBestellwert());
@@ -131,7 +131,7 @@ public class ArtikelTest {
     @Test
     public void testGetMwst_satz() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(7, testArtikel.getMwst_satz());
     }
 
@@ -141,7 +141,7 @@ public class ArtikelTest {
     @Test
     public void testSetMwst_satz() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int mwst_satz = 99;
         testArtikel.setMwst_satz(mwst_satz);
         assertEquals(mwst_satz, testArtikel.getMwst_satz());
@@ -153,7 +153,7 @@ public class ArtikelTest {
     @Test
     public void testGetBestandsmenge_frei() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(6, testArtikel.getBestandsmenge_frei());
     }
 
@@ -163,7 +163,7 @@ public class ArtikelTest {
     @Test
     public void testSetBestandsmenge_frei() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int Bestandsmenge_frei = 15;
         testArtikel.setBestandsmenge_frei(Bestandsmenge_frei);
         assertEquals(Bestandsmenge_frei, testArtikel.getBestandsmenge_frei());
@@ -175,7 +175,7 @@ public class ArtikelTest {
     @Test
     public void testGetBestandsmenge_reserviert() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(6, testArtikel.getBestandsmenge_reserviert());
     }
 
@@ -185,7 +185,7 @@ public class ArtikelTest {
     @Test
     public void testSetBestandsmenge_reserviert() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int Bestandsmenge_reserviert = 144;
         testArtikel.setBestandsmenge_reserviert(Bestandsmenge_reserviert);
         assertEquals(Bestandsmenge_reserviert, testArtikel.getBestandsmenge_reserviert());
@@ -197,7 +197,7 @@ public class ArtikelTest {
     @Test
     public void testGetBestandsmenge_zulauf() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(23, testArtikel.getBestandsmenge_zulauf());
     }
 
@@ -207,7 +207,7 @@ public class ArtikelTest {
     @Test
     public void testSetBestandsmenge_zulauf() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int Bestandsmenge_zulauf = 1444;
         testArtikel.setBestandsmenge_zulauf(Bestandsmenge_zulauf);
         assertEquals(Bestandsmenge_zulauf, testArtikel.getBestandsmenge_zulauf());
@@ -219,7 +219,7 @@ public class ArtikelTest {
     @Test
     public void testGetBestandsmenge_verkauft() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals(23, testArtikel.getBestandsmenge_verkauft());
     }
 
@@ -229,7 +229,7 @@ public class ArtikelTest {
     @Test
     public void testSetBestandsmenge_verkauft() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         int Bestandsmenge_verkauft = 670;
         testArtikel.setBestandsmenge_verkauft(Bestandsmenge_verkauft);
         assertEquals(Bestandsmenge_verkauft, testArtikel.getBestandsmenge_verkauft());
@@ -241,7 +241,7 @@ public class ArtikelTest {
     @Test
     public void testGetLieferantenID() {
         Artikel testArtikel = new Artikel("3333","text artikel","text bestellung",5,555,7,6,
-        6,23,23, "445838");
+        6,23,23);
         assertEquals("445838", testArtikel.getLieferantenID());
     }
 

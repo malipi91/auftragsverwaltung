@@ -73,7 +73,11 @@
                           </Group>
                       </Group>
                   </Group>
+<<<<<<< HEAD
                   <EmptySpace min="22" pref="135" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="22" pref="139" max="32767" attributes="0"/>
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
               </Group>
           </Group>
         </DimensionLayout>
@@ -98,7 +102,11 @@
                       <Component id="jbSpeichern_ArtikelAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jbAbbrechen_ArtikelAnlegen" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
+<<<<<<< HEAD
                   <EmptySpace pref="69" max="32767" attributes="0"/>
+=======
+                  <EmptySpace pref="81" max="32767" attributes="0"/>
+>>>>>>> 89806cc862e2033d0b3cc242f9fc6a7422d9ef87
               </Group>
           </Group>
         </DimensionLayout>

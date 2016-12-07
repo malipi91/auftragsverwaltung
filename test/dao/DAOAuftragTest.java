@@ -23,33 +23,45 @@ import static org.junit.Assert.*;
 public class DAOAuftragTest {
     
    DAOAuftrag da;
-    
+   String letzteID = "143";
     @Before
     public void setUp() throws SQLException {
-        Auftrag auftrag = new Auftrag("99999","test", "1480600612165", "1480600612165", "bar", 100,"f", "1480600612165");
+        
         
         da = new DAOAuftrag();
-        da.legeNeueAuftragAn(auftrag);
+        String datumm = "2016-11-20";
     }
     
     
     @Test
     public void testErhalteAuftragFuerID() throws Exception {
-        Auftrag ergebnis =  da.erhalteAuftragFuerID("8");
-        assertEquals("8", ergebnis.getAuftrags_ID());
+        Auftrag ergebnis =  da.erhalteAuftragFuerID("98");
+        assertEquals("98", ergebnis.getAuftrags_ID());
         
     }
     
     @Test 
     public void testLegeNeuenAuftragAn() throws SQLException{
-        Auftrag auftrag2 = new Auftrag("99999","test", "1480600612165", "1480600612165", "bar", 100,"f", "1480600612165");
-        da.legeNeueAuftragAn(auftrag2);
-        assertEquals("9",da.erhalteAuftragFuerID("9").getAuftrags_ID());
+        Auftrag auftrag = new Auftrag(letzteID,"test", "2016.12.16", "2016.12.16", "bar", 435544,"f", "2016.12.16");     
+        da.legeNeueAuftragAn(auftrag);
+        assertEquals(letzteID,da.erhalteAuftragFuerID(letzteID).getAuftrags_ID());
     }
     
-//    @Test
-//    public void testGibAlleAuftraege() throws SQLException{
-//        assertEquals(9, da.gibAlleAuftraege(5).get(3));          
-//    }
-//    
+    
+    @Test
+    public void testLöscheAuftrag() throws SQLException{
+        
+        da.loescheAuftrag(letzteID);
+        assertEquals(da.erhalteLKZAuftragFuerID(letzteID).getLKZ(),"w");
+        
+    }
+    
+    @Test
+    public void testBearbeiteAuftrag() throws SQLException{
+      
+      Auftrag auftrag2 = new Auftrag("140","test", "2016.12.16", "2016.12.16", "bar", 1,"f","2016.12.16");     
+      da.bearbeiteAuftrag("140", auftrag2);
+      assertEquals(1, da.erhalteAuftragFuerID("140").getAuftragswert());
+    }
+    
 }
