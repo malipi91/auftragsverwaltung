@@ -21,7 +21,7 @@ import model.Auftragsposition;
 /* 24.11.16 Yoeruek Aufsplittung der StartAv Klasse in einzelne Klassen, da Code für eine Klasse zu lang. */
 /* 27.11.16 Yoeruek Anpassung der Größenverhältnisse (Schriftart, Layout)*/
 /*----------------------------------------------------------*/
-public class ArtikelAnzeige extends javax.swing.JInternalFrame {
+public class ArtikelSuchen extends javax.swing.JInternalFrame {
     
     //Variablendeklaration
     StartAV myParent;
@@ -30,15 +30,15 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     private final String Loeschen_Text = "Soll der Artikel wirklich gelöscht werden?"; 
     private final String Loeschen_Titel = "Artikel Löschen";
     
-    /**
-     * Creates new form ArtikelAnzeige
-     */
-    public ArtikelAnzeige(StartAV parent) {
-          myParent = parent;
-         
-          
+    /* 06.12.16 Yoeruek Konstruktor, damit beim rein ziehen der Masken in die StartAV keine Probleme entstehen. */
+    public ArtikelSuchen(){
         initComponents();
-     
+    }
+    
+    /* 06.12.16 Yoeruek Konstruktor wird beim Ausführen der StartAV benutzt*/
+    public ArtikelSuchen(StartAV parent) {
+        myParent = parent;
+        initComponents();
     }
 
 
@@ -46,17 +46,17 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ArtikelAnzeige = new javax.swing.JPanel();
+        ArtikelSuche = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jtfArtikelID_ArtikelAnzeigen = new javax.swing.JTextField();
-        jbsuchen_artikelanzeigen = new javax.swing.JButton();
+        jtfArtikelID_ArtikelSuchen = new javax.swing.JTextField();
+        jbsuchen_artikelsuchen = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtArtikelListe = new javax.swing.JTable();
-        jbLöschen_artikelAnzeigen = new javax.swing.JButton();
-        jbBearbeiten_artikelAnzeigen = new javax.swing.JButton();
+        jbLöschen_artikelSuchen = new javax.swing.JButton();
+        jbBearbeiten_artikelSuchen = new javax.swing.JButton();
         jcbSuchkriterium_ArtikelAnzeige = new javax.swing.JComboBox<>();
-        jbAnzeigen_ArtikelAnzeige = new javax.swing.JButton();
+        jbAnzeigen_ArtikelSuchen = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -78,25 +78,25 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             }
         });
 
-        ArtikelAnzeige.setPreferredSize(new java.awt.Dimension(1200, 900));
+        ArtikelSuche.setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel37.setText("Artikel Anzeigen");
+        jLabel37.setText("Artikel Suchen");
 
-        jtfArtikelID_ArtikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jtfArtikelID_ArtikelAnzeigen.setToolTipText("");
-        jtfArtikelID_ArtikelAnzeigen.setMinimumSize(new java.awt.Dimension(6, 25));
-        jtfArtikelID_ArtikelAnzeigen.setPreferredSize(new java.awt.Dimension(6, 25));
-        jtfArtikelID_ArtikelAnzeigen.addKeyListener(new java.awt.event.KeyAdapter() {
+        jtfArtikelID_ArtikelSuchen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtfArtikelID_ArtikelSuchen.setToolTipText("");
+        jtfArtikelID_ArtikelSuchen.setMinimumSize(new java.awt.Dimension(6, 25));
+        jtfArtikelID_ArtikelSuchen.setPreferredSize(new java.awt.Dimension(6, 25));
+        jtfArtikelID_ArtikelSuchen.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfArtikelID_ArtikelAnzeigenKeyTyped(evt);
+                jtfArtikelID_ArtikelSuchenKeyTyped(evt);
             }
         });
 
-        jbsuchen_artikelanzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe2.png"))); // NOI18N
-        jbsuchen_artikelanzeigen.addActionListener(new java.awt.event.ActionListener() {
+        jbsuchen_artikelsuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/lupe.png"))); // NOI18N
+        jbsuchen_artikelsuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbsuchen_artikelanzeigenActionPerformed(evt);
+                jbsuchen_artikelsuchenActionPerformed(evt);
             }
         });
 
@@ -310,84 +310,84 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jtArtikelListe);
 
-        jbLöschen_artikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbLöschen_artikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
-        jbLöschen_artikelAnzeigen.setPreferredSize(new java.awt.Dimension(130, 35));
-        jbLöschen_artikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
+        jbLöschen_artikelSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbLöschen_artikelSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/müll2.png"))); // NOI18N
+        jbLöschen_artikelSuchen.setPreferredSize(new java.awt.Dimension(130, 35));
+        jbLöschen_artikelSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLöschen_artikelAnzeigenActionPerformed(evt);
+                jbLöschen_artikelSuchenActionPerformed(evt);
             }
         });
 
-        jbBearbeiten_artikelAnzeigen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbBearbeiten_artikelAnzeigen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
-        jbBearbeiten_artikelAnzeigen.setPreferredSize(new java.awt.Dimension(130, 35));
-        jbBearbeiten_artikelAnzeigen.addActionListener(new java.awt.event.ActionListener() {
+        jbBearbeiten_artikelSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbBearbeiten_artikelSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bearbeiten1.png"))); // NOI18N
+        jbBearbeiten_artikelSuchen.setPreferredSize(new java.awt.Dimension(130, 35));
+        jbBearbeiten_artikelSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbBearbeiten_artikelAnzeigenActionPerformed(evt);
+                jbBearbeiten_artikelSuchenActionPerformed(evt);
             }
         });
 
         jcbSuchkriterium_ArtikelAnzeige.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jcbSuchkriterium_ArtikelAnzeige.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Artikel-ID", "Artikelname", "Bestandsmenge Frei", "Einzelwert" }));
 
-        jbAnzeigen_ArtikelAnzeige.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbAnzeigen_ArtikelAnzeige.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
-        jbAnzeigen_ArtikelAnzeige.setText("Anzeigen");
-        jbAnzeigen_ArtikelAnzeige.addActionListener(new java.awt.event.ActionListener() {
+        jbAnzeigen_ArtikelSuchen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbAnzeigen_ArtikelSuchen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/anzeigen.png"))); // NOI18N
+        jbAnzeigen_ArtikelSuchen.setText("Anzeigen");
+        jbAnzeigen_ArtikelSuchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbAnzeigen_ArtikelAnzeigeActionPerformed(evt);
+                jbAnzeigen_ArtikelSuchenActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout ArtikelAnzeigeLayout = new javax.swing.GroupLayout(ArtikelAnzeige);
-        ArtikelAnzeige.setLayout(ArtikelAnzeigeLayout);
-        ArtikelAnzeigeLayout.setHorizontalGroup(
-            ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout ArtikelSucheLayout = new javax.swing.GroupLayout(ArtikelSuche);
+        ArtikelSuche.setLayout(ArtikelSucheLayout);
+        ArtikelSucheLayout.setHorizontalGroup(
+            ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
-                        .addGap(355, 355, 355)
+            .addGroup(ArtikelSucheLayout.createSequentialGroup()
+                .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ArtikelSucheLayout.createSequentialGroup()
+                        .addGap(392, 392, 392)
                         .addComponent(jLabel37))
-                    .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                    .addGroup(ArtikelSucheLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jbAnzeigen_ArtikelAnzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jbAnzeigen_ArtikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 871, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+                                .addGroup(ArtikelSucheLayout.createSequentialGroup()
                                     .addComponent(jcbSuchkriterium_ArtikelAnzeige, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jtfArtikelID_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtfArtikelID_ArtikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jbsuchen_artikelanzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbsuchen_artikelsuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jbBearbeiten_artikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jbBearbeiten_artikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jbLöschen_artikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jbLöschen_artikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
-        ArtikelAnzeigeLayout.setVerticalGroup(
-            ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ArtikelAnzeigeLayout.createSequentialGroup()
+        ArtikelSucheLayout.setVerticalGroup(
+            ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ArtikelSucheLayout.createSequentialGroup()
                 .addGap(4, 4, 4)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbsuchen_artikelanzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ArtikelAnzeigeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtfArtikelID_ArtikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbsuchen_artikelsuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ArtikelSucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtfArtikelID_ArtikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jcbSuchkriterium_ArtikelAnzeige, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jbBearbeiten_artikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbLöschen_artikelAnzeigen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbBearbeiten_artikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLöschen_artikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jbAnzeigen_ArtikelAnzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addComponent(jbAnzeigen_ArtikelSuchen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -396,27 +396,25 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(ArtikelAnzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(ArtikelAnzeige, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+            .addComponent(ArtikelSuche, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void setzeArtikelAnzeigeZurueck(){
-        this.jtfArtikelID_ArtikelAnzeigen.setText("");
+        this.jtfArtikelID_ArtikelSuchen.setText("");
     }
     private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
         /* 02.12.16 Yoeruek Schließt das aktuelle Fenster */
        this.setzeArtikelAnzeigeZurueck();
     }//GEN-LAST:event_formInternalFrameClosed
 
-    private void jbBearbeiten_artikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_artikelAnzeigenActionPerformed
+    private void jbBearbeiten_artikelSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBearbeiten_artikelSuchenActionPerformed
         /*--------------------------------------------------------------------------------------------*/
         /* 02.12.16 Yoeruek Die Methode prüft ob ein Artikel ausgewählt wurde, und übergibt die         */
         /*                eingegeben Artikel ID weiter an die nächste Maske. Wenn nichts ausgewählt   */
@@ -432,13 +430,13 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
             ArtikelBearbeiten artikelBearbeiten =
             this.myParent.getArtikelBearbeiten();
             artikelBearbeiten.ladeDatenfuerArtikelID
-            (this.jtfArtikelID_ArtikelAnzeigen.getText());
+            (this.jtfArtikelID_ArtikelSuchen.getText());
             artikelBearbeiten.setVisible(true);
 
         }
-    }//GEN-LAST:event_jbBearbeiten_artikelAnzeigenActionPerformed
+    }//GEN-LAST:event_jbBearbeiten_artikelSuchenActionPerformed
 
-    private void jbLöschen_artikelAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschen_artikelAnzeigenActionPerformed
+    private void jbLöschen_artikelSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLöschen_artikelSuchenActionPerformed
         /*--------------------------------------------------------------------------------------------*/
         /* 02.12.16 Yoeruek Die Methode prüft ob ein Artikel markiert ist und löscht anschließend     */
         /*                  die Daten. Falls nichts markiert wurde wird eine Fehlermeldung ausgegeben.*/
@@ -467,35 +465,35 @@ public class ArtikelAnzeige extends javax.swing.JInternalFrame {
                 //                    "Artikel löschen",JOptionPane.CLOSED_OPTION);
         }
         this.setVisible(false);
-    }//GEN-LAST:event_jbLöschen_artikelAnzeigenActionPerformed
+    }//GEN-LAST:event_jbLöschen_artikelSuchenActionPerformed
 
-    private void jbsuchen_artikelanzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsuchen_artikelanzeigenActionPerformed
+    private void jbsuchen_artikelsuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsuchen_artikelsuchenActionPerformed
         /* 30.11.16 Yoeruek Öffnet über die Lupe Artikel-ID Suchen */
         //this.myParent.oeffneSucheArtikelAnzeigen();
 
-    }//GEN-LAST:event_jbsuchen_artikelanzeigenActionPerformed
+    }//GEN-LAST:event_jbsuchen_artikelsuchenActionPerformed
 
-    private void jtfArtikelID_ArtikelAnzeigenKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfArtikelID_ArtikelAnzeigenKeyTyped
+    private void jtfArtikelID_ArtikelSuchenKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfArtikelID_ArtikelSuchenKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfArtikelID_ArtikelAnzeigenKeyTyped
+    }//GEN-LAST:event_jtfArtikelID_ArtikelSuchenKeyTyped
 
-    private void jbAnzeigen_ArtikelAnzeigeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_ArtikelAnzeigeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbAnzeigen_ArtikelAnzeigeActionPerformed
+    private void jbAnzeigen_ArtikelSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAnzeigen_ArtikelSuchenActionPerformed
+        myParent.oeffneArtikelAnzeigen();
+    }//GEN-LAST:event_jbAnzeigen_ArtikelSuchenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel ArtikelAnzeige;
+    private javax.swing.JPanel ArtikelSuche;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JButton jbAnzeigen_ArtikelAnzeige;
-    private javax.swing.JButton jbBearbeiten_artikelAnzeigen;
-    private javax.swing.JButton jbLöschen_artikelAnzeigen;
-    private javax.swing.JButton jbsuchen_artikelanzeigen;
+    private javax.swing.JButton jbAnzeigen_ArtikelSuchen;
+    private javax.swing.JButton jbBearbeiten_artikelSuchen;
+    private javax.swing.JButton jbLöschen_artikelSuchen;
+    private javax.swing.JButton jbsuchen_artikelsuchen;
     private javax.swing.JComboBox<String> jcbSuchkriterium_ArtikelAnzeige;
     private javax.swing.JTable jtArtikelListe;
-    private javax.swing.JTextField jtfArtikelID_ArtikelAnzeigen;
+    private javax.swing.JTextField jtfArtikelID_ArtikelSuchen;
     // End of variables declaration//GEN-END:variables
 
 

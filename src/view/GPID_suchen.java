@@ -6,8 +6,8 @@
 package view;
 
 /*-----------------------------------------------------------------------*/
-/* Datum    Name    Was                                                        */
-/* 29.11.16 Yoeruek Erstellung und Anpassung                                        */
+/* Datum    Name    Was                                                  */
+/* 29.11.16 Yoeruek Erstellung und Anpassung                             */
 /*-----------------------------------------------------------------------*/
 
 public class GPID_suchen extends javax.swing.JInternalFrame {
@@ -15,9 +15,12 @@ public class GPID_suchen extends javax.swing.JInternalFrame {
     //Variablendeklaration
     StartAV myParent;
 
-    /**
-     * Creates new form GPID_suchen
-     */
+    /* 06.12.16 Yoeruek Konstruktor, damit beim rein ziehen der Masken in die StartAV keine Probleme entstehen. */
+    public GPID_suchen(){
+        initComponents();
+    }
+    
+    /* 06.12.16 Yoeruek Konstruktor wird beim Ausführen der StartAV benutzt*/
     public GPID_suchen(StartAV parent) {
         initComponents();
         myParent =  parent;
@@ -204,10 +207,11 @@ public class GPID_suchen extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
